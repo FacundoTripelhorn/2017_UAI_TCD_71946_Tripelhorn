@@ -1,0 +1,15 @@
+C:\Users\Facu\Desktop\Campo 2017\OrganizacionDeEventos\DAL_ABMC\bin\Debug\DAL_ABMC.dll
+C:\Users\Facu\Desktop\Campo 2017\OrganizacionDeEventos\DAL_ABMC\bin\Debug\DAL_ABMC.pdb
+C:\Users\Facu\Desktop\Campo 2017\OrganizacionDeEventos\DAL_ABMC\bin\Debug\DAL_ABMC.xml
+C:\Users\Facu\Desktop\Campo 2017\OrganizacionDeEventos\DAL_ABMC\bin\Debug\BLL_Estatica.dll
+C:\Users\Facu\Desktop\Campo 2017\OrganizacionDeEventos\DAL_ABMC\bin\Debug\DAL.dll
+C:\Users\Facu\Desktop\Campo 2017\OrganizacionDeEventos\DAL_ABMC\bin\Debug\BLL_Estatica.pdb
+C:\Users\Facu\Desktop\Campo 2017\OrganizacionDeEventos\DAL_ABMC\bin\Debug\BLL_Estatica.xml
+C:\Users\Facu\Desktop\Campo 2017\OrganizacionDeEventos\DAL_ABMC\bin\Debug\DAL.pdb
+C:\Users\Facu\Desktop\Campo 2017\OrganizacionDeEventos\DAL_ABMC\bin\Debug\DAL.xml
+C:\Users\Facu\Desktop\Campo 2017\OrganizacionDeEventos\DAL_ABMC\obj\Debug\DAL_ABMC.vbprojResolveAssemblyReference.cache
+C:\Users\Facu\Desktop\Campo 2017\OrganizacionDeEventos\DAL_ABMC\obj\Debug\DAL_ABMC.Resources.resources
+C:\Users\Facu\Desktop\Campo 2017\OrganizacionDeEventos\DAL_ABMC\obj\Debug\DAL_ABMC.vbproj.GenerateResource.Cache
+C:\Users\Facu\Desktop\Campo 2017\OrganizacionDeEventos\DAL_ABMC\obj\Debug\DAL_ABMC.dll
+C:\Users\Facu\Desktop\Campo 2017\OrganizacionDeEventos\DAL_ABMC\obj\Debug\DAL_ABMC.xml
+C:\Users\Facu\Desktop\Campo 2017\OrganizacionDeEventos\DAL_ABMC\obj\Debug\DAL_ABMC.pdb

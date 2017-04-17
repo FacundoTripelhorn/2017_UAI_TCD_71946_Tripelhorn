@@ -1,0 +1,631 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+OrganizacionDeEventos
+</name>
+</assembly>
+<members>
+<member name="T:OrganizacionDeEventos.EvOrgDataSet">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:OrganizacionDeEventos.EvOrgDataSet.ClienteDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:OrganizacionDeEventos.EvOrgDataSet.ClienteRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:OrganizacionDeEventos.EvOrgDataSet.ClienteRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:OrganizacionDeEventos.EvOrgDataSetTableAdapters.ClienteTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:OrganizacionDeEventos.EvOrgDataSetTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:OrganizacionDeEventos.EvOrgDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(OrganizacionDeEventos.EvOrgDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:OrganizacionDeEventos.EvOrgDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(OrganizacionDeEventos.EvOrgDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:OrganizacionDeEventos.EvOrgDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(OrganizacionDeEventos.EvOrgDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:OrganizacionDeEventos.EvOrgDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:OrganizacionDeEventos.EvOrgDataSetTableAdapters.TableAdapterManager.UpdateAll(OrganizacionDeEventos.EvOrgDataSet)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:OrganizacionDeEventos.EvOrgDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:OrganizacionDeEventos.EvOrgDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+<member name="T:OrganizacionDeEventos.EvOrgDataSet1">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:OrganizacionDeEventos.EvOrgDataSet1.ClienteDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:OrganizacionDeEventos.EvOrgDataSet1.ClienteRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:OrganizacionDeEventos.EvOrgDataSet1.ClienteRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:OrganizacionDeEventos.EvOrgDataSet1TableAdapters.ClienteTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:OrganizacionDeEventos.EvOrgDataSet1TableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:OrganizacionDeEventos.EvOrgDataSet1TableAdapters.TableAdapterManager.UpdateUpdatedRows(OrganizacionDeEventos.EvOrgDataSet1,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:OrganizacionDeEventos.EvOrgDataSet1TableAdapters.TableAdapterManager.UpdateInsertedRows(OrganizacionDeEventos.EvOrgDataSet1,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:OrganizacionDeEventos.EvOrgDataSet1TableAdapters.TableAdapterManager.UpdateDeletedRows(OrganizacionDeEventos.EvOrgDataSet1,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:OrganizacionDeEventos.EvOrgDataSet1TableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:OrganizacionDeEventos.EvOrgDataSet1TableAdapters.TableAdapterManager.UpdateAll(OrganizacionDeEventos.EvOrgDataSet1)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:OrganizacionDeEventos.EvOrgDataSet1TableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:OrganizacionDeEventos.EvOrgDataSet1TableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+<member name="T:OrganizacionDeEventos.EvOrgDataSet2">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:OrganizacionDeEventos.EvOrgDataSet2.MaterialDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:OrganizacionDeEventos.EvOrgDataSet2.MaterialRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:OrganizacionDeEventos.EvOrgDataSet2.MaterialRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:OrganizacionDeEventos.EvOrgDataSet2TableAdapters.MaterialTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:OrganizacionDeEventos.EvOrgDataSet2TableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:OrganizacionDeEventos.EvOrgDataSet2TableAdapters.TableAdapterManager.UpdateUpdatedRows(OrganizacionDeEventos.EvOrgDataSet2,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:OrganizacionDeEventos.EvOrgDataSet2TableAdapters.TableAdapterManager.UpdateInsertedRows(OrganizacionDeEventos.EvOrgDataSet2,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:OrganizacionDeEventos.EvOrgDataSet2TableAdapters.TableAdapterManager.UpdateDeletedRows(OrganizacionDeEventos.EvOrgDataSet2,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:OrganizacionDeEventos.EvOrgDataSet2TableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:OrganizacionDeEventos.EvOrgDataSet2TableAdapters.TableAdapterManager.UpdateAll(OrganizacionDeEventos.EvOrgDataSet2)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:OrganizacionDeEventos.EvOrgDataSet2TableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:OrganizacionDeEventos.EvOrgDataSet2TableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+<member name="T:OrganizacionDeEventos.EvOrgDataSet3">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:OrganizacionDeEventos.EvOrgDataSet3.PasoDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:OrganizacionDeEventos.EvOrgDataSet3.PasoRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:OrganizacionDeEventos.EvOrgDataSet3.PasoRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:OrganizacionDeEventos.EvOrgDataSet3TableAdapters.PasoTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:OrganizacionDeEventos.EvOrgDataSet3TableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:OrganizacionDeEventos.EvOrgDataSet3TableAdapters.TableAdapterManager.UpdateUpdatedRows(OrganizacionDeEventos.EvOrgDataSet3,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:OrganizacionDeEventos.EvOrgDataSet3TableAdapters.TableAdapterManager.UpdateInsertedRows(OrganizacionDeEventos.EvOrgDataSet3,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:OrganizacionDeEventos.EvOrgDataSet3TableAdapters.TableAdapterManager.UpdateDeletedRows(OrganizacionDeEventos.EvOrgDataSet3,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:OrganizacionDeEventos.EvOrgDataSet3TableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:OrganizacionDeEventos.EvOrgDataSet3TableAdapters.TableAdapterManager.UpdateAll(OrganizacionDeEventos.EvOrgDataSet3)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:OrganizacionDeEventos.EvOrgDataSet3TableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:OrganizacionDeEventos.EvOrgDataSet3TableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+<member name="T:OrganizacionDeEventos.EvOrgDataSet4">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:OrganizacionDeEventos.EvOrgDataSet4.DireccionSalonDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:OrganizacionDeEventos.EvOrgDataSet4.SalonDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:OrganizacionDeEventos.EvOrgDataSet4.DireccionSalonRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:OrganizacionDeEventos.EvOrgDataSet4.SalonRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:OrganizacionDeEventos.EvOrgDataSet4.DireccionSalonRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:OrganizacionDeEventos.EvOrgDataSet4.SalonRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:OrganizacionDeEventos.EvOrgDataSet4TableAdapters.DireccionSalonTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:OrganizacionDeEventos.EvOrgDataSet4TableAdapters.SalonTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:OrganizacionDeEventos.EvOrgDataSet4TableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:OrganizacionDeEventos.EvOrgDataSet4TableAdapters.TableAdapterManager.UpdateUpdatedRows(OrganizacionDeEventos.EvOrgDataSet4,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:OrganizacionDeEventos.EvOrgDataSet4TableAdapters.TableAdapterManager.UpdateInsertedRows(OrganizacionDeEventos.EvOrgDataSet4,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:OrganizacionDeEventos.EvOrgDataSet4TableAdapters.TableAdapterManager.UpdateDeletedRows(OrganizacionDeEventos.EvOrgDataSet4,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:OrganizacionDeEventos.EvOrgDataSet4TableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:OrganizacionDeEventos.EvOrgDataSet4TableAdapters.TableAdapterManager.UpdateAll(OrganizacionDeEventos.EvOrgDataSet4)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:OrganizacionDeEventos.EvOrgDataSet4TableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:OrganizacionDeEventos.EvOrgDataSet4TableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+<member name="T:OrganizacionDeEventos.EvOrgDataSet5">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:OrganizacionDeEventos.EvOrgDataSet5.ServicioDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:OrganizacionDeEventos.EvOrgDataSet5.ServicioRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:OrganizacionDeEventos.EvOrgDataSet5.ServicioRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:OrganizacionDeEventos.EvOrgDataSet5TableAdapters.ServicioTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:OrganizacionDeEventos.EvOrgDataSet5TableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:OrganizacionDeEventos.EvOrgDataSet5TableAdapters.TableAdapterManager.UpdateUpdatedRows(OrganizacionDeEventos.EvOrgDataSet5,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:OrganizacionDeEventos.EvOrgDataSet5TableAdapters.TableAdapterManager.UpdateInsertedRows(OrganizacionDeEventos.EvOrgDataSet5,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:OrganizacionDeEventos.EvOrgDataSet5TableAdapters.TableAdapterManager.UpdateDeletedRows(OrganizacionDeEventos.EvOrgDataSet5,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:OrganizacionDeEventos.EvOrgDataSet5TableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:OrganizacionDeEventos.EvOrgDataSet5TableAdapters.TableAdapterManager.UpdateAll(OrganizacionDeEventos.EvOrgDataSet5)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:OrganizacionDeEventos.EvOrgDataSet5TableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:OrganizacionDeEventos.EvOrgDataSet5TableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+<member name="T:OrganizacionDeEventos.EvOrgDataSet6">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:OrganizacionDeEventos.EvOrgDataSet6.ServicioDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:OrganizacionDeEventos.EvOrgDataSet6.ServicioRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:OrganizacionDeEventos.EvOrgDataSet6.ServicioRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:OrganizacionDeEventos.EvOrgDataSet6TableAdapters.ServicioTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:OrganizacionDeEventos.EvOrgDataSet6TableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:OrganizacionDeEventos.EvOrgDataSet6TableAdapters.TableAdapterManager.UpdateUpdatedRows(OrganizacionDeEventos.EvOrgDataSet6,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:OrganizacionDeEventos.EvOrgDataSet6TableAdapters.TableAdapterManager.UpdateInsertedRows(OrganizacionDeEventos.EvOrgDataSet6,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:OrganizacionDeEventos.EvOrgDataSet6TableAdapters.TableAdapterManager.UpdateDeletedRows(OrganizacionDeEventos.EvOrgDataSet6,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:OrganizacionDeEventos.EvOrgDataSet6TableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:OrganizacionDeEventos.EvOrgDataSet6TableAdapters.TableAdapterManager.UpdateAll(OrganizacionDeEventos.EvOrgDataSet6)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:OrganizacionDeEventos.EvOrgDataSet6TableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:OrganizacionDeEventos.EvOrgDataSet6TableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+<member name="T:OrganizacionDeEventos.EvOrgDataSet7">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:OrganizacionDeEventos.EvOrgDataSet7.TipoEventoDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:OrganizacionDeEventos.EvOrgDataSet7.TipoEventoRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:OrganizacionDeEventos.EvOrgDataSet7.TipoEventoRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:OrganizacionDeEventos.EvOrgDataSet7TableAdapters.TipoEventoTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:OrganizacionDeEventos.EvOrgDataSet7TableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:OrganizacionDeEventos.EvOrgDataSet7TableAdapters.TableAdapterManager.UpdateUpdatedRows(OrganizacionDeEventos.EvOrgDataSet7,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:OrganizacionDeEventos.EvOrgDataSet7TableAdapters.TableAdapterManager.UpdateInsertedRows(OrganizacionDeEventos.EvOrgDataSet7,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:OrganizacionDeEventos.EvOrgDataSet7TableAdapters.TableAdapterManager.UpdateDeletedRows(OrganizacionDeEventos.EvOrgDataSet7,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:OrganizacionDeEventos.EvOrgDataSet7TableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:OrganizacionDeEventos.EvOrgDataSet7TableAdapters.TableAdapterManager.UpdateAll(OrganizacionDeEventos.EvOrgDataSet7)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:OrganizacionDeEventos.EvOrgDataSet7TableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:OrganizacionDeEventos.EvOrgDataSet7TableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+<member name="T:OrganizacionDeEventos.EvOrgDataSet8">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:OrganizacionDeEventos.EvOrgDataSet8.PasoDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:OrganizacionDeEventos.EvOrgDataSet8.PasoRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:OrganizacionDeEventos.EvOrgDataSet8.PasoRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:OrganizacionDeEventos.EvOrgDataSet8TableAdapters.PasoTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:OrganizacionDeEventos.EvOrgDataSet8TableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:OrganizacionDeEventos.EvOrgDataSet8TableAdapters.TableAdapterManager.UpdateUpdatedRows(OrganizacionDeEventos.EvOrgDataSet8,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:OrganizacionDeEventos.EvOrgDataSet8TableAdapters.TableAdapterManager.UpdateInsertedRows(OrganizacionDeEventos.EvOrgDataSet8,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:OrganizacionDeEventos.EvOrgDataSet8TableAdapters.TableAdapterManager.UpdateDeletedRows(OrganizacionDeEventos.EvOrgDataSet8,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:OrganizacionDeEventos.EvOrgDataSet8TableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:OrganizacionDeEventos.EvOrgDataSet8TableAdapters.TableAdapterManager.UpdateAll(OrganizacionDeEventos.EvOrgDataSet8)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:OrganizacionDeEventos.EvOrgDataSet8TableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:OrganizacionDeEventos.EvOrgDataSet8TableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+<member name="T:OrganizacionDeEventos.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:OrganizacionDeEventos.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:OrganizacionDeEventos.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+</members>
+</doc>

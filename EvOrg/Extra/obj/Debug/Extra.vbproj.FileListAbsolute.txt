@@ -1,0 +1,9 @@
+C:\Users\Facu\Desktop\Campo 2017\OrganizacionDeEventos\Extra\bin\Debug\Extra.dll
+C:\Users\Facu\Desktop\Campo 2017\OrganizacionDeEventos\Extra\bin\Debug\Extra.pdb
+C:\Users\Facu\Desktop\Campo 2017\OrganizacionDeEventos\Extra\bin\Debug\Extra.xml
+C:\Users\Facu\Desktop\Campo 2017\OrganizacionDeEventos\Extra\obj\Debug\Extra.Resources.resources
+C:\Users\Facu\Desktop\Campo 2017\OrganizacionDeEventos\Extra\obj\Debug\Extra.vbproj.GenerateResource.Cache
+C:\Users\Facu\Desktop\Campo 2017\OrganizacionDeEventos\Extra\obj\Debug\Extra.dll
+C:\Users\Facu\Desktop\Campo 2017\OrganizacionDeEventos\Extra\obj\Debug\Extra.xml
+C:\Users\Facu\Desktop\Campo 2017\OrganizacionDeEventos\Extra\obj\Debug\Extra.pdb
+C:\Users\Facu\Desktop\Campo 2017\OrganizacionDeEventos\Extra\obj\Debug\Extra.vbprojResolveAssemblyReference.cache

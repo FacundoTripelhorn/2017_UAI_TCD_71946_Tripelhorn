@@ -1,0 +1,12 @@
+C:\Users\Facu\Desktop\Campo 2017\OrganizacionDeEventos\DAL\bin\Debug\DAL.dll
+C:\Users\Facu\Desktop\Campo 2017\OrganizacionDeEventos\DAL\bin\Debug\DAL.pdb
+C:\Users\Facu\Desktop\Campo 2017\OrganizacionDeEventos\DAL\bin\Debug\DAL.xml
+C:\Users\Facu\Desktop\Campo 2017\OrganizacionDeEventos\DAL\bin\Debug\BLL_Estatica.dll
+C:\Users\Facu\Desktop\Campo 2017\OrganizacionDeEventos\DAL\bin\Debug\BLL_Estatica.pdb
+C:\Users\Facu\Desktop\Campo 2017\OrganizacionDeEventos\DAL\bin\Debug\BLL_Estatica.xml
+C:\Users\Facu\Desktop\Campo 2017\OrganizacionDeEventos\DAL\obj\Debug\DAL.vbprojResolveAssemblyReference.cache
+C:\Users\Facu\Desktop\Campo 2017\OrganizacionDeEventos\DAL\obj\Debug\DAL.Resources.resources
+C:\Users\Facu\Desktop\Campo 2017\OrganizacionDeEventos\DAL\obj\Debug\DAL.vbproj.GenerateResource.Cache
+C:\Users\Facu\Desktop\Campo 2017\OrganizacionDeEventos\DAL\obj\Debug\DAL.dll
+C:\Users\Facu\Desktop\Campo 2017\OrganizacionDeEventos\DAL\obj\Debug\DAL.xml
+C:\Users\Facu\Desktop\Campo 2017\OrganizacionDeEventos\DAL\obj\Debug\DAL.pdb

@@ -1,0 +1,9 @@
+C:\Users\Facu\Desktop\Campo 2017\OrganizacionDeEventos\BLL_Estatica\bin\Debug\BLL_Estatica.dll
+C:\Users\Facu\Desktop\Campo 2017\OrganizacionDeEventos\BLL_Estatica\bin\Debug\BLL_Estatica.pdb
+C:\Users\Facu\Desktop\Campo 2017\OrganizacionDeEventos\BLL_Estatica\bin\Debug\BLL_Estatica.xml
+C:\Users\Facu\Desktop\Campo 2017\OrganizacionDeEventos\BLL_Estatica\obj\Debug\BLL_Estatica.vbprojResolveAssemblyReference.cache
+C:\Users\Facu\Desktop\Campo 2017\OrganizacionDeEventos\BLL_Estatica\obj\Debug\BLL_Estatica.Resources.resources
+C:\Users\Facu\Desktop\Campo 2017\OrganizacionDeEventos\BLL_Estatica\obj\Debug\BLL_Estatica.vbproj.GenerateResource.Cache
+C:\Users\Facu\Desktop\Campo 2017\OrganizacionDeEventos\BLL_Estatica\obj\Debug\BLL_Estatica.dll
+C:\Users\Facu\Desktop\Campo 2017\OrganizacionDeEventos\BLL_Estatica\obj\Debug\BLL_Estatica.xml
+C:\Users\Facu\Desktop\Campo 2017\OrganizacionDeEventos\BLL_Estatica\obj\Debug\BLL_Estatica.pdb
