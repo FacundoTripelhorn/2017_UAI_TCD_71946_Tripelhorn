@@ -32,7 +32,7 @@ Namespace My
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Sub OnCreateMainForm()
-            Me.MainForm = Global.OrganizacionDeEventos.ABMTipoEvento
+            Me.MainForm = Global.OrganizacionDeEventos.CrearBDForm
         End Sub
     End Class
 End Namespace

@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class o
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
+Partial Class ABMServicio
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,9 +20,8 @@ Partial Class o
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.ListaServiciosLbl = New System.Windows.Forms.Label()
         Me.GrillaServicios = New System.Windows.Forms.DataGridView()
@@ -46,25 +45,11 @@ Partial Class o
         Me.CalleTxt = New System.Windows.Forms.TextBox()
         Me.NumeroTxt = New System.Windows.Forms.TextBox()
         Me.CPTxt = New System.Windows.Forms.TextBox()
-        Me.EvOrgDataSet5 = New OrganizacionDeEventos.EvOrgDataSet5()
-        Me.ServicioBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.ServicioTableAdapter = New OrganizacionDeEventos.EvOrgDataSet5TableAdapters.ServicioTableAdapter()
-        Me.IdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NombreDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TelefonoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.EmailDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.EvOrgDataSet6 = New OrganizacionDeEventos.EvOrgDataSet6()
-        Me.ServicioBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.ServicioTableAdapter1 = New OrganizacionDeEventos.EvOrgDataSet6TableAdapters.ServicioTableAdapter()
         Me.TableLayoutPanel1.SuspendLayout()
         CType(Me.GrillaServicios, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TableLayoutPanel2.SuspendLayout()
         Me.DireccionGrp.SuspendLayout()
         Me.TableLayoutPanel3.SuspendLayout()
-        CType(Me.EvOrgDataSet5, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ServicioBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.EvOrgDataSet6, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ServicioBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TableLayoutPanel1
@@ -118,11 +103,8 @@ Partial Class o
         '
         Me.GrillaServicios.AllowUserToAddRows = False
         Me.GrillaServicios.AllowUserToDeleteRows = False
-        Me.GrillaServicios.AutoGenerateColumns = False
         Me.GrillaServicios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.GrillaServicios.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdDataGridViewTextBoxColumn, Me.NombreDataGridViewTextBoxColumn, Me.TelefonoDataGridViewTextBoxColumn, Me.EmailDataGridViewTextBoxColumn})
         Me.TableLayoutPanel1.SetColumnSpan(Me.GrillaServicios, 4)
-        Me.GrillaServicios.DataSource = Me.ServicioBindingSource1
         Me.GrillaServicios.Dock = System.Windows.Forms.DockStyle.Fill
         Me.GrillaServicios.Location = New System.Drawing.Point(3, 35)
         Me.GrillaServicios.Name = "GrillaServicios"
@@ -366,70 +348,14 @@ Partial Class o
         Me.CPTxt.Size = New System.Drawing.Size(148, 23)
         Me.CPTxt.TabIndex = 5
         '
-        'EvOrgDataSet5
-        '
-        Me.EvOrgDataSet5.DataSetName = "EvOrgDataSet5"
-        Me.EvOrgDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'ServicioBindingSource
-        '
-        Me.ServicioBindingSource.DataMember = "Servicio"
-        Me.ServicioBindingSource.DataSource = Me.EvOrgDataSet5
-        '
-        'ServicioTableAdapter
-        '
-        Me.ServicioTableAdapter.ClearBeforeFill = True
-        '
-        'IdDataGridViewTextBoxColumn
-        '
-        Me.IdDataGridViewTextBoxColumn.DataPropertyName = "Id"
-        Me.IdDataGridViewTextBoxColumn.HeaderText = "Id"
-        Me.IdDataGridViewTextBoxColumn.Name = "IdDataGridViewTextBoxColumn"
-        Me.IdDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'NombreDataGridViewTextBoxColumn
-        '
-        Me.NombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre"
-        Me.NombreDataGridViewTextBoxColumn.HeaderText = "Nombre"
-        Me.NombreDataGridViewTextBoxColumn.Name = "NombreDataGridViewTextBoxColumn"
-        Me.NombreDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'TelefonoDataGridViewTextBoxColumn
-        '
-        Me.TelefonoDataGridViewTextBoxColumn.DataPropertyName = "Telefono"
-        Me.TelefonoDataGridViewTextBoxColumn.HeaderText = "Telefono"
-        Me.TelefonoDataGridViewTextBoxColumn.Name = "TelefonoDataGridViewTextBoxColumn"
-        Me.TelefonoDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'EmailDataGridViewTextBoxColumn
-        '
-        Me.EmailDataGridViewTextBoxColumn.DataPropertyName = "Email"
-        Me.EmailDataGridViewTextBoxColumn.HeaderText = "Email"
-        Me.EmailDataGridViewTextBoxColumn.Name = "EmailDataGridViewTextBoxColumn"
-        Me.EmailDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'EvOrgDataSet6
-        '
-        Me.EvOrgDataSet6.DataSetName = "EvOrgDataSet6"
-        Me.EvOrgDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'ServicioBindingSource1
-        '
-        Me.ServicioBindingSource1.DataMember = "Servicio"
-        Me.ServicioBindingSource1.DataSource = Me.EvOrgDataSet6
-        '
-        'ServicioTableAdapter1
-        '
-        Me.ServicioTableAdapter1.ClearBeforeFill = True
-        '
-        'o
+        'ABMServicio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(770, 395)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.MinimumSize = New System.Drawing.Size(786, 434)
-        Me.Name = "o"
+        Me.Name = "ABMServicio"
         Me.Text = "ABMServicio"
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.TableLayoutPanel1.PerformLayout()
@@ -438,10 +364,6 @@ Partial Class o
         Me.DireccionGrp.ResumeLayout(False)
         Me.TableLayoutPanel3.ResumeLayout(False)
         Me.TableLayoutPanel3.PerformLayout()
-        CType(Me.EvOrgDataSet5, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ServicioBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.EvOrgDataSet6, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ServicioBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -469,14 +391,4 @@ Partial Class o
     Friend WithEvents CalleTxt As TextBox
     Friend WithEvents NumeroTxt As TextBox
     Friend WithEvents CPTxt As TextBox
-    Friend WithEvents EvOrgDataSet5 As EvOrgDataSet5
-    Friend WithEvents ServicioBindingSource As BindingSource
-    Friend WithEvents ServicioTableAdapter As EvOrgDataSet5TableAdapters.ServicioTableAdapter
-    Friend WithEvents IdDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents NombreDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents TelefonoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents EmailDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents EvOrgDataSet6 As EvOrgDataSet6
-    Friend WithEvents ServicioBindingSource1 As BindingSource
-    Friend WithEvents ServicioTableAdapter1 As EvOrgDataSet6TableAdapters.ServicioTableAdapter
 End Class

@@ -22,7 +22,6 @@ Partial Class ABMSalon
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container()
         Me.GrillaSalones = New System.Windows.Forms.DataGridView()
         Me.ListaSalonesLbl = New System.Windows.Forms.Label()
         Me.NombreLbl = New System.Windows.Forms.Label()
@@ -48,32 +47,19 @@ Partial Class ABMSalon
         Me.CalleTxt = New System.Windows.Forms.TextBox()
         Me.NumeroTxt = New System.Windows.Forms.TextBox()
         Me.CPTxt = New System.Windows.Forms.TextBox()
-        Me.EvOrgDataSet4 = New OrganizacionDeEventos.EvOrgDataSet4()
-        Me.SalonBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.SalonTableAdapter = New OrganizacionDeEventos.EvOrgDataSet4TableAdapters.SalonTableAdapter()
-        Me.IdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NombreDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CapacidadDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.EmailDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TelefonoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.GrillaSalones, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
         Me.DireccionGrp.SuspendLayout()
         Me.TableLayoutPanel3.SuspendLayout()
-        CType(Me.EvOrgDataSet4, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.SalonBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GrillaSalones
         '
         Me.GrillaSalones.AllowUserToAddRows = False
         Me.GrillaSalones.AllowUserToDeleteRows = False
-        Me.GrillaSalones.AutoGenerateColumns = False
         Me.GrillaSalones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.GrillaSalones.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdDataGridViewTextBoxColumn, Me.NombreDataGridViewTextBoxColumn, Me.CapacidadDataGridViewTextBoxColumn, Me.EmailDataGridViewTextBoxColumn, Me.TelefonoDataGridViewTextBoxColumn})
         Me.TableLayoutPanel1.SetColumnSpan(Me.GrillaSalones, 4)
-        Me.GrillaSalones.DataSource = Me.SalonBindingSource
         Me.GrillaSalones.Dock = System.Windows.Forms.DockStyle.Fill
         Me.GrillaSalones.Location = New System.Drawing.Point(3, 35)
         Me.GrillaSalones.Name = "GrillaSalones"
@@ -385,56 +371,7 @@ Partial Class ABMSalon
         Me.CPTxt.Size = New System.Drawing.Size(141, 23)
         Me.CPTxt.TabIndex = 5
         '
-        'EvOrgDataSet4
-        '
-        Me.EvOrgDataSet4.DataSetName = "EvOrgDataSet4"
-        Me.EvOrgDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'SalonBindingSource
-        '
-        Me.SalonBindingSource.DataMember = "Salon"
-        Me.SalonBindingSource.DataSource = Me.EvOrgDataSet4
-        '
-        'SalonTableAdapter
-        '
-        Me.SalonTableAdapter.ClearBeforeFill = True
-        '
-        'IdDataGridViewTextBoxColumn
-        '
-        Me.IdDataGridViewTextBoxColumn.DataPropertyName = "Id"
-        Me.IdDataGridViewTextBoxColumn.HeaderText = "Id"
-        Me.IdDataGridViewTextBoxColumn.Name = "IdDataGridViewTextBoxColumn"
-        Me.IdDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'NombreDataGridViewTextBoxColumn
-        '
-        Me.NombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre"
-        Me.NombreDataGridViewTextBoxColumn.HeaderText = "Nombre"
-        Me.NombreDataGridViewTextBoxColumn.Name = "NombreDataGridViewTextBoxColumn"
-        Me.NombreDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'CapacidadDataGridViewTextBoxColumn
-        '
-        Me.CapacidadDataGridViewTextBoxColumn.DataPropertyName = "Capacidad"
-        Me.CapacidadDataGridViewTextBoxColumn.HeaderText = "Capacidad"
-        Me.CapacidadDataGridViewTextBoxColumn.Name = "CapacidadDataGridViewTextBoxColumn"
-        Me.CapacidadDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'EmailDataGridViewTextBoxColumn
-        '
-        Me.EmailDataGridViewTextBoxColumn.DataPropertyName = "Email"
-        Me.EmailDataGridViewTextBoxColumn.HeaderText = "Email"
-        Me.EmailDataGridViewTextBoxColumn.Name = "EmailDataGridViewTextBoxColumn"
-        Me.EmailDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'TelefonoDataGridViewTextBoxColumn
-        '
-        Me.TelefonoDataGridViewTextBoxColumn.DataPropertyName = "Telefono"
-        Me.TelefonoDataGridViewTextBoxColumn.HeaderText = "Telefono"
-        Me.TelefonoDataGridViewTextBoxColumn.Name = "TelefonoDataGridViewTextBoxColumn"
-        Me.TelefonoDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'ABMSalón
+        'ABMSalon
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -442,7 +379,7 @@ Partial Class ABMSalon
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.MaximumSize = New System.Drawing.Size(779, 435)
         Me.MinimumSize = New System.Drawing.Size(779, 435)
-        Me.Name = "ABMSalón"
+        Me.Name = "ABMSalon"
         Me.Text = "ABMSalón"
         CType(Me.GrillaSalones, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TableLayoutPanel1.ResumeLayout(False)
@@ -451,8 +388,6 @@ Partial Class ABMSalon
         Me.DireccionGrp.ResumeLayout(False)
         Me.TableLayoutPanel3.ResumeLayout(False)
         Me.TableLayoutPanel3.PerformLayout()
-        CType(Me.EvOrgDataSet4, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.SalonBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -482,12 +417,4 @@ Partial Class ABMSalon
     Friend WithEvents CalleTxt As TextBox
     Friend WithEvents NumeroTxt As TextBox
     Friend WithEvents CPTxt As TextBox
-    Friend WithEvents EvOrgDataSet4 As EvOrgDataSet4
-    Friend WithEvents SalonBindingSource As BindingSource
-    Friend WithEvents SalonTableAdapter As EvOrgDataSet4TableAdapters.SalonTableAdapter
-    Friend WithEvents IdDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents NombreDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents CapacidadDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents EmailDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents TelefonoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
 End Class

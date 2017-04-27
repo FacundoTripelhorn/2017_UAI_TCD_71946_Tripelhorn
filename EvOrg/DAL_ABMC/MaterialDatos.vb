@@ -6,10 +6,10 @@ Public Class MaterialDatos
     Implements IABMC
 
     Dim vMaterial As Material
-    Public Sub Alta(Optional Objeto As Object = Nothing) Implements IABMC.Alta
+    Public Sub Alta(Optional pObjeto As Object = Nothing) Implements IABMC.Alta
         Try
-            If TypeOf Objeto Is Material Then
-                vMaterial = Objeto
+            If TypeOf pObjeto Is Material Then
+                vMaterial = pObjeto
                 Dim DTable As DataTable = Comando.GetDataTable("Material")
                 Dim DRow As DataRow = DTable.NewRow
 
@@ -22,16 +22,12 @@ Public Class MaterialDatos
         End Try
     End Sub
 
-    Public Sub Baja(Optional Objeto As Object = Nothing) Implements IABMC.Baja
+    Public Sub Baja(Optional pObjeto As Object = Nothing) Implements IABMC.Baja
         Try
-            If TypeOf Objeto Is Material Then
-                vMaterial = DirectCast(Objeto, Material)
-                Dim DTable As DataTable = Comando.GetDataTable("Material")
-                For i = 0 To DTable.Rows.Count - 1
-                    If DTable.Rows(i).Item(0) = vMaterial.Id Then
-                        DTable.Rows(i).Delete()
-                    End If
-                Next
+            If TypeOf pObjeto Is Material Then
+                vMaterial = DirectCast(pObjeto, Material)
+                Dim DTable As DataTable = Comando.GetData("SELECT * FROM Material WHERE Id = '" & vMaterial.Id & "'")
+                If DTable.Rows.Count > 0 Then DTable.Rows(0).Delete()
                 Comando.ActualizarBD("Material", DTable)
             End If
         Catch ex As Exception
@@ -39,18 +35,14 @@ Public Class MaterialDatos
         End Try
     End Sub
 
-    Public Sub Modificacion(Optional Objeto As Object = Nothing) Implements IABMC.Modificacion
+    Public Sub Modificacion(Optional pObjeto As Object = Nothing) Implements IABMC.Modificacion
         Try
-            If TypeOf Objeto Is Material Then
-                vMaterial = DirectCast(Objeto, Material)
-                Dim DTable As DataTable = Comando.GetDataTable("Material")
+            If TypeOf pObjeto Is Material Then
+                vMaterial = DirectCast(pObjeto, Material)
+                Dim DTable As DataTable = Comando.GetData("SELECT * FROM Material WHERE Id = '" & vMaterial.Id & "'")
                 Dim DRow As DataRow = DTable.NewRow
                 DRow.ItemArray = {vMaterial.Id, vMaterial.Nombre, vMaterial.Cantidad}
-                For i = 0 To DTable.Rows.Count - 1
-                    If DTable.Rows(i).Item(0) = DRow.Item(0) Then
-                        DTable.Rows(i).ItemArray = DRow.ItemArray
-                    End If
-                Next
+                If DTable.Rows.Count > 0 Then DTable.Rows(0).ItemArray = DRow.ItemArray
                 Comando.ActualizarBD("Material", DTable)
                 ConsultaTodo()
             End If

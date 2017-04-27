@@ -22,7 +22,6 @@ Partial Class ABMTipoEvento
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -33,51 +32,32 @@ Partial Class ABMTipoEvento
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.PasoGPB = New System.Windows.Forms.GroupBox()
         Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
-        Me.Label6 = New System.Windows.Forms.Label()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.Label7 = New System.Windows.Forms.Label()
+        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.Label5 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Button5 = New System.Windows.Forms.Button()
-        Me.EvOrgDataSet7 = New OrganizacionDeEventos.EvOrgDataSet7()
-        Me.TipoEventoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.TipoEventoTableAdapter = New OrganizacionDeEventos.EvOrgDataSet7TableAdapters.TipoEventoTableAdapter()
-        Me.IdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NombreDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.EvOrgDataSet8 = New OrganizacionDeEventos.EvOrgDataSet8()
-        Me.PasoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.PasoTableAdapter = New OrganizacionDeEventos.EvOrgDataSet8TableAdapters.PasoTableAdapter()
-        Me.IdDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DescripcionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.FechaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PrioridadDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PasoGPB.SuspendLayout()
         Me.TableLayoutPanel3.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
-        CType(Me.EvOrgDataSet7, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TipoEventoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.EvOrgDataSet8, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PasoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'DataGridView1
         '
         Me.DataGridView1.AllowUserToAddRows = False
         Me.DataGridView1.AllowUserToDeleteRows = False
-        Me.DataGridView1.AutoGenerateColumns = False
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdDataGridViewTextBoxColumn, Me.NombreDataGridViewTextBoxColumn})
-        Me.DataGridView1.DataSource = Me.TipoEventoBindingSource
         Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DataGridView1.Location = New System.Drawing.Point(3, 26)
         Me.DataGridView1.Name = "DataGridView1"
@@ -134,10 +114,7 @@ Partial Class ABMTipoEvento
         '
         Me.DataGridView2.AllowUserToAddRows = False
         Me.DataGridView2.AllowUserToDeleteRows = False
-        Me.DataGridView2.AutoGenerateColumns = False
         Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdDataGridViewTextBoxColumn1, Me.DescripcionDataGridViewTextBoxColumn, Me.FechaDataGridViewTextBoxColumn, Me.PrioridadDataGridViewTextBoxColumn})
-        Me.DataGridView2.DataSource = Me.PasoBindingSource
         Me.DataGridView2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DataGridView2.Location = New System.Drawing.Point(424, 26)
         Me.DataGridView2.Name = "DataGridView2"
@@ -182,7 +159,7 @@ Partial Class ABMTipoEvento
         Me.TableLayoutPanel3.ColumnCount = 3
         Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 101.0!))
         Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 187.0!))
-        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 136.0!))
+        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 149.0!))
         Me.TableLayoutPanel3.Controls.Add(Me.ComboBox1, 1, 3)
         Me.TableLayoutPanel3.Controls.Add(Me.Button2, 2, 2)
         Me.TableLayoutPanel3.Controls.Add(Me.Label7, 0, 3)
@@ -202,6 +179,15 @@ Partial Class ABMTipoEvento
         Me.TableLayoutPanel3.Size = New System.Drawing.Size(437, 83)
         Me.TableLayoutPanel3.TabIndex = 8
         '
+        'ComboBox1
+        '
+        Me.ComboBox1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(104, 56)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(181, 24)
+        Me.ComboBox1.TabIndex = 5
+        '
         'Button2
         '
         Me.Button2.Dock = System.Windows.Forms.DockStyle.Fill
@@ -213,6 +199,35 @@ Partial Class ABMTipoEvento
         Me.Button2.TabIndex = 7
         Me.Button2.Text = "Borrar Paso"
         Me.Button2.UseVisualStyleBackColor = True
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Label7.Location = New System.Drawing.Point(3, 53)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(95, 30)
+        Me.Label7.TabIndex = 3
+        Me.Label7.Text = "Prioridad"
+        '
+        'DateTimePicker1
+        '
+        Me.DateTimePicker1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.DateTimePicker1.Location = New System.Drawing.Point(104, 30)
+        Me.DateTimePicker1.Name = "DateTimePicker1"
+        Me.TableLayoutPanel3.SetRowSpan(Me.DateTimePicker1, 2)
+        Me.DateTimePicker1.Size = New System.Drawing.Size(181, 23)
+        Me.DateTimePicker1.TabIndex = 4
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Label5.Location = New System.Drawing.Point(3, 0)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(95, 27)
+        Me.Label5.TabIndex = 0
+        Me.Label5.Text = "Descripción"
         '
         'Button1
         '
@@ -226,15 +241,6 @@ Partial Class ABMTipoEvento
         Me.Button1.Text = "Agregar Paso"
         Me.Button1.UseVisualStyleBackColor = True
         '
-        'DateTimePicker1
-        '
-        Me.DateTimePicker1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.DateTimePicker1.Location = New System.Drawing.Point(104, 30)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.TableLayoutPanel3.SetRowSpan(Me.DateTimePicker1, 2)
-        Me.DateTimePicker1.Size = New System.Drawing.Size(181, 23)
-        Me.DateTimePicker1.TabIndex = 4
-        '
         'Label6
         '
         Me.Label6.AutoSize = True
@@ -245,35 +251,6 @@ Partial Class ABMTipoEvento
         Me.Label6.Size = New System.Drawing.Size(95, 26)
         Me.Label6.TabIndex = 2
         Me.Label6.Text = "Fecha"
-        '
-        'ComboBox1
-        '
-        Me.ComboBox1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(104, 56)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(181, 24)
-        Me.ComboBox1.TabIndex = 5
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label7.Location = New System.Drawing.Point(3, 53)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(95, 30)
-        Me.Label7.TabIndex = 3
-        Me.Label7.Text = "Prioridad"
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label5.Location = New System.Drawing.Point(3, 0)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(95, 27)
-        Me.Label5.TabIndex = 0
-        Me.Label5.Text = "Descripción"
         '
         'TextBox3
         '
@@ -372,76 +349,6 @@ Partial Class ABMTipoEvento
         Me.Button5.Text = "Modificar"
         Me.Button5.UseVisualStyleBackColor = True
         '
-        'EvOrgDataSet7
-        '
-        Me.EvOrgDataSet7.DataSetName = "EvOrgDataSet7"
-        Me.EvOrgDataSet7.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'TipoEventoBindingSource
-        '
-        Me.TipoEventoBindingSource.DataMember = "TipoEvento"
-        Me.TipoEventoBindingSource.DataSource = Me.EvOrgDataSet7
-        '
-        'TipoEventoTableAdapter
-        '
-        Me.TipoEventoTableAdapter.ClearBeforeFill = True
-        '
-        'IdDataGridViewTextBoxColumn
-        '
-        Me.IdDataGridViewTextBoxColumn.DataPropertyName = "Id"
-        Me.IdDataGridViewTextBoxColumn.HeaderText = "Id"
-        Me.IdDataGridViewTextBoxColumn.Name = "IdDataGridViewTextBoxColumn"
-        Me.IdDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'NombreDataGridViewTextBoxColumn
-        '
-        Me.NombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre"
-        Me.NombreDataGridViewTextBoxColumn.HeaderText = "Nombre"
-        Me.NombreDataGridViewTextBoxColumn.Name = "NombreDataGridViewTextBoxColumn"
-        Me.NombreDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'EvOrgDataSet8
-        '
-        Me.EvOrgDataSet8.DataSetName = "EvOrgDataSet8"
-        Me.EvOrgDataSet8.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'PasoBindingSource
-        '
-        Me.PasoBindingSource.DataMember = "Paso"
-        Me.PasoBindingSource.DataSource = Me.EvOrgDataSet8
-        '
-        'PasoTableAdapter
-        '
-        Me.PasoTableAdapter.ClearBeforeFill = True
-        '
-        'IdDataGridViewTextBoxColumn1
-        '
-        Me.IdDataGridViewTextBoxColumn1.DataPropertyName = "Id"
-        Me.IdDataGridViewTextBoxColumn1.HeaderText = "Id"
-        Me.IdDataGridViewTextBoxColumn1.Name = "IdDataGridViewTextBoxColumn1"
-        Me.IdDataGridViewTextBoxColumn1.ReadOnly = True
-        '
-        'DescripcionDataGridViewTextBoxColumn
-        '
-        Me.DescripcionDataGridViewTextBoxColumn.DataPropertyName = "Descripcion"
-        Me.DescripcionDataGridViewTextBoxColumn.HeaderText = "Descripcion"
-        Me.DescripcionDataGridViewTextBoxColumn.Name = "DescripcionDataGridViewTextBoxColumn"
-        Me.DescripcionDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'FechaDataGridViewTextBoxColumn
-        '
-        Me.FechaDataGridViewTextBoxColumn.DataPropertyName = "Fecha"
-        Me.FechaDataGridViewTextBoxColumn.HeaderText = "Fecha"
-        Me.FechaDataGridViewTextBoxColumn.Name = "FechaDataGridViewTextBoxColumn"
-        Me.FechaDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'PrioridadDataGridViewTextBoxColumn
-        '
-        Me.PrioridadDataGridViewTextBoxColumn.DataPropertyName = "Prioridad"
-        Me.PrioridadDataGridViewTextBoxColumn.HeaderText = "Prioridad"
-        Me.PrioridadDataGridViewTextBoxColumn.Name = "PrioridadDataGridViewTextBoxColumn"
-        Me.PrioridadDataGridViewTextBoxColumn.ReadOnly = True
-        '
         'ABMTipoEvento
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -458,10 +365,6 @@ Partial Class ABMTipoEvento
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.TableLayoutPanel1.PerformLayout()
         Me.TableLayoutPanel2.ResumeLayout(False)
-        CType(Me.EvOrgDataSet7, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TipoEventoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.EvOrgDataSet8, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PasoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -489,16 +392,4 @@ Partial Class ABMTipoEvento
     Friend WithEvents Button3 As Button
     Friend WithEvents TableLayoutPanel2 As TableLayoutPanel
     Friend WithEvents TableLayoutPanel3 As TableLayoutPanel
-    Friend WithEvents EvOrgDataSet7 As EvOrgDataSet7
-    Friend WithEvents TipoEventoBindingSource As BindingSource
-    Friend WithEvents TipoEventoTableAdapter As EvOrgDataSet7TableAdapters.TipoEventoTableAdapter
-    Friend WithEvents IdDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents NombreDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents EvOrgDataSet8 As EvOrgDataSet8
-    Friend WithEvents PasoBindingSource As BindingSource
-    Friend WithEvents PasoTableAdapter As EvOrgDataSet8TableAdapters.PasoTableAdapter
-    Friend WithEvents IdDataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
-    Friend WithEvents DescripcionDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents FechaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents PrioridadDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
 End Class

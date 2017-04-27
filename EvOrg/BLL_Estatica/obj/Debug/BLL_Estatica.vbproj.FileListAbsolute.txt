@@ -7,3 +7,39 @@ C:\Users\Facu\Desktop\Campo 2017\OrganizacionDeEventos\BLL_Estatica\obj\Debug\BL
 C:\Users\Facu\Desktop\Campo 2017\OrganizacionDeEventos\BLL_Estatica\obj\Debug\BLL_Estatica.dll
 C:\Users\Facu\Desktop\Campo 2017\OrganizacionDeEventos\BLL_Estatica\obj\Debug\BLL_Estatica.xml
 C:\Users\Facu\Desktop\Campo 2017\OrganizacionDeEventos\BLL_Estatica\obj\Debug\BLL_Estatica.pdb
+F:\Trabajo de Campo I\EvOrg\BLL_Estatica\bin\Debug\BLL_Estatica.dll
+F:\Trabajo de Campo I\EvOrg\BLL_Estatica\bin\Debug\BLL_Estatica.pdb
+F:\Trabajo de Campo I\EvOrg\BLL_Estatica\bin\Debug\BLL_Estatica.xml
+F:\Trabajo de Campo I\EvOrg\BLL_Estatica\obj\Debug\BLL_Estatica.vbprojResolveAssemblyReference.cache
+F:\Trabajo de Campo I\EvOrg\BLL_Estatica\obj\Debug\BLL_Estatica.Resources.resources
+F:\Trabajo de Campo I\EvOrg\BLL_Estatica\obj\Debug\BLL_Estatica.vbproj.GenerateResource.Cache
+F:\Trabajo de Campo I\EvOrg\BLL_Estatica\obj\Debug\BLL_Estatica.dll
+F:\Trabajo de Campo I\EvOrg\BLL_Estatica\obj\Debug\BLL_Estatica.xml
+F:\Trabajo de Campo I\EvOrg\BLL_Estatica\obj\Debug\BLL_Estatica.pdb
+C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\BLL_Estatica\bin\Debug\BLL_Estatica.dll
+C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\BLL_Estatica\bin\Debug\BLL_Estatica.pdb
+C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\BLL_Estatica\bin\Debug\BLL_Estatica.xml
+C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\BLL_Estatica\obj\Debug\BLL_Estatica.vbprojResolveAssemblyReference.cache
+C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\BLL_Estatica\obj\Debug\BLL_Estatica.Resources.resources
+C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\BLL_Estatica\obj\Debug\BLL_Estatica.vbproj.GenerateResource.Cache
+C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\BLL_Estatica\obj\Debug\BLL_Estatica.dll
+C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\BLL_Estatica\obj\Debug\BLL_Estatica.xml
+C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\BLL_Estatica\obj\Debug\BLL_Estatica.pdb
+F:\Trabajo de Campo I\24_04\EvOrg\BLL_Estatica\bin\Debug\BLL_Estatica.dll
+F:\Trabajo de Campo I\24_04\EvOrg\BLL_Estatica\bin\Debug\BLL_Estatica.pdb
+F:\Trabajo de Campo I\24_04\EvOrg\BLL_Estatica\bin\Debug\BLL_Estatica.xml
+F:\Trabajo de Campo I\24_04\EvOrg\BLL_Estatica\obj\Debug\BLL_Estatica.vbprojResolveAssemblyReference.cache
+F:\Trabajo de Campo I\24_04\EvOrg\BLL_Estatica\obj\Debug\BLL_Estatica.Resources.resources
+F:\Trabajo de Campo I\24_04\EvOrg\BLL_Estatica\obj\Debug\BLL_Estatica.vbproj.GenerateResource.Cache
+F:\Trabajo de Campo I\24_04\EvOrg\BLL_Estatica\obj\Debug\BLL_Estatica.dll
+F:\Trabajo de Campo I\24_04\EvOrg\BLL_Estatica\obj\Debug\BLL_Estatica.xml
+F:\Trabajo de Campo I\24_04\EvOrg\BLL_Estatica\obj\Debug\BLL_Estatica.pdb
+D:\Trabajo de Campo I\24_04\EvOrg\BLL_Estatica\bin\Debug\BLL_Estatica.dll
+D:\Trabajo de Campo I\24_04\EvOrg\BLL_Estatica\bin\Debug\BLL_Estatica.pdb
+D:\Trabajo de Campo I\24_04\EvOrg\BLL_Estatica\bin\Debug\BLL_Estatica.xml
+D:\Trabajo de Campo I\24_04\EvOrg\BLL_Estatica\obj\Debug\BLL_Estatica.vbprojResolveAssemblyReference.cache
+D:\Trabajo de Campo I\24_04\EvOrg\BLL_Estatica\obj\Debug\BLL_Estatica.Resources.resources
+D:\Trabajo de Campo I\24_04\EvOrg\BLL_Estatica\obj\Debug\BLL_Estatica.vbproj.GenerateResource.Cache
+D:\Trabajo de Campo I\24_04\EvOrg\BLL_Estatica\obj\Debug\BLL_Estatica.dll
+D:\Trabajo de Campo I\24_04\EvOrg\BLL_Estatica\obj\Debug\BLL_Estatica.xml
+D:\Trabajo de Campo I\24_04\EvOrg\BLL_Estatica\obj\Debug\BLL_Estatica.pdb

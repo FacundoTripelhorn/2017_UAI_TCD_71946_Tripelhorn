@@ -7,3 +7,39 @@ C:\Users\Facu\Desktop\Campo 2017\OrganizacionDeEventos\Extra\obj\Debug\Extra.dll
 C:\Users\Facu\Desktop\Campo 2017\OrganizacionDeEventos\Extra\obj\Debug\Extra.xml
 C:\Users\Facu\Desktop\Campo 2017\OrganizacionDeEventos\Extra\obj\Debug\Extra.pdb
 C:\Users\Facu\Desktop\Campo 2017\OrganizacionDeEventos\Extra\obj\Debug\Extra.vbprojResolveAssemblyReference.cache
+F:\Trabajo de Campo I\EvOrg\Extra\bin\Debug\Extra.dll
+F:\Trabajo de Campo I\EvOrg\Extra\bin\Debug\Extra.pdb
+F:\Trabajo de Campo I\EvOrg\Extra\bin\Debug\Extra.xml
+F:\Trabajo de Campo I\EvOrg\Extra\obj\Debug\Extra.vbprojResolveAssemblyReference.cache
+F:\Trabajo de Campo I\EvOrg\Extra\obj\Debug\Extra.Resources.resources
+F:\Trabajo de Campo I\EvOrg\Extra\obj\Debug\Extra.vbproj.GenerateResource.Cache
+F:\Trabajo de Campo I\EvOrg\Extra\obj\Debug\Extra.dll
+F:\Trabajo de Campo I\EvOrg\Extra\obj\Debug\Extra.xml
+F:\Trabajo de Campo I\EvOrg\Extra\obj\Debug\Extra.pdb
+C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\Extra\bin\Debug\Extra.dll
+C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\Extra\bin\Debug\Extra.pdb
+C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\Extra\bin\Debug\Extra.xml
+C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\Extra\obj\Debug\Extra.vbprojResolveAssemblyReference.cache
+C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\Extra\obj\Debug\Extra.Resources.resources
+C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\Extra\obj\Debug\Extra.vbproj.GenerateResource.Cache
+C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\Extra\obj\Debug\Extra.dll
+C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\Extra\obj\Debug\Extra.xml
+C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\Extra\obj\Debug\Extra.pdb
+F:\Trabajo de Campo I\24_04\EvOrg\Extra\bin\Debug\Extra.dll
+F:\Trabajo de Campo I\24_04\EvOrg\Extra\bin\Debug\Extra.pdb
+F:\Trabajo de Campo I\24_04\EvOrg\Extra\bin\Debug\Extra.xml
+F:\Trabajo de Campo I\24_04\EvOrg\Extra\obj\Debug\Extra.vbprojResolveAssemblyReference.cache
+F:\Trabajo de Campo I\24_04\EvOrg\Extra\obj\Debug\Extra.Resources.resources
+F:\Trabajo de Campo I\24_04\EvOrg\Extra\obj\Debug\Extra.vbproj.GenerateResource.Cache
+F:\Trabajo de Campo I\24_04\EvOrg\Extra\obj\Debug\Extra.dll
+F:\Trabajo de Campo I\24_04\EvOrg\Extra\obj\Debug\Extra.xml
+F:\Trabajo de Campo I\24_04\EvOrg\Extra\obj\Debug\Extra.pdb
+D:\Trabajo de Campo I\24_04\EvOrg\Extra\bin\Debug\Extra.dll
+D:\Trabajo de Campo I\24_04\EvOrg\Extra\bin\Debug\Extra.pdb
+D:\Trabajo de Campo I\24_04\EvOrg\Extra\bin\Debug\Extra.xml
+D:\Trabajo de Campo I\24_04\EvOrg\Extra\obj\Debug\Extra.vbprojResolveAssemblyReference.cache
+D:\Trabajo de Campo I\24_04\EvOrg\Extra\obj\Debug\Extra.Resources.resources
+D:\Trabajo de Campo I\24_04\EvOrg\Extra\obj\Debug\Extra.vbproj.GenerateResource.Cache
+D:\Trabajo de Campo I\24_04\EvOrg\Extra\obj\Debug\Extra.dll
+D:\Trabajo de Campo I\24_04\EvOrg\Extra\obj\Debug\Extra.xml
+D:\Trabajo de Campo I\24_04\EvOrg\Extra\obj\Debug\Extra.pdb

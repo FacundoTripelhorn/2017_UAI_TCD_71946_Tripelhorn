@@ -30,3 +30,152 @@ C:\Users\Facu\Desktop\Campo 2017\OrganizacionDeEventos\OrganizacionDeEventos\obj
 C:\Users\Facu\Desktop\Campo 2017\OrganizacionDeEventos\OrganizacionDeEventos\obj\Debug\OrganizacionDeEventos.o.resources
 C:\Users\Facu\Desktop\Campo 2017\OrganizacionDeEventos\OrganizacionDeEventos\obj\Debug\OrganizacionDeEventos.ABMTipoEvento.resources
 C:\Users\Facu\Desktop\Campo 2017\OrganizacionDeEventos\OrganizacionDeEventos\obj\Debug\OrganizacionDeEventos.ABMSalon.resources
+F:\Trabajo de Campo I\EvOrg\OrganizacionDeEventos\bin\Debug\OrganizacionDeEventos.exe.config
+F:\Trabajo de Campo I\EvOrg\OrganizacionDeEventos\obj\Debug\OrganizacionDeEventos.exe
+F:\Trabajo de Campo I\EvOrg\OrganizacionDeEventos\obj\Debug\OrganizacionDeEventos.xml
+F:\Trabajo de Campo I\EvOrg\OrganizacionDeEventos\obj\Debug\OrganizacionDeEventos.pdb
+F:\Trabajo de Campo I\EvOrg\OrganizacionDeEventos\obj\Debug\GUI.vbprojResolveAssemblyReference.cache
+F:\Trabajo de Campo I\EvOrg\OrganizacionDeEventos\obj\Debug\OrganizacionDeEventos.ABMCliente.resources
+F:\Trabajo de Campo I\EvOrg\OrganizacionDeEventos\obj\Debug\OrganizacionDeEventos.ABMMaterial.resources
+F:\Trabajo de Campo I\EvOrg\OrganizacionDeEventos\obj\Debug\OrganizacionDeEventos.CrearBDForm.resources
+F:\Trabajo de Campo I\EvOrg\OrganizacionDeEventos\obj\Debug\OrganizacionDeEventos.ABMPaso.resources
+F:\Trabajo de Campo I\EvOrg\OrganizacionDeEventos\obj\Debug\OrganizacionDeEventos.ABMSalon.resources
+F:\Trabajo de Campo I\EvOrg\OrganizacionDeEventos\obj\Debug\OrganizacionDeEventos.ABMTipoEvento.resources
+F:\Trabajo de Campo I\EvOrg\OrganizacionDeEventos\obj\Debug\OrganizacionDeEventos.Resources.resources
+F:\Trabajo de Campo I\EvOrg\OrganizacionDeEventos\obj\Debug\GUI.vbproj.GenerateResource.Cache
+F:\Trabajo de Campo I\EvOrg\OrganizacionDeEventos\bin\Debug\OrganizacionDeEventos.exe
+F:\Trabajo de Campo I\EvOrg\OrganizacionDeEventos\bin\Debug\OrganizacionDeEventos.pdb
+F:\Trabajo de Campo I\EvOrg\OrganizacionDeEventos\bin\Debug\OrganizacionDeEventos.xml
+F:\Trabajo de Campo I\EvOrg\OrganizacionDeEventos\bin\Debug\BLL_Dinamica.dll
+F:\Trabajo de Campo I\EvOrg\OrganizacionDeEventos\bin\Debug\BLL_Estatica.dll
+F:\Trabajo de Campo I\EvOrg\OrganizacionDeEventos\bin\Debug\Extra.dll
+F:\Trabajo de Campo I\EvOrg\OrganizacionDeEventos\bin\Debug\DAL_ABMC.dll
+F:\Trabajo de Campo I\EvOrg\OrganizacionDeEventos\bin\Debug\DAL.dll
+F:\Trabajo de Campo I\EvOrg\OrganizacionDeEventos\bin\Debug\BLL_Dinamica.pdb
+F:\Trabajo de Campo I\EvOrg\OrganizacionDeEventos\bin\Debug\BLL_Dinamica.xml
+F:\Trabajo de Campo I\EvOrg\OrganizacionDeEventos\bin\Debug\BLL_Estatica.pdb
+F:\Trabajo de Campo I\EvOrg\OrganizacionDeEventos\bin\Debug\BLL_Estatica.xml
+F:\Trabajo de Campo I\EvOrg\OrganizacionDeEventos\bin\Debug\Extra.pdb
+F:\Trabajo de Campo I\EvOrg\OrganizacionDeEventos\bin\Debug\Extra.xml
+F:\Trabajo de Campo I\EvOrg\OrganizacionDeEventos\bin\Debug\DAL_ABMC.pdb
+F:\Trabajo de Campo I\EvOrg\OrganizacionDeEventos\bin\Debug\DAL_ABMC.xml
+F:\Trabajo de Campo I\EvOrg\OrganizacionDeEventos\bin\Debug\DAL.pdb
+F:\Trabajo de Campo I\EvOrg\OrganizacionDeEventos\bin\Debug\DAL.xml
+F:\Trabajo de Campo I\EvOrg\OrganizacionDeEventos\obj\Debug\OrganizacionDeEventos.ABMServicio.resources
+C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\OrganizacionDeEventos\bin\Debug\OrganizacionDeEventos.exe.config
+C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\OrganizacionDeEventos\obj\Debug\OrganizacionDeEventos.exe
+C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\OrganizacionDeEventos\obj\Debug\OrganizacionDeEventos.xml
+C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\OrganizacionDeEventos\obj\Debug\OrganizacionDeEventos.pdb
+C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\OrganizacionDeEventos\obj\Debug\GUI.vbprojResolveAssemblyReference.cache
+C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\OrganizacionDeEventos\obj\Debug\OrganizacionDeEventos.ABMCliente.resources
+C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\OrganizacionDeEventos\obj\Debug\OrganizacionDeEventos.ABMMaterial.resources
+C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\OrganizacionDeEventos\obj\Debug\OrganizacionDeEventos.CrearBDForm.resources
+C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\OrganizacionDeEventos\obj\Debug\OrganizacionDeEventos.ABMPaso.resources
+C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\OrganizacionDeEventos\obj\Debug\OrganizacionDeEventos.ABMSalon.resources
+C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\OrganizacionDeEventos\obj\Debug\OrganizacionDeEventos.ABMServicio.resources
+C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\OrganizacionDeEventos\obj\Debug\OrganizacionDeEventos.ABMTipoEvento.resources
+C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\OrganizacionDeEventos\obj\Debug\OrganizacionDeEventos.NuevaPatente.resources
+C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\OrganizacionDeEventos\obj\Debug\OrganizacionDeEventos.Resources.resources
+C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\OrganizacionDeEventos\obj\Debug\GUI.vbproj.GenerateResource.Cache
+C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\OrganizacionDeEventos\bin\Debug\OrganizacionDeEventos.exe
+C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\OrganizacionDeEventos\bin\Debug\OrganizacionDeEventos.pdb
+C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\OrganizacionDeEventos\bin\Debug\OrganizacionDeEventos.xml
+C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\OrganizacionDeEventos\bin\Debug\BLL_Dinamica.dll
+C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\OrganizacionDeEventos\bin\Debug\BLL_Estatica.dll
+C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\OrganizacionDeEventos\bin\Debug\Extra.dll
+C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\OrganizacionDeEventos\bin\Debug\DAL_ABMC.dll
+C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\OrganizacionDeEventos\bin\Debug\DAL.dll
+C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\OrganizacionDeEventos\bin\Debug\BLL_Dinamica.pdb
+C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\OrganizacionDeEventos\bin\Debug\BLL_Dinamica.xml
+C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\OrganizacionDeEventos\bin\Debug\BLL_Estatica.pdb
+C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\OrganizacionDeEventos\bin\Debug\BLL_Estatica.xml
+C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\OrganizacionDeEventos\bin\Debug\Extra.pdb
+C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\OrganizacionDeEventos\bin\Debug\Extra.xml
+C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\OrganizacionDeEventos\bin\Debug\DAL_ABMC.pdb
+C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\OrganizacionDeEventos\bin\Debug\DAL_ABMC.xml
+C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\OrganizacionDeEventos\bin\Debug\DAL.pdb
+C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\OrganizacionDeEventos\bin\Debug\DAL.xml
+C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\OrganizacionDeEventos\obj\Debug\OrganizacionDeEventos.ABMFamilia.resources
+C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\OrganizacionDeEventos\obj\Debug\OrganizacionDeEventos.ABMPatente.resources
+C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\OrganizacionDeEventos\obj\Debug\OrganizacionDeEventos.ABMUsuario.resources
+C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\OrganizacionDeEventos\obj\Debug\OrganizacionDeEventos.NuevoUsuario.resources
+C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\OrganizacionDeEventos\obj\Debug\OrganizacionDeEventos.LogIn.resources
+C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\OrganizacionDeEventos\obj\Debug\OrganizacionDeEventos.Inicio.resources
+F:\Trabajo de Campo I\24_04\EvOrg\OrganizacionDeEventos\bin\Debug\OrganizacionDeEventos.exe.config
+F:\Trabajo de Campo I\24_04\EvOrg\OrganizacionDeEventos\obj\Debug\OrganizacionDeEventos.exe
+F:\Trabajo de Campo I\24_04\EvOrg\OrganizacionDeEventos\obj\Debug\OrganizacionDeEventos.xml
+F:\Trabajo de Campo I\24_04\EvOrg\OrganizacionDeEventos\obj\Debug\OrganizacionDeEventos.pdb
+F:\Trabajo de Campo I\24_04\EvOrg\OrganizacionDeEventos\bin\Debug\OrganizacionDeEventos.exe
+F:\Trabajo de Campo I\24_04\EvOrg\OrganizacionDeEventos\bin\Debug\OrganizacionDeEventos.pdb
+F:\Trabajo de Campo I\24_04\EvOrg\OrganizacionDeEventos\bin\Debug\OrganizacionDeEventos.xml
+F:\Trabajo de Campo I\24_04\EvOrg\OrganizacionDeEventos\bin\Debug\BLL_Dinamica.dll
+F:\Trabajo de Campo I\24_04\EvOrg\OrganizacionDeEventos\bin\Debug\BLL_Estatica.dll
+F:\Trabajo de Campo I\24_04\EvOrg\OrganizacionDeEventos\bin\Debug\Extra.dll
+F:\Trabajo de Campo I\24_04\EvOrg\OrganizacionDeEventos\bin\Debug\DAL_ABMC.dll
+F:\Trabajo de Campo I\24_04\EvOrg\OrganizacionDeEventos\bin\Debug\DAL.dll
+F:\Trabajo de Campo I\24_04\EvOrg\OrganizacionDeEventos\bin\Debug\BLL_Dinamica.pdb
+F:\Trabajo de Campo I\24_04\EvOrg\OrganizacionDeEventos\bin\Debug\BLL_Dinamica.xml
+F:\Trabajo de Campo I\24_04\EvOrg\OrganizacionDeEventos\bin\Debug\BLL_Estatica.pdb
+F:\Trabajo de Campo I\24_04\EvOrg\OrganizacionDeEventos\bin\Debug\BLL_Estatica.xml
+F:\Trabajo de Campo I\24_04\EvOrg\OrganizacionDeEventos\bin\Debug\Extra.pdb
+F:\Trabajo de Campo I\24_04\EvOrg\OrganizacionDeEventos\bin\Debug\Extra.xml
+F:\Trabajo de Campo I\24_04\EvOrg\OrganizacionDeEventos\bin\Debug\DAL_ABMC.pdb
+F:\Trabajo de Campo I\24_04\EvOrg\OrganizacionDeEventos\bin\Debug\DAL_ABMC.xml
+F:\Trabajo de Campo I\24_04\EvOrg\OrganizacionDeEventos\bin\Debug\DAL.pdb
+F:\Trabajo de Campo I\24_04\EvOrg\OrganizacionDeEventos\bin\Debug\DAL.xml
+F:\Trabajo de Campo I\24_04\EvOrg\OrganizacionDeEventos\obj\Debug\GUI.vbprojResolveAssemblyReference.cache
+F:\Trabajo de Campo I\24_04\EvOrg\OrganizacionDeEventos\obj\Debug\OrganizacionDeEventos.ABMCliente.resources
+F:\Trabajo de Campo I\24_04\EvOrg\OrganizacionDeEventos\obj\Debug\OrganizacionDeEventos.ABMMaterial.resources
+F:\Trabajo de Campo I\24_04\EvOrg\OrganizacionDeEventos\obj\Debug\OrganizacionDeEventos.CrearBDForm.resources
+F:\Trabajo de Campo I\24_04\EvOrg\OrganizacionDeEventos\obj\Debug\OrganizacionDeEventos.ABMPaso.resources
+F:\Trabajo de Campo I\24_04\EvOrg\OrganizacionDeEventos\obj\Debug\OrganizacionDeEventos.Inicio.resources
+F:\Trabajo de Campo I\24_04\EvOrg\OrganizacionDeEventos\obj\Debug\OrganizacionDeEventos.ABMFamilia.resources
+F:\Trabajo de Campo I\24_04\EvOrg\OrganizacionDeEventos\obj\Debug\OrganizacionDeEventos.ABMPatente.resources
+F:\Trabajo de Campo I\24_04\EvOrg\OrganizacionDeEventos\obj\Debug\OrganizacionDeEventos.ABMSalon.resources
+F:\Trabajo de Campo I\24_04\EvOrg\OrganizacionDeEventos\obj\Debug\OrganizacionDeEventos.ABMServicio.resources
+F:\Trabajo de Campo I\24_04\EvOrg\OrganizacionDeEventos\obj\Debug\OrganizacionDeEventos.ABMTipoEvento.resources
+F:\Trabajo de Campo I\24_04\EvOrg\OrganizacionDeEventos\obj\Debug\OrganizacionDeEventos.ABMUsuario.resources
+F:\Trabajo de Campo I\24_04\EvOrg\OrganizacionDeEventos\obj\Debug\OrganizacionDeEventos.LogIn.resources
+F:\Trabajo de Campo I\24_04\EvOrg\OrganizacionDeEventos\obj\Debug\OrganizacionDeEventos.NuevaPatente.resources
+F:\Trabajo de Campo I\24_04\EvOrg\OrganizacionDeEventos\obj\Debug\OrganizacionDeEventos.Resources.resources
+F:\Trabajo de Campo I\24_04\EvOrg\OrganizacionDeEventos\obj\Debug\OrganizacionDeEventos.NuevoUsuario.resources
+F:\Trabajo de Campo I\24_04\EvOrg\OrganizacionDeEventos\obj\Debug\GUI.vbproj.GenerateResource.Cache
+D:\Trabajo de Campo I\24_04\EvOrg\OrganizacionDeEventos\bin\Debug\OrganizacionDeEventos.exe.config
+D:\Trabajo de Campo I\24_04\EvOrg\OrganizacionDeEventos\obj\Debug\OrganizacionDeEventos.exe
+D:\Trabajo de Campo I\24_04\EvOrg\OrganizacionDeEventos\obj\Debug\OrganizacionDeEventos.xml
+D:\Trabajo de Campo I\24_04\EvOrg\OrganizacionDeEventos\obj\Debug\OrganizacionDeEventos.pdb
+D:\Trabajo de Campo I\24_04\EvOrg\OrganizacionDeEventos\bin\Debug\OrganizacionDeEventos.exe
+D:\Trabajo de Campo I\24_04\EvOrg\OrganizacionDeEventos\bin\Debug\OrganizacionDeEventos.pdb
+D:\Trabajo de Campo I\24_04\EvOrg\OrganizacionDeEventos\bin\Debug\OrganizacionDeEventos.xml
+D:\Trabajo de Campo I\24_04\EvOrg\OrganizacionDeEventos\bin\Debug\BLL_Dinamica.dll
+D:\Trabajo de Campo I\24_04\EvOrg\OrganizacionDeEventos\bin\Debug\BLL_Estatica.dll
+D:\Trabajo de Campo I\24_04\EvOrg\OrganizacionDeEventos\bin\Debug\Extra.dll
+D:\Trabajo de Campo I\24_04\EvOrg\OrganizacionDeEventos\bin\Debug\DAL_ABMC.dll
+D:\Trabajo de Campo I\24_04\EvOrg\OrganizacionDeEventos\bin\Debug\DAL.dll
+D:\Trabajo de Campo I\24_04\EvOrg\OrganizacionDeEventos\bin\Debug\BLL_Dinamica.pdb
+D:\Trabajo de Campo I\24_04\EvOrg\OrganizacionDeEventos\bin\Debug\BLL_Dinamica.xml
+D:\Trabajo de Campo I\24_04\EvOrg\OrganizacionDeEventos\bin\Debug\BLL_Estatica.pdb
+D:\Trabajo de Campo I\24_04\EvOrg\OrganizacionDeEventos\bin\Debug\BLL_Estatica.xml
+D:\Trabajo de Campo I\24_04\EvOrg\OrganizacionDeEventos\bin\Debug\Extra.pdb
+D:\Trabajo de Campo I\24_04\EvOrg\OrganizacionDeEventos\bin\Debug\Extra.xml
+D:\Trabajo de Campo I\24_04\EvOrg\OrganizacionDeEventos\bin\Debug\DAL_ABMC.pdb
+D:\Trabajo de Campo I\24_04\EvOrg\OrganizacionDeEventos\bin\Debug\DAL_ABMC.xml
+D:\Trabajo de Campo I\24_04\EvOrg\OrganizacionDeEventos\bin\Debug\DAL.pdb
+D:\Trabajo de Campo I\24_04\EvOrg\OrganizacionDeEventos\bin\Debug\DAL.xml
+D:\Trabajo de Campo I\24_04\EvOrg\OrganizacionDeEventos\obj\Debug\GUI.vbprojResolveAssemblyReference.cache
+D:\Trabajo de Campo I\24_04\EvOrg\OrganizacionDeEventos\obj\Debug\OrganizacionDeEventos.ABMCliente.resources
+D:\Trabajo de Campo I\24_04\EvOrg\OrganizacionDeEventos\obj\Debug\OrganizacionDeEventos.ABMMaterial.resources
+D:\Trabajo de Campo I\24_04\EvOrg\OrganizacionDeEventos\obj\Debug\OrganizacionDeEventos.CrearBDForm.resources
+D:\Trabajo de Campo I\24_04\EvOrg\OrganizacionDeEventos\obj\Debug\OrganizacionDeEventos.ABMPaso.resources
+D:\Trabajo de Campo I\24_04\EvOrg\OrganizacionDeEventos\obj\Debug\OrganizacionDeEventos.Inicio.resources
+D:\Trabajo de Campo I\24_04\EvOrg\OrganizacionDeEventos\obj\Debug\OrganizacionDeEventos.ABMFamilia.resources
+D:\Trabajo de Campo I\24_04\EvOrg\OrganizacionDeEventos\obj\Debug\OrganizacionDeEventos.ABMPatente.resources
+D:\Trabajo de Campo I\24_04\EvOrg\OrganizacionDeEventos\obj\Debug\OrganizacionDeEventos.ABMSalon.resources
+D:\Trabajo de Campo I\24_04\EvOrg\OrganizacionDeEventos\obj\Debug\OrganizacionDeEventos.ABMServicio.resources
+D:\Trabajo de Campo I\24_04\EvOrg\OrganizacionDeEventos\obj\Debug\OrganizacionDeEventos.ABMTipoEvento.resources
+D:\Trabajo de Campo I\24_04\EvOrg\OrganizacionDeEventos\obj\Debug\OrganizacionDeEventos.ABMUsuario.resources
+D:\Trabajo de Campo I\24_04\EvOrg\OrganizacionDeEventos\obj\Debug\OrganizacionDeEventos.LogIn.resources
+D:\Trabajo de Campo I\24_04\EvOrg\OrganizacionDeEventos\obj\Debug\OrganizacionDeEventos.NuevaPatente.resources
+D:\Trabajo de Campo I\24_04\EvOrg\OrganizacionDeEventos\obj\Debug\OrganizacionDeEventos.Resources.resources
+D:\Trabajo de Campo I\24_04\EvOrg\OrganizacionDeEventos\obj\Debug\OrganizacionDeEventos.NuevoUsuario.resources
+D:\Trabajo de Campo I\24_04\EvOrg\OrganizacionDeEventos\obj\Debug\GUI.vbproj.GenerateResource.Cache

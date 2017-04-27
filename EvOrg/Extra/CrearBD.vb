@@ -15,7 +15,6 @@ Public Class CrearBD
     End Function
 
     Public Sub CrearBase()
-
         Dim vScript As New FileStream(Application.StartupPath & "\EvOrgScript.sql", FileMode.Open)
         Dim vLector As New StreamReader(vScript)
         Dim vStringConexion As String = ConfigurationManager.ConnectionStrings.Item("MiConexion").ConnectionString
@@ -24,26 +23,30 @@ Public Class CrearBD
         vStringBuilder.InitialCatalog = "master"
         Dim vConexion As New SqlConnection(vStringBuilder.ConnectionString)
         vConexion.Open()
+        Dim vComando As SqlCommand
         Try
-            Dim vComando As New SqlCommand("CREATE DATABASE [EvOrg]", vConexion)
+            vComando = New SqlCommand("CREATE DATABASE [EvOrg]", vConexion)
             vComando.ExecuteNonQuery()
             vConexion.ChangeDatabase("EvOrg")
             vComando.CommandText = vLector.ReadToEnd
             vComando.ExecuteNonQuery()
         Catch ex As Exception
+
         End Try
         vConexion.Close()
         vLector.Close()
         vScript.Close()
     End Sub
 
-    Public Sub CrearString(Optional pServidor As String = Nothing)
+    Public Sub CrearString()
         Try
+            Dim vInstance As SqlDataSourceEnumerator = SqlDataSourceEnumerator.Instance
+            Dim vDTable As DataTable = vInstance.GetDataSources
             Dim vConfig As ConnectionStringSettings = ConfigurationManager.ConnectionStrings("MiConexion")
             If Not vConfig Is Nothing Then
                 Dim vString As String
                 Dim vConstructor As New SqlConnectionStringBuilder(vConfig.ConnectionString)
-                vConstructor.DataSource = pServidor
+                vConstructor.DataSource = DRow.Item(0) & "\" & DRow(1)
                 vConstructor.IntegratedSecurity = True
                 vString = vConstructor.ConnectionString
                 SetConfig(vString)

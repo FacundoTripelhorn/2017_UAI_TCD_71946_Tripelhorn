@@ -96,6 +96,24 @@
     <Compile Include="FormulariosABM\ABMPaso.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Inicio.Designer.vb">
+      <DependentUpon>Inicio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Inicio.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UsuarioFamiliaPatente\ABMFamilia.Designer.vb">
+      <DependentUpon>ABMFamilia.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UsuarioFamiliaPatente\ABMFamilia.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UsuarioFamiliaPatente\ABMPatente.Designer.vb">
+      <DependentUpon>ABMPatente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UsuarioFamiliaPatente\ABMPatente.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormulariosABM\ABMSalon.Designer.vb">
       <DependentUpon>ABMSalon.vb</DependentUpon>
     </Compile>
@@ -114,6 +132,24 @@
     <Compile Include="FormulariosABM\ABMTipoEvento.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="UsuarioFamiliaPatente\ABMUsuario.Designer.vb">
+      <DependentUpon>ABMUsuario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UsuarioFamiliaPatente\ABMUsuario.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LogIn.Designer.vb">
+      <DependentUpon>LogIn.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LogIn.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UsuarioFamiliaPatente\NuevaPatente.Designer.vb">
+      <DependentUpon>NuevaPatente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UsuarioFamiliaPatente\NuevaPatente.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -129,6 +165,13 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="UsuarioFamiliaPatente\NuevoUsuario.Designer.vb">
+      <DependentUpon>NuevoUsuario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UsuarioFamiliaPatente\NuevoUsuario.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UsuarioFamiliaPatente\VistaUsuario.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="FormulariosABM\ABMCliente.resx">
@@ -143,6 +186,15 @@
     <EmbeddedResource Include="FormulariosABM\ABMPaso.resx">
       <DependentUpon>ABMPaso.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Inicio.resx">
+      <DependentUpon>Inicio.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UsuarioFamiliaPatente\ABMFamilia.resx">
+      <DependentUpon>ABMFamilia.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UsuarioFamiliaPatente\ABMPatente.resx">
+      <DependentUpon>ABMPatente.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormulariosABM\ABMSalon.resx">
       <DependentUpon>ABMSalon.vb</DependentUpon>
     </EmbeddedResource>
@@ -152,11 +204,23 @@
     <EmbeddedResource Include="FormulariosABM\ABMTipoEvento.resx">
       <DependentUpon>ABMTipoEvento.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UsuarioFamiliaPatente\ABMUsuario.resx">
+      <DependentUpon>ABMUsuario.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogIn.resx">
+      <DependentUpon>LogIn.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UsuarioFamiliaPatente\NuevaPatente.resx">
+      <DependentUpon>NuevaPatente.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UsuarioFamiliaPatente\NuevoUsuario.resx">
+      <DependentUpon>NuevoUsuario.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

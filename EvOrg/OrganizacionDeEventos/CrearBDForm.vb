@@ -9,8 +9,7 @@ Public Class CrearBDForm
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles BtnAceptar.Click
         Base.CrearString(ComboBox1.SelectedItem)
         Base.CrearBase()
-        ABMMaterial.ShowDialog()
-        Me.Hide()
+        LogIn.ShowDialog()
     End Sub
 
     Private Sub BtnCancelar_Click(sender As Object, e As EventArgs) Handles BtnCancelar.Click

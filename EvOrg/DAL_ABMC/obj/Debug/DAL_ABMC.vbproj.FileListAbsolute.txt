@@ -13,3 +13,63 @@ C:\Users\Facu\Desktop\Campo 2017\OrganizacionDeEventos\DAL_ABMC\obj\Debug\DAL_AB
 C:\Users\Facu\Desktop\Campo 2017\OrganizacionDeEventos\DAL_ABMC\obj\Debug\DAL_ABMC.dll
 C:\Users\Facu\Desktop\Campo 2017\OrganizacionDeEventos\DAL_ABMC\obj\Debug\DAL_ABMC.xml
 C:\Users\Facu\Desktop\Campo 2017\OrganizacionDeEventos\DAL_ABMC\obj\Debug\DAL_ABMC.pdb
+F:\Trabajo de Campo I\EvOrg\DAL_ABMC\bin\Debug\DAL_ABMC.dll
+F:\Trabajo de Campo I\EvOrg\DAL_ABMC\bin\Debug\DAL_ABMC.pdb
+F:\Trabajo de Campo I\EvOrg\DAL_ABMC\bin\Debug\DAL_ABMC.xml
+F:\Trabajo de Campo I\EvOrg\DAL_ABMC\bin\Debug\BLL_Estatica.dll
+F:\Trabajo de Campo I\EvOrg\DAL_ABMC\bin\Debug\DAL.dll
+F:\Trabajo de Campo I\EvOrg\DAL_ABMC\bin\Debug\BLL_Estatica.pdb
+F:\Trabajo de Campo I\EvOrg\DAL_ABMC\bin\Debug\BLL_Estatica.xml
+F:\Trabajo de Campo I\EvOrg\DAL_ABMC\bin\Debug\DAL.pdb
+F:\Trabajo de Campo I\EvOrg\DAL_ABMC\bin\Debug\DAL.xml
+F:\Trabajo de Campo I\EvOrg\DAL_ABMC\obj\Debug\DAL_ABMC.vbprojResolveAssemblyReference.cache
+F:\Trabajo de Campo I\EvOrg\DAL_ABMC\obj\Debug\DAL_ABMC.Resources.resources
+F:\Trabajo de Campo I\EvOrg\DAL_ABMC\obj\Debug\DAL_ABMC.vbproj.GenerateResource.Cache
+F:\Trabajo de Campo I\EvOrg\DAL_ABMC\obj\Debug\DAL_ABMC.dll
+F:\Trabajo de Campo I\EvOrg\DAL_ABMC\obj\Debug\DAL_ABMC.xml
+F:\Trabajo de Campo I\EvOrg\DAL_ABMC\obj\Debug\DAL_ABMC.pdb
+C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\DAL_ABMC\obj\Debug\DAL_ABMC.vbprojResolveAssemblyReference.cache
+C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\DAL_ABMC\obj\Debug\DAL_ABMC.Resources.resources
+C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\DAL_ABMC\obj\Debug\DAL_ABMC.vbproj.GenerateResource.Cache
+C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\DAL_ABMC\obj\Debug\DAL_ABMC.dll
+C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\DAL_ABMC\obj\Debug\DAL_ABMC.xml
+C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\DAL_ABMC\obj\Debug\DAL_ABMC.pdb
+C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\DAL_ABMC\bin\Debug\DAL_ABMC.dll
+C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\DAL_ABMC\bin\Debug\DAL_ABMC.pdb
+C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\DAL_ABMC\bin\Debug\DAL_ABMC.xml
+C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\DAL_ABMC\bin\Debug\BLL_Estatica.dll
+C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\DAL_ABMC\bin\Debug\DAL.dll
+C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\DAL_ABMC\bin\Debug\BLL_Estatica.pdb
+C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\DAL_ABMC\bin\Debug\BLL_Estatica.xml
+C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\DAL_ABMC\bin\Debug\DAL.pdb
+C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\DAL_ABMC\bin\Debug\DAL.xml
+F:\Trabajo de Campo I\24_04\EvOrg\DAL_ABMC\bin\Debug\DAL_ABMC.dll
+F:\Trabajo de Campo I\24_04\EvOrg\DAL_ABMC\bin\Debug\DAL_ABMC.pdb
+F:\Trabajo de Campo I\24_04\EvOrg\DAL_ABMC\bin\Debug\DAL_ABMC.xml
+F:\Trabajo de Campo I\24_04\EvOrg\DAL_ABMC\bin\Debug\BLL_Estatica.dll
+F:\Trabajo de Campo I\24_04\EvOrg\DAL_ABMC\bin\Debug\DAL.dll
+F:\Trabajo de Campo I\24_04\EvOrg\DAL_ABMC\bin\Debug\BLL_Estatica.pdb
+F:\Trabajo de Campo I\24_04\EvOrg\DAL_ABMC\bin\Debug\BLL_Estatica.xml
+F:\Trabajo de Campo I\24_04\EvOrg\DAL_ABMC\bin\Debug\DAL.pdb
+F:\Trabajo de Campo I\24_04\EvOrg\DAL_ABMC\bin\Debug\DAL.xml
+F:\Trabajo de Campo I\24_04\EvOrg\DAL_ABMC\obj\Debug\DAL_ABMC.vbprojResolveAssemblyReference.cache
+F:\Trabajo de Campo I\24_04\EvOrg\DAL_ABMC\obj\Debug\DAL_ABMC.Resources.resources
+F:\Trabajo de Campo I\24_04\EvOrg\DAL_ABMC\obj\Debug\DAL_ABMC.vbproj.GenerateResource.Cache
+F:\Trabajo de Campo I\24_04\EvOrg\DAL_ABMC\obj\Debug\DAL_ABMC.dll
+F:\Trabajo de Campo I\24_04\EvOrg\DAL_ABMC\obj\Debug\DAL_ABMC.xml
+F:\Trabajo de Campo I\24_04\EvOrg\DAL_ABMC\obj\Debug\DAL_ABMC.pdb
+D:\Trabajo de Campo I\24_04\EvOrg\DAL_ABMC\bin\Debug\DAL_ABMC.dll
+D:\Trabajo de Campo I\24_04\EvOrg\DAL_ABMC\bin\Debug\DAL_ABMC.pdb
+D:\Trabajo de Campo I\24_04\EvOrg\DAL_ABMC\bin\Debug\DAL_ABMC.xml
+D:\Trabajo de Campo I\24_04\EvOrg\DAL_ABMC\bin\Debug\BLL_Estatica.dll
+D:\Trabajo de Campo I\24_04\EvOrg\DAL_ABMC\bin\Debug\DAL.dll
+D:\Trabajo de Campo I\24_04\EvOrg\DAL_ABMC\bin\Debug\BLL_Estatica.pdb
+D:\Trabajo de Campo I\24_04\EvOrg\DAL_ABMC\bin\Debug\BLL_Estatica.xml
+D:\Trabajo de Campo I\24_04\EvOrg\DAL_ABMC\bin\Debug\DAL.pdb
+D:\Trabajo de Campo I\24_04\EvOrg\DAL_ABMC\bin\Debug\DAL.xml
+D:\Trabajo de Campo I\24_04\EvOrg\DAL_ABMC\obj\Debug\DAL_ABMC.vbprojResolveAssemblyReference.cache
+D:\Trabajo de Campo I\24_04\EvOrg\DAL_ABMC\obj\Debug\DAL_ABMC.Resources.resources
+D:\Trabajo de Campo I\24_04\EvOrg\DAL_ABMC\obj\Debug\DAL_ABMC.vbproj.GenerateResource.Cache
+D:\Trabajo de Campo I\24_04\EvOrg\DAL_ABMC\obj\Debug\DAL_ABMC.dll
+D:\Trabajo de Campo I\24_04\EvOrg\DAL_ABMC\obj\Debug\DAL_ABMC.xml
+D:\Trabajo de Campo I\24_04\EvOrg\DAL_ABMC\obj\Debug\DAL_ABMC.pdb

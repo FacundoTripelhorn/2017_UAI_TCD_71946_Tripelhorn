@@ -10,3 +10,51 @@ C:\Users\Facu\Desktop\Campo 2017\OrganizacionDeEventos\DAL\obj\Debug\DAL.vbproj.
 C:\Users\Facu\Desktop\Campo 2017\OrganizacionDeEventos\DAL\obj\Debug\DAL.dll
 C:\Users\Facu\Desktop\Campo 2017\OrganizacionDeEventos\DAL\obj\Debug\DAL.xml
 C:\Users\Facu\Desktop\Campo 2017\OrganizacionDeEventos\DAL\obj\Debug\DAL.pdb
+F:\Trabajo de Campo I\EvOrg\DAL\bin\Debug\DAL.dll
+F:\Trabajo de Campo I\EvOrg\DAL\bin\Debug\DAL.pdb
+F:\Trabajo de Campo I\EvOrg\DAL\bin\Debug\DAL.xml
+F:\Trabajo de Campo I\EvOrg\DAL\bin\Debug\BLL_Estatica.dll
+F:\Trabajo de Campo I\EvOrg\DAL\bin\Debug\BLL_Estatica.pdb
+F:\Trabajo de Campo I\EvOrg\DAL\bin\Debug\BLL_Estatica.xml
+F:\Trabajo de Campo I\EvOrg\DAL\obj\Debug\DAL.vbprojResolveAssemblyReference.cache
+F:\Trabajo de Campo I\EvOrg\DAL\obj\Debug\DAL.Resources.resources
+F:\Trabajo de Campo I\EvOrg\DAL\obj\Debug\DAL.vbproj.GenerateResource.Cache
+F:\Trabajo de Campo I\EvOrg\DAL\obj\Debug\DAL.dll
+F:\Trabajo de Campo I\EvOrg\DAL\obj\Debug\DAL.xml
+F:\Trabajo de Campo I\EvOrg\DAL\obj\Debug\DAL.pdb
+C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\DAL\bin\Debug\DAL.dll
+C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\DAL\bin\Debug\DAL.pdb
+C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\DAL\bin\Debug\DAL.xml
+C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\DAL\bin\Debug\BLL_Estatica.dll
+C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\DAL\bin\Debug\BLL_Estatica.pdb
+C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\DAL\bin\Debug\BLL_Estatica.xml
+C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\DAL\obj\Debug\DAL.vbprojResolveAssemblyReference.cache
+C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\DAL\obj\Debug\DAL.Resources.resources
+C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\DAL\obj\Debug\DAL.vbproj.GenerateResource.Cache
+C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\DAL\obj\Debug\DAL.dll
+C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\DAL\obj\Debug\DAL.xml
+C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\DAL\obj\Debug\DAL.pdb
+F:\Trabajo de Campo I\24_04\EvOrg\DAL\bin\Debug\DAL.dll
+F:\Trabajo de Campo I\24_04\EvOrg\DAL\bin\Debug\DAL.pdb
+F:\Trabajo de Campo I\24_04\EvOrg\DAL\bin\Debug\DAL.xml
+F:\Trabajo de Campo I\24_04\EvOrg\DAL\bin\Debug\BLL_Estatica.dll
+F:\Trabajo de Campo I\24_04\EvOrg\DAL\bin\Debug\BLL_Estatica.pdb
+F:\Trabajo de Campo I\24_04\EvOrg\DAL\bin\Debug\BLL_Estatica.xml
+F:\Trabajo de Campo I\24_04\EvOrg\DAL\obj\Debug\DAL.vbprojResolveAssemblyReference.cache
+F:\Trabajo de Campo I\24_04\EvOrg\DAL\obj\Debug\DAL.Resources.resources
+F:\Trabajo de Campo I\24_04\EvOrg\DAL\obj\Debug\DAL.vbproj.GenerateResource.Cache
+F:\Trabajo de Campo I\24_04\EvOrg\DAL\obj\Debug\DAL.dll
+F:\Trabajo de Campo I\24_04\EvOrg\DAL\obj\Debug\DAL.xml
+F:\Trabajo de Campo I\24_04\EvOrg\DAL\obj\Debug\DAL.pdb
+D:\Trabajo de Campo I\24_04\EvOrg\DAL\bin\Debug\DAL.dll
+D:\Trabajo de Campo I\24_04\EvOrg\DAL\bin\Debug\DAL.pdb
+D:\Trabajo de Campo I\24_04\EvOrg\DAL\bin\Debug\DAL.xml
+D:\Trabajo de Campo I\24_04\EvOrg\DAL\bin\Debug\BLL_Estatica.dll
+D:\Trabajo de Campo I\24_04\EvOrg\DAL\bin\Debug\BLL_Estatica.pdb
+D:\Trabajo de Campo I\24_04\EvOrg\DAL\bin\Debug\BLL_Estatica.xml
+D:\Trabajo de Campo I\24_04\EvOrg\DAL\obj\Debug\DAL.vbprojResolveAssemblyReference.cache
+D:\Trabajo de Campo I\24_04\EvOrg\DAL\obj\Debug\DAL.Resources.resources
+D:\Trabajo de Campo I\24_04\EvOrg\DAL\obj\Debug\DAL.vbproj.GenerateResource.Cache
+D:\Trabajo de Campo I\24_04\EvOrg\DAL\obj\Debug\DAL.dll
+D:\Trabajo de Campo I\24_04\EvOrg\DAL\obj\Debug\DAL.xml
+D:\Trabajo de Campo I\24_04\EvOrg\DAL\obj\Debug\DAL.pdb

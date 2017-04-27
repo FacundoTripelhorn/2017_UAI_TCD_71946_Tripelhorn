@@ -18,6 +18,14 @@ Public Class Comando
         Return DTable
     End Function
 
+    Public Shared Function GetData(pSelectCommand As String) As DataTable
+        Dim DAdapter As New SqlDataAdapter
+        Dim DTable As New DataTable
+        DAdapter.SelectCommand = Comando.ObjComando(pSelectCommand, Conexion.ObjConexion())
+        DAdapter.Fill(DTable)
+        Return DTable
+    End Function
+
     Public Shared Sub ActualizarBD(pTablaNombre As String, pDTable As DataTable)
         Dim DAdapter As New SqlDataAdapter
         DAdapter.SelectCommand = Comando.ObjComando("SELECT * FROM " & pTablaNombre, Conexion.ObjConexion())

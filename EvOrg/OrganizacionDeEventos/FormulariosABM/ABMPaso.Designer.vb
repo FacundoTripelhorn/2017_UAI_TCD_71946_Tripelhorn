@@ -22,7 +22,6 @@ Partial Class ABMPaso
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container()
         Me.EventoCombo = New System.Windows.Forms.ComboBox()
         Me.ElegirEventoLbl = New System.Windows.Forms.Label()
         Me.GrillaPasos = New System.Windows.Forms.DataGridView()
@@ -40,19 +39,9 @@ Partial Class ABMPaso
         Me.ModificacionBtn = New System.Windows.Forms.Button()
         Me.TipoPasoLbl = New System.Windows.Forms.Label()
         Me.TipoPasoCombo = New System.Windows.Forms.ComboBox()
-        Me.EvOrgDataSet3 = New OrganizacionDeEventos.EvOrgDataSet3()
-        Me.PasoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.PasoTableAdapter = New OrganizacionDeEventos.EvOrgDataSet3TableAdapters.PasoTableAdapter()
-        Me.IdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DescripcionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.FechaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PrioridadDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TipoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.GrillaPasos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
-        CType(Me.EvOrgDataSet3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PasoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'EventoCombo
@@ -83,11 +72,8 @@ Partial Class ABMPaso
         '
         Me.GrillaPasos.AllowUserToAddRows = False
         Me.GrillaPasos.AllowUserToDeleteRows = False
-        Me.GrillaPasos.AutoGenerateColumns = False
         Me.GrillaPasos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.GrillaPasos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdDataGridViewTextBoxColumn, Me.DescripcionDataGridViewTextBoxColumn, Me.FechaDataGridViewTextBoxColumn, Me.PrioridadDataGridViewTextBoxColumn, Me.TipoDataGridViewTextBoxColumn})
         Me.TableLayoutPanel1.SetColumnSpan(Me.GrillaPasos, 5)
-        Me.GrillaPasos.DataSource = Me.PasoBindingSource
         Me.GrillaPasos.Dock = System.Windows.Forms.DockStyle.Fill
         Me.GrillaPasos.Location = New System.Drawing.Point(3, 52)
         Me.GrillaPasos.Name = "GrillaPasos"
@@ -169,7 +155,7 @@ Partial Class ABMPaso
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 56.0!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 198.0!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 74.0!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 92.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 192.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.ElegirEventoLbl, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.EventoCombo, 0, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.FechaDTP, 3, 4)
@@ -282,51 +268,6 @@ Partial Class ABMPaso
         Me.TipoPasoCombo.Size = New System.Drawing.Size(349, 21)
         Me.TipoPasoCombo.TabIndex = 13
         '
-        'EvOrgDataSet3
-        '
-        Me.EvOrgDataSet3.DataSetName = "EvOrgDataSet3"
-        Me.EvOrgDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'PasoBindingSource
-        '
-        Me.PasoBindingSource.DataMember = "Paso"
-        Me.PasoBindingSource.DataSource = Me.EvOrgDataSet3
-        '
-        'PasoTableAdapter
-        '
-        Me.PasoTableAdapter.ClearBeforeFill = True
-        '
-        'IdDataGridViewTextBoxColumn
-        '
-        Me.IdDataGridViewTextBoxColumn.DataPropertyName = "Id"
-        Me.IdDataGridViewTextBoxColumn.HeaderText = "Id"
-        Me.IdDataGridViewTextBoxColumn.Name = "IdDataGridViewTextBoxColumn"
-        Me.IdDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'DescripcionDataGridViewTextBoxColumn
-        '
-        Me.DescripcionDataGridViewTextBoxColumn.DataPropertyName = "Descripcion"
-        Me.DescripcionDataGridViewTextBoxColumn.HeaderText = "Descripcion"
-        Me.DescripcionDataGridViewTextBoxColumn.Name = "DescripcionDataGridViewTextBoxColumn"
-        '
-        'FechaDataGridViewTextBoxColumn
-        '
-        Me.FechaDataGridViewTextBoxColumn.DataPropertyName = "Fecha"
-        Me.FechaDataGridViewTextBoxColumn.HeaderText = "Fecha"
-        Me.FechaDataGridViewTextBoxColumn.Name = "FechaDataGridViewTextBoxColumn"
-        '
-        'PrioridadDataGridViewTextBoxColumn
-        '
-        Me.PrioridadDataGridViewTextBoxColumn.DataPropertyName = "Prioridad"
-        Me.PrioridadDataGridViewTextBoxColumn.HeaderText = "Prioridad"
-        Me.PrioridadDataGridViewTextBoxColumn.Name = "PrioridadDataGridViewTextBoxColumn"
-        '
-        'TipoDataGridViewTextBoxColumn
-        '
-        Me.TipoDataGridViewTextBoxColumn.DataPropertyName = "Tipo"
-        Me.TipoDataGridViewTextBoxColumn.HeaderText = "Tipo"
-        Me.TipoDataGridViewTextBoxColumn.Name = "TipoDataGridViewTextBoxColumn"
-        '
         'ABMPaso
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -340,8 +281,6 @@ Partial Class ABMPaso
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.TableLayoutPanel1.PerformLayout()
         Me.TableLayoutPanel2.ResumeLayout(False)
-        CType(Me.EvOrgDataSet3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PasoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -363,12 +302,4 @@ Partial Class ABMPaso
     Friend WithEvents ModificacionBtn As Button
     Friend WithEvents TipoPasoLbl As Label
     Friend WithEvents TipoPasoCombo As ComboBox
-    Friend WithEvents EvOrgDataSet3 As EvOrgDataSet3
-    Friend WithEvents PasoBindingSource As BindingSource
-    Friend WithEvents PasoTableAdapter As EvOrgDataSet3TableAdapters.PasoTableAdapter
-    Friend WithEvents IdDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents DescripcionDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents FechaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents PrioridadDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents TipoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
 End Class
