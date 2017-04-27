@@ -8,17 +8,17 @@ Imports System.Runtime.InteropServices
 
 ' Review the values of the assembly attributes
 
-<Assembly: AssemblyTitle("Extra")> 
+<Assembly: AssemblyTitle("Framework")> 
 <Assembly: AssemblyDescription("")> 
 <Assembly: AssemblyCompany("")> 
-<Assembly: AssemblyProduct("Extra")> 
+<Assembly: AssemblyProduct("Framework")> 
 <Assembly: AssemblyCopyright("Copyright ©  2017")> 
 <Assembly: AssemblyTrademark("")> 
 
 <Assembly: ComVisible(False)>
 
 'The following GUID is for the ID of the typelib if this project is exposed to COM
-<Assembly: Guid("a7e967fc-91ed-4d3b-8e25-fd61c7b326ce")> 
+<Assembly: Guid("198abe3c-22cd-4294-80c6-987ab053c9c3")> 
 
 ' Version information for an assembly consists of the following four values:
 '

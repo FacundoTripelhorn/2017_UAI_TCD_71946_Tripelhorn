@@ -3,18 +3,8 @@ Imports System.IO
 Imports System.Data.Sql
 Imports System.Windows.Forms
 Imports System.Configuration
-Public Class CrearBD
-    Public Function CargarServidores() As List(Of String)
-        Dim Instance As SqlDataSourceEnumerator = SqlDataSourceEnumerator.Instance
-        Dim DTable As DataTable = Instance.GetDataSources
-        Dim ListaDeServidores As New List(Of String)
-        For Each DRow As DataRow In DTable.Rows
-            ListaDeServidores.Add(DRow.Item(0) & "\" & DRow(1))
-        Next
-        Return ListaDeServidores
-    End Function
-
-    Public Sub CrearBase()
+Public Class CrearBase
+    Public Sub CrearBD()
         Dim vScript As New FileStream(Application.StartupPath & "\EvOrgScript.sql", FileMode.Open)
         Dim vLector As New StreamReader(vScript)
         Dim vStringConexion As String = ConfigurationManager.ConnectionStrings.Item("MiConexion").ConnectionString
@@ -23,10 +13,14 @@ Public Class CrearBD
         vStringBuilder.InitialCatalog = "master"
         Dim vConexion As New SqlConnection(vStringBuilder.ConnectionString)
         vConexion.Open()
-        Dim vComando As SqlCommand
+        Dim vComando As New SqlCommand
         Try
             vComando = New SqlCommand("CREATE DATABASE [EvOrg]", vConexion)
             vComando.ExecuteNonQuery()
+        Catch ex As Exception
+
+        End Try
+        Try
             vConexion.ChangeDatabase("EvOrg")
             vComando.CommandText = vLector.ReadToEnd
             vComando.ExecuteNonQuery()
@@ -46,7 +40,7 @@ Public Class CrearBD
             If Not vConfig Is Nothing Then
                 Dim vString As String
                 Dim vConstructor As New SqlConnectionStringBuilder(vConfig.ConnectionString)
-                vConstructor.DataSource = DRow.Item(0) & "\" & DRow(1)
+                vConstructor.DataSource = vDTable.Rows(0).Item(0) & "\" & vDTable.Rows(0).Item(1)
                 vConstructor.IntegratedSecurity = True
                 vString = vConstructor.ConnectionString
                 SetConfig(vString)
@@ -65,3 +59,4 @@ Public Class CrearBD
         ConfigurationManager.RefreshSection("connectionStrings")
     End Sub
 End Class
+

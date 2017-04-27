@@ -225,32 +225,32 @@ INSERT [dbo].[Usuario] ([Id], [Email], [Password], [Familia]) VALUES (N'Administ
 
 ALTER TABLE [dbo].[Evento]  WITH CHECK ADD  CONSTRAINT [FK_Evento_Cliente] FOREIGN KEY([Cliente])
 REFERENCES [dbo].[Cliente] ([DNI])
-GO
+;
 ALTER TABLE [dbo].[Evento] CHECK CONSTRAINT [FK_Evento_Cliente]
-GO
+;
 ALTER TABLE [dbo].[Evento]  WITH CHECK ADD  CONSTRAINT [FK_Evento_Salon] FOREIGN KEY([Salon])
 REFERENCES [dbo].[Salon] ([Id])
-GO
+;
 ALTER TABLE [dbo].[Evento] CHECK CONSTRAINT [FK_Evento_Salon]
-GO
+;
 ALTER TABLE [dbo].[Evento]  WITH CHECK ADD  CONSTRAINT [FK_Evento_TipoEvento] FOREIGN KEY([Tipo])
 REFERENCES [dbo].[TipoEvento] ([Id])
-GO
+;
 ALTER TABLE [dbo].[Evento] CHECK CONSTRAINT [FK_Evento_TipoEvento]
-GO
+;
 ALTER TABLE [dbo].[GrupoPatente]  WITH CHECK ADD  CONSTRAINT [FK_GrupoPatente_GrupoPatente] FOREIGN KEY([Padre])
 REFERENCES [dbo].[GrupoPatente] ([Id])
-GO
+;
 ALTER TABLE [dbo].[GrupoPatente] CHECK CONSTRAINT [FK_GrupoPatente_GrupoPatente]
-GO
+;
 ALTER TABLE [dbo].[TipoEventoPaso]  WITH CHECK ADD  CONSTRAINT [FK_TipoEventoPaso_Paso] FOREIGN KEY([Paso])
 REFERENCES [dbo].[Paso] ([Id])
-GO
+;
 ALTER TABLE [dbo].[TipoEventoPaso] CHECK CONSTRAINT [FK_TipoEventoPaso_Paso]
-GO
+;
 ALTER TABLE [dbo].[TipoEventoPaso]  WITH CHECK ADD  CONSTRAINT [FK_TipoEventoPaso_TipoEvento] FOREIGN KEY([TipoEv])
 REFERENCES [dbo].[TipoEvento] ([Id])
-GO
+;
 ALTER TABLE [dbo].[TipoEventoPaso] CHECK CONSTRAINT [FK_TipoEventoPaso_TipoEvento]
-GO
+;
 

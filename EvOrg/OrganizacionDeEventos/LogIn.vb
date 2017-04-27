@@ -1,8 +1,10 @@
 ﻿Imports BLL_Dinamica
 Imports BLL_Estatica
+Imports Framework
 Public Class LogIn
     Property Usuario As New Usuario
     Property UsuarioDinamico As New UsuarioDinamico
+    Property Base As New CrearBase
     Private Sub AceptarBtn_Click(sender As Object, e As EventArgs) Handles AceptarBtn.Click
         Usuario.IdUsuario = UsuarioTxt.Text
         Usuario.Contraseña = ContraseñaTxt.Text
@@ -17,5 +19,8 @@ Public Class LogIn
         End If
     End Sub
 
-
+    Private Sub LogIn_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Base.CrearString()
+        Base.CrearBD()
+    End Sub
 End Class
