@@ -58,7 +58,7 @@ Public Class MaterialDatos
             MaterialLista = New List(Of Object)
             If DTable.Rows.Count > 0 Then
                 For Each DRow As DataRow In DTable.Rows
-                    MaterialLista.Add(New Material(DRow.Item(0), DRow.Item(1), DRow.Item(2)))
+                    MaterialLista.Add(New Material(DRow(0), DRow(1), DRow(2)))
                 Next
             End If
             Return MaterialLista

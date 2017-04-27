@@ -64,9 +64,10 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Familia.vb" />
-    <Compile Include="GrupoPatente.vb" />
-    <Compile Include="Material.vb" />
+    <Compile Include="Negocio\Cliente.vb" />
+    <Compile Include="Seguridad\Familia.vb" />
+    <Compile Include="Seguridad\GrupoPatente.vb" />
+    <Compile Include="Negocio\Material.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -82,9 +83,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Patente.vb" />
-    <Compile Include="PatenteAbstracta.vb" />
-    <Compile Include="Usuario.vb" />
+    <Compile Include="Seguridad\Patente.vb" />
+    <Compile Include="Seguridad\PatenteAbstracta.vb" />
+    <Compile Include="Seguridad\Usuario.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">

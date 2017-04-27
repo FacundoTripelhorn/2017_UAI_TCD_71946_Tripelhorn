@@ -1,11 +1,11 @@
 ﻿Imports BLL_Dinamica
 Imports BLL_Estatica
 Public Class ABMMaterial
-    Dim Material As Material
-    Dim MaterialD As New MaterialDinamico
+    Dim vMaterial As Material
+    Dim vMaterialDinamico As New MaterialDinamico
 
     Private Sub ABMMaterial_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        GrillaMateriales.DataSource = MaterialD.ConsultaTodo()
+        GrillaMateriales.DataSource = vMaterialDinamico.ConsultaTodo()
     End Sub
 
     Private Sub Limpiar()
@@ -15,30 +15,26 @@ Public Class ABMMaterial
     End Sub
 
     Private Sub BtnAlta_Click(sender As Object, e As EventArgs) Handles AltaBtn.Click
-        Material = New Material(IdTxt.Text, NombreTxt.Text, CantidadNumeric.Value)
-        MaterialD.Alta(Material)
+        vMaterial = New Material(IdTxt.Text, NombreTxt.Text, CantidadNumeric.Value)
+        vMaterialDinamico.Alta(vMaterial)
         Limpiar()
-        GrillaMateriales.DataSource = MaterialD.ConsultaTodo()
+        GrillaMateriales.DataSource = vMaterialDinamico.ConsultaTodo()
     End Sub
 
     Private Sub BtnBaja_Click(sender As Object, e As EventArgs) Handles BajaBtn.Click
-        Material = DirectCast(GrillaMateriales.SelectedRows(0).DataBoundItem, Material)
-        MaterialD.Baja(Material)
+        vMaterial = DirectCast(GrillaMateriales.SelectedRows(0).DataBoundItem, Material)
+        vMaterialDinamico.Baja(vMaterial)
         Limpiar()
-        GrillaMateriales.DataSource = MaterialD.ConsultaTodo()
+        GrillaMateriales.DataSource = vMaterialDinamico.ConsultaTodo()
     End Sub
 
     Private Sub BtnModificar_Click(sender As Object, e As EventArgs) Handles ModificacionBtn.Click
-        Material = DirectCast(GrillaMateriales.SelectedRows(0).DataBoundItem, Material)
-        Material.Nombre = NombreTxt.Text
-        Material.Cantidad = CantidadNumeric.Value
-        MaterialD.Modificacion(Material)
+        vMaterial = DirectCast(GrillaMateriales.SelectedRows(0).DataBoundItem, Material)
+        vMaterial.Nombre = NombreTxt.Text
+        vMaterial.Cantidad = CantidadNumeric.Value
+        vMaterialDinamico.Modificacion(vMaterial)
         Limpiar()
-        GrillaMateriales.DataSource = MaterialD.ConsultaTodo()
-    End Sub
-
-    Private Sub GrillaMateriales_CellEnter(sender As Object, e As DataGridViewCellEventArgs) Handles GrillaMateriales.CellEnter
-
+        GrillaMateriales.DataSource = vMaterialDinamico.ConsultaTodo()
     End Sub
 
     Private Sub GrillaMateriales_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles GrillaMateriales.CellClick

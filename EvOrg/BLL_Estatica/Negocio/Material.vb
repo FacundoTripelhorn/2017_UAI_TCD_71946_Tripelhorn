@@ -1,11 +1,8 @@
 ﻿Public Class Material
-#Region "Propiedades"
     Property Id As Integer
     Property Nombre As String
     Property Cantidad As Integer
-#End Region
 
-#Region "Constructores"
     Sub New()
 
     End Sub
@@ -20,5 +17,5 @@
         Me.Nombre = pNombre
         Me.Cantidad = pCantidad
     End Sub
-#End Region
+
 End Class

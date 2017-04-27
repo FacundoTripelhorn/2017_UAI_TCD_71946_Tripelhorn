@@ -65,9 +65,10 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FamiliaDinamica.vb" />
-    <Compile Include="GrupoPatenteDinamico.vb" />
-    <Compile Include="MaterialDinamico.vb" />
+    <Compile Include="Negocio\ClienteDinamico.vb" />
+    <Compile Include="Seguridad\FamiliaDinamica.vb" />
+    <Compile Include="Seguridad\GrupoPatenteDinamico.vb" />
+    <Compile Include="Negocio\MaterialDinamico.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -83,9 +84,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="PatenteAbstractaDinamica.vb" />
-    <Compile Include="PatenteDinamica.vb" />
-    <Compile Include="UsuarioDinamico.vb" />
+    <Compile Include="Seguridad\PatenteAbstractaDinamica.vb" />
+    <Compile Include="Seguridad\PatenteDinamica.vb" />
+    <Compile Include="Seguridad\UsuarioDinamico.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">

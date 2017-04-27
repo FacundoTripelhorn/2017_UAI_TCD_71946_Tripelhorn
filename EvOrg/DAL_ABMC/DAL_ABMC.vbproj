@@ -63,9 +63,10 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FamiliaDatos.vb" />
-    <Compile Include="GrupoPatenteDatos.vb" />
-    <Compile Include="MaterialDatos.vb" />
+    <Compile Include="Negocio\ClienteDatos.vb" />
+    <Compile Include="Seguridad\FamiliaDatos.vb" />
+    <Compile Include="Seguridad\GrupoPatenteDatos.vb" />
+    <Compile Include="Negocio\MaterialDatos.vb" />
     <Compile Include="IABMC.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -82,8 +83,8 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="PatenteDatos.vb" />
-    <Compile Include="UsuarioDatos.vb" />
+    <Compile Include="Seguridad\PatenteDatos.vb" />
+    <Compile Include="Seguridad\UsuarioDatos.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">
