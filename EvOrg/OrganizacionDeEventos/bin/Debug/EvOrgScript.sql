@@ -200,7 +200,10 @@ CREATE TABLE [dbo].[Usuario](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 ;
+
+SET IDENTITY_INSERT [dbo].[Familia] ON 
 INSERT [dbo].[Familia] ([Id], [Nombre]) VALUES (1, N'Administrador')
+SET IDENTITY_INSERT [dbo].[Familia] OFF
 
 INSERT [dbo].[FamiliaGrupoPatente] ([Familia], [GrupoPatente], [Padre]) VALUES (1, 1, 1)
 INSERT [dbo].[FamiliaGrupoPatente] ([Familia], [GrupoPatente], [Padre]) VALUES (1, 2, 1)
@@ -208,26 +211,46 @@ INSERT [dbo].[FamiliaGrupoPatente] ([Familia], [GrupoPatente], [Padre]) VALUES (
 INSERT [dbo].[FamiliaPatente] ([Familia], [Patente], [Padre]) VALUES (1, 9, 2)
 INSERT [dbo].[FamiliaPatente] ([Familia], [Patente], [Padre]) VALUES (1, 10, 2)
 
+SET IDENTITY_INSERT [dbo].[GrupoPatente] ON 
 INSERT [dbo].[GrupoPatente] ([Id], [Nombre], [Padre]) VALUES (1, N'Patentes del Sistema', NULL)
 INSERT [dbo].[GrupoPatente] ([Id], [Nombre], [Padre]) VALUES (2, N'ABM', 1)
+SET IDENTITY_INSERT [dbo].[GrupoPatente] OFF
 
+SET IDENTITY_INSERT [dbo].[Patente] ON 
 INSERT [dbo].[Patente] ([Id], [Nombre], [Formulario], [Padre]) VALUES (9, N'Material', N'ABMMaterial', 2)
 INSERT [dbo].[Patente] ([Id], [Nombre], [Formulario], [Padre]) VALUES (10, N'Cliente', N'ABMCliente', 2)
+SET IDENTITY_INSERT [dbo].[Patente] OFF
 
-INSERT [dbo].[Usuario] ([Id], [Email], [Contraseña], [Familia]) VALUES (N'Administrador', N'facu418@gmail.com', N'123456', 1)
+INSERT [dbo].[Usuario] ([Id], [Email], [Password], [Familia]) VALUES (N'Administrador', N'facu418@gmail.com', N'123456', 1)
 
 ALTER TABLE [dbo].[Evento]  WITH CHECK ADD  CONSTRAINT [FK_Evento_Cliente] FOREIGN KEY([Cliente])
 REFERENCES [dbo].[Cliente] ([DNI])
-;
+GO
 ALTER TABLE [dbo].[Evento] CHECK CONSTRAINT [FK_Evento_Cliente]
-;
+GO
 ALTER TABLE [dbo].[Evento]  WITH CHECK ADD  CONSTRAINT [FK_Evento_Salon] FOREIGN KEY([Salon])
 REFERENCES [dbo].[Salon] ([Id])
-;
+GO
 ALTER TABLE [dbo].[Evento] CHECK CONSTRAINT [FK_Evento_Salon]
-;
+GO
 ALTER TABLE [dbo].[Evento]  WITH CHECK ADD  CONSTRAINT [FK_Evento_TipoEvento] FOREIGN KEY([Tipo])
 REFERENCES [dbo].[TipoEvento] ([Id])
-;
+GO
 ALTER TABLE [dbo].[Evento] CHECK CONSTRAINT [FK_Evento_TipoEvento]
-;
+GO
+ALTER TABLE [dbo].[GrupoPatente]  WITH CHECK ADD  CONSTRAINT [FK_GrupoPatente_GrupoPatente] FOREIGN KEY([Padre])
+REFERENCES [dbo].[GrupoPatente] ([Id])
+GO
+ALTER TABLE [dbo].[GrupoPatente] CHECK CONSTRAINT [FK_GrupoPatente_GrupoPatente]
+GO
+ALTER TABLE [dbo].[TipoEventoPaso]  WITH CHECK ADD  CONSTRAINT [FK_TipoEventoPaso_Paso] FOREIGN KEY([Paso])
+REFERENCES [dbo].[Paso] ([Id])
+GO
+ALTER TABLE [dbo].[TipoEventoPaso] CHECK CONSTRAINT [FK_TipoEventoPaso_Paso]
+GO
+ALTER TABLE [dbo].[TipoEventoPaso]  WITH CHECK ADD  CONSTRAINT [FK_TipoEventoPaso_TipoEvento] FOREIGN KEY([TipoEv])
+REFERENCES [dbo].[TipoEvento] ([Id])
+GO
+ALTER TABLE [dbo].[TipoEventoPaso] CHECK CONSTRAINT [FK_TipoEventoPaso_TipoEvento]
+GO
+
