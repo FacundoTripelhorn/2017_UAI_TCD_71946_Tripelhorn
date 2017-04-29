@@ -1,5 +1,5 @@
 ﻿Imports DAL_ABMC
-
+Imports BLL_Estatica
 Public Class UsuarioDinamico
     Implements IABMC
 
@@ -21,8 +21,8 @@ Public Class UsuarioDinamico
         Return UsuarioDatos.ConsultaTodo()
     End Function
 
-    Public Function InicioSesion(Optional pObjeto As Object = Nothing) As Boolean
-        Return UsuarioDatos.InicioSesion(pObjeto)
+    Public Function InicioSesion(pUsuario As Usuario, pContraseña As String) As Boolean
+        Return UsuarioDatos.InicioSesion(pUsuario, pContraseña)
     End Function
 
     Public Function DevuelveUsuario(pIdUsuario As String) As Object

@@ -84,12 +84,6 @@
       <DependentUpon>ABMMaterial.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CrearBDForm.Designer.vb">
-      <DependentUpon>CrearBDForm.vb</DependentUpon>
-    </Compile>
-    <Compile Include="CrearBDForm.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="FormulariosABM\ABMPaso.Designer.vb">
       <DependentUpon>ABMPaso.vb</DependentUpon>
     </Compile>
@@ -179,9 +173,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormulariosABM\ABMMaterial.resx">
       <DependentUpon>ABMMaterial.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CrearBDForm.resx">
-      <DependentUpon>CrearBDForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormulariosABM\ABMPaso.resx">
       <DependentUpon>ABMPaso.vb</DependentUpon>

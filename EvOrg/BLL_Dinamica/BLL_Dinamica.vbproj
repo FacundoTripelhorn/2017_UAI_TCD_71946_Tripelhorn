@@ -120,6 +120,10 @@
       <Project>{a3d67e2f-7bde-4559-af99-aa944ec06e17}</Project>
       <Name>DAL_ABMC</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Framework\Framework.vbproj">
+      <Project>{d38db499-0b05-4283-a636-d8b3435fa277}</Project>
+      <Name>Framework</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

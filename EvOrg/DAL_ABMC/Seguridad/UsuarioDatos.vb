@@ -1,7 +1,7 @@
 ﻿Imports BLL_Estatica
 Imports DAL_ABMC
 Imports DAL
-
+Imports Framework
 Public Class UsuarioDatos
     Implements IABMC
 
@@ -48,12 +48,11 @@ Public Class UsuarioDatos
         End Try
     End Sub
 
-    Public Function InicioSesion(Optional pObjeto As Object = Nothing) As Boolean
-        vUsuario = DirectCast(pObjeto, Usuario)
+    Public Function InicioSesion(pUsuario As Usuario, pContraseña As String) As Boolean
+        Dim vEncriptar As Encriptador = Encriptador.GetInstance
         Try
-            Dim DT As DataTable = Comando.GetData("SELECT * FROM Usuario WHERE Id = '" & vUsuario.IdUsuario & "' AND Password = '" & vUsuario.Contraseña & "'")
-
-            If DT.Rows.Count > 0 Then
+            Dim DT As DataTable = Comando.GetData("SELECT * FROM Usuario WHERE Id = '" & pUsuario.IdUsuario & "' AND Password = '" & pUsuario.Contraseña & "'")
+            If vEncriptar.ValidarHash(pContraseña, DT.Rows(0).Item(2).ToString) Then
                 Return True
             Else
                 Return False

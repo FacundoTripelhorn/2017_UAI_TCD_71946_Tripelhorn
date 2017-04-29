@@ -6,10 +6,11 @@ Public Class LogIn
     Property UsuarioDinamico As New UsuarioDinamico
     Property Base As New CrearBase
     Private Sub AceptarBtn_Click(sender As Object, e As EventArgs) Handles AceptarBtn.Click
+        Dim vEncriptar As Encriptador = Encriptador.GetInstance
         Usuario.IdUsuario = UsuarioTxt.Text
-        Usuario.Contraseña = ContraseñaTxt.Text
+        Usuario.Contraseña = vEncriptar.Encriptar(ContraseñaTxt.Text)
 
-        If UsuarioDinamico.InicioSesion(Usuario) = True Then
+        If UsuarioDinamico.InicioSesion(Usuario, ContraseñaTxt.Text) = True Then
             MsgBox("Inicio exitoso")
             Dim vInicio As New Inicio(Usuario)
             vInicio.ShowDialog()

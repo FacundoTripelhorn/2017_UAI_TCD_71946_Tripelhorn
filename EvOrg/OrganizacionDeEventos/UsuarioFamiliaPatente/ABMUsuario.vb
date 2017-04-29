@@ -1,12 +1,12 @@
 ﻿Imports BLL_Dinamica
 Imports BLL_Estatica
-
+Imports Framework
 Public Class ABMUsuario
 
     Property Usuario As New Usuario
     Property UsuarioDinamico As New UsuarioDinamico
     Property FamiliaDinamica As New FamiliaDinamica
-
+    Property Base As New CrearBase
 
     Private Sub ABMUsuario_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Actualizar()
@@ -25,17 +25,13 @@ Public Class ABMUsuario
         Dim vNuevoUsuario As New NuevoUsuario
         vNuevoUsuario.Alta = True
         vNuevoUsuario.ShowDialog()
+        Actualizar()
     End Sub
 
     Private Sub BajaBtn_Click(sender As Object, e As EventArgs) Handles BajaBtn.Click
         Usuario.IdUsuario = DirectCast(GrillaUsuario.SelectedRows(0).DataBoundItem, VistaUsuario).Nombre
         For Each vUsuario As Usuario In UsuarioDinamico.ConsultaTodo
             If vUsuario.IdUsuario = Usuario.IdUsuario Then Usuario = vUsuario
-        Next
-        For Each vFamilia As Familia In FamiliaDinamica.ConsultaTodo
-            If vFamilia.Id = GrillaUsuario.SelectedRows(0).Cells(3).Value Then
-                Usuario.Familia = vFamilia
-            End If
         Next
         UsuarioDinamico.Baja(Usuario)
         Actualizar()

@@ -124,6 +124,7 @@ Partial Class ABMUsuario
         Me.GrillaUsuario.Dock = System.Windows.Forms.DockStyle.Fill
         Me.GrillaUsuario.Location = New System.Drawing.Point(3, 29)
         Me.GrillaUsuario.Name = "GrillaUsuario"
+        Me.GrillaUsuario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.GrillaUsuario.Size = New System.Drawing.Size(245, 243)
         Me.GrillaUsuario.TabIndex = 0
         '
