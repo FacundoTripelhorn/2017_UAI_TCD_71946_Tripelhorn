@@ -183,6 +183,7 @@ Public Class FamiliaDatos
             AgregarHijosPatente(pPadre, pFamilia)
         End If
     End Sub
+
     Public Sub AgregarHijosPatente(pPadre As GrupoPatente, pFamilia As Integer)
         Dim DTFPatente As DataTable = Comando.GetData("SELECT * FROM FamiliaPatente WHERE Familia = '" & pFamilia & "' AND Padre = '" & pPadre.Id & "'")
         If DTFPatente.Rows.Count > 0 Then

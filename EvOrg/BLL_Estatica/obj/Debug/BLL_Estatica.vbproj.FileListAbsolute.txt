@@ -43,3 +43,5 @@ D:\Trabajo de Campo I\24_04\EvOrg\BLL_Estatica\obj\Debug\BLL_Estatica.vbproj.Gen
 D:\Trabajo de Campo I\24_04\EvOrg\BLL_Estatica\obj\Debug\BLL_Estatica.dll
 D:\Trabajo de Campo I\24_04\EvOrg\BLL_Estatica\obj\Debug\BLL_Estatica.xml
 D:\Trabajo de Campo I\24_04\EvOrg\BLL_Estatica\obj\Debug\BLL_Estatica.pdb
+C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\BLL_Estatica\bin\Debug\BLL_Estatica.dll.CodeAnalysisLog.xml
+C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\BLL_Estatica\bin\Debug\BLL_Estatica.dll.lastcodeanalysissucceeded

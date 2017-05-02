@@ -78,7 +78,7 @@ Public Class UsuarioDatos
         Return vLista
     End Function
 
-    Public Function DevuelveUsuario(pIdUsuario As String) As Object
+    Public Function DevuelveUsuario(pIdUsuario As String) As Usuario
         Try
             Dim DTUsuario As DataTable = Comando.GetData("SELECT * FROM Usuario WHERE Id = '" & pIdUsuario & "'")
             If DTUsuario.Rows.Count > 0 Then

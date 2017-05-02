@@ -25,7 +25,7 @@ Public Class UsuarioDinamico
         Return UsuarioDatos.InicioSesion(pUsuario, pContraseña)
     End Function
 
-    Public Function DevuelveUsuario(pIdUsuario As String) As Object
+    Public Function DevuelveUsuario(pIdUsuario As String) As Usuario
         Return UsuarioDatos.DevuelveUsuario(pIdUsuario)
     End Function
 End Class

@@ -192,7 +192,7 @@ CREATE TABLE [dbo].[TipoEventoPaso](
 CREATE TABLE [dbo].[Usuario](
 	[Id] [nvarchar](16) NOT NULL,
 	[Email] [nvarchar](50) NULL,
-	[Password] [nvarchar](16) NULL,
+	[Password] [char](32) NULL,
 	[Familia] [int] NULL,
  CONSTRAINT [PK_Usuario] PRIMARY KEY CLUSTERED 
 (
@@ -207,21 +207,36 @@ SET IDENTITY_INSERT [dbo].[Familia] OFF
 
 INSERT [dbo].[FamiliaGrupoPatente] ([Familia], [GrupoPatente], [Padre]) VALUES (1, 1, 1)
 INSERT [dbo].[FamiliaGrupoPatente] ([Familia], [GrupoPatente], [Padre]) VALUES (1, 2, 1)
-
+INSERT [dbo].[FamiliaGrupoPatente] ([Familia], [GrupoPatente], [Padre]) VALUES (1, 3, 1)
 INSERT [dbo].[FamiliaPatente] ([Familia], [Patente], [Padre]) VALUES (1, 9, 2)
 INSERT [dbo].[FamiliaPatente] ([Familia], [Patente], [Padre]) VALUES (1, 10, 2)
+INSERT [dbo].[FamiliaPatente] ([Familia], [Patente], [Padre]) VALUES (1, 11, 2)
+INSERT [dbo].[FamiliaPatente] ([Familia], [Patente], [Padre]) VALUES (1, 12, 2)
+INSERT [dbo].[FamiliaPatente] ([Familia], [Patente], [Padre]) VALUES (1, 13, 2)
+INSERT [dbo].[FamiliaPatente] ([Familia], [Patente], [Padre]) VALUES (1, 14, 2)
+INSERT [dbo].[FamiliaPatente] ([Familia], [Patente], [Padre]) VALUES (1, 15, 3)
+INSERT [dbo].[FamiliaPatente] ([Familia], [Patente], [Padre]) VALUES (1, 16, 3)
+INSERT [dbo].[FamiliaPatente] ([Familia], [Patente], [Padre]) VALUES (1, 17, 3)
 
 SET IDENTITY_INSERT [dbo].[GrupoPatente] ON 
 INSERT [dbo].[GrupoPatente] ([Id], [Nombre], [Padre]) VALUES (1, N'Patentes del Sistema', NULL)
 INSERT [dbo].[GrupoPatente] ([Id], [Nombre], [Padre]) VALUES (2, N'ABM', 1)
+INSERT [dbo].[GrupoPatente] ([Id], [Nombre], [Padre]) VALUES (3, N'Seguridad', 1)
 SET IDENTITY_INSERT [dbo].[GrupoPatente] OFF
 
 SET IDENTITY_INSERT [dbo].[Patente] ON 
 INSERT [dbo].[Patente] ([Id], [Nombre], [Formulario], [Padre]) VALUES (9, N'Material', N'ABMMaterial', 2)
 INSERT [dbo].[Patente] ([Id], [Nombre], [Formulario], [Padre]) VALUES (10, N'Cliente', N'ABMCliente', 2)
+INSERT [dbo].[Patente] ([Id], [Nombre], [Formulario], [Padre]) VALUES (11, N'Paso', N'ABMPaso', 2)
+INSERT [dbo].[Patente] ([Id], [Nombre], [Formulario], [Padre]) VALUES (12, N'Salon', N'ABMSalon', 2)
+INSERT [dbo].[Patente] ([Id], [Nombre], [Formulario], [Padre]) VALUES (13, N'Servicio', N'ABMServicio', 2)
+INSERT [dbo].[Patente] ([Id], [Nombre], [Formulario], [Padre]) VALUES (14, N'TipoEvento', N'ABMTipoEvento', 2)
+INSERT [dbo].[Patente] ([Id], [Nombre], [Formulario], [Padre]) VALUES (15, N'Usuario', N'ABMUsuario', 3)
+INSERT [dbo].[Patente] ([Id], [Nombre], [Formulario], [Padre]) VALUES (16, N'Familia', N'ABMFamilia', 3)
+INSERT [dbo].[Patente] ([Id], [Nombre], [Formulario], [Padre]) VALUES (17, N'Patente', N'ABMPatente', 3)
 SET IDENTITY_INSERT [dbo].[Patente] OFF
 
-INSERT [dbo].[Usuario] ([Id], [Email], [Password], [Familia]) VALUES (N'Administrador', N'facu418@gmail.com', N'123456', 1)
+INSERT [dbo].[Usuario] ([Id], [Email], [Password], [Familia]) VALUES (N'Administrador', N'facundo.tripelhorn@gmail.com', N'91F5167C34C400758115C2A6826EC2E3', 1)
 
 ALTER TABLE [dbo].[Evento]  WITH CHECK ADD  CONSTRAINT [FK_Evento_Cliente] FOREIGN KEY([Cliente])
 REFERENCES [dbo].[Cliente] ([DNI])
