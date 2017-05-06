@@ -2,26 +2,27 @@
 Imports BLL_Estatica
 Imports Framework
 Public Class LogIn
-    Property Usuario As New Usuario
-    Property UsuarioDinamico As New UsuarioDinamico
-    Property Base As New CrearBase
-    Private Sub AceptarBtn_Click(sender As Object, e As EventArgs) Handles AceptarBtn.Click
-        Dim vEncriptar As Encriptador = Encriptador.GetInstance
-        Usuario.IdUsuario = UsuarioTxt.Text
-        Usuario.Contraseña = vEncriptar.Encriptar(ContraseñaTxt.Text)
+    Dim vControladorLogin As ControladorLogIn = ControladorLogIn.GetInstance
 
-        If UsuarioDinamico.InicioSesion(Usuario, ContraseñaTxt.Text) = True Then
-            MsgBox("Inicio exitoso")
-            Dim vInicio As New Inicio(Usuario)
-            vInicio.ShowDialog()
-        Else
-            ContraseñaTxt.Text = ""
-            ErrorLinkLabel.Visible = True
-        End If
+    Private Sub AceptarBtn_Click(sender As Object, e As EventArgs) Handles AceptarBtn.Click
+        Try
+            If Not (UsuarioTxt.Text = "" And ContraseñaTxt.Text = "") Then
+                If vControladorLogin.Aceptar(UsuarioTxt.Text, ContraseñaTxt.Text) Then
+                    Me.Close()
+                Else
+                    UsuarioTxt.Text = ""
+                    ContraseñaTxt.Text = ""
+                    ErrorLinkLabel.Visible = True
+                End If
+            Else
+                MsgBox("Ingrese usuario y contraseña por favor")
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
     End Sub
 
     Private Sub LogIn_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Base.CrearString()
-        Base.CrearBD()
+
     End Sub
 End Class

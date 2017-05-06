@@ -22,6 +22,7 @@ Partial Class ABMMaterial
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ABMMaterial))
         Me.GrillaMateriales = New System.Windows.Forms.DataGridView()
         Me.IdLbl = New System.Windows.Forms.Label()
         Me.IdTxt = New System.Windows.Forms.TextBox()
@@ -57,8 +58,10 @@ Partial Class ABMMaterial
         'IdLbl
         '
         Me.IdLbl.AutoSize = True
+        Me.IdLbl.BackColor = System.Drawing.Color.Transparent
         Me.IdLbl.Dock = System.Windows.Forms.DockStyle.Fill
         Me.IdLbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.IdLbl.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.IdLbl.Location = New System.Drawing.Point(3, 312)
         Me.IdLbl.Name = "IdLbl"
         Me.IdLbl.Size = New System.Drawing.Size(42, 27)
@@ -68,6 +71,7 @@ Partial Class ABMMaterial
         '
         'IdTxt
         '
+        Me.IdTxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.IdTxt.Dock = System.Windows.Forms.DockStyle.Fill
         Me.IdTxt.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.IdTxt.Location = New System.Drawing.Point(51, 315)
@@ -77,6 +81,7 @@ Partial Class ABMMaterial
         '
         'NombreTxt
         '
+        Me.NombreTxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.NombreTxt.Dock = System.Windows.Forms.DockStyle.Fill
         Me.NombreTxt.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.NombreTxt.Location = New System.Drawing.Point(206, 315)
@@ -87,8 +92,10 @@ Partial Class ABMMaterial
         'NombreLbl
         '
         Me.NombreLbl.AutoSize = True
+        Me.NombreLbl.BackColor = System.Drawing.Color.Transparent
         Me.NombreLbl.Dock = System.Windows.Forms.DockStyle.Fill
         Me.NombreLbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.NombreLbl.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.NombreLbl.Location = New System.Drawing.Point(137, 312)
         Me.NombreLbl.Name = "NombreLbl"
         Me.NombreLbl.Size = New System.Drawing.Size(63, 27)
@@ -99,8 +106,10 @@ Partial Class ABMMaterial
         'CantidadLbl
         '
         Me.CantidadLbl.AutoSize = True
+        Me.CantidadLbl.BackColor = System.Drawing.Color.Transparent
         Me.CantidadLbl.Dock = System.Windows.Forms.DockStyle.Fill
         Me.CantidadLbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CantidadLbl.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.CantidadLbl.Location = New System.Drawing.Point(292, 312)
         Me.CantidadLbl.Name = "CantidadLbl"
         Me.CantidadLbl.Size = New System.Drawing.Size(66, 27)
@@ -110,6 +119,7 @@ Partial Class ABMMaterial
         '
         'CantidadNumeric
         '
+        Me.CantidadNumeric.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.CantidadNumeric.Dock = System.Windows.Forms.DockStyle.Fill
         Me.CantidadNumeric.Location = New System.Drawing.Point(364, 315)
         Me.CantidadNumeric.Maximum = New Decimal(New Integer() {10000, 0, 0, 0})
@@ -119,45 +129,52 @@ Partial Class ABMMaterial
         '
         'AltaBtn
         '
+        Me.AltaBtn.BackColor = System.Drawing.Color.Transparent
         Me.TableLayoutPanel1.SetColumnSpan(Me.AltaBtn, 2)
         Me.AltaBtn.Dock = System.Windows.Forms.DockStyle.Fill
         Me.AltaBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.AltaBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.AltaBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.AltaBtn.Location = New System.Drawing.Point(3, 342)
         Me.AltaBtn.Name = "AltaBtn"
         Me.AltaBtn.Size = New System.Drawing.Size(128, 36)
         Me.AltaBtn.TabIndex = 7
         Me.AltaBtn.Text = "Agregar"
-        Me.AltaBtn.UseVisualStyleBackColor = True
+        Me.AltaBtn.UseVisualStyleBackColor = False
         '
         'BajaBtn
         '
+        Me.BajaBtn.BackColor = System.Drawing.Color.Transparent
         Me.TableLayoutPanel1.SetColumnSpan(Me.BajaBtn, 2)
         Me.BajaBtn.Dock = System.Windows.Forms.DockStyle.Fill
         Me.BajaBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BajaBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BajaBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.BajaBtn.Location = New System.Drawing.Point(137, 342)
         Me.BajaBtn.Name = "BajaBtn"
         Me.BajaBtn.Size = New System.Drawing.Size(149, 36)
         Me.BajaBtn.TabIndex = 8
         Me.BajaBtn.Text = "Borrar"
-        Me.BajaBtn.UseVisualStyleBackColor = True
+        Me.BajaBtn.UseVisualStyleBackColor = False
         '
         'ModificacionBtn
         '
+        Me.ModificacionBtn.BackColor = System.Drawing.Color.Transparent
         Me.TableLayoutPanel1.SetColumnSpan(Me.ModificacionBtn, 2)
         Me.ModificacionBtn.Dock = System.Windows.Forms.DockStyle.Fill
         Me.ModificacionBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ModificacionBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ModificacionBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.ModificacionBtn.Location = New System.Drawing.Point(292, 342)
         Me.ModificacionBtn.Name = "ModificacionBtn"
         Me.ModificacionBtn.Size = New System.Drawing.Size(153, 36)
         Me.ModificacionBtn.TabIndex = 9
         Me.ModificacionBtn.Text = "Modificar"
-        Me.ModificacionBtn.UseVisualStyleBackColor = True
+        Me.ModificacionBtn.UseVisualStyleBackColor = False
         '
         'TableLayoutPanel1
         '
+        Me.TableLayoutPanel1.BackColor = System.Drawing.Color.Transparent
         Me.TableLayoutPanel1.ColumnCount = 6
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 48.0!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
@@ -190,9 +207,11 @@ Partial Class ABMMaterial
         'ListaMaterialesLbl
         '
         Me.ListaMaterialesLbl.AutoSize = True
+        Me.ListaMaterialesLbl.BackColor = System.Drawing.Color.Transparent
         Me.TableLayoutPanel1.SetColumnSpan(Me.ListaMaterialesLbl, 3)
         Me.ListaMaterialesLbl.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.ListaMaterialesLbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ListaMaterialesLbl.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.ListaMaterialesLbl.Location = New System.Drawing.Point(3, 12)
         Me.ListaMaterialesLbl.Name = "ListaMaterialesLbl"
         Me.ListaMaterialesLbl.Size = New System.Drawing.Size(197, 17)
@@ -203,6 +222,7 @@ Partial Class ABMMaterial
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(448, 381)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.MinimumSize = New System.Drawing.Size(464, 420)

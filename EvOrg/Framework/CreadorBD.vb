@@ -3,7 +3,32 @@ Imports System.IO
 Imports System.Data.Sql
 Imports System.Windows.Forms
 Imports System.Configuration
-Public Class CrearBase
+Public Class CreadorBD
+#Region "Singleton"
+    Private Shared vCreadorBD As CreadorBD = Nothing
+    Private Sub New()
+
+    End Sub
+    Public Shared Function GetInstance() As CreadorBD
+        If vCreadorBD Is Nothing Then
+            vCreadorBD = New CreadorBD
+        End If
+        Return vCreadorBD
+    End Function
+#End Region
+
+    Dim vFlag = False
+    Public Sub Crear()
+        Try
+            If vFlag = False Then
+                CrearString()
+                CrearBD()
+                vFlag = True
+            End If
+        Catch ex As Exception
+        End Try
+    End Sub
+
     Public Sub CrearBD()
         Dim vScript As New FileStream(Application.StartupPath & "\EvOrgScript.sql", FileMode.Open)
         Dim vLector As New StreamReader(vScript)

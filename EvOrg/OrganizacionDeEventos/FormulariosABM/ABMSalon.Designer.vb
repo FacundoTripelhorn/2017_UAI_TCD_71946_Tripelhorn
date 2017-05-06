@@ -22,6 +22,7 @@ Partial Class ABMSalon
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ABMSalon))
         Me.GrillaSalones = New System.Windows.Forms.DataGridView()
         Me.ListaSalonesLbl = New System.Windows.Forms.Label()
         Me.NombreLbl = New System.Windows.Forms.Label()
@@ -186,6 +187,8 @@ Partial Class ABMSalon
         '
         'TableLayoutPanel1
         '
+        Me.TableLayoutPanel1.BackColor = System.Drawing.Color.Transparent
+        Me.TableLayoutPanel1.BackgroundImage = CType(resources.GetObject("TableLayoutPanel1.BackgroundImage"), System.Drawing.Image)
         Me.TableLayoutPanel1.ColumnCount = 6
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 73.0!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 279.0!))
@@ -208,6 +211,7 @@ Partial Class ABMSalon
         Me.TableLayoutPanel1.Controls.Add(Me.TableLayoutPanel2, 0, 6)
         Me.TableLayoutPanel1.Controls.Add(Me.DireccionGrp, 0, 5)
         Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel1.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 0)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 7
@@ -223,6 +227,7 @@ Partial Class ABMSalon
         '
         'TableLayoutPanel2
         '
+        Me.TableLayoutPanel2.BackColor = System.Drawing.Color.Transparent
         Me.TableLayoutPanel2.ColumnCount = 3
         Me.TableLayoutPanel1.SetColumnSpan(Me.TableLayoutPanel2, 6)
         Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
@@ -245,6 +250,7 @@ Partial Class ABMSalon
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.AltaBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.AltaBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.AltaBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.AltaBtn.Location = New System.Drawing.Point(3, 3)
         Me.AltaBtn.Name = "AltaBtn"
         Me.AltaBtn.Size = New System.Drawing.Size(246, 30)
@@ -258,6 +264,7 @@ Partial Class ABMSalon
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.BajaBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BajaBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BajaBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.BajaBtn.Location = New System.Drawing.Point(255, 3)
         Me.BajaBtn.Name = "BajaBtn"
         Me.BajaBtn.Size = New System.Drawing.Size(246, 30)
@@ -271,6 +278,7 @@ Partial Class ABMSalon
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.ModificacionBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ModificacionBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ModificacionBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.ModificacionBtn.Location = New System.Drawing.Point(507, 3)
         Me.ModificacionBtn.Name = "ModificacionBtn"
         Me.ModificacionBtn.Size = New System.Drawing.Size(247, 30)
@@ -284,6 +292,7 @@ Partial Class ABMSalon
         Me.DireccionGrp.Controls.Add(Me.TableLayoutPanel3)
         Me.DireccionGrp.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DireccionGrp.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DireccionGrp.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.DireccionGrp.Location = New System.Drawing.Point(3, 301)
         Me.DireccionGrp.Name = "DireccionGrp"
         Me.DireccionGrp.Size = New System.Drawing.Size(757, 50)
@@ -293,6 +302,7 @@ Partial Class ABMSalon
         '
         'TableLayoutPanel3
         '
+        Me.TableLayoutPanel3.BackColor = System.Drawing.Color.Transparent
         Me.TableLayoutPanel3.ColumnCount = 6
         Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 73.0!))
         Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 330.0!))

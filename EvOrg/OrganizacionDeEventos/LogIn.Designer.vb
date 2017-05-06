@@ -22,6 +22,7 @@ Partial Class LogIn
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(LogIn))
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.UsuarioLbl = New System.Windows.Forms.Label()
         Me.ContraseñaLbl = New System.Windows.Forms.Label()
@@ -37,6 +38,7 @@ Partial Class LogIn
         '
         'TableLayoutPanel1
         '
+        Me.TableLayoutPanel1.BackColor = System.Drawing.Color.Transparent
         Me.TableLayoutPanel1.ColumnCount = 2
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40.16064!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 59.83936!))
@@ -63,6 +65,7 @@ Partial Class LogIn
         Me.UsuarioLbl.AutoSize = True
         Me.UsuarioLbl.Dock = System.Windows.Forms.DockStyle.Fill
         Me.UsuarioLbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.UsuarioLbl.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.UsuarioLbl.Location = New System.Drawing.Point(3, 23)
         Me.UsuarioLbl.Name = "UsuarioLbl"
         Me.UsuarioLbl.Size = New System.Drawing.Size(112, 31)
@@ -75,6 +78,7 @@ Partial Class LogIn
         Me.ContraseñaLbl.AutoSize = True
         Me.ContraseñaLbl.Dock = System.Windows.Forms.DockStyle.Fill
         Me.ContraseñaLbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ContraseñaLbl.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.ContraseñaLbl.Location = New System.Drawing.Point(3, 54)
         Me.ContraseñaLbl.Name = "ContraseñaLbl"
         Me.ContraseñaLbl.Size = New System.Drawing.Size(112, 28)
@@ -104,6 +108,7 @@ Partial Class LogIn
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.AceptarBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.AceptarBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.AceptarBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.AceptarBtn.Location = New System.Drawing.Point(3, 3)
         Me.AceptarBtn.Name = "AceptarBtn"
         Me.AceptarBtn.Size = New System.Drawing.Size(138, 42)
@@ -117,6 +122,7 @@ Partial Class LogIn
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.CancelarBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.CancelarBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CancelarBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.CancelarBtn.Location = New System.Drawing.Point(147, 3)
         Me.CancelarBtn.Name = "CancelarBtn"
         Me.CancelarBtn.Size = New System.Drawing.Size(138, 42)
@@ -161,6 +167,7 @@ Partial Class LogIn
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(294, 155)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.Name = "LogIn"

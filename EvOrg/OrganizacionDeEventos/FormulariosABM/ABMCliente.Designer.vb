@@ -22,6 +22,7 @@ Partial Class ABMCliente
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ABMCliente))
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.ApellidoTxt = New System.Windows.Forms.TextBox()
         Me.NombreTxt = New System.Windows.Forms.TextBox()
@@ -44,6 +45,7 @@ Partial Class ABMCliente
         '
         'TableLayoutPanel1
         '
+        Me.TableLayoutPanel1.BackColor = System.Drawing.Color.Transparent
         Me.TableLayoutPanel1.ColumnCount = 4
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 549.0!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.44482!))
@@ -101,8 +103,10 @@ Partial Class ABMCliente
         'DNILbl
         '
         Me.DNILbl.AutoSize = True
+        Me.DNILbl.BackColor = System.Drawing.Color.Transparent
         Me.DNILbl.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DNILbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DNILbl.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.DNILbl.Location = New System.Drawing.Point(552, 30)
         Me.DNILbl.Name = "DNILbl"
         Me.DNILbl.Size = New System.Drawing.Size(77, 30)
@@ -113,8 +117,10 @@ Partial Class ABMCliente
         'NombreLbl
         '
         Me.NombreLbl.AutoSize = True
+        Me.NombreLbl.BackColor = System.Drawing.Color.Transparent
         Me.NombreLbl.Dock = System.Windows.Forms.DockStyle.Fill
         Me.NombreLbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.NombreLbl.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.NombreLbl.Location = New System.Drawing.Point(552, 60)
         Me.NombreLbl.Name = "NombreLbl"
         Me.NombreLbl.Size = New System.Drawing.Size(77, 30)
@@ -125,8 +131,10 @@ Partial Class ABMCliente
         'ApellidoLbl
         '
         Me.ApellidoLbl.AutoSize = True
+        Me.ApellidoLbl.BackColor = System.Drawing.Color.Transparent
         Me.ApellidoLbl.Dock = System.Windows.Forms.DockStyle.Fill
         Me.ApellidoLbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ApellidoLbl.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.ApellidoLbl.Location = New System.Drawing.Point(552, 90)
         Me.ApellidoLbl.Name = "ApellidoLbl"
         Me.ApellidoLbl.Size = New System.Drawing.Size(77, 30)
@@ -147,8 +155,10 @@ Partial Class ABMCliente
         'TelefonoLbl
         '
         Me.TelefonoLbl.AutoSize = True
+        Me.TelefonoLbl.BackColor = System.Drawing.Color.Transparent
         Me.TelefonoLbl.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TelefonoLbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TelefonoLbl.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.TelefonoLbl.Location = New System.Drawing.Point(552, 120)
         Me.TelefonoLbl.Name = "TelefonoLbl"
         Me.TelefonoLbl.Size = New System.Drawing.Size(77, 30)
@@ -159,8 +169,10 @@ Partial Class ABMCliente
         'EmailLbl
         '
         Me.EmailLbl.AutoSize = True
+        Me.EmailLbl.BackColor = System.Drawing.Color.Transparent
         Me.EmailLbl.Dock = System.Windows.Forms.DockStyle.Fill
         Me.EmailLbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.EmailLbl.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.EmailLbl.Location = New System.Drawing.Point(552, 150)
         Me.EmailLbl.Name = "EmailLbl"
         Me.EmailLbl.Size = New System.Drawing.Size(77, 30)
@@ -193,6 +205,7 @@ Partial Class ABMCliente
         Me.AltaBtn.Dock = System.Windows.Forms.DockStyle.Fill
         Me.AltaBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.AltaBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.AltaBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.AltaBtn.Location = New System.Drawing.Point(552, 183)
         Me.AltaBtn.Name = "AltaBtn"
         Me.AltaBtn.Size = New System.Drawing.Size(77, 33)
@@ -205,6 +218,7 @@ Partial Class ABMCliente
         Me.BajaBtn.Dock = System.Windows.Forms.DockStyle.Fill
         Me.BajaBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BajaBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BajaBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.BajaBtn.Location = New System.Drawing.Point(635, 183)
         Me.BajaBtn.Name = "BajaBtn"
         Me.BajaBtn.Size = New System.Drawing.Size(77, 33)
@@ -217,6 +231,7 @@ Partial Class ABMCliente
         Me.ModificacionBtn.Dock = System.Windows.Forms.DockStyle.Fill
         Me.ModificacionBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ModificacionBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ModificacionBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.ModificacionBtn.Location = New System.Drawing.Point(718, 183)
         Me.ModificacionBtn.Name = "ModificacionBtn"
         Me.ModificacionBtn.Size = New System.Drawing.Size(78, 33)
@@ -227,9 +242,11 @@ Partial Class ABMCliente
         'ListaClientesLbl
         '
         Me.ListaClientesLbl.AutoSize = True
+        Me.ListaClientesLbl.BackColor = System.Drawing.Color.Transparent
         Me.TableLayoutPanel1.SetColumnSpan(Me.ListaClientesLbl, 4)
         Me.ListaClientesLbl.Dock = System.Windows.Forms.DockStyle.Fill
         Me.ListaClientesLbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ListaClientesLbl.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.ListaClientesLbl.Location = New System.Drawing.Point(3, 0)
         Me.ListaClientesLbl.Name = "ListaClientesLbl"
         Me.ListaClientesLbl.Size = New System.Drawing.Size(793, 30)
@@ -254,6 +271,8 @@ Partial Class ABMCliente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.IndianRed
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(799, 219)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.MinimumSize = New System.Drawing.Size(680, 247)

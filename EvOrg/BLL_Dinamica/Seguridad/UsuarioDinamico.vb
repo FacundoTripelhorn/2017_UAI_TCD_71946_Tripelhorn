@@ -3,7 +3,7 @@ Imports BLL_Estatica
 Public Class UsuarioDinamico
     Implements IABMC
 
-    Property UsuarioDatos As New UsuarioDatos
+    Dim UsuarioDatos As New UsuarioDatos
 
     Public Sub Alta(Optional pObjeto As Object = Nothing) Implements IABMC.Alta
         UsuarioDatos.Alta(pObjeto)

@@ -6,7 +6,7 @@ Public Class PatenteDinamica
     Inherits PatenteAbstractaDinamica
     Implements IABMC
 
-    Property PatenteDatos As New PatenteDatos
+    Dim PatenteDatos As New PatenteDatos
 
     Public Sub Alta(Optional pObjeto As Object = Nothing) Implements IABMC.Alta
         PatenteDatos.Alta(pObjeto)

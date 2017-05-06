@@ -71,6 +71,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ControladorLogIn.vb" />
     <Compile Include="FormulariosABM\ABMCliente.Designer.vb">
       <DependentUpon>ABMCliente.vb</DependentUpon>
     </Compile>

@@ -2,11 +2,12 @@
 Imports BLL_Estatica
 Imports DAL_ABMC
 Imports System.Reflection
+
 Public Class GrupoPatenteDinamico
     Inherits PatenteAbstractaDinamica
     Implements IABMC
 
-    Property GrupoPatenteDatos As New GrupoPatenteDatos
+    Dim GrupoPatenteDatos As New GrupoPatenteDatos
     Public Sub Alta(Optional pObjeto As Object = Nothing) Implements IABMC.Alta
         GrupoPatenteDatos.Alta(pObjeto)
     End Sub
@@ -55,7 +56,6 @@ Public Class GrupoPatenteDinamico
 
     Public Overrides Sub MostrarEnMenuStrip(pMenuStrip As MenuStrip, pUsuario As Usuario, pFormulario As Form)
         Dim vLista As New List(Of PatenteAbstracta)
-        Dim vFamiliaDatos As New FamiliaDatos
         Dim vUsuarioDinamico As New UsuarioDinamico
         Dim vUsuario As Usuario = vUsuarioDinamico.DevuelveUsuario(pUsuario.IdUsuario)
         vLista = vUsuario.Familia.GetPatentes
@@ -95,6 +95,8 @@ Public Class GrupoPatenteDinamico
                     vTool.Name = vPAbstracta.Nombre
                     vTool.Text = vPAbstracta.Nombre
                     vTool.Tag = vPAbstracta
+                    vTool.BackColor = System.Drawing.Color.Lavender
+                    vTool.BackgroundImage = System.Drawing.Image.FromFile(Application.StartupPath + "\Fondo.jpg")
                     pTool.DropDownItems.Add(vTool)
                     pTool.DropDownItems.Item(vTool.Name).Text = vPAbstracta.Nombre
                     AddHandler vTool.Click, AddressOf Menu_Click
@@ -112,6 +114,7 @@ Public Class GrupoPatenteDinamico
         Dim vSTool As ToolStripMenuItem = CType(sender, ToolStripMenuItem)
         Click(vSTool)
     End Sub
+
     Private Sub Click(pTool As ToolStripItem)
         Dim vFName As String = "OrganizacionDeEventos." & DirectCast(pTool.Tag, Patente).Formulario.ToString
         Dim vAsm As Assembly = Assembly.GetEntryAssembly
@@ -119,5 +122,4 @@ Public Class GrupoPatenteDinamico
         Dim vForm = Activator.CreateInstance(vTipo)
         vForm.ShowDialog()
     End Sub
-
 End Class

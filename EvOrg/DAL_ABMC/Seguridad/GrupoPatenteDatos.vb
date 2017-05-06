@@ -75,6 +75,7 @@ Public Class GrupoPatenteDatos
 
         End Try
     End Sub
+
     Public Sub Modificacion(Optional pObjeto As Object = Nothing) Implements IABMC.Modificacion
         If TypeOf pObjeto Is GrupoPatente Then
             vGrupoPatente = DirectCast(pObjeto, GrupoPatente)

@@ -45,7 +45,7 @@ Public Class ClienteDatos
                 Comando.ActualizarBD("Cliente", DTable)
             End If
         Catch ex As Exception
-
+            MsgBox("Error al modificar el cliente seleccionado")
         End Try
     End Sub
 

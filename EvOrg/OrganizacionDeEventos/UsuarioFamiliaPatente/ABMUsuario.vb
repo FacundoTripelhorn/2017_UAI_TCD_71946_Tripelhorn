@@ -6,7 +6,6 @@ Public Class ABMUsuario
     Property Usuario As New Usuario
     Property UsuarioDinamico As New UsuarioDinamico
     Property FamiliaDinamica As New FamiliaDinamica
-    Property Base As New CrearBase
 
     Private Sub ABMUsuario_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Actualizar()

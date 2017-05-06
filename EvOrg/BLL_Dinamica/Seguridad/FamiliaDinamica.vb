@@ -3,7 +3,7 @@
 Public Class FamiliaDinamica
     Implements IABMC
 
-    Property FamiliaDatos As New FamiliaDatos
+    Dim FamiliaDatos As New FamiliaDatos
 
     Public Sub Alta(Optional pObjeto As Object = Nothing) Implements IABMC.Alta
         FamiliaDatos.Alta(pObjeto)

@@ -1,28 +1,25 @@
-﻿Imports DAL
-Imports DAL_ABMC
-Imports BLL_Estatica
-Public Class MaterialDinamico
+﻿Imports DAL_ABMC
+Public Class PasoDinamico
     Implements IABMC
 
-    Dim MaterialDatos As MaterialDatos
+    Dim PasoDatos As PasoDatos
 
     Sub New()
-        Me.MaterialDatos = New MaterialDatos
+        PasoDatos = New PasoDatos
     End Sub
-
     Public Sub Alta(Optional pObjeto As Object = Nothing) Implements IABMC.Alta
-        Me.MaterialDatos.Alta(pObjeto)
+        PasoDatos.Alta(pObjeto)
     End Sub
 
     Public Sub Baja(Optional pObjeto As Object = Nothing) Implements IABMC.Baja
-        Me.MaterialDatos.Baja(pObjeto)
+        PasoDatos.Baja(pObjeto)
     End Sub
 
     Public Sub Modificacion(Optional pObjeto As Object = Nothing) Implements IABMC.Modificacion
-        Me.MaterialDatos.Modificacion(pObjeto)
+        PasoDatos.Modificacion(pObjeto)
     End Sub
 
     Public Function ConsultaTodo() As List(Of Object) Implements IABMC.ConsultaTodo
-        Return Me.MaterialDatos.ConsultaTodo()
+        Return PasoDatos.ConsultaTodo()
     End Function
 End Class

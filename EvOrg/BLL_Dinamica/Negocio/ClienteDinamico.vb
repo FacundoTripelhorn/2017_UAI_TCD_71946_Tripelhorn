@@ -3,7 +3,7 @@
 Public Class ClienteDinamico
     Implements IABMC
 
-    Property ClienteDatos As ClienteDatos
+    Dim ClienteDatos As ClienteDatos
 
     Sub New()
         ClienteDatos = New ClienteDatos

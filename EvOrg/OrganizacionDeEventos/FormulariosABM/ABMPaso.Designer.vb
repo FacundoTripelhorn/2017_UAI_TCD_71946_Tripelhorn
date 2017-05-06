@@ -22,6 +22,7 @@ Partial Class ABMPaso
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ABMPaso))
         Me.EventoCombo = New System.Windows.Forms.ComboBox()
         Me.ElegirEventoLbl = New System.Windows.Forms.Label()
         Me.GrillaPasos = New System.Windows.Forms.DataGridView()
@@ -53,15 +54,17 @@ Partial Class ABMPaso
         Me.EventoCombo.Location = New System.Drawing.Point(3, 23)
         Me.EventoCombo.MinimumSize = New System.Drawing.Size(709, 0)
         Me.EventoCombo.Name = "EventoCombo"
-        Me.EventoCombo.Size = New System.Drawing.Size(809, 21)
+        Me.EventoCombo.Size = New System.Drawing.Size(810, 21)
         Me.EventoCombo.TabIndex = 0
         '
         'ElegirEventoLbl
         '
         Me.ElegirEventoLbl.AutoSize = True
+        Me.ElegirEventoLbl.BackColor = System.Drawing.Color.Transparent
         Me.TableLayoutPanel1.SetColumnSpan(Me.ElegirEventoLbl, 2)
         Me.ElegirEventoLbl.Dock = System.Windows.Forms.DockStyle.Fill
         Me.ElegirEventoLbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ElegirEventoLbl.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.ElegirEventoLbl.Location = New System.Drawing.Point(3, 0)
         Me.ElegirEventoLbl.Name = "ElegirEventoLbl"
         Me.ElegirEventoLbl.Size = New System.Drawing.Size(188, 20)
@@ -84,8 +87,10 @@ Partial Class ABMPaso
         'DescripcionLbl
         '
         Me.DescripcionLbl.AutoSize = True
+        Me.DescripcionLbl.BackColor = System.Drawing.Color.Transparent
         Me.DescripcionLbl.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DescripcionLbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DescripcionLbl.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.DescripcionLbl.Location = New System.Drawing.Point(3, 223)
         Me.DescripcionLbl.Name = "DescripcionLbl"
         Me.DescripcionLbl.Size = New System.Drawing.Size(87, 30)
@@ -106,8 +111,10 @@ Partial Class ABMPaso
         'FechaLbl
         '
         Me.FechaLbl.AutoSize = True
+        Me.FechaLbl.BackColor = System.Drawing.Color.Transparent
         Me.FechaLbl.Dock = System.Windows.Forms.DockStyle.Fill
         Me.FechaLbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.FechaLbl.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.FechaLbl.Location = New System.Drawing.Point(298, 223)
         Me.FechaLbl.Name = "FechaLbl"
         Me.FechaLbl.Size = New System.Drawing.Size(50, 30)
@@ -127,8 +134,10 @@ Partial Class ABMPaso
         'PrioridadLbl
         '
         Me.PrioridadLbl.AutoSize = True
+        Me.PrioridadLbl.BackColor = System.Drawing.Color.Transparent
         Me.PrioridadLbl.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PrioridadLbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PrioridadLbl.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.PrioridadLbl.Location = New System.Drawing.Point(552, 223)
         Me.PrioridadLbl.Name = "PrioridadLbl"
         Me.PrioridadLbl.Size = New System.Drawing.Size(68, 30)
@@ -143,11 +152,12 @@ Partial Class ABMPaso
         Me.PrioridadCombo.FormattingEnabled = True
         Me.PrioridadCombo.Location = New System.Drawing.Point(626, 226)
         Me.PrioridadCombo.Name = "PrioridadCombo"
-        Me.PrioridadCombo.Size = New System.Drawing.Size(186, 21)
+        Me.PrioridadCombo.Size = New System.Drawing.Size(187, 21)
         Me.PrioridadCombo.TabIndex = 9
         '
         'TableLayoutPanel1
         '
+        Me.TableLayoutPanel1.BackColor = System.Drawing.Color.Transparent
         Me.TableLayoutPanel1.ColumnCount = 7
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 93.0!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 101.0!))
@@ -155,7 +165,7 @@ Partial Class ABMPaso
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 56.0!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 198.0!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 74.0!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 192.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 193.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.ElegirEventoLbl, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.EventoCombo, 0, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.FechaDTP, 3, 4)
@@ -179,7 +189,7 @@ Partial Class ABMPaso
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 68.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(815, 319)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(816, 319)
         Me.TableLayoutPanel1.TabIndex = 10
         '
         'Calendario
@@ -192,6 +202,7 @@ Partial Class ABMPaso
         '
         'TableLayoutPanel2
         '
+        Me.TableLayoutPanel2.BackColor = System.Drawing.Color.Transparent
         Me.TableLayoutPanel2.ColumnCount = 3
         Me.TableLayoutPanel1.SetColumnSpan(Me.TableLayoutPanel2, 7)
         Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
@@ -205,51 +216,62 @@ Partial Class ABMPaso
         Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
         Me.TableLayoutPanel2.RowCount = 1
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel2.Size = New System.Drawing.Size(809, 62)
+        Me.TableLayoutPanel2.Size = New System.Drawing.Size(810, 62)
         Me.TableLayoutPanel2.TabIndex = 11
         '
         'B
         '
-        Me.B.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.B.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.B.BackColor = System.Drawing.Color.Transparent
         Me.B.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.B.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.B.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.B.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.B.Location = New System.Drawing.Point(3, 3)
         Me.B.Name = "B"
-        Me.B.Size = New System.Drawing.Size(263, 56)
+        Me.B.Size = New System.Drawing.Size(264, 56)
         Me.B.TabIndex = 0
         Me.B.Text = "Agregar"
-        Me.B.UseVisualStyleBackColor = True
+        Me.B.UseVisualStyleBackColor = False
         '
         'BajaBtn
         '
-        Me.BajaBtn.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.BajaBtn.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BajaBtn.BackColor = System.Drawing.Color.Transparent
         Me.BajaBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BajaBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BajaBtn.Location = New System.Drawing.Point(272, 3)
+        Me.BajaBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BajaBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.BajaBtn.Location = New System.Drawing.Point(273, 3)
         Me.BajaBtn.Name = "BajaBtn"
-        Me.BajaBtn.Size = New System.Drawing.Size(263, 56)
+        Me.BajaBtn.Size = New System.Drawing.Size(264, 56)
         Me.BajaBtn.TabIndex = 1
         Me.BajaBtn.Text = "Borrar"
-        Me.BajaBtn.UseVisualStyleBackColor = True
+        Me.BajaBtn.UseVisualStyleBackColor = False
         '
         'ModificacionBtn
         '
-        Me.ModificacionBtn.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.ModificacionBtn.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.ModificacionBtn.BackColor = System.Drawing.Color.Transparent
         Me.ModificacionBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ModificacionBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ModificacionBtn.Location = New System.Drawing.Point(541, 3)
+        Me.ModificacionBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ModificacionBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.ModificacionBtn.Location = New System.Drawing.Point(543, 3)
         Me.ModificacionBtn.Name = "ModificacionBtn"
-        Me.ModificacionBtn.Size = New System.Drawing.Size(265, 56)
+        Me.ModificacionBtn.Size = New System.Drawing.Size(264, 56)
         Me.ModificacionBtn.TabIndex = 2
         Me.ModificacionBtn.Text = "Modificar"
-        Me.ModificacionBtn.UseVisualStyleBackColor = True
+        Me.ModificacionBtn.UseVisualStyleBackColor = False
         '
         'TipoPasoLbl
         '
         Me.TipoPasoLbl.AutoSize = True
+        Me.TipoPasoLbl.BackColor = System.Drawing.Color.Transparent
         Me.TableLayoutPanel1.SetColumnSpan(Me.TipoPasoLbl, 2)
         Me.TipoPasoLbl.Dock = System.Windows.Forms.DockStyle.Left
         Me.TipoPasoLbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TipoPasoLbl.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.TipoPasoLbl.Location = New System.Drawing.Point(3, 194)
         Me.TipoPasoLbl.Name = "TipoPasoLbl"
         Me.TipoPasoLbl.Size = New System.Drawing.Size(170, 29)
@@ -272,9 +294,10 @@ Partial Class ABMPaso
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(815, 319)
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
+        Me.ClientSize = New System.Drawing.Size(816, 319)
         Me.Controls.Add(Me.TableLayoutPanel1)
-        Me.MinimumSize = New System.Drawing.Size(731, 358)
+        Me.MinimumSize = New System.Drawing.Size(832, 358)
         Me.Name = "ABMPaso"
         Me.Text = "ABMPaso"
         CType(Me.GrillaPasos, System.ComponentModel.ISupportInitialize).EndInit()
