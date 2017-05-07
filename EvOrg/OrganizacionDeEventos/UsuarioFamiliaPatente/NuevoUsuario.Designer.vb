@@ -236,8 +236,9 @@ Partial Class NuevoUsuario
         Me.ClientSize = New System.Drawing.Size(352, 184)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "NuevoUsuario"
-        Me.Text = "NuevoUsuario"
+        Me.Text = "EvOrg"
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.TableLayoutPanel1.PerformLayout()
         Me.TableLayoutPanel2.ResumeLayout(False)

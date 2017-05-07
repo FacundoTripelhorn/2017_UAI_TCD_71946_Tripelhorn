@@ -387,10 +387,11 @@ Partial Class ABMSalon
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(763, 396)
         Me.Controls.Add(Me.TableLayoutPanel1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximumSize = New System.Drawing.Size(779, 435)
         Me.MinimumSize = New System.Drawing.Size(779, 435)
         Me.Name = "ABMSalon"
-        Me.Text = "ABMSalón"
+        Me.Text = "EvOrg"
         CType(Me.GrillaSalones, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.TableLayoutPanel1.PerformLayout()

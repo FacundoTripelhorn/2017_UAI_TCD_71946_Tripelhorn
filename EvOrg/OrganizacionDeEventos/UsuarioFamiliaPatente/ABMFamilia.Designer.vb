@@ -195,8 +195,9 @@ Partial Class ABMFamilia
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(397, 355)
         Me.Controls.Add(Me.TableLayoutPanel1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "ABMFamilia"
-        Me.Text = "ABMFamilia"
+        Me.Text = "EvOrg"
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.TableLayoutPanel1.PerformLayout()
         Me.TableLayoutPanel2.ResumeLayout(False)

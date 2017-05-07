@@ -26,7 +26,6 @@ Public Class ControladorLogIn
             vUsuario.Contraseña = vEncriptar.Encriptar(pContraseña)
 
             If vUsuarioDinamico.InicioSesion(vUsuario, pContraseña) = True Then
-                MsgBox("Inicio exitoso")
                 Dim vInicio As New Inicio(vUsuario)
                 vInicio.Show()
             Else
@@ -34,7 +33,6 @@ Public Class ControladorLogIn
             End If
             Return True
         Catch ex As Exception
-            MsgBox(ex.Message)
             Return False
         End Try
     End Function

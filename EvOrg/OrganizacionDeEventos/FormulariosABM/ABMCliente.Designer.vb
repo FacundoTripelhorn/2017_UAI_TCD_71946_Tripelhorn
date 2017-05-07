@@ -275,9 +275,10 @@ Partial Class ABMCliente
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(799, 219)
         Me.Controls.Add(Me.TableLayoutPanel1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MinimumSize = New System.Drawing.Size(680, 247)
         Me.Name = "ABMCliente"
-        Me.Text = "ABMCliente"
+        Me.Text = "EvOrg"
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.TableLayoutPanel1.PerformLayout()
         CType(Me.GrillaClientes, System.ComponentModel.ISupportInitialize).EndInit()

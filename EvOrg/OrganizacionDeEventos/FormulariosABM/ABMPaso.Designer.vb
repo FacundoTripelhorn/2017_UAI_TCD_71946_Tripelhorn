@@ -297,9 +297,10 @@ Partial Class ABMPaso
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(816, 319)
         Me.Controls.Add(Me.TableLayoutPanel1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MinimumSize = New System.Drawing.Size(832, 358)
         Me.Name = "ABMPaso"
-        Me.Text = "ABMPaso"
+        Me.Text = "EvOrg"
         CType(Me.GrillaPasos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.TableLayoutPanel1.PerformLayout()

@@ -107,8 +107,9 @@ Partial Class ABMPatente
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(362, 305)
         Me.Controls.Add(Me.TableLayoutPanel1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "ABMPatente"
-        Me.Text = "ABMPatente"
+        Me.Text = "EvOrg"
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.ContextMenuStrip1.ResumeLayout(False)
         Me.ResumeLayout(False)
