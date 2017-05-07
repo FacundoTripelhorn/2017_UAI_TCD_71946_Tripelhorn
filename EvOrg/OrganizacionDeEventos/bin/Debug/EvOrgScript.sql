@@ -240,32 +240,40 @@ INSERT [dbo].[Usuario] ([Id], [Email], [Password], [Familia]) VALUES (N'Administ
 
 ALTER TABLE [dbo].[Evento]  WITH CHECK ADD  CONSTRAINT [FK_Evento_Cliente] FOREIGN KEY([Cliente])
 REFERENCES [dbo].[Cliente] ([DNI])
-;
 ALTER TABLE [dbo].[Evento] CHECK CONSTRAINT [FK_Evento_Cliente]
-;
 ALTER TABLE [dbo].[Evento]  WITH CHECK ADD  CONSTRAINT [FK_Evento_Salon] FOREIGN KEY([Salon])
-REFERENCES [dbo].[Salon] ([Id])
-;
+REFERENCES [dbo].[Salon] ([Id]) ON DELETE SET NULL
 ALTER TABLE [dbo].[Evento] CHECK CONSTRAINT [FK_Evento_Salon]
-;
 ALTER TABLE [dbo].[Evento]  WITH CHECK ADD  CONSTRAINT [FK_Evento_TipoEvento] FOREIGN KEY([Tipo])
-REFERENCES [dbo].[TipoEvento] ([Id])
-;
+REFERENCES [dbo].[TipoEvento] ([Id]) ON DELETE SET NULL
 ALTER TABLE [dbo].[Evento] CHECK CONSTRAINT [FK_Evento_TipoEvento]
-;
+ALTER TABLE [dbo].[FamiliaGrupoPatente]  WITH CHECK ADD  CONSTRAINT [FK_FamiliaGrupoPatente_Familia] FOREIGN KEY([Familia])
+REFERENCES [dbo].[Familia] ([Id]) ON DELETE CASCADE
+ALTER TABLE [dbo].[FamiliaGrupoPatente] CHECK CONSTRAINT [FK_FamiliaGrupoPatente_Familia]
+ALTER TABLE [dbo].[FamiliaGrupoPatente]  WITH CHECK ADD  CONSTRAINT [FK_FamiliaGrupoPatente_GrupoPatente] FOREIGN KEY([GrupoPatente])
+REFERENCES [dbo].[GrupoPatente] ([Id]) ON DELETE CASCADE
+ALTER TABLE [dbo].[FamiliaGrupoPatente] CHECK CONSTRAINT [FK_FamiliaGrupoPatente_GrupoPatente]
+ALTER TABLE [dbo].[FamiliaPatente]  WITH CHECK ADD  CONSTRAINT [FK_FamiliaPatente_Familia] FOREIGN KEY([Familia])
+REFERENCES [dbo].[Familia] ([Id]) ON DELETE CASCADE
+ALTER TABLE [dbo].[FamiliaPatente] CHECK CONSTRAINT [FK_FamiliaPatente_Familia]
+ALTER TABLE [dbo].[FamiliaPatente]  WITH CHECK ADD  CONSTRAINT [FK_FamiliaPatente_Patente] FOREIGN KEY([Patente])
+REFERENCES [dbo].[Patente] ([Id]) ON DELETE CASCADE
+ALTER TABLE [dbo].[FamiliaPatente] CHECK CONSTRAINT [FK_FamiliaPatente_Patente]
 ALTER TABLE [dbo].[GrupoPatente]  WITH CHECK ADD  CONSTRAINT [FK_GrupoPatente_GrupoPatente] FOREIGN KEY([Padre])
-REFERENCES [dbo].[GrupoPatente] ([Id])
-;
+REFERENCES [dbo].[GrupoPatente] ([Id]) ON DELETE CASCADE
 ALTER TABLE [dbo].[GrupoPatente] CHECK CONSTRAINT [FK_GrupoPatente_GrupoPatente]
-;
+ALTER TABLE [dbo].[Patente]  WITH CHECK ADD  CONSTRAINT [FK_Patente_GrupoPatente] FOREIGN KEY([Padre])
+REFERENCES [dbo].[GrupoPatente] ([Id]) ON DELETE CASCADE
+ALTER TABLE [dbo].[Patente] CHECK CONSTRAINT [FK_Patente_GrupoPatente]
 ALTER TABLE [dbo].[TipoEventoPaso]  WITH CHECK ADD  CONSTRAINT [FK_TipoEventoPaso_Paso] FOREIGN KEY([Paso])
-REFERENCES [dbo].[Paso] ([Id])
-;
+REFERENCES [dbo].[Paso] ([Id]) ON DELETE SET NULL
 ALTER TABLE [dbo].[TipoEventoPaso] CHECK CONSTRAINT [FK_TipoEventoPaso_Paso]
-;
 ALTER TABLE [dbo].[TipoEventoPaso]  WITH CHECK ADD  CONSTRAINT [FK_TipoEventoPaso_TipoEvento] FOREIGN KEY([TipoEv])
-REFERENCES [dbo].[TipoEvento] ([Id])
-;
+REFERENCES [dbo].[TipoEvento] ([Id]) ON DELETE CASCADE
 ALTER TABLE [dbo].[TipoEventoPaso] CHECK CONSTRAINT [FK_TipoEventoPaso_TipoEvento]
+ALTER TABLE [dbo].[Usuario]  WITH CHECK ADD  CONSTRAINT [FK_Usuario_Familia] FOREIGN KEY([Familia])
+REFERENCES [dbo].[Familia] ([Id]) ON DELETE SET NULL
+ALTER TABLE [dbo].[Usuario] CHECK CONSTRAINT [FK_Usuario_Familia]
+
 ;
 
