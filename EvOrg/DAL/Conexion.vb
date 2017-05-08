@@ -10,7 +10,6 @@ Public Class Conexion
         End If
         Dim vString As ConnectionStringSettings = ConfigurationManager.ConnectionStrings("MiConexion")
         vObjConexion.ConnectionString = vString.ConnectionString
-        'vObjConexion.ConnectionString = "Data Source=FACU;Initial Catalog=EvOrg;Integrated Security=True"
         Return vObjConexion
     End Function
 End Class

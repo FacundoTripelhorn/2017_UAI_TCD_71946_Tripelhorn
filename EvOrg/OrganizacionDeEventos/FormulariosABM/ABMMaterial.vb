@@ -15,10 +15,14 @@ Public Class ABMMaterial
     End Sub
 
     Private Sub BtnAlta_Click(sender As Object, e As EventArgs) Handles AltaBtn.Click
-        vMaterial = New Material(IdTxt.Text, NombreTxt.Text, CantidadNumeric.Value)
-        vMaterialDinamico.Alta(vMaterial)
-        Limpiar()
-        GrillaMateriales.DataSource = vMaterialDinamico.ConsultaTodo()
+        If Not (IdTxt.Text = "" And NombreTxt.Text = "" And CantidadNumeric.Value = 0) Then
+            vMaterial = New Material(IdTxt.Text, NombreTxt.Text, CantidadNumeric.Value)
+            vMaterialDinamico.Alta(vMaterial)
+            Limpiar()
+            GrillaMateriales.DataSource = vMaterialDinamico.ConsultaTodo()
+        Else
+            MessageBox.Show("Debe ingresar un id, un nombre de material y una cantidad", "EvOrg", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End If
     End Sub
 
     Private Sub BtnBaja_Click(sender As Object, e As EventArgs) Handles BajaBtn.Click

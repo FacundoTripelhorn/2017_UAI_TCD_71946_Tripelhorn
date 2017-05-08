@@ -1,4 +1,5 @@
-﻿Imports System.Reflection
+﻿Imports System.ComponentModel
+Imports System.Reflection
 Public Class NuevaPatente
     Private Sub NuevaPatente_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim vAsm As Assembly = Assembly.GetExecutingAssembly

@@ -15,29 +15,34 @@ Public Class ABMPatente
 
     Private Sub AgregarPatenteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AgregarPatenteToolStripMenuItem.Click
         Dim vSNode As TreeNode = TreePatente.SelectedNode
-        If TypeOf vSNode.Tag Is GrupoPatente Then
-            Dim fNuevaPatente As New NuevaPatente
-            fNuevaPatente.ShowDialog()
+        Try
+            If TypeOf vSNode.Tag Is GrupoPatente Then
+                Dim fNuevaPatente As New NuevaPatente
+                fNuevaPatente.ShowDialog()
 
-            Dim vNombre As String = fNuevaPatente.Nombre
-            Dim vFormulario As String = fNuevaPatente.Formulario
-            Dim vPadre As GrupoPatente = vSNode.Tag
-            If vNombre.Length > 0 And vFormulario.Length > 0 Then
-                Patente.Nombre = vNombre
-                Patente.Formulario = vFormulario
-                Patente.Padre = vPadre.Id
+                Dim vNombre As String = fNuevaPatente.Nombre
+                Dim vFormulario As String = fNuevaPatente.Formulario
+                Dim vPadre As GrupoPatente = vSNode.Tag
+                If vNombre.Length > 0 And vFormulario.Length > 0 Then
+                    Patente.Nombre = vNombre
+                    Patente.Formulario = vFormulario
+                    Patente.Padre = vPadre.Id
 
-                Dim vNNode As New TreeNode
-                vNNode.Name = vNombre
-                vNNode.Tag = Patente
-                vSNode.Nodes.Add(vNNode)
-                vPadre.ListaPatentes.Add(Patente)
-                PatenteDinamica.Alta(Patente)
-                TreePatente.Nodes.Clear()
-                ABMPatente_Load(Nothing, Nothing)
-                TreePatente.ExpandAll()
+                    Dim vNNode As New TreeNode
+                    vNNode.Name = vNombre
+                    vNNode.Tag = Patente
+                    vSNode.Nodes.Add(vNNode)
+                    vPadre.ListaPatentes.Add(Patente)
+                    PatenteDinamica.Alta(Patente)
+                    TreePatente.Nodes.Clear()
+                    ABMPatente_Load(Nothing, Nothing)
+                    TreePatente.ExpandAll()
+                End If
             End If
-        End If
+        Catch ex As Exception
+
+        End Try
+
     End Sub
 
     Private Sub AgregarGrupoDePatentesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AgregarGrupoDePatentesToolStripMenuItem.Click

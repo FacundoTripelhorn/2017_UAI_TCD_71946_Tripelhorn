@@ -15,10 +15,15 @@ Public Class ABMCliente
         EmailTxt.Text = ""
     End Sub
     Private Sub AltaBtn_Click(sender As Object, e As EventArgs) Handles AltaBtn.Click
-        vCliente = New Cliente(Integer.Parse(DNITxt.Text), NombreTxt.Text, ApellidoTxt.Text, Integer.Parse(TelefonoTxt.Text), EmailTxt.Text)
-        vClienteDinamico.Alta(vCliente)
-        Limpiar()
-        GrillaClientes.DataSource = vClienteDinamico.ConsultaTodo()
+        Try
+            vCliente = New Cliente(Integer.Parse(DNITxt.Text), NombreTxt.Text, ApellidoTxt.Text, Integer.Parse(TelefonoTxt.Text), EmailTxt.Text)
+            vClienteDinamico.Alta(vCliente)
+            Limpiar()
+            GrillaClientes.DataSource = vClienteDinamico.ConsultaTodo()
+        Catch ex As Exception
+
+        End Try
+
     End Sub
 
     Private Sub BajaBtn_Click(sender As Object, e As EventArgs) Handles BajaBtn.Click
