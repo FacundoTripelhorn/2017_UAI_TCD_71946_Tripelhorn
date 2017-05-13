@@ -1,5 +1,7 @@
 ﻿Imports BLL_Estatica
 Imports BLL_Dinamica
+Imports System.ComponentModel
+
 Public Class Inicio
 
     Property Usuario As New Usuario
@@ -21,19 +23,19 @@ Public Class Inicio
         GrupoPatenteDinamico.MostrarEnMenuStrip(MenuStrip1, Usuario, Me)
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) 
+    Private Sub Button1_Click(sender As Object, e As EventArgs)
         ABMUsuario.ShowDialog()
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) 
+    Private Sub Button2_Click(sender As Object, e As EventArgs)
         ABMFamilia.ShowDialog()
     End Sub
 
-    Private Sub Button3_Click(sender As Object, e As EventArgs) 
+    Private Sub Button3_Click(sender As Object, e As EventArgs)
         ABMPatente.ShowDialog()
     End Sub
 
-    Private Sub Button4_Click(sender As Object, e As EventArgs) 
+    Private Sub Button4_Click(sender As Object, e As EventArgs)
         ABMMaterial.ShowDialog()
     End Sub
 End Class

@@ -49,20 +49,6 @@ Public Class ABMFamilia
         Next
     End Sub
 
-    Private Sub TreePatente_AfterCheck(sender As Object, e As TreeViewEventArgs) Handles TreePatente.AfterCheck
-        Dim vNode As New TreeNode
-        vNode = e.Node
-        If vNode.Checked Then
-            For Each vHijo As TreeNode In vNode.Nodes
-                vHijo.Checked = True
-            Next
-        Else
-            For Each vHijo As TreeNode In vNode.Nodes
-                vHijo.Checked = False
-            Next
-        End If
-    End Sub
-
     Private Sub BajaBtn_Click(sender As Object, e As EventArgs) Handles BajaBtn.Click
         Familia.Nombre = FamiliaListbox.SelectedItem.ToString
         FamiliaDinamica.Baja(Familia)
@@ -86,31 +72,60 @@ Public Class ABMFamilia
 
     Private Sub FamiliaListbox_SelectedValueChanged(sender As Object, e As EventArgs) Handles FamiliaListbox.SelectedValueChanged
         TreePatente.Nodes.Item(0).Checked = False
+        UncheckearNodos(TreePatente.Nodes.Item(0))
         Familia.Nombre = FamiliaListbox.SelectedItem.ToString
         Dim vLista As List(Of Object)
         vLista = FamiliaDinamica.ListarPatentes(Familia)
 
         For Each vPatente As PatenteAbstracta In vLista
-            For Each vNode As TreeNode In TreePatente.Nodes
-                If vPatente.Nombre = vNode.Text.ToString Then
-                    vNode.Checked = True
-                    ChequearNodos(vNode, vPatente)
-                Else
-                    ChequearNodos(vNode, vPatente)
-                End If
-            Next
+            If TypeOf vPatente Is GrupoPatente Then
+                Dim vGPatente As GrupoPatente = DirectCast(vPatente, GrupoPatente)
+                For Each vNode As TreeNode In TreePatente.Nodes
+                    If vGPatente.Nombre = vNode.Text.ToString Then
+                        vNode.Checked = True
+                        ChequearNodos(vNode, vGPatente.ListaPatentes)
+                    End If
+                Next
+            End If
         Next
         TreePatente.ExpandAll()
     End Sub
 
-    Private Sub ChequearNodos(pNode As TreeNode, pPatente As PatenteAbstracta)
+    Private Sub ChequearNodos(pNode As TreeNode, pLista As List(Of PatenteAbstracta))
+        For Each vPatente As PatenteAbstracta In pLista
+            For Each vNode As TreeNode In pNode.Nodes
+                If vPatente.Nombre = vNode.Text.ToString Then
+                    vNode.Checked = True
+                    Dim vGPatente As GrupoPatente
+                    If TypeOf vPatente Is GrupoPatente Then
+                        vGPatente = DirectCast(vPatente, GrupoPatente)
+                        ChequearNodos(vNode, vGPatente.ListaPatentes)
+                    End If
+                End If
+            Next
+        Next
+    End Sub
+
+    Private Sub UncheckearNodos(pNode As TreeNode)
         For Each vNode As TreeNode In pNode.Nodes
-            If pPatente.Nombre = vNode.Text.ToString Then
-                vNode.Checked = True
-                ChequearNodos(vNode, pPatente)
-            Else
-                ChequearNodos(vNode, pPatente)
+            vNode.Checked = False
+            If vNode.Nodes.Count > 0 Then
+                UncheckearNodos(vNode)
             End If
         Next
+    End Sub
+
+    Private Sub TreePatente_AfterExpand(sender As Object, e As TreeViewEventArgs) Handles TreePatente.AfterExpand
+        Dim vNode As New TreeNode
+        vNode = e.Node
+        If vNode.Checked Then
+            For Each vHijo As TreeNode In vNode.Nodes
+                vHijo.Checked = True
+            Next
+        Else
+            For Each vHijo As TreeNode In vNode.Nodes
+                vHijo.Checked = False
+            Next
+        End If
     End Sub
 End Class

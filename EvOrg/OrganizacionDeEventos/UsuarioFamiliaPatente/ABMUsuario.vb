@@ -22,7 +22,7 @@ Public Class ABMUsuario
 
     Private Sub AltaBtn_Click(sender As Object, e As EventArgs) Handles AltaBtn.Click
         Dim vNuevoUsuario As New NuevoUsuario
-        vNuevoUsuario.Alta = True
+        vNuevoUsuario.Modificacion = False
         vNuevoUsuario.ShowDialog()
         Actualizar()
     End Sub
@@ -47,7 +47,7 @@ Public Class ABMUsuario
             End If
         Next
         Dim vNuevoUsuario As New NuevoUsuario
-        vNuevoUsuario.Alta = False
+        vNuevoUsuario.Modificacion = True
         vNuevoUsuario.Usuario = Usuario
         vNuevoUsuario.ShowDialog()
     End Sub

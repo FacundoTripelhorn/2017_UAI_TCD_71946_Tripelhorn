@@ -178,4 +178,3 @@ D:\Trabajo de Campo I\24_04\EvOrg\OrganizacionDeEventos\obj\Debug\GUI.vbproj.Gen
 C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\OrganizacionDeEventos\bin\Debug\Framework.dll
 C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\OrganizacionDeEventos\bin\Debug\Framework.pdb
 C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\OrganizacionDeEventos\bin\Debug\Framework.xml
-C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\OrganizacionDeEventos\obj\Debug\OrganizacionDeEventos.Load.resources

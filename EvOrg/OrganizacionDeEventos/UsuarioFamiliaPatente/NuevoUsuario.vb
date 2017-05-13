@@ -6,14 +6,14 @@ Public Class NuevoUsuario
     Property FamiliaDinamica As New FamiliaDinamica
     Property Usuario As New Usuario
     Property UsuarioDinamico As New UsuarioDinamico
-    Property Alta As New Boolean
+    Property Modificacion As New Boolean
 
     Private Sub NuevoUsuario_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim vLista As List(Of Object) = FamiliaDinamica.ConsultaTodo
         For Each vFamilia As Familia In vLista
             FamiliaCombo.Items.Add(vFamilia.Nombre)
         Next
-        If Alta = False Then
+        If Modificacion = True Then
             IdUsuarioTxt.Text = Usuario.IdUsuario
             IdUsuarioTxt.Enabled = False
             EmailTxt.Text = Usuario.Email
@@ -32,7 +32,7 @@ Public Class NuevoUsuario
                 If vFamilia.Nombre = FamiliaCombo.Text Then Familia = vFamilia
             Next
             Usuario.Familia = Familia
-            If Alta Then UsuarioDinamico.Alta(Usuario) Else UsuarioDinamico.Modificacion(Usuario)
+            If Modificacion Then UsuarioDinamico.Modificacion(Usuario) Else UsuarioDinamico.Alta(Usuario)
             Me.Close()
         End If
     End Sub

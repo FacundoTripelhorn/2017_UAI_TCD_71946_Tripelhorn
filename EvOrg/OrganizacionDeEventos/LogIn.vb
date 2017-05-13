@@ -22,10 +22,6 @@ Public Class LogIn
         End Try
     End Sub
 
-    Private Sub LogIn_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
-
     Private Sub ErrorLinkLabel_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles ErrorLinkLabel.LinkClicked
         MessageBox.Show("Por favor vuelva a ingresar usuario y contraseña", "Error")
     End Sub

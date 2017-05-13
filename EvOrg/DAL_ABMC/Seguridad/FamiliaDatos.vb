@@ -113,36 +113,39 @@ Public Class FamiliaDatos
             Dim DT As DataTable = Comando.GetData("SELECT * FROM Familia WHERE Nombre = '" & vFamilia.Nombre & "'")
             If DT.Rows.Count > 0 Then
                 vUsuario.Familia.Id = DT.Rows(0).Item(0)
+                vUsuario.Familia.Nombre = DT.Rows(0).Item(1)
             End If
         ElseIf TypeOf pObjeto Is Usuario Then
             vUsuario = DirectCast(pObjeto, Usuario)
         End If
 
         Try
-            Dim DTFGPatente As DataTable = Comando.GetData("SELECT * FROM FamiliaGrupoPatente WHERE Familia = '" & vUsuario.Familia.Id & "'")
+            Dim DTFGPatente As DataTable = Comando.GetData("SELECT * FROM FamiliaGrupoPatente WHERE Familia = " & vUsuario.Familia.Id)
+            Dim DTFPatente As DataTable = Comando.GetData("SELECT * FROM FamiliaPatente WHERE Familia = " & vUsuario.Familia.Id)
             If DTFGPatente.Rows.Count > 0 Then
                 If DTFGPatente.Rows(0).Item(2) = 1 Then
-                    Dim DTGPatente As DataTable = Comando.GetData("SELECT * FROM GrupoPatente WHERE Id = '" & DTFGPatente.Rows(0).Item(2) & "'")
-                    For Each DRowGP As DataRow In DTGPatente.Rows
-                        If TypeOf DRowGP.Item(2) Is DBNull Then
-                            Dim vPadre As New GrupoPatente(DRowGP.Item(0), DRowGP.Item(1), 1)
-                            vLista.Add(vPadre)
-                            AgregarHijosGrupo(vPadre, vUsuario.Familia.Id)
-                        Else
-                            Dim vPadre As New GrupoPatente(DRowGP.Item(0), DRowGP.Item(1), DRowGP.Item(2))
-                            vLista.Add(vPadre)
-                            AgregarHijosGrupo(vPadre, vUsuario.Familia.Id)
-                        End If
-                    Next
+                    Dim DTGPatente As DataTable = Comando.GetData("SELECT * FROM GrupoPatente WHERE Id = 1")
+                    Dim vPadre As New GrupoPatente(DTGPatente.Rows(0).Item(0), DTGPatente.Rows(0).Item(1), 1)
+                    vLista.Add(vPadre)
+                    AgregarHijosGrupo(vPadre, vUsuario.Familia.Id)
                 Else
                     Dim DTFGPTemporal As DataTable = Comando.GetData("SELECT * FROM FamiliaGrupoPatente WHERE Familia = '" & vUsuario.Familia.Id & "' AND Padre = 1")
                     For Each DRowFGP As DataRow In DTFGPTemporal.Rows
-                        Dim DTGPatente As DataTable = Comando.GetData("SELECT * FROM GrupoPatente WHERE GrupoPatente_Id = '" & DRowFGP.Item(1) & "'")
-                        For Each DrowGP As DataRow In DTGPatente.Rows
-                            Dim vPadre As New GrupoPatente(DrowGP.Item(0), DrowGP.Item(1), DrowGP.Item(2))
+                        Dim DTGPatente As DataTable = Comando.GetData("SELECT * FROM GrupoPatente WHERE Id = '" & DRowFGP.Item(1) & "'")
+                        Dim vPadre As New GrupoPatente(DTGPatente.Rows(0).Item(0), DTGPatente.Rows(0).Item(1), DTGPatente.Rows(0).Item(2))
+                        vLista.Add(vPadre)
+                        AgregarHijosGrupo(vPadre, vUsuario.Familia.Id)
+                    Next
+                End If
+            Else
+                If DTFPatente.Rows.Count > 0 Then
+                    For Each DRow As DataRow In DTFPatente.Rows
+                        If DRow.Item(2) = 1 Then
+                            Dim DTGPatente As DataTable = Comando.GetData("SELECT * FROM GrupoPatente WHERE Id = 1")
+                            Dim vPadre As New GrupoPatente(DTGPatente.Rows(0).Item(0), DTGPatente.Rows(0).Item(1), 1)
                             vLista.Add(vPadre)
                             AgregarHijosGrupo(vPadre, vUsuario.Familia.Id)
-                        Next
+                        End If
                     Next
                 End If
             End If

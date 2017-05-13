@@ -70,6 +70,8 @@ Public Class GrupoPatenteDinamico
                 pMenuStrip.Items.Item(vTool.Name).Text = vPAbstracta.Nombre
                 If TypeOf vPAbstracta Is GrupoPatente Then
                     AgregarToolStrip(vPAbstracta, vTool, pFormulario)
+                Else
+                    AddHandler vTool.Click, AddressOf Menu_Click
                 End If
             Next
         Else
