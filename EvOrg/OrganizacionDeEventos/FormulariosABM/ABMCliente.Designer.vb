@@ -264,6 +264,7 @@ Partial Class ABMCliente
         Me.GrillaClientes.Name = "GrillaClientes"
         Me.GrillaClientes.ReadOnly = True
         Me.TableLayoutPanel1.SetRowSpan(Me.GrillaClientes, 6)
+        Me.GrillaClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.GrillaClientes.Size = New System.Drawing.Size(543, 183)
         Me.GrillaClientes.TabIndex = 14
         '

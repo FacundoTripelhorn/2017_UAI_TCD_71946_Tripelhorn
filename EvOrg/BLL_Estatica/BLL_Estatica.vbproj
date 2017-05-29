@@ -65,7 +65,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Negocio\Cliente.vb" />
+    <Compile Include="Negocio\Direccion.vb" />
     <Compile Include="Negocio\Paso.vb" />
+    <Compile Include="Negocio\Salon.vb" />
+    <Compile Include="Negocio\Servicio.vb" />
+    <Compile Include="Negocio\TipoEvento.vb" />
     <Compile Include="Seguridad\Familia.vb" />
     <Compile Include="Seguridad\GrupoPatente.vb" />
     <Compile Include="Negocio\Material.vb" />

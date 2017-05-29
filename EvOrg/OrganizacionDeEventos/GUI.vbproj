@@ -91,6 +91,11 @@
     <Compile Include="FormulariosABM\ABMPaso.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FormulariosABM\VistaPaso.vb" />
+    <Compile Include="FormulariosABM\VistaPasoTE.vb" />
+    <Compile Include="FormulariosABM\VistaSalon.vb" />
+    <Compile Include="FormulariosABM\VistaServicio.vb" />
+    <Compile Include="FormulariosABM\VistaTipoEvento.vb" />
     <Compile Include="Inicio.Designer.vb">
       <DependentUpon>Inicio.vb</DependentUpon>
     </Compile>

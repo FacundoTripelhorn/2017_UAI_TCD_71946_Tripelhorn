@@ -5,6 +5,7 @@ Public Class ABMMaterial
     Dim vMaterialDinamico As New MaterialDinamico
 
     Private Sub ABMMaterial_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        GrillaMateriales.DataSource = Nothing
         GrillaMateriales.DataSource = vMaterialDinamico.ConsultaTodo()
     End Sub
 

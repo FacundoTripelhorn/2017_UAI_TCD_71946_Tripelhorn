@@ -66,7 +66,8 @@ Partial Class ABMSalon
         Me.GrillaSalones.Name = "GrillaSalones"
         Me.GrillaSalones.ReadOnly = True
         Me.TableLayoutPanel1.SetRowSpan(Me.GrillaSalones, 2)
-        Me.GrillaSalones.Size = New System.Drawing.Size(545, 203)
+        Me.GrillaSalones.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.GrillaSalones.Size = New System.Drawing.Size(446, 203)
         Me.GrillaSalones.TabIndex = 0
         '
         'ListaSalonesLbl
@@ -75,6 +76,7 @@ Partial Class ABMSalon
         Me.TableLayoutPanel1.SetColumnSpan(Me.ListaSalonesLbl, 6)
         Me.ListaSalonesLbl.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.ListaSalonesLbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ListaSalonesLbl.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.ListaSalonesLbl.Location = New System.Drawing.Point(3, 15)
         Me.ListaSalonesLbl.Name = "ListaSalonesLbl"
         Me.ListaSalonesLbl.Size = New System.Drawing.Size(757, 17)
@@ -86,6 +88,7 @@ Partial Class ABMSalon
         Me.NombreLbl.AutoSize = True
         Me.NombreLbl.Dock = System.Windows.Forms.DockStyle.Fill
         Me.NombreLbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.NombreLbl.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.NombreLbl.Location = New System.Drawing.Point(3, 241)
         Me.NombreLbl.Name = "NombreLbl"
         Me.NombreLbl.Size = New System.Drawing.Size(67, 27)
@@ -98,9 +101,10 @@ Partial Class ABMSalon
         Me.CapacidadLbl.AutoSize = True
         Me.CapacidadLbl.Dock = System.Windows.Forms.DockStyle.Fill
         Me.CapacidadLbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CapacidadLbl.Location = New System.Drawing.Point(355, 241)
+        Me.CapacidadLbl.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.CapacidadLbl.Location = New System.Drawing.Point(286, 241)
         Me.CapacidadLbl.Name = "CapacidadLbl"
-        Me.CapacidadLbl.Size = New System.Drawing.Size(75, 27)
+        Me.CapacidadLbl.Size = New System.Drawing.Size(79, 27)
         Me.CapacidadLbl.TabIndex = 4
         Me.CapacidadLbl.Text = "Capacidad"
         Me.CapacidadLbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -111,9 +115,10 @@ Partial Class ABMSalon
         Me.TableLayoutPanel1.SetColumnSpan(Me.DescripcionLbl, 2)
         Me.DescripcionLbl.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DescripcionLbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DescripcionLbl.Location = New System.Drawing.Point(554, 32)
+        Me.DescripcionLbl.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.DescripcionLbl.Location = New System.Drawing.Point(455, 32)
         Me.DescripcionLbl.Name = "DescripcionLbl"
-        Me.DescripcionLbl.Size = New System.Drawing.Size(206, 26)
+        Me.DescripcionLbl.Size = New System.Drawing.Size(305, 26)
         Me.DescripcionLbl.TabIndex = 5
         Me.DescripcionLbl.Text = "Descripción"
         Me.DescripcionLbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -123,9 +128,10 @@ Partial Class ABMSalon
         Me.TelefonoLbl.AutoSize = True
         Me.TelefonoLbl.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TelefonoLbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TelefonoLbl.Location = New System.Drawing.Point(355, 268)
+        Me.TelefonoLbl.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.TelefonoLbl.Location = New System.Drawing.Point(286, 268)
         Me.TelefonoLbl.Name = "TelefonoLbl"
-        Me.TelefonoLbl.Size = New System.Drawing.Size(75, 30)
+        Me.TelefonoLbl.Size = New System.Drawing.Size(79, 30)
         Me.TelefonoLbl.TabIndex = 6
         Me.TelefonoLbl.Text = "Teléfono"
         Me.TelefonoLbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -135,6 +141,7 @@ Partial Class ABMSalon
         Me.EmailLbl.AutoSize = True
         Me.EmailLbl.Dock = System.Windows.Forms.DockStyle.Fill
         Me.EmailLbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.EmailLbl.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.EmailLbl.Location = New System.Drawing.Point(3, 268)
         Me.EmailLbl.Name = "EmailLbl"
         Me.EmailLbl.Size = New System.Drawing.Size(67, 30)
@@ -147,26 +154,26 @@ Partial Class ABMSalon
         Me.NombreTxt.Dock = System.Windows.Forms.DockStyle.Fill
         Me.NombreTxt.Location = New System.Drawing.Point(76, 244)
         Me.NombreTxt.Name = "NombreTxt"
-        Me.NombreTxt.Size = New System.Drawing.Size(273, 20)
+        Me.NombreTxt.Size = New System.Drawing.Size(204, 20)
         Me.NombreTxt.TabIndex = 8
         '
         'CapacidadTxt
         '
         Me.CapacidadTxt.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.CapacidadTxt.Location = New System.Drawing.Point(436, 244)
+        Me.CapacidadTxt.Location = New System.Drawing.Point(371, 244)
         Me.CapacidadTxt.Name = "CapacidadTxt"
-        Me.CapacidadTxt.Size = New System.Drawing.Size(112, 20)
+        Me.CapacidadTxt.Size = New System.Drawing.Size(78, 20)
         Me.CapacidadTxt.TabIndex = 9
         '
         'DescripcionTxt
         '
         Me.TableLayoutPanel1.SetColumnSpan(Me.DescripcionTxt, 2)
         Me.DescripcionTxt.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.DescripcionTxt.Location = New System.Drawing.Point(554, 61)
+        Me.DescripcionTxt.Location = New System.Drawing.Point(455, 61)
         Me.DescripcionTxt.Multiline = True
         Me.DescripcionTxt.Name = "DescripcionTxt"
         Me.TableLayoutPanel1.SetRowSpan(Me.DescripcionTxt, 3)
-        Me.DescripcionTxt.Size = New System.Drawing.Size(206, 234)
+        Me.DescripcionTxt.Size = New System.Drawing.Size(305, 234)
         Me.DescripcionTxt.TabIndex = 10
         '
         'EmailTxt
@@ -174,15 +181,15 @@ Partial Class ABMSalon
         Me.EmailTxt.Dock = System.Windows.Forms.DockStyle.Fill
         Me.EmailTxt.Location = New System.Drawing.Point(76, 271)
         Me.EmailTxt.Name = "EmailTxt"
-        Me.EmailTxt.Size = New System.Drawing.Size(273, 20)
+        Me.EmailTxt.Size = New System.Drawing.Size(204, 20)
         Me.EmailTxt.TabIndex = 11
         '
         'TelefonoTxt
         '
         Me.TelefonoTxt.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TelefonoTxt.Location = New System.Drawing.Point(436, 271)
+        Me.TelefonoTxt.Location = New System.Drawing.Point(371, 271)
         Me.TelefonoTxt.Name = "TelefonoTxt"
-        Me.TelefonoTxt.Size = New System.Drawing.Size(112, 20)
+        Me.TelefonoTxt.Size = New System.Drawing.Size(78, 20)
         Me.TelefonoTxt.TabIndex = 12
         '
         'TableLayoutPanel1
@@ -191,10 +198,10 @@ Partial Class ABMSalon
         Me.TableLayoutPanel1.BackgroundImage = CType(resources.GetObject("TableLayoutPanel1.BackgroundImage"), System.Drawing.Image)
         Me.TableLayoutPanel1.ColumnCount = 6
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 73.0!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 279.0!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 81.0!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 118.0!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 117.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 210.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 85.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 84.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 216.0!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 95.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.ListaSalonesLbl, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.TelefonoTxt, 3, 4)
@@ -211,7 +218,7 @@ Partial Class ABMSalon
         Me.TableLayoutPanel1.Controls.Add(Me.TableLayoutPanel2, 0, 6)
         Me.TableLayoutPanel1.Controls.Add(Me.DireccionGrp, 0, 5)
         Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel1.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.TableLayoutPanel1.ForeColor = System.Drawing.SystemColors.ControlText
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 0)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 7
