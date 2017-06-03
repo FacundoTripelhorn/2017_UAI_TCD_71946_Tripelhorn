@@ -16,6 +16,7 @@ Public Class ABMServicio
         Next
         GrillaServicios.DataSource = Nothing
         GrillaServicios.DataSource = vLista
+        GrillaServicios.Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
     End Sub
     Private Sub Limpiar()
         NombreTxt.Text = ""

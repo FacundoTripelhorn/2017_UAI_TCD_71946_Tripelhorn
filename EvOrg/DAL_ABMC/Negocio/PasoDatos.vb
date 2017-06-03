@@ -13,7 +13,7 @@ Public Class PasoDatos
                 vPaso = DirectCast(pObjeto, Paso)
                 Dim DTable As DataTable = Comando.GetDataTable("Paso")
                 Dim DRow As DataRow = DTable.NewRow
-                DRow.ItemArray = {vPaso.Id, vPaso.Descripcion, vPaso.Fecha, vPaso.Prioridad, vPaso.Tipo}
+                DRow.ItemArray = {vPaso.Id, vPaso.Descripcion, vPaso.Prioridad, vPaso.Tipo}
                 DTable.Rows.Add(DRow)
                 Comando.ActualizarBD("Paso", DTable)
             End If
@@ -41,7 +41,7 @@ Public Class PasoDatos
                 vPaso = DirectCast(pObjeto, Paso)
                 Dim DTable As DataTable = Comando.GetData("SELECT * FROM Paso WHERE Id = " & vPaso.Id)
                 Dim DRow As DataRow = DTable.NewRow
-                DRow.ItemArray = {vPaso.Id, vPaso.Descripcion, vPaso.Fecha, vPaso.Prioridad, vPaso.Tipo}
+                DRow.ItemArray = {vPaso.Id, vPaso.Descripcion, vPaso.Prioridad, vPaso.Tipo}
                 If DTable.Rows.Count > 0 Then DTable.Rows(0).ItemArray = DRow.ItemArray
                 Comando.ActualizarBD("Paso", DTable)
             End If
@@ -56,11 +56,25 @@ Public Class PasoDatos
             Dim DTable As DataTable = Comando.GetDataTable("Paso")
             PasoLista = New List(Of Object)
             For Each DRow As DataRow In DTable.Rows
-                PasoLista.Add(New Paso(DRow(0), DRow(1), DRow(2), DRow(3), DRow(4)))
+                PasoLista.Add(New Paso(DRow(0), DRow(1), , DRow(2), DRow(3),))
             Next
             Return PasoLista
         Catch ex As Exception
             Return Nothing
         End Try
     End Function
+
+    Private Function GetEvento(pPasoId) As Evento
+        Dim vEvento As New Evento
+        Dim vEventoDatos As New EventoDatos
+        For Each Evento As Evento In vEventoDatos.ConsultaTodo
+            For Each Paso As Paso In Evento.ListaPasos
+                If pPasoId = Paso.Id And Paso.Tipo = "Concreto" Then
+                    vEvento = Evento
+                End If
+            Next
+        Next
+        Return vEvento
+    End Function
+
 End Class

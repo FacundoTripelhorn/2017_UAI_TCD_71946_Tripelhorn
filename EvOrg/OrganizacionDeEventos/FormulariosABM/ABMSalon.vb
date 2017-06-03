@@ -16,6 +16,7 @@ Public Class ABMSalon
         Next
         GrillaSalones.DataSource = Nothing
         GrillaSalones.DataSource = vLista
+        GrillaSalones.Columns(2).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
     End Sub
     Private Sub Limpiar()
         NombreTxt.Text = ""

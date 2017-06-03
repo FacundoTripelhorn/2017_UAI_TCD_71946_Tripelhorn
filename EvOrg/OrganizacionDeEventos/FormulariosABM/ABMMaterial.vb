@@ -5,8 +5,13 @@ Public Class ABMMaterial
     Dim vMaterialDinamico As New MaterialDinamico
 
     Private Sub ABMMaterial_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Actualizar()
+    End Sub
+
+    Private Sub Actualizar()
         GrillaMateriales.DataSource = Nothing
         GrillaMateriales.DataSource = vMaterialDinamico.ConsultaTodo()
+        GrillaMateriales.Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
     End Sub
 
     Private Sub Limpiar()
@@ -20,7 +25,7 @@ Public Class ABMMaterial
             vMaterial = New Material(IdTxt.Text, NombreTxt.Text, CantidadNumeric.Value)
             vMaterialDinamico.Alta(vMaterial)
             Limpiar()
-            GrillaMateriales.DataSource = vMaterialDinamico.ConsultaTodo()
+            Actualizar()
         Else
             MessageBox.Show("Debe ingresar un id, un nombre de material y una cantidad", "EvOrg", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End If
@@ -30,7 +35,7 @@ Public Class ABMMaterial
         vMaterial = DirectCast(GrillaMateriales.SelectedRows(0).DataBoundItem, Material)
         vMaterialDinamico.Baja(vMaterial)
         Limpiar()
-        GrillaMateriales.DataSource = vMaterialDinamico.ConsultaTodo()
+        Actualizar()
     End Sub
 
     Private Sub BtnModificar_Click(sender As Object, e As EventArgs) Handles ModificacionBtn.Click
@@ -39,7 +44,7 @@ Public Class ABMMaterial
         vMaterial.Cantidad = CantidadNumeric.Value
         vMaterialDinamico.Modificacion(vMaterial)
         Limpiar()
-        GrillaMateriales.DataSource = vMaterialDinamico.ConsultaTodo()
+        Actualizar()
     End Sub
 
     Private Sub GrillaMateriales_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles GrillaMateriales.CellClick

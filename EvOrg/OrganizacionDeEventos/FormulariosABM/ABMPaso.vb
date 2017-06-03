@@ -3,16 +3,15 @@ Imports BLL_Estatica
 Public Class ABMPaso
     Dim vPaso As Paso
     Dim vPasoDinamico As New PasoDinamico
+    Dim vEvento As Evento
+    Dim vEventoDinamico As New EventoDinamico
 
     Private Sub ABMPaso_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
             Calendario.RemoveAllAnnuallyBoldedDates()
             CargarPrioridadCombo()
-            'CargarEventos()
+            CargarEventos()
             Actualizar()
-            For Each Paso As Paso In vPasoDinamico.ConsultaTodo
-                AgregarFechaACalendario(Paso.Fecha)
-            Next
         Catch ex As Exception
 
         End Try
@@ -24,11 +23,11 @@ Public Class ABMPaso
         PrioridadCombo.Items.Add("Alta")
     End Sub
 
-    'Private Sub CargarEventos()
-    '    For Each Evento As Evento In vEventoDinamico.ConsultaTodo
-    '        EventoCombo.Items.Add(Evento.Nombre)
-    '    Next
-    'End Sub
+    Private Sub CargarEventos()
+        For Each Evento As Evento In vEventoDinamico.ConsultaTodo
+            EventoCombo.Items.Add(Evento.Nombre)
+        Next
+    End Sub
     Private Sub Limpiar()
         EventoCombo.Text = ""
         DescripcionTxt.Text = ""
@@ -38,7 +37,7 @@ Public Class ABMPaso
 
     Private Sub Actualizar()
         Dim vLista As New List(Of VistaPaso)
-        For Each Paso As Paso In vPasoDinamico.ConsultaTodo
+        For Each Paso As Paso In vEvento.ListaPasos
             vLista.Add(New VistaPaso(Paso.Descripcion, Paso.Fecha, Paso.Prioridad, Paso.Tipo))
         Next
         GrillaPasos.DataSource = Nothing
@@ -58,32 +57,31 @@ Public Class ABMPaso
         End If
     End Sub
 
-    Private Function SetPasoId() As Integer
-        Try
-            Dim vId As New Integer
-            For Each Paso As Paso In vPasoDinamico.ConsultaTodo
-                vId = Paso.Id
-            Next
-            Return vId + 1
-        Catch ex As Exception
-            Return Nothing
-        End Try
+    Private Function GetPasoId() As Integer
+        Dim vId As New Integer
+        For Each Paso As Paso In vPasoDinamico.ConsultaTodo
+            vId = Paso.Id
+        Next
+        Return vId + 1
     End Function
 
+
     Private Sub AltaBtn_Click(sender As Object, e As EventArgs) Handles AltaBtn.Click
-        'If Not (EventoCombo.Text = "") Then
-        If Not (DescripcionTxt.Text = "" And FechaDTP.Value > Date.Now And PrioridadCombo.Text = "") Then
-                vPaso = New Paso(SetPasoId, DescripcionTxt.Text, FechaDTP.Value, PrioridadCombo.Text, "Concreto")
+        If Not (EventoCombo.Text = "") Then
+            If Not (DescripcionTxt.Text = "" And FechaDTP.Value > Date.Now And PrioridadCombo.Text = "") Then
+                vPaso = New Paso(GetPasoId(), DescripcionTxt.Text, FechaDTP.Value, PrioridadCombo.Text, "Concreto", vEvento)
                 vPasoDinamico.Alta(vPaso)
+                vEventoDinamico.AgregarPaso(vEvento, vPaso, FechaDTP.Value)
+                vEvento.ListaPasos.Add(vPaso)
                 AgregarFechaACalendario(vPaso.Fecha)
                 Limpiar()
                 Actualizar()
             Else
                 MsgBox("Ingrese los datos del paso")
             End If
-        'Else
-        'MsgBox("Seleccione un evento")
-        ' End If
+        Else
+            MsgBox("Seleccione un evento")
+        End If
     End Sub
 
     Private Sub BajaBtn_Click(sender As Object, e As EventArgs) Handles BajaBtn.Click
@@ -120,4 +118,17 @@ Public Class ABMPaso
         Next
         Return vP
     End Function
+
+    Private Sub EventoCombo_SelectedIndexChanged(sender As Object, e As EventArgs) Handles EventoCombo.SelectedIndexChanged
+        For Each Evento As Evento In vEventoDinamico.ConsultaTodo
+            If Evento.Nombre = EventoCombo.SelectedItem Then
+                vEvento = Evento
+                Actualizar()
+            End If
+        Next
+        Calendario.RemoveAllAnnuallyBoldedDates()
+        For Each Paso As Paso In vEvento.ListaPasos
+            AgregarFechaACalendario(Paso.Fecha)
+        Next
+    End Sub
 End Class

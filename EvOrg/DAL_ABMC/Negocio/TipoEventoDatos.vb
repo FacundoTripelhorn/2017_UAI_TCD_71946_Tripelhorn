@@ -88,7 +88,7 @@ Public Class TipoEventoDatos
             If pTipoEventoId = DRIntermedia(0) Then
                 For Each DRPaso As DataRow In DTPaso.Rows
                     If DRIntermedia(1) = DRPaso(0) Then
-                        Dim vPaso As New Paso(DRPaso(0), DRPaso(1), DRPaso(2), DRPaso(3), DRPaso(4))
+                        Dim vPaso As New Paso(DRPaso(0), DRPaso(1), , DRPaso(2), DRPaso(3),)
                         ListaPasos.Add(vPaso)
                     End If
                 Next

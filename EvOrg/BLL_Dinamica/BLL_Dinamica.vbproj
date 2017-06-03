@@ -66,6 +66,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Negocio\ClienteDinamico.vb" />
+    <Compile Include="Negocio\EventoDinamico.vb" />
     <Compile Include="Negocio\PasoDinamico.vb" />
     <Compile Include="Negocio\SalonDinamico.vb" />
     <Compile Include="Negocio\ServicioDinamico.vb" />
