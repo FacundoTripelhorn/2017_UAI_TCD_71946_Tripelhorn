@@ -72,34 +72,91 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ControladorLogIn.vb" />
-    <Compile Include="FormulariosABM\ABMCliente.Designer.vb">
+    <Compile Include="Negocio\FormulariosABM\ABMCliente.Designer.vb">
       <DependentUpon>ABMCliente.vb</DependentUpon>
     </Compile>
-    <Compile Include="FormulariosABM\ABMCliente.vb">
+    <Compile Include="Negocio\FormulariosABM\ABMCliente.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormulariosABM\ABMMaterial.vb">
+    <Compile Include="Negocio\FormulariosABM\ABMMaterial.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormulariosABM\ABMMaterial.Designer.vb">
+    <Compile Include="Negocio\FormulariosABM\ABMMaterial.Designer.vb">
       <DependentUpon>ABMMaterial.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormulariosABM\ABMPaso.Designer.vb">
+    <Compile Include="Negocio\FormulariosABM\ABMPaso.Designer.vb">
       <DependentUpon>ABMPaso.vb</DependentUpon>
     </Compile>
-    <Compile Include="FormulariosABM\ABMPaso.vb">
+    <Compile Include="Negocio\FormulariosABM\ABMPaso.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormulariosABM\VistaPaso.vb" />
-    <Compile Include="FormulariosABM\VistaPasoTE.vb" />
-    <Compile Include="FormulariosABM\VistaSalon.vb" />
-    <Compile Include="FormulariosABM\VistaServicio.vb" />
-    <Compile Include="FormulariosABM\VistaTipoEvento.vb" />
+    <Compile Include="Negocio\FormulariosABM\VistaPaso.vb" />
+    <Compile Include="Negocio\FormulariosABM\VistaPasoTE.vb" />
+    <Compile Include="Negocio\FormulariosABM\VistaSalon.vb" />
+    <Compile Include="Negocio\FormulariosABM\VistaServicio.vb" />
+    <Compile Include="Negocio\FormulariosABM\VistaTipoEvento.vb" />
     <Compile Include="Inicio.Designer.vb">
       <DependentUpon>Inicio.vb</DependentUpon>
     </Compile>
     <Compile Include="Inicio.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MultiIdioma\IObservado.vb" />
+    <Compile Include="MultiIdioma\IObservador.vb" />
+    <Compile Include="MultiIdioma\Traductor.vb" />
+    <Compile Include="Negocio\CrearEvento.Designer.vb">
+      <DependentUpon>CrearEvento.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Negocio\CrearEvento.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Negocio\ListaMateriales.Designer.vb">
+      <DependentUpon>ListaMateriales.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Negocio\ListaMateriales.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Negocio\Presupuesto.Designer.vb">
+      <DependentUpon>Presupuesto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Negocio\Presupuesto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Negocio\ReservarMaterial.Designer.vb">
+      <DependentUpon>ReservarMaterial.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Negocio\ReservarMaterial.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Negocio\ReservarServicio.Designer.vb">
+      <DependentUpon>ReservarServicio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Negocio\ReservarServicio.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Negocio\SeleccionarSalon.Designer.vb">
+      <DependentUpon>SeleccionarSalon.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Negocio\SeleccionarSalon.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Negocio\TareasDelDia.Designer.vb">
+      <DependentUpon>TareasDelDia.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Negocio\TareasDelDia.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Negocio\VerEventos.Designer.vb">
+      <DependentUpon>VerEventos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Negocio\VerEventos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Negocio\VerMateriales.Designer.vb">
+      <DependentUpon>VerMateriales.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Negocio\VerMateriales.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UsuarioFamiliaPatente\ABMFamilia.Designer.vb">
@@ -114,22 +171,22 @@
     <Compile Include="UsuarioFamiliaPatente\ABMPatente.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormulariosABM\ABMSalon.Designer.vb">
+    <Compile Include="Negocio\FormulariosABM\ABMSalon.Designer.vb">
       <DependentUpon>ABMSalon.vb</DependentUpon>
     </Compile>
-    <Compile Include="FormulariosABM\ABMSalon.vb">
+    <Compile Include="Negocio\FormulariosABM\ABMSalon.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormulariosABM\ABMServicio.Designer.vb">
+    <Compile Include="Negocio\FormulariosABM\ABMServicio.Designer.vb">
       <DependentUpon>ABMServicio.vb</DependentUpon>
     </Compile>
-    <Compile Include="FormulariosABM\ABMServicio.vb">
+    <Compile Include="Negocio\FormulariosABM\ABMServicio.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormulariosABM\ABMTipoEvento.Designer.vb">
+    <Compile Include="Negocio\FormulariosABM\ABMTipoEvento.Designer.vb">
       <DependentUpon>ABMTipoEvento.vb</DependentUpon>
     </Compile>
-    <Compile Include="FormulariosABM\ABMTipoEvento.vb">
+    <Compile Include="Negocio\FormulariosABM\ABMTipoEvento.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UsuarioFamiliaPatente\ABMUsuario.Designer.vb">
@@ -174,17 +231,44 @@
     <Compile Include="UsuarioFamiliaPatente\VistaUsuario.vb" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="FormulariosABM\ABMCliente.resx">
+    <EmbeddedResource Include="Negocio\FormulariosABM\ABMCliente.resx">
       <DependentUpon>ABMCliente.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormulariosABM\ABMMaterial.resx">
+    <EmbeddedResource Include="Negocio\FormulariosABM\ABMMaterial.resx">
       <DependentUpon>ABMMaterial.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormulariosABM\ABMPaso.resx">
+    <EmbeddedResource Include="Negocio\FormulariosABM\ABMPaso.resx">
       <DependentUpon>ABMPaso.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inicio.resx">
       <DependentUpon>Inicio.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Negocio\CrearEvento.resx">
+      <DependentUpon>CrearEvento.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Negocio\ListaMateriales.resx">
+      <DependentUpon>ListaMateriales.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Negocio\Presupuesto.resx">
+      <DependentUpon>Presupuesto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Negocio\ReservarMaterial.resx">
+      <DependentUpon>ReservarMaterial.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Negocio\ReservarServicio.resx">
+      <DependentUpon>ReservarServicio.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Negocio\SeleccionarSalon.resx">
+      <DependentUpon>SeleccionarSalon.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Negocio\TareasDelDia.resx">
+      <DependentUpon>TareasDelDia.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Negocio\VerEventos.resx">
+      <DependentUpon>VerEventos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Negocio\VerMateriales.resx">
+      <DependentUpon>VerMateriales.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UsuarioFamiliaPatente\ABMFamilia.resx">
       <DependentUpon>ABMFamilia.vb</DependentUpon>
@@ -192,13 +276,13 @@
     <EmbeddedResource Include="UsuarioFamiliaPatente\ABMPatente.resx">
       <DependentUpon>ABMPatente.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormulariosABM\ABMSalon.resx">
+    <EmbeddedResource Include="Negocio\FormulariosABM\ABMSalon.resx">
       <DependentUpon>ABMSalon.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormulariosABM\ABMServicio.resx">
+    <EmbeddedResource Include="Negocio\FormulariosABM\ABMServicio.resx">
       <DependentUpon>ABMServicio.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormulariosABM\ABMTipoEvento.resx">
+    <EmbeddedResource Include="Negocio\FormulariosABM\ABMTipoEvento.resx">
       <DependentUpon>ABMTipoEvento.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UsuarioFamiliaPatente\ABMUsuario.resx">
@@ -230,7 +314,9 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BLL_Dinamica\BLL_Dinamica.vbproj">

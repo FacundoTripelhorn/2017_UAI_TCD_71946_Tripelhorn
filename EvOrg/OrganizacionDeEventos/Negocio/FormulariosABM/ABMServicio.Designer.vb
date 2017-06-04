@@ -46,6 +46,8 @@ Partial Class ABMServicio
         Me.CalleTxt = New System.Windows.Forms.TextBox()
         Me.NumeroTxt = New System.Windows.Forms.TextBox()
         Me.CPTxt = New System.Windows.Forms.TextBox()
+        Me.PrecioLbl = New System.Windows.Forms.Label()
+        Me.PrecioTxt = New System.Windows.Forms.TextBox()
         Me.TableLayoutPanel1.SuspendLayout()
         CType(Me.GrillaServicios, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TableLayoutPanel2.SuspendLayout()
@@ -58,11 +60,11 @@ Partial Class ABMServicio
         Me.TableLayoutPanel1.BackColor = System.Drawing.Color.Transparent
         Me.TableLayoutPanel1.ColumnCount = 6
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 73.0!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 125.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 75.0!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 78.0!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 126.0!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 150.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 63.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 171.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.ListaServiciosLbl, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.GrillaServicios, 0, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.EmailTxt, 1, 4)
@@ -75,6 +77,8 @@ Partial Class ABMServicio
         Me.TableLayoutPanel1.Controls.Add(Me.ObservacionLbl, 4, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.TableLayoutPanel2, 0, 6)
         Me.TableLayoutPanel1.Controls.Add(Me.DireccionGrp, 0, 5)
+        Me.TableLayoutPanel1.Controls.Add(Me.PrecioLbl, 4, 4)
+        Me.TableLayoutPanel1.Controls.Add(Me.PrecioTxt, 5, 4)
         Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel1.ForeColor = System.Drawing.SystemColors.ControlText
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 0)
@@ -82,12 +86,12 @@ Partial Class ABMServicio
         Me.TableLayoutPanel1.RowCount = 7
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 183.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 56.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(627, 395)
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 58.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48.0!))
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(727, 395)
         Me.TableLayoutPanel1.TabIndex = 15
         '
         'ListaServiciosLbl
@@ -99,7 +103,7 @@ Partial Class ABMServicio
         Me.ListaServiciosLbl.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.ListaServiciosLbl.Location = New System.Drawing.Point(3, 15)
         Me.ListaServiciosLbl.Name = "ListaServiciosLbl"
-        Me.ListaServiciosLbl.Size = New System.Drawing.Size(621, 17)
+        Me.ListaServiciosLbl.Size = New System.Drawing.Size(721, 17)
         Me.ListaServiciosLbl.TabIndex = 1
         Me.ListaServiciosLbl.Text = "Lista de Servicios"
         '
@@ -115,16 +119,16 @@ Partial Class ABMServicio
         Me.GrillaServicios.ReadOnly = True
         Me.TableLayoutPanel1.SetRowSpan(Me.GrillaServicios, 2)
         Me.GrillaServicios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.GrillaServicios.Size = New System.Drawing.Size(345, 203)
+        Me.GrillaServicios.Size = New System.Drawing.Size(487, 194)
         Me.GrillaServicios.TabIndex = 11
         '
         'EmailTxt
         '
         Me.TableLayoutPanel1.SetColumnSpan(Me.EmailTxt, 3)
         Me.EmailTxt.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.EmailTxt.Location = New System.Drawing.Point(76, 269)
+        Me.EmailTxt.Location = New System.Drawing.Point(76, 260)
         Me.EmailTxt.Name = "EmailTxt"
-        Me.EmailTxt.Size = New System.Drawing.Size(272, 20)
+        Me.EmailTxt.Size = New System.Drawing.Size(414, 20)
         Me.EmailTxt.TabIndex = 3
         '
         'EmailLbl
@@ -133,7 +137,7 @@ Partial Class ABMServicio
         Me.EmailLbl.Dock = System.Windows.Forms.DockStyle.Fill
         Me.EmailLbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.EmailLbl.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.EmailLbl.Location = New System.Drawing.Point(3, 266)
+        Me.EmailLbl.Location = New System.Drawing.Point(3, 257)
         Me.EmailLbl.Name = "EmailLbl"
         Me.EmailLbl.Size = New System.Drawing.Size(67, 32)
         Me.EmailLbl.TabIndex = 7
@@ -146,7 +150,7 @@ Partial Class ABMServicio
         Me.NombreLbl.Dock = System.Windows.Forms.DockStyle.Fill
         Me.NombreLbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.NombreLbl.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.NombreLbl.Location = New System.Drawing.Point(3, 241)
+        Me.NombreLbl.Location = New System.Drawing.Point(3, 232)
         Me.NombreLbl.Name = "NombreLbl"
         Me.NombreLbl.Size = New System.Drawing.Size(67, 25)
         Me.NombreLbl.TabIndex = 2
@@ -156,17 +160,17 @@ Partial Class ABMServicio
         'NombreTxt
         '
         Me.NombreTxt.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.NombreTxt.Location = New System.Drawing.Point(76, 244)
+        Me.NombreTxt.Location = New System.Drawing.Point(76, 235)
         Me.NombreTxt.Name = "NombreTxt"
-        Me.NombreTxt.Size = New System.Drawing.Size(119, 20)
+        Me.NombreTxt.Size = New System.Drawing.Size(219, 20)
         Me.NombreTxt.TabIndex = 1
         '
         'TelefonoTxt
         '
         Me.TelefonoTxt.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TelefonoTxt.Location = New System.Drawing.Point(276, 244)
+        Me.TelefonoTxt.Location = New System.Drawing.Point(376, 235)
         Me.TelefonoTxt.Name = "TelefonoTxt"
-        Me.TelefonoTxt.Size = New System.Drawing.Size(72, 20)
+        Me.TelefonoTxt.Size = New System.Drawing.Size(114, 20)
         Me.TelefonoTxt.TabIndex = 2
         '
         'TelefonoLbl
@@ -175,7 +179,7 @@ Partial Class ABMServicio
         Me.TelefonoLbl.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TelefonoLbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TelefonoLbl.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.TelefonoLbl.Location = New System.Drawing.Point(201, 241)
+        Me.TelefonoLbl.Location = New System.Drawing.Point(301, 232)
         Me.TelefonoLbl.Name = "TelefonoLbl"
         Me.TelefonoLbl.Size = New System.Drawing.Size(69, 25)
         Me.TelefonoLbl.TabIndex = 6
@@ -186,12 +190,12 @@ Partial Class ABMServicio
         '
         Me.TableLayoutPanel1.SetColumnSpan(Me.ObservacionTxt, 2)
         Me.ObservacionTxt.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.ObservacionTxt.Location = New System.Drawing.Point(354, 61)
+        Me.ObservacionTxt.Location = New System.Drawing.Point(496, 61)
         Me.ObservacionTxt.Multiline = True
         Me.ObservacionTxt.Name = "ObservacionTxt"
-        Me.TableLayoutPanel1.SetRowSpan(Me.ObservacionTxt, 3)
-        Me.ObservacionTxt.Size = New System.Drawing.Size(270, 234)
-        Me.ObservacionTxt.TabIndex = 7
+        Me.TableLayoutPanel1.SetRowSpan(Me.ObservacionTxt, 2)
+        Me.ObservacionTxt.Size = New System.Drawing.Size(228, 193)
+        Me.ObservacionTxt.TabIndex = 5
         '
         'ObservacionLbl
         '
@@ -200,9 +204,9 @@ Partial Class ABMServicio
         Me.ObservacionLbl.Dock = System.Windows.Forms.DockStyle.Fill
         Me.ObservacionLbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ObservacionLbl.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.ObservacionLbl.Location = New System.Drawing.Point(354, 32)
+        Me.ObservacionLbl.Location = New System.Drawing.Point(496, 32)
         Me.ObservacionLbl.Name = "ObservacionLbl"
-        Me.ObservacionLbl.Size = New System.Drawing.Size(270, 26)
+        Me.ObservacionLbl.Size = New System.Drawing.Size(228, 26)
         Me.ObservacionLbl.TabIndex = 5
         Me.ObservacionLbl.Text = "Observación"
         Me.ObservacionLbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -218,11 +222,11 @@ Partial Class ABMServicio
         Me.TableLayoutPanel2.Controls.Add(Me.BajaBtn, 1, 0)
         Me.TableLayoutPanel2.Controls.Add(Me.ModificacionBtn, 2, 0)
         Me.TableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel2.Location = New System.Drawing.Point(3, 357)
+        Me.TableLayoutPanel2.Location = New System.Drawing.Point(3, 350)
         Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
         Me.TableLayoutPanel2.RowCount = 1
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel2.Size = New System.Drawing.Size(621, 35)
+        Me.TableLayoutPanel2.Size = New System.Drawing.Size(721, 42)
         Me.TableLayoutPanel2.TabIndex = 20
         '
         'AltaBtn
@@ -232,10 +236,10 @@ Partial Class ABMServicio
         Me.AltaBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.AltaBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.AltaBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.AltaBtn.Location = New System.Drawing.Point(3, 3)
+        Me.AltaBtn.Location = New System.Drawing.Point(3, 10)
         Me.AltaBtn.Name = "AltaBtn"
-        Me.AltaBtn.Size = New System.Drawing.Size(201, 29)
-        Me.AltaBtn.TabIndex = 8
+        Me.AltaBtn.Size = New System.Drawing.Size(234, 29)
+        Me.AltaBtn.TabIndex = 9
         Me.AltaBtn.Text = "Agregar"
         Me.AltaBtn.UseVisualStyleBackColor = True
         '
@@ -246,10 +250,10 @@ Partial Class ABMServicio
         Me.BajaBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BajaBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BajaBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.BajaBtn.Location = New System.Drawing.Point(210, 3)
+        Me.BajaBtn.Location = New System.Drawing.Point(243, 10)
         Me.BajaBtn.Name = "BajaBtn"
-        Me.BajaBtn.Size = New System.Drawing.Size(201, 29)
-        Me.BajaBtn.TabIndex = 9
+        Me.BajaBtn.Size = New System.Drawing.Size(234, 29)
+        Me.BajaBtn.TabIndex = 10
         Me.BajaBtn.Text = "Borrar"
         Me.BajaBtn.UseVisualStyleBackColor = True
         '
@@ -260,10 +264,10 @@ Partial Class ABMServicio
         Me.ModificacionBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ModificacionBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ModificacionBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.ModificacionBtn.Location = New System.Drawing.Point(417, 3)
+        Me.ModificacionBtn.Location = New System.Drawing.Point(483, 10)
         Me.ModificacionBtn.Name = "ModificacionBtn"
-        Me.ModificacionBtn.Size = New System.Drawing.Size(201, 29)
-        Me.ModificacionBtn.TabIndex = 10
+        Me.ModificacionBtn.Size = New System.Drawing.Size(235, 29)
+        Me.ModificacionBtn.TabIndex = 11
         Me.ModificacionBtn.Text = "Modificar"
         Me.ModificacionBtn.UseVisualStyleBackColor = True
         '
@@ -274,9 +278,9 @@ Partial Class ABMServicio
         Me.DireccionGrp.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DireccionGrp.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DireccionGrp.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.DireccionGrp.Location = New System.Drawing.Point(3, 301)
+        Me.DireccionGrp.Location = New System.Drawing.Point(3, 292)
         Me.DireccionGrp.Name = "DireccionGrp"
-        Me.DireccionGrp.Size = New System.Drawing.Size(621, 50)
+        Me.DireccionGrp.Size = New System.Drawing.Size(721, 52)
         Me.DireccionGrp.TabIndex = 21
         Me.DireccionGrp.TabStop = False
         Me.DireccionGrp.Text = "Dirección"
@@ -285,11 +289,11 @@ Partial Class ABMServicio
         '
         Me.TableLayoutPanel3.ColumnCount = 6
         Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 73.0!))
-        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 259.0!))
-        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 65.0!))
-        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 97.0!))
-        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 48.0!))
-        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 216.0!))
+        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 68.0!))
+        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 119.0!))
+        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50.0!))
+        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 89.0!))
         Me.TableLayoutPanel3.Controls.Add(Me.CalleLbl, 0, 0)
         Me.TableLayoutPanel3.Controls.Add(Me.NumeroLbl, 2, 0)
         Me.TableLayoutPanel3.Controls.Add(Me.CPLbl, 4, 0)
@@ -301,7 +305,7 @@ Partial Class ABMServicio
         Me.TableLayoutPanel3.Name = "TableLayoutPanel3"
         Me.TableLayoutPanel3.RowCount = 1
         Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel3.Size = New System.Drawing.Size(615, 28)
+        Me.TableLayoutPanel3.Size = New System.Drawing.Size(715, 30)
         Me.TableLayoutPanel3.TabIndex = 0
         '
         'CalleLbl
@@ -310,7 +314,7 @@ Partial Class ABMServicio
         Me.CalleLbl.Dock = System.Windows.Forms.DockStyle.Fill
         Me.CalleLbl.Location = New System.Drawing.Point(3, 0)
         Me.CalleLbl.Name = "CalleLbl"
-        Me.CalleLbl.Size = New System.Drawing.Size(67, 28)
+        Me.CalleLbl.Size = New System.Drawing.Size(67, 30)
         Me.CalleLbl.TabIndex = 0
         Me.CalleLbl.Text = "Calle"
         Me.CalleLbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -319,9 +323,9 @@ Partial Class ABMServicio
         '
         Me.NumeroLbl.AutoSize = True
         Me.NumeroLbl.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.NumeroLbl.Location = New System.Drawing.Point(335, 0)
+        Me.NumeroLbl.Location = New System.Drawing.Point(392, 0)
         Me.NumeroLbl.Name = "NumeroLbl"
-        Me.NumeroLbl.Size = New System.Drawing.Size(59, 28)
+        Me.NumeroLbl.Size = New System.Drawing.Size(62, 30)
         Me.NumeroLbl.TabIndex = 1
         Me.NumeroLbl.Text = "Número"
         Me.NumeroLbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -330,9 +334,9 @@ Partial Class ABMServicio
         '
         Me.CPLbl.AutoSize = True
         Me.CPLbl.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.CPLbl.Location = New System.Drawing.Point(497, 0)
+        Me.CPLbl.Location = New System.Drawing.Point(579, 0)
         Me.CPLbl.Name = "CPLbl"
-        Me.CPLbl.Size = New System.Drawing.Size(42, 28)
+        Me.CPLbl.Size = New System.Drawing.Size(44, 30)
         Me.CPLbl.TabIndex = 2
         Me.CPLbl.Text = "C. P."
         Me.CPLbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -342,31 +346,53 @@ Partial Class ABMServicio
         Me.CalleTxt.Dock = System.Windows.Forms.DockStyle.Fill
         Me.CalleTxt.Location = New System.Drawing.Point(76, 3)
         Me.CalleTxt.Name = "CalleTxt"
-        Me.CalleTxt.Size = New System.Drawing.Size(253, 23)
-        Me.CalleTxt.TabIndex = 4
+        Me.CalleTxt.Size = New System.Drawing.Size(310, 23)
+        Me.CalleTxt.TabIndex = 6
         '
         'NumeroTxt
         '
         Me.NumeroTxt.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.NumeroTxt.Location = New System.Drawing.Point(400, 3)
+        Me.NumeroTxt.Location = New System.Drawing.Point(460, 3)
         Me.NumeroTxt.Name = "NumeroTxt"
-        Me.NumeroTxt.Size = New System.Drawing.Size(91, 23)
-        Me.NumeroTxt.TabIndex = 5
+        Me.NumeroTxt.Size = New System.Drawing.Size(113, 23)
+        Me.NumeroTxt.TabIndex = 7
         '
         'CPTxt
         '
         Me.CPTxt.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.CPTxt.Location = New System.Drawing.Point(545, 3)
+        Me.CPTxt.Location = New System.Drawing.Point(629, 3)
         Me.CPTxt.Name = "CPTxt"
-        Me.CPTxt.Size = New System.Drawing.Size(210, 23)
-        Me.CPTxt.TabIndex = 6
+        Me.CPTxt.Size = New System.Drawing.Size(83, 23)
+        Me.CPTxt.TabIndex = 8
+        '
+        'PrecioLbl
+        '
+        Me.PrecioLbl.AutoSize = True
+        Me.PrecioLbl.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.PrecioLbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PrecioLbl.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.PrecioLbl.Location = New System.Drawing.Point(496, 257)
+        Me.PrecioLbl.Name = "PrecioLbl"
+        Me.PrecioLbl.Size = New System.Drawing.Size(57, 32)
+        Me.PrecioLbl.TabIndex = 22
+        Me.PrecioLbl.Text = "Precio"
+        Me.PrecioLbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'PrecioTxt
+        '
+        Me.PrecioTxt.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.PrecioTxt.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PrecioTxt.Location = New System.Drawing.Point(559, 260)
+        Me.PrecioTxt.Name = "PrecioTxt"
+        Me.PrecioTxt.Size = New System.Drawing.Size(165, 23)
+        Me.PrecioTxt.TabIndex = 4
         '
         'ABMServicio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
-        Me.ClientSize = New System.Drawing.Size(627, 395)
+        Me.ClientSize = New System.Drawing.Size(727, 395)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MinimumSize = New System.Drawing.Size(16, 434)
@@ -406,4 +432,6 @@ Partial Class ABMServicio
     Friend WithEvents CalleTxt As TextBox
     Friend WithEvents NumeroTxt As TextBox
     Friend WithEvents CPTxt As TextBox
+    Friend WithEvents PrecioLbl As Label
+    Friend WithEvents PrecioTxt As TextBox
 End Class

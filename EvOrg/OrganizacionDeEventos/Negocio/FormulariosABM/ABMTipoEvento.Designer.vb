@@ -66,18 +66,19 @@ Partial Class ABMTipoEvento
         Me.GrillaTipoEvento.ReadOnly = True
         Me.TableLayoutPanel1.SetRowSpan(Me.GrillaTipoEvento, 5)
         Me.GrillaTipoEvento.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.GrillaTipoEvento.Size = New System.Drawing.Size(143, 244)
+        Me.GrillaTipoEvento.Size = New System.Drawing.Size(143, 245)
         Me.GrillaTipoEvento.TabIndex = 0
         '
         'TiposEventoLbl
         '
         Me.TiposEventoLbl.AutoSize = True
+        Me.TableLayoutPanel1.SetColumnSpan(Me.TiposEventoLbl, 2)
         Me.TiposEventoLbl.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TiposEventoLbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TiposEventoLbl.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.TiposEventoLbl.Location = New System.Drawing.Point(3, 0)
         Me.TiposEventoLbl.Name = "TiposEventoLbl"
-        Me.TiposEventoLbl.Size = New System.Drawing.Size(143, 23)
+        Me.TiposEventoLbl.Size = New System.Drawing.Size(292, 23)
         Me.TiposEventoLbl.TabIndex = 1
         Me.TiposEventoLbl.Text = "Lista de Tipos de Evento"
         '
@@ -128,7 +129,7 @@ Partial Class ABMTipoEvento
         Me.GrillaPasos.ReadOnly = True
         Me.TableLayoutPanel1.SetRowSpan(Me.GrillaPasos, 4)
         Me.GrillaPasos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.GrillaPasos.Size = New System.Drawing.Size(414, 133)
+        Me.GrillaPasos.Size = New System.Drawing.Size(414, 134)
         Me.GrillaPasos.TabIndex = 5
         '
         'NombreTxt
@@ -138,7 +139,7 @@ Partial Class ABMTipoEvento
         Me.NombreTxt.Location = New System.Drawing.Point(152, 46)
         Me.NombreTxt.Name = "NombreTxt"
         Me.NombreTxt.Size = New System.Drawing.Size(143, 23)
-        Me.NombreTxt.TabIndex = 6
+        Me.NombreTxt.TabIndex = 1
         '
         'DescripcionTxt
         '
@@ -148,7 +149,7 @@ Partial Class ABMTipoEvento
         Me.DescripcionTxt.Multiline = True
         Me.DescripcionTxt.Name = "DescripcionTxt"
         Me.TableLayoutPanel1.SetRowSpan(Me.DescripcionTxt, 2)
-        Me.DescripcionTxt.Size = New System.Drawing.Size(143, 167)
+        Me.DescripcionTxt.Size = New System.Drawing.Size(143, 168)
         Me.DescripcionTxt.TabIndex = 7
         '
         'PasoGPB
@@ -157,7 +158,7 @@ Partial Class ABMTipoEvento
         Me.PasoGPB.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PasoGPB.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.PasoGPB.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.PasoGPB.Location = New System.Drawing.Point(301, 165)
+        Me.PasoGPB.Location = New System.Drawing.Point(301, 166)
         Me.PasoGPB.Name = "PasoGPB"
         Me.PasoGPB.Size = New System.Drawing.Size(414, 105)
         Me.PasoGPB.TabIndex = 8
@@ -208,7 +209,7 @@ Partial Class ABMTipoEvento
         Me.BajaPasoBtn.Name = "BajaPasoBtn"
         Me.TableLayoutPanel3.SetRowSpan(Me.BajaPasoBtn, 2)
         Me.BajaPasoBtn.Size = New System.Drawing.Size(114, 36)
-        Me.BajaPasoBtn.TabIndex = 7
+        Me.BajaPasoBtn.TabIndex = 6
         Me.BajaPasoBtn.Text = "Borrar Paso"
         Me.BajaPasoBtn.UseVisualStyleBackColor = True
         '
@@ -241,7 +242,7 @@ Partial Class ABMTipoEvento
         Me.AltaPasoBtn.Name = "AltaPasoBtn"
         Me.TableLayoutPanel3.SetRowSpan(Me.AltaPasoBtn, 2)
         Me.AltaPasoBtn.Size = New System.Drawing.Size(114, 35)
-        Me.AltaPasoBtn.TabIndex = 6
+        Me.AltaPasoBtn.TabIndex = 5
         Me.AltaPasoBtn.Text = "Agregar Paso"
         Me.AltaPasoBtn.UseVisualStyleBackColor = True
         '
@@ -262,7 +263,7 @@ Partial Class ABMTipoEvento
         Me.DescripcionTxt2.Location = New System.Drawing.Point(104, 3)
         Me.DescripcionTxt2.Name = "DescripcionTxt2"
         Me.DescripcionTxt2.Size = New System.Drawing.Size(181, 23)
-        Me.DescripcionTxt2.TabIndex = 1
+        Me.DescripcionTxt2.TabIndex = 2
         '
         'DiasNumeric
         '
@@ -270,7 +271,7 @@ Partial Class ABMTipoEvento
         Me.DiasNumeric.Location = New System.Drawing.Point(104, 30)
         Me.DiasNumeric.Name = "DiasNumeric"
         Me.DiasNumeric.Size = New System.Drawing.Size(181, 23)
-        Me.DiasNumeric.TabIndex = 8
+        Me.DiasNumeric.TabIndex = 4
         '
         'TableLayoutPanel1
         '
@@ -298,9 +299,9 @@ Partial Class ABMTipoEvento
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 62.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 111.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 10.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50.0!))
         Me.TableLayoutPanel1.Size = New System.Drawing.Size(718, 324)
         Me.TableLayoutPanel1.TabIndex = 9
         '
@@ -315,11 +316,11 @@ Partial Class ABMTipoEvento
         Me.TableLayoutPanel2.Controls.Add(Me.BajaBtn, 1, 0)
         Me.TableLayoutPanel2.Controls.Add(Me.ModificacionBtn, 2, 0)
         Me.TableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel2.Location = New System.Drawing.Point(3, 276)
+        Me.TableLayoutPanel2.Location = New System.Drawing.Point(3, 277)
         Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
         Me.TableLayoutPanel2.RowCount = 1
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel2.Size = New System.Drawing.Size(712, 45)
+        Me.TableLayoutPanel2.Size = New System.Drawing.Size(712, 44)
         Me.TableLayoutPanel2.TabIndex = 9
         '
         'AltaBtn
@@ -331,8 +332,8 @@ Partial Class ABMTipoEvento
         Me.AltaBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.AltaBtn.Location = New System.Drawing.Point(3, 3)
         Me.AltaBtn.Name = "AltaBtn"
-        Me.AltaBtn.Size = New System.Drawing.Size(231, 39)
-        Me.AltaBtn.TabIndex = 0
+        Me.AltaBtn.Size = New System.Drawing.Size(231, 38)
+        Me.AltaBtn.TabIndex = 7
         Me.AltaBtn.Text = "Agregar"
         Me.AltaBtn.UseVisualStyleBackColor = True
         '
@@ -345,8 +346,8 @@ Partial Class ABMTipoEvento
         Me.BajaBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.BajaBtn.Location = New System.Drawing.Point(240, 3)
         Me.BajaBtn.Name = "BajaBtn"
-        Me.BajaBtn.Size = New System.Drawing.Size(231, 39)
-        Me.BajaBtn.TabIndex = 1
+        Me.BajaBtn.Size = New System.Drawing.Size(231, 38)
+        Me.BajaBtn.TabIndex = 8
         Me.BajaBtn.Text = "Borrar"
         Me.BajaBtn.UseVisualStyleBackColor = True
         '
@@ -359,8 +360,8 @@ Partial Class ABMTipoEvento
         Me.ModificacionBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.ModificacionBtn.Location = New System.Drawing.Point(477, 3)
         Me.ModificacionBtn.Name = "ModificacionBtn"
-        Me.ModificacionBtn.Size = New System.Drawing.Size(232, 39)
-        Me.ModificacionBtn.TabIndex = 2
+        Me.ModificacionBtn.Size = New System.Drawing.Size(232, 38)
+        Me.ModificacionBtn.TabIndex = 9
         Me.ModificacionBtn.Text = "Modificar"
         Me.ModificacionBtn.UseVisualStyleBackColor = True
         '

@@ -48,6 +48,8 @@ Partial Class ABMSalon
         Me.CalleTxt = New System.Windows.Forms.TextBox()
         Me.NumeroTxt = New System.Windows.Forms.TextBox()
         Me.CPTxt = New System.Windows.Forms.TextBox()
+        Me.PrecioLbl = New System.Windows.Forms.Label()
+        Me.PrecioTxt = New System.Windows.Forms.TextBox()
         CType(Me.GrillaSalones, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
@@ -67,7 +69,7 @@ Partial Class ABMSalon
         Me.GrillaSalones.ReadOnly = True
         Me.TableLayoutPanel1.SetRowSpan(Me.GrillaSalones, 2)
         Me.GrillaSalones.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.GrillaSalones.Size = New System.Drawing.Size(446, 203)
+        Me.GrillaSalones.Size = New System.Drawing.Size(543, 195)
         Me.GrillaSalones.TabIndex = 0
         '
         'ListaSalonesLbl
@@ -79,7 +81,7 @@ Partial Class ABMSalon
         Me.ListaSalonesLbl.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.ListaSalonesLbl.Location = New System.Drawing.Point(3, 15)
         Me.ListaSalonesLbl.Name = "ListaSalonesLbl"
-        Me.ListaSalonesLbl.Size = New System.Drawing.Size(757, 17)
+        Me.ListaSalonesLbl.Size = New System.Drawing.Size(809, 17)
         Me.ListaSalonesLbl.TabIndex = 1
         Me.ListaSalonesLbl.Text = "Lista de Salones"
         '
@@ -89,7 +91,7 @@ Partial Class ABMSalon
         Me.NombreLbl.Dock = System.Windows.Forms.DockStyle.Fill
         Me.NombreLbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.NombreLbl.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.NombreLbl.Location = New System.Drawing.Point(3, 241)
+        Me.NombreLbl.Location = New System.Drawing.Point(3, 233)
         Me.NombreLbl.Name = "NombreLbl"
         Me.NombreLbl.Size = New System.Drawing.Size(67, 27)
         Me.NombreLbl.TabIndex = 2
@@ -102,7 +104,7 @@ Partial Class ABMSalon
         Me.CapacidadLbl.Dock = System.Windows.Forms.DockStyle.Fill
         Me.CapacidadLbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CapacidadLbl.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.CapacidadLbl.Location = New System.Drawing.Point(286, 241)
+        Me.CapacidadLbl.Location = New System.Drawing.Point(373, 233)
         Me.CapacidadLbl.Name = "CapacidadLbl"
         Me.CapacidadLbl.Size = New System.Drawing.Size(79, 27)
         Me.CapacidadLbl.TabIndex = 4
@@ -116,9 +118,9 @@ Partial Class ABMSalon
         Me.DescripcionLbl.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DescripcionLbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DescripcionLbl.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.DescripcionLbl.Location = New System.Drawing.Point(455, 32)
+        Me.DescripcionLbl.Location = New System.Drawing.Point(552, 32)
         Me.DescripcionLbl.Name = "DescripcionLbl"
-        Me.DescripcionLbl.Size = New System.Drawing.Size(305, 26)
+        Me.DescripcionLbl.Size = New System.Drawing.Size(260, 26)
         Me.DescripcionLbl.TabIndex = 5
         Me.DescripcionLbl.Text = "Descripción"
         Me.DescripcionLbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -129,7 +131,7 @@ Partial Class ABMSalon
         Me.TelefonoLbl.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TelefonoLbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TelefonoLbl.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.TelefonoLbl.Location = New System.Drawing.Point(286, 268)
+        Me.TelefonoLbl.Location = New System.Drawing.Point(373, 260)
         Me.TelefonoLbl.Name = "TelefonoLbl"
         Me.TelefonoLbl.Size = New System.Drawing.Size(79, 30)
         Me.TelefonoLbl.TabIndex = 6
@@ -142,7 +144,7 @@ Partial Class ABMSalon
         Me.EmailLbl.Dock = System.Windows.Forms.DockStyle.Fill
         Me.EmailLbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.EmailLbl.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.EmailLbl.Location = New System.Drawing.Point(3, 268)
+        Me.EmailLbl.Location = New System.Drawing.Point(3, 260)
         Me.EmailLbl.Name = "EmailLbl"
         Me.EmailLbl.Size = New System.Drawing.Size(67, 30)
         Me.EmailLbl.TabIndex = 7
@@ -152,45 +154,45 @@ Partial Class ABMSalon
         'NombreTxt
         '
         Me.NombreTxt.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.NombreTxt.Location = New System.Drawing.Point(76, 244)
+        Me.NombreTxt.Location = New System.Drawing.Point(76, 236)
         Me.NombreTxt.Name = "NombreTxt"
-        Me.NombreTxt.Size = New System.Drawing.Size(204, 20)
-        Me.NombreTxt.TabIndex = 8
+        Me.NombreTxt.Size = New System.Drawing.Size(291, 20)
+        Me.NombreTxt.TabIndex = 1
         '
         'CapacidadTxt
         '
         Me.CapacidadTxt.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.CapacidadTxt.Location = New System.Drawing.Point(371, 244)
+        Me.CapacidadTxt.Location = New System.Drawing.Point(458, 236)
         Me.CapacidadTxt.Name = "CapacidadTxt"
-        Me.CapacidadTxt.Size = New System.Drawing.Size(78, 20)
-        Me.CapacidadTxt.TabIndex = 9
+        Me.CapacidadTxt.Size = New System.Drawing.Size(88, 20)
+        Me.CapacidadTxt.TabIndex = 2
         '
         'DescripcionTxt
         '
         Me.TableLayoutPanel1.SetColumnSpan(Me.DescripcionTxt, 2)
         Me.DescripcionTxt.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.DescripcionTxt.Location = New System.Drawing.Point(455, 61)
+        Me.DescripcionTxt.Location = New System.Drawing.Point(552, 61)
         Me.DescripcionTxt.Multiline = True
         Me.DescripcionTxt.Name = "DescripcionTxt"
-        Me.TableLayoutPanel1.SetRowSpan(Me.DescripcionTxt, 3)
-        Me.DescripcionTxt.Size = New System.Drawing.Size(305, 234)
-        Me.DescripcionTxt.TabIndex = 10
+        Me.TableLayoutPanel1.SetRowSpan(Me.DescripcionTxt, 2)
+        Me.DescripcionTxt.Size = New System.Drawing.Size(260, 196)
+        Me.DescripcionTxt.TabIndex = 6
         '
         'EmailTxt
         '
         Me.EmailTxt.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.EmailTxt.Location = New System.Drawing.Point(76, 271)
+        Me.EmailTxt.Location = New System.Drawing.Point(76, 263)
         Me.EmailTxt.Name = "EmailTxt"
-        Me.EmailTxt.Size = New System.Drawing.Size(204, 20)
-        Me.EmailTxt.TabIndex = 11
+        Me.EmailTxt.Size = New System.Drawing.Size(291, 20)
+        Me.EmailTxt.TabIndex = 3
         '
         'TelefonoTxt
         '
         Me.TelefonoTxt.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TelefonoTxt.Location = New System.Drawing.Point(371, 271)
+        Me.TelefonoTxt.Location = New System.Drawing.Point(458, 263)
         Me.TelefonoTxt.Name = "TelefonoTxt"
-        Me.TelefonoTxt.Size = New System.Drawing.Size(78, 20)
-        Me.TelefonoTxt.TabIndex = 12
+        Me.TelefonoTxt.Size = New System.Drawing.Size(88, 20)
+        Me.TelefonoTxt.TabIndex = 4
         '
         'TableLayoutPanel1
         '
@@ -198,11 +200,11 @@ Partial Class ABMSalon
         Me.TableLayoutPanel1.BackgroundImage = CType(resources.GetObject("TableLayoutPanel1.BackgroundImage"), System.Drawing.Image)
         Me.TableLayoutPanel1.ColumnCount = 6
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 73.0!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 210.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 85.0!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 84.0!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 216.0!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 95.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 94.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 55.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 211.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.ListaSalonesLbl, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.TelefonoTxt, 3, 4)
         Me.TableLayoutPanel1.Controls.Add(Me.GrillaSalones, 0, 1)
@@ -217,6 +219,8 @@ Partial Class ABMSalon
         Me.TableLayoutPanel1.Controls.Add(Me.DescripcionLbl, 4, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.TableLayoutPanel2, 0, 6)
         Me.TableLayoutPanel1.Controls.Add(Me.DireccionGrp, 0, 5)
+        Me.TableLayoutPanel1.Controls.Add(Me.PrecioLbl, 4, 4)
+        Me.TableLayoutPanel1.Controls.Add(Me.PrecioTxt, 5, 4)
         Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel1.ForeColor = System.Drawing.SystemColors.ControlText
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 0)
@@ -224,12 +228,12 @@ Partial Class ABMSalon
         Me.TableLayoutPanel1.RowCount = 7
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 183.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 56.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(763, 396)
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 67.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39.0!))
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(815, 396)
         Me.TableLayoutPanel1.TabIndex = 14
         '
         'TableLayoutPanel2
@@ -244,11 +248,11 @@ Partial Class ABMSalon
         Me.TableLayoutPanel2.Controls.Add(Me.BajaBtn, 1, 0)
         Me.TableLayoutPanel2.Controls.Add(Me.ModificacionBtn, 2, 0)
         Me.TableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel2.Location = New System.Drawing.Point(3, 357)
+        Me.TableLayoutPanel2.Location = New System.Drawing.Point(3, 360)
         Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
         Me.TableLayoutPanel2.RowCount = 1
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel2.Size = New System.Drawing.Size(757, 36)
+        Me.TableLayoutPanel2.Size = New System.Drawing.Size(809, 33)
         Me.TableLayoutPanel2.TabIndex = 20
         '
         'AltaBtn
@@ -260,8 +264,8 @@ Partial Class ABMSalon
         Me.AltaBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.AltaBtn.Location = New System.Drawing.Point(3, 3)
         Me.AltaBtn.Name = "AltaBtn"
-        Me.AltaBtn.Size = New System.Drawing.Size(246, 30)
-        Me.AltaBtn.TabIndex = 0
+        Me.AltaBtn.Size = New System.Drawing.Size(263, 27)
+        Me.AltaBtn.TabIndex = 10
         Me.AltaBtn.Text = "Agregar"
         Me.AltaBtn.UseVisualStyleBackColor = True
         '
@@ -272,10 +276,10 @@ Partial Class ABMSalon
         Me.BajaBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BajaBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BajaBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.BajaBtn.Location = New System.Drawing.Point(255, 3)
+        Me.BajaBtn.Location = New System.Drawing.Point(272, 3)
         Me.BajaBtn.Name = "BajaBtn"
-        Me.BajaBtn.Size = New System.Drawing.Size(246, 30)
-        Me.BajaBtn.TabIndex = 1
+        Me.BajaBtn.Size = New System.Drawing.Size(263, 27)
+        Me.BajaBtn.TabIndex = 11
         Me.BajaBtn.Text = "Borrar"
         Me.BajaBtn.UseVisualStyleBackColor = True
         '
@@ -286,10 +290,10 @@ Partial Class ABMSalon
         Me.ModificacionBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ModificacionBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ModificacionBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.ModificacionBtn.Location = New System.Drawing.Point(507, 3)
+        Me.ModificacionBtn.Location = New System.Drawing.Point(541, 3)
         Me.ModificacionBtn.Name = "ModificacionBtn"
-        Me.ModificacionBtn.Size = New System.Drawing.Size(247, 30)
-        Me.ModificacionBtn.TabIndex = 2
+        Me.ModificacionBtn.Size = New System.Drawing.Size(265, 27)
+        Me.ModificacionBtn.TabIndex = 12
         Me.ModificacionBtn.Text = "Modificar"
         Me.ModificacionBtn.UseVisualStyleBackColor = True
         '
@@ -300,9 +304,9 @@ Partial Class ABMSalon
         Me.DireccionGrp.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DireccionGrp.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DireccionGrp.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.DireccionGrp.Location = New System.Drawing.Point(3, 301)
+        Me.DireccionGrp.Location = New System.Drawing.Point(3, 293)
         Me.DireccionGrp.Name = "DireccionGrp"
-        Me.DireccionGrp.Size = New System.Drawing.Size(757, 50)
+        Me.DireccionGrp.Size = New System.Drawing.Size(809, 61)
         Me.DireccionGrp.TabIndex = 21
         Me.DireccionGrp.TabStop = False
         Me.DireccionGrp.Text = "Dirección"
@@ -316,7 +320,7 @@ Partial Class ABMSalon
         Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 64.0!))
         Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 91.0!))
         Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 46.0!))
-        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 147.0!))
+        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 233.0!))
         Me.TableLayoutPanel3.Controls.Add(Me.CalleLbl, 0, 0)
         Me.TableLayoutPanel3.Controls.Add(Me.NumeroLbl, 2, 0)
         Me.TableLayoutPanel3.Controls.Add(Me.CPLbl, 4, 0)
@@ -328,7 +332,7 @@ Partial Class ABMSalon
         Me.TableLayoutPanel3.Name = "TableLayoutPanel3"
         Me.TableLayoutPanel3.RowCount = 1
         Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel3.Size = New System.Drawing.Size(751, 28)
+        Me.TableLayoutPanel3.Size = New System.Drawing.Size(803, 39)
         Me.TableLayoutPanel3.TabIndex = 0
         '
         'CalleLbl
@@ -337,7 +341,7 @@ Partial Class ABMSalon
         Me.CalleLbl.Dock = System.Windows.Forms.DockStyle.Fill
         Me.CalleLbl.Location = New System.Drawing.Point(3, 0)
         Me.CalleLbl.Name = "CalleLbl"
-        Me.CalleLbl.Size = New System.Drawing.Size(67, 28)
+        Me.CalleLbl.Size = New System.Drawing.Size(67, 39)
         Me.CalleLbl.TabIndex = 0
         Me.CalleLbl.Text = "Calle"
         Me.CalleLbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -348,7 +352,7 @@ Partial Class ABMSalon
         Me.NumeroLbl.Dock = System.Windows.Forms.DockStyle.Fill
         Me.NumeroLbl.Location = New System.Drawing.Point(406, 0)
         Me.NumeroLbl.Name = "NumeroLbl"
-        Me.NumeroLbl.Size = New System.Drawing.Size(58, 28)
+        Me.NumeroLbl.Size = New System.Drawing.Size(58, 39)
         Me.NumeroLbl.TabIndex = 1
         Me.NumeroLbl.Text = "Número"
         Me.NumeroLbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -359,7 +363,7 @@ Partial Class ABMSalon
         Me.CPLbl.Dock = System.Windows.Forms.DockStyle.Fill
         Me.CPLbl.Location = New System.Drawing.Point(561, 0)
         Me.CPLbl.Name = "CPLbl"
-        Me.CPLbl.Size = New System.Drawing.Size(40, 28)
+        Me.CPLbl.Size = New System.Drawing.Size(40, 39)
         Me.CPLbl.TabIndex = 2
         Me.CPLbl.Text = "C. P."
         Me.CPLbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -370,7 +374,7 @@ Partial Class ABMSalon
         Me.CalleTxt.Location = New System.Drawing.Point(76, 3)
         Me.CalleTxt.Name = "CalleTxt"
         Me.CalleTxt.Size = New System.Drawing.Size(324, 23)
-        Me.CalleTxt.TabIndex = 3
+        Me.CalleTxt.TabIndex = 7
         '
         'NumeroTxt
         '
@@ -378,24 +382,45 @@ Partial Class ABMSalon
         Me.NumeroTxt.Location = New System.Drawing.Point(470, 3)
         Me.NumeroTxt.Name = "NumeroTxt"
         Me.NumeroTxt.Size = New System.Drawing.Size(85, 23)
-        Me.NumeroTxt.TabIndex = 4
+        Me.NumeroTxt.TabIndex = 8
         '
         'CPTxt
         '
         Me.CPTxt.Dock = System.Windows.Forms.DockStyle.Fill
         Me.CPTxt.Location = New System.Drawing.Point(607, 3)
         Me.CPTxt.Name = "CPTxt"
-        Me.CPTxt.Size = New System.Drawing.Size(141, 23)
-        Me.CPTxt.TabIndex = 5
+        Me.CPTxt.Size = New System.Drawing.Size(227, 23)
+        Me.CPTxt.TabIndex = 9
+        '
+        'PrecioLbl
+        '
+        Me.PrecioLbl.AutoSize = True
+        Me.PrecioLbl.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.PrecioLbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PrecioLbl.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.PrecioLbl.Location = New System.Drawing.Point(552, 260)
+        Me.PrecioLbl.Name = "PrecioLbl"
+        Me.PrecioLbl.Size = New System.Drawing.Size(49, 30)
+        Me.PrecioLbl.TabIndex = 22
+        Me.PrecioLbl.Text = "Precio"
+        Me.PrecioLbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'PrecioTxt
+        '
+        Me.PrecioTxt.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.PrecioTxt.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PrecioTxt.Location = New System.Drawing.Point(607, 263)
+        Me.PrecioTxt.Name = "PrecioTxt"
+        Me.PrecioTxt.Size = New System.Drawing.Size(205, 23)
+        Me.PrecioTxt.TabIndex = 5
         '
         'ABMSalon
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(763, 396)
+        Me.ClientSize = New System.Drawing.Size(815, 396)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.MaximumSize = New System.Drawing.Size(779, 435)
         Me.MinimumSize = New System.Drawing.Size(779, 435)
         Me.Name = "ABMSalon"
         Me.Text = "EvOrg"
@@ -435,4 +460,6 @@ Partial Class ABMSalon
     Friend WithEvents CalleTxt As TextBox
     Friend WithEvents NumeroTxt As TextBox
     Friend WithEvents CPTxt As TextBox
+    Friend WithEvents PrecioLbl As Label
+    Friend WithEvents PrecioTxt As TextBox
 End Class

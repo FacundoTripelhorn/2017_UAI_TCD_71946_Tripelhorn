@@ -183,4 +183,24 @@ Public Class EventoDatos
             MsgBox("Error al agregar el paso al evento")
         End Try
     End Sub
+
+    Public Sub BorrarPaso(pEvento As Evento, pPaso As Paso)
+        Try
+            Dim DTable As DataTable = Comando.GetData("SELECT * FROM EventoPaso WHERE Evento = " & pEvento.Id & " AND Paso = " & pPaso.Id)
+            If DTable.Rows.Count > 0 Then DTable.Rows(0).Delete()
+            Comando.ActualizarBD("EventoPaso", DTable)
+        Catch ex As Exception
+            MsgBox("Error al eliminar el paso")
+        End Try
+    End Sub
+
+    Public Sub ModificarPaso(pEvento As Evento, pPaso As Paso, pFecha As Date)
+        Try
+            Dim DTable As DataTable = Comando.GetData("SELECT * FROM EventoPaso WHERE Evento = " & pEvento.Id & " AND Paso = " & pPaso.Id)
+            If DTable.Rows.Count > 0 Then DTable.Rows(0).Item(2) = pFecha
+            Comando.ActualizarBD("EventoPaso", DTable)
+        Catch ex As Exception
+            MsgBox("Error al modificar el paso")
+        End Try
+    End Sub
 End Class

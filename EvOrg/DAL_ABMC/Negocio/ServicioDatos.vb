@@ -16,7 +16,7 @@ Public Class ServicioDatos
                 DRDireccion.ItemArray = {vServicio.Direccion.Id, vServicio.Direccion.Calle, vServicio.Direccion.Numero, vServicio.Direccion.CP}
                 DTDireccion.Rows.Add(DRDireccion)
                 Dim DRow As DataRow = DTable.NewRow
-                DRow.ItemArray = {vServicio.Id, vServicio.Nombre, vServicio.Telefono, vServicio.Direccion.Id, vServicio.Email, vServicio.Observacion}
+                DRow.ItemArray = {vServicio.Id, vServicio.Nombre, vServicio.Telefono, vServicio.Direccion.Id, vServicio.Email, vServicio.Observacion, vServicio.Precio}
                 DTable.Rows.Add(DRow)
                 Comando.ActualizarBD("DireccionServicio", DTDireccion)
                 Comando.ActualizarBD("Servicio", DTable)
@@ -57,7 +57,7 @@ Public Class ServicioDatos
                 DRDireccion.ItemArray = {vServicio.Direccion.Id, vServicio.Direccion.Calle, vServicio.Direccion.Numero, vServicio.Direccion.CP}
                 If DTDireccion.Rows.Count > 0 Then DTDireccion.Rows(0).ItemArray = DRDireccion.ItemArray
                 Dim DRow As DataRow = DTable.NewRow
-                DRow.ItemArray = {vServicio.Id, vServicio.Nombre, vServicio.Telefono, vServicio.Direccion.Id, vServicio.Email, vServicio.Observacion}
+                DRow.ItemArray = {vServicio.Id, vServicio.Nombre, vServicio.Telefono, vServicio.Direccion.Id, vServicio.Email, vServicio.Observacion, vServicio.Precio}
                 If DTable.Rows.Count > 0 Then DTable.Rows(0).ItemArray = DRow.ItemArray
                 Comando.ActualizarBD("DireccionServicio", DTDireccion)
                 Comando.ActualizarBD("Servicio", DTable)
@@ -78,7 +78,7 @@ Public Class ServicioDatos
                 For Each DRDireccion As DataRow In DTDireccion.Rows
                     If DRDireccion(0) = DRow(3) Then Direccion = New Direccion(DRDireccion(0), DRDireccion(1), DRDireccion(2), DRDireccion(3))
                 Next
-                ServicioLista.Add(New Servicio(DRow(0), DRow(1), DRow(2), Direccion, DRow(4), DRow(5)))
+                ServicioLista.Add(New Servicio(DRow(0), DRow(1), DRow(2), Direccion, DRow(4), DRow(5), DRow(6)))
             Next
             Return ServicioLista
         Catch ex As Exception

@@ -67,23 +67,28 @@ Public Class ABMPatente
     End Sub
 
     Private Sub EliminarElementoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EliminarElementoToolStripMenuItem.Click
-        Dim vSNode As TreeNode = TreePatente.SelectedNode
+        Try
+            Dim vSNode As TreeNode = TreePatente.SelectedNode
 
-        If TypeOf vSNode.Tag Is GrupoPatente Then
-            If Not vSNode.Parent Is Nothing Then
-                Dim vPadre As GrupoPatente = vSNode.Parent.Tag()
-                vSNode.Remove()
-                vPadre.ListaPatentes.Remove(vSNode.Tag)
-                If TreePatente.SelectedNode.Text = vPadre.Nombre Then
-                    GrupoPatenteDinamico.Baja((vSNode.Tag))
-                Else
-                    PatenteDinamica.Baja(vSNode.Tag)
+            If TypeOf vSNode.Tag Is GrupoPatente Then
+                If Not vSNode.Parent Is Nothing Then
+                    Dim vPadre As GrupoPatente = vSNode.Parent.Tag()
+                    vSNode.Remove()
+                    vPadre.ListaPatentes.Remove(vSNode.Tag)
+                    If TypeOf vSNode.Tag Is GrupoPatente Then
+                        GrupoPatenteDinamico.Baja((vSNode.Tag))
+                    Else
+                        PatenteDinamica.Baja(vSNode.Tag)
+                    End If
                 End If
+            Else
+                vSNode.Remove()
+                PatenteDinamica.Baja(vSNode.Tag)
             End If
-        Else
-            vSNode.Remove()
-            PatenteDinamica.Baja(vSNode.Tag)
-        End If
+        Catch ex As Exception
+            MsgBox("Error al eliminar el elemento seleccionado")
+        End Try
+
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click

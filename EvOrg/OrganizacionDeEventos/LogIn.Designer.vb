@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class LogIn
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class LogIn
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(LogIn))
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
@@ -31,7 +31,6 @@ Partial Class LogIn
         Me.CancelarBtn = New System.Windows.Forms.Button()
         Me.UsuarioTxt = New System.Windows.Forms.TextBox()
         Me.ContraseñaTxt = New System.Windows.Forms.TextBox()
-        Me.ErrorLinkLabel = New System.Windows.Forms.LinkLabel()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
         Me.SuspendLayout()
@@ -47,7 +46,6 @@ Partial Class LogIn
         Me.TableLayoutPanel1.Controls.Add(Me.TableLayoutPanel2, 0, 4)
         Me.TableLayoutPanel1.Controls.Add(Me.UsuarioTxt, 1, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.ContraseñaTxt, 1, 2)
-        Me.TableLayoutPanel1.Controls.Add(Me.ErrorLinkLabel, 0, 3)
         Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 0)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
@@ -69,7 +67,7 @@ Partial Class LogIn
         Me.UsuarioLbl.Location = New System.Drawing.Point(3, 23)
         Me.UsuarioLbl.Name = "UsuarioLbl"
         Me.UsuarioLbl.Size = New System.Drawing.Size(112, 31)
-        Me.UsuarioLbl.TabIndex = 0
+        Me.UsuarioLbl.TabIndex = 4
         Me.UsuarioLbl.Text = "Usuario"
         Me.UsuarioLbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -82,7 +80,7 @@ Partial Class LogIn
         Me.ContraseñaLbl.Location = New System.Drawing.Point(3, 54)
         Me.ContraseñaLbl.Name = "ContraseñaLbl"
         Me.ContraseñaLbl.Size = New System.Drawing.Size(112, 28)
-        Me.ContraseñaLbl.TabIndex = 1
+        Me.ContraseñaLbl.TabIndex = 5
         Me.ContraseñaLbl.Text = "Contraseña"
         Me.ContraseñaLbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -112,7 +110,7 @@ Partial Class LogIn
         Me.AceptarBtn.Location = New System.Drawing.Point(3, 3)
         Me.AceptarBtn.Name = "AceptarBtn"
         Me.AceptarBtn.Size = New System.Drawing.Size(138, 42)
-        Me.AceptarBtn.TabIndex = 0
+        Me.AceptarBtn.TabIndex = 2
         Me.AceptarBtn.Text = "Aceptar"
         Me.AceptarBtn.UseVisualStyleBackColor = True
         '
@@ -126,7 +124,7 @@ Partial Class LogIn
         Me.CancelarBtn.Location = New System.Drawing.Point(147, 3)
         Me.CancelarBtn.Name = "CancelarBtn"
         Me.CancelarBtn.Size = New System.Drawing.Size(138, 42)
-        Me.CancelarBtn.TabIndex = 1
+        Me.CancelarBtn.TabIndex = 3
         Me.CancelarBtn.Text = "Cancelar"
         Me.CancelarBtn.UseVisualStyleBackColor = True
         '
@@ -137,7 +135,7 @@ Partial Class LogIn
         Me.UsuarioTxt.Location = New System.Drawing.Point(121, 26)
         Me.UsuarioTxt.Name = "UsuarioTxt"
         Me.UsuarioTxt.Size = New System.Drawing.Size(170, 23)
-        Me.UsuarioTxt.TabIndex = 3
+        Me.UsuarioTxt.TabIndex = 0
         '
         'ContraseñaTxt
         '
@@ -146,22 +144,8 @@ Partial Class LogIn
         Me.ContraseñaTxt.Location = New System.Drawing.Point(121, 57)
         Me.ContraseñaTxt.Name = "ContraseñaTxt"
         Me.ContraseñaTxt.Size = New System.Drawing.Size(170, 23)
-        Me.ContraseñaTxt.TabIndex = 4
+        Me.ContraseñaTxt.TabIndex = 1
         Me.ContraseñaTxt.UseSystemPasswordChar = True
-        '
-        'ErrorLinkLabel
-        '
-        Me.ErrorLinkLabel.AutoSize = True
-        Me.TableLayoutPanel1.SetColumnSpan(Me.ErrorLinkLabel, 2)
-        Me.ErrorLinkLabel.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.ErrorLinkLabel.Location = New System.Drawing.Point(3, 82)
-        Me.ErrorLinkLabel.Name = "ErrorLinkLabel"
-        Me.ErrorLinkLabel.Size = New System.Drawing.Size(288, 19)
-        Me.ErrorLinkLabel.TabIndex = 5
-        Me.ErrorLinkLabel.TabStop = True
-        Me.ErrorLinkLabel.Text = "Usuario o Contraseña incorrectos"
-        Me.ErrorLinkLabel.TextAlign = System.Drawing.ContentAlignment.TopRight
-        Me.ErrorLinkLabel.Visible = False
         '
         'LogIn
         '
@@ -172,6 +156,7 @@ Partial Class LogIn
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "LogIn"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "EvOrg"
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.TableLayoutPanel1.PerformLayout()
@@ -188,5 +173,4 @@ Partial Class LogIn
     Friend WithEvents CancelarBtn As Button
     Friend WithEvents UsuarioTxt As TextBox
     Friend WithEvents ContraseñaTxt As TextBox
-    Friend WithEvents ErrorLinkLabel As LinkLabel
 End Class

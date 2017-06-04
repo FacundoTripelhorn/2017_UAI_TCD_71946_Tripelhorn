@@ -6,7 +6,6 @@ Public Class ABMCliente
     Dim vClienteDinamico As New ClienteDinamico
     Private Sub ABMCliente_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Actualizar()
-
     End Sub
 
     Private Sub Actualizar()
@@ -24,30 +23,25 @@ Public Class ABMCliente
     End Sub
     Private Sub AltaBtn_Click(sender As Object, e As EventArgs) Handles AltaBtn.Click
         Try
-            If Regex.IsMatch(DNITxt.Text, "[0-9]*") Then
-                If Regex.IsMatch(NombreTxt.Text, "^([A-ZÁÉÍÓÚ]{1}[a-zñáéíóú]+[\s]*)+$") And Regex.IsMatch(ApellidoTxt.Text, "^([A-ZÁÉÍÓÚ]{1}[a-zñáéíóú]+[\s]*)+$") Then
-                    If Regex.IsMatch(TelefonoTxt.Text, "^11\d{8}") Then
-                        If Regex.IsMatch(EmailTxt.Text, "^[\w]+@{1}[\w]+\.[a-z]{2,3}$") Then
-                            vCliente = New Cliente(Integer.Parse(DNITxt.Text), NombreTxt.Text, ApellidoTxt.Text, Integer.Parse(TelefonoTxt.Text), EmailTxt.Text)
-                            vClienteDinamico.Alta(vCliente)
-                            Limpiar()
-                            GrillaClientes.DataSource = vClienteDinamico.ConsultaTodo()
-                        Else
-                            MsgBox("El email ingresado es incorecto")
-                        End If
+            If Regex.IsMatch(NombreTxt.Text, "^([A-ZÁÉÍÓÚ]{1}[a-zñáéíóú]+[\s]*)+$") And Regex.IsMatch(ApellidoTxt.Text, "^([A-ZÁÉÍÓÚ]{1}[a-zñáéíóú]+[\s]*)+$") Then
+                If Regex.IsMatch(TelefonoTxt.Text, "[0-9]{8,10}") Then
+                    If Regex.IsMatch(EmailTxt.Text, "^[\w]+@{1}[\w]+\.[a-z]{2,3}$") Then
+                        vCliente = New Cliente(Integer.Parse(DNITxt.Text), NombreTxt.Text, ApellidoTxt.Text, Integer.Parse(TelefonoTxt.Text), EmailTxt.Text)
+                        vClienteDinamico.Alta(vCliente)
+                        Limpiar()
+                        GrillaClientes.DataSource = vClienteDinamico.ConsultaTodo()
                     Else
-                        MsgBox("Número de telefono incorrecto")
+                        MsgBox("El email ingresado es incorecto")
                     End If
                 Else
-                        MsgBox("Error al ingresar nombre y apellido")
+                    MsgBox("El número de telefono ingresado es incorrecto")
                 End If
             Else
-                MsgBox("DNI incorrecto")
+                MsgBox("Nombre o apellido ingresados incorrectos")
             End If
         Catch ex As Exception
 
         End Try
-
     End Sub
 
     Private Sub BajaBtn_Click(sender As Object, e As EventArgs) Handles BajaBtn.Click
@@ -72,16 +66,16 @@ Public Class ABMCliente
                         Limpiar()
                         GrillaClientes.DataSource = vClienteDinamico.ConsultaTodo()
                     Else
-                        MsgBox("El email ingresado es incorecto")
+                        MsgBox("El email ingresado es incorrecto")
                     End If
                 Else
                     MsgBox("Número de telefono incorrecto")
                 End If
             Else
-                MsgBox("Error al ingresar nombre y apellido")
+                MsgBox("Nombre o apellido incorrectos")
             End If
         Else
-            MsgBox("DNI incorrecto")
+            MsgBox("DNI incorrecto, no puede contener letras")
         End If
     End Sub
 
@@ -96,5 +90,13 @@ Public Class ABMCliente
         Catch ex As Exception
 
         End Try
+    End Sub
+
+    Private Sub DNITxt_KeyPress(sender As Object, e As KeyPressEventArgs) Handles DNITxt.KeyPress
+        If Not (Regex.IsMatch(e.KeyChar, "[0-9\b]")) Then e.KeyChar = Nothing
+    End Sub
+
+    Private Sub TelefonoTxt_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TelefonoTxt.KeyPress
+        If Not (Regex.IsMatch(e.KeyChar, "[0-9\b]")) Then e.KeyChar = Nothing
     End Sub
 End Class

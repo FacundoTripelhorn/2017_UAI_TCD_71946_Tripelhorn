@@ -12,12 +12,17 @@ Public Class ABMUsuario
     End Sub
 
     Public Sub Actualizar()
-        Dim vLista As New List(Of VistaUsuario)
-        For Each vUsuario As Usuario In UsuarioDinamico.ConsultaTodo
-            vLista.Add(New VistaUsuario(vUsuario.IdUsuario, vUsuario.Email))
-        Next
-        GrillaUsuario.DataSource = Nothing
-        GrillaUsuario.DataSource = vLista
+        Try
+            Dim vLista As New List(Of VistaUsuario)
+            For Each vUsuario As Usuario In UsuarioDinamico.ConsultaTodo
+                vLista.Add(New VistaUsuario(vUsuario.IdUsuario, vUsuario.Email))
+            Next
+            GrillaUsuario.DataSource = Nothing
+            GrillaUsuario.DataSource = vLista
+            GrillaUsuario.Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        Catch ex As Exception
+
+        End Try
     End Sub
 
     Private Sub AltaBtn_Click(sender As Object, e As EventArgs) Handles AltaBtn.Click

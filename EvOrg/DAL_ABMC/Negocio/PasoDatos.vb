@@ -56,7 +56,7 @@ Public Class PasoDatos
             Dim DTable As DataTable = Comando.GetDataTable("Paso")
             PasoLista = New List(Of Object)
             For Each DRow As DataRow In DTable.Rows
-                PasoLista.Add(New Paso(DRow(0), DRow(1), , DRow(2), DRow(3),))
+                PasoLista.Add(New Paso(DRow(0), DRow(1), , DRow(2), DRow(3)))
             Next
             Return PasoLista
         Catch ex As Exception

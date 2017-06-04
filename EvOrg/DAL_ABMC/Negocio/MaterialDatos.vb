@@ -13,12 +13,12 @@ Public Class MaterialDatos
                 Dim DTable As DataTable = Comando.GetDataTable("Material")
                 Dim DRow As DataRow = DTable.NewRow
 
-                DRow.ItemArray = {vMaterial.Id, vMaterial.Nombre, vMaterial.Cantidad}
+                DRow.ItemArray = {vMaterial.Id, vMaterial.Nombre, vMaterial.Cantidad, vMaterial.Precio}
                 DTable.Rows.Add(DRow)
                 Comando.ActualizarBD("Material", DTable)
             End If
         Catch ex As Exception
-            MsgBox("ERROR AL INGRESAR EL MATERIAL")
+            MsgBox("Error al ingresar el material")
         End Try
     End Sub
 
@@ -31,7 +31,7 @@ Public Class MaterialDatos
                 Comando.ActualizarBD("Material", DTable)
             End If
         Catch ex As Exception
-            MsgBox("ERROR AL BORRAR EL MATERIAL")
+            MsgBox("Error al borrar el material seleccionado")
         End Try
     End Sub
 
@@ -41,13 +41,13 @@ Public Class MaterialDatos
                 vMaterial = DirectCast(pObjeto, Material)
                 Dim DTable As DataTable = Comando.GetData("SELECT * FROM Material WHERE Id = '" & vMaterial.Id & "'")
                 Dim DRow As DataRow = DTable.NewRow
-                DRow.ItemArray = {vMaterial.Id, vMaterial.Nombre, vMaterial.Cantidad}
+                DRow.ItemArray = {vMaterial.Id, vMaterial.Nombre, vMaterial.Cantidad, vMaterial.Precio}
                 If DTable.Rows.Count > 0 Then DTable.Rows(0).ItemArray = DRow.ItemArray
                 Comando.ActualizarBD("Material", DTable)
                 ConsultaTodo()
             End If
         Catch ex As Exception
-            MsgBox("ERROR AL MODIFICAR EL MATERIAL")
+            MsgBox("Error al modificar el material seleccionado")
         End Try
     End Sub
 
@@ -58,7 +58,7 @@ Public Class MaterialDatos
             MaterialLista = New List(Of Object)
             If DTable.Rows.Count > 0 Then
                 For Each DRow As DataRow In DTable.Rows
-                    MaterialLista.Add(New Material(DRow(0), DRow(1), DRow(2)))
+                    MaterialLista.Add(New Material(DRow(0), DRow(1), DRow(2), DRow(3)))
                 Next
             End If
             Return MaterialLista

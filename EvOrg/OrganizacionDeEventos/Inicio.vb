@@ -38,4 +38,12 @@ Public Class Inicio
     Private Sub Button4_Click(sender As Object, e As EventArgs)
         ABMMaterial.ShowDialog()
     End Sub
+
+    Private Sub Inicio_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
+
+        If MessageBox.Show("¿Desea cerrar sesión?", "EvOrg", MessageBoxButtons.YesNo) = MsgBoxResult.Yes Then
+            LogIn.Show()
+        End If
+
+    End Sub
 End Class

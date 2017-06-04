@@ -11,6 +11,7 @@ Public Class ABMFamilia
         Dim vLista As New List(Of Object)
         vLista = GrupoPatenteDinamico.ConsultaTodo()
         GrupoPatenteDinamico.MostrarEnTreeView(TreePatente)
+        TreePatente.ExpandAll()
         ActualizarLista()
     End Sub
 

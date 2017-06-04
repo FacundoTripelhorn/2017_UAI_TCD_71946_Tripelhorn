@@ -23,4 +23,12 @@ Public Class EventoDinamico
     Public Sub AgregarPaso(pEvento As Evento, pPaso As Paso, pFecha As Date)
         vEventoDatos.AgregarPaso(pEvento, pPaso, pFecha)
     End Sub
+
+    Public Sub BorrarPaso(pEvento As Evento, pPaso As Paso)
+        vEventoDatos.BorrarPaso(pEvento, pPaso)
+    End Sub
+
+    Public Sub ModificarPaso(pEvento As Evento, pPaso As Paso, pFecha As Date)
+        vEventoDatos.ModificarPaso(pEvento, pPaso, pFecha)
+    End Sub
 End Class

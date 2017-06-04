@@ -28,12 +28,13 @@ Public Class GrupoPatenteDatos
         End If
 
         Try
-            Dim DTGPatente As DataTable = Comando.GetDataTable("SELECT * FROM GrupoPatente WHERE Id = '" & vGrupoPatente.Id & "'")
+            Dim DTGPatente As DataTable = Comando.GetData("SELECT * FROM GrupoPatente WHERE Id = '" & vGrupoPatente.Id & "'")
             If DTGPatente.Rows.Count > 0 Then
-                If Not vGrupoPatente.ListaPatentes Is Nothing Then
+                If vGrupoPatente.ListaPatentes.Count > 0 Then
                     BajaHijosPatente(vGrupoPatente.Id)
                     BajaHijosGrupoPatente(vGrupoPatente.Id)
                 End If
+                BorrarDatosFamilia(vGrupoPatente.Id, vGrupoPatente.Padre)
                 DTGPatente.Rows(0).Delete()
             End If
             Comando.ActualizarBD("GrupoPatente", DTGPatente)
@@ -153,6 +154,20 @@ Public Class GrupoPatenteDatos
                     AgregarHijosGrupoPatente(vGPatente)
                 Next
             End If
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Sub BorrarDatosFamilia(pGrupoPatenteId As Integer, pPadreId As Integer)
+        Try
+            Dim DTable As DataTable = Comando.GetData("SELECT * FROM FamiliaGrupoPatente WHERE GrupoPatente = " & pGrupoPatenteId & "AND Padre = " & pPadreId)
+            If DTable.Rows.Count > 0 Then
+                For Each DRow As DataRow In DTable.Rows
+                    DRow.Delete()
+                Next
+            End If
+            Comando.ActualizarBD("FamiliaGrupoPatente", DTable)
         Catch ex As Exception
 
         End Try

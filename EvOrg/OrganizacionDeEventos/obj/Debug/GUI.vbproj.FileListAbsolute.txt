@@ -178,3 +178,12 @@ D:\Trabajo de Campo I\24_04\EvOrg\OrganizacionDeEventos\obj\Debug\GUI.vbproj.Gen
 C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\OrganizacionDeEventos\bin\Debug\Framework.dll
 C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\OrganizacionDeEventos\bin\Debug\Framework.pdb
 C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\OrganizacionDeEventos\bin\Debug\Framework.xml
+C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\OrganizacionDeEventos\obj\Debug\OrganizacionDeEventos.ReservarMaterial.resources
+C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\OrganizacionDeEventos\obj\Debug\OrganizacionDeEventos.SeleccionarSalon.resources
+C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\OrganizacionDeEventos\obj\Debug\OrganizacionDeEventos.TareasDelDia.resources
+C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\OrganizacionDeEventos\obj\Debug\OrganizacionDeEventos.VerEventos.resources
+C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\OrganizacionDeEventos\obj\Debug\OrganizacionDeEventos.VerMateriales.resources
+C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\OrganizacionDeEventos\obj\Debug\OrganizacionDeEventos.CrearEvento.resources
+C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\OrganizacionDeEventos\obj\Debug\OrganizacionDeEventos.ListaMateriales.resources
+C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\OrganizacionDeEventos\obj\Debug\OrganizacionDeEventos.Presupuesto.resources
+C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\OrganizacionDeEventos\obj\Debug\OrganizacionDeEventos.ReservarServicio.resources

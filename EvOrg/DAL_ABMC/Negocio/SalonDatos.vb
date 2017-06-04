@@ -16,7 +16,7 @@ Public Class SalonDatos
                 DRDireccion.ItemArray = {vSalon.Direccion.Id, vSalon.Direccion.Calle, vSalon.Direccion.Numero, vSalon.Direccion.CP}
                 DTDireccion.Rows.Add(DRDireccion)
                 Dim DRSalon As DataRow = DTSalon.NewRow
-                DRSalon.ItemArray = {vSalon.Id, vSalon.Nombre, vSalon.Capacidad, vSalon.Email, vSalon.Telefono, vSalon.Direccion.Id, vSalon.Descripcion}
+                DRSalon.ItemArray = {vSalon.Id, vSalon.Nombre, vSalon.Capacidad, vSalon.Email, vSalon.Telefono, vSalon.Direccion.Id, vSalon.Descripcion, vSalon.Precio}
                 DTSalon.Rows.Add(DRSalon)
                 Comando.ActualizarBD("DireccionSalon", DTDireccion)
                 Comando.ActualizarBD("Salon", DTSalon)
@@ -57,7 +57,7 @@ Public Class SalonDatos
                 DRDireccion.ItemArray = {vSalon.Direccion.Id, vSalon.Direccion.Calle, vSalon.Direccion.Numero, vSalon.Direccion.CP}
                 If DTDireccion.Rows.Count > 0 Then DTDireccion.Rows(0).ItemArray = DRDireccion.ItemArray
                 Dim DRow As DataRow = DTable.NewRow
-                DRow.ItemArray = {vSalon.Id, vSalon.Nombre, vSalon.Capacidad, vSalon.Email, vSalon.Telefono, vSalon.Direccion.Id, vSalon.Descripcion}
+                DRow.ItemArray = {vSalon.Id, vSalon.Nombre, vSalon.Capacidad, vSalon.Email, vSalon.Telefono, vSalon.Direccion.Id, vSalon.Descripcion, vSalon.Precio}
                 If DTable.Rows.Count > 0 Then DTable.Rows(0).ItemArray = DRow.ItemArray
                 Comando.ActualizarBD("DireccionSalon", DTDireccion)
                 Comando.ActualizarBD("Salon", DTable)
@@ -78,7 +78,7 @@ Public Class SalonDatos
                 For Each DRDireccion As DataRow In DTDireccion.Rows
                     If DRDireccion(0) = DRow(5) Then Direccion = New Direccion(DRDireccion(0), DRDireccion(1), DRDireccion(2), DRDireccion(3))
                 Next
-                SalonLista.Add(New Salon(DRow(0), DRow(1), DRow(2), DRow(3), DRow(4), Direccion, DRow(6)))
+                SalonLista.Add(New Salon(DRow(0), DRow(1), DRow(2), DRow(3), DRow(4), Direccion, DRow(6), DRow(7)))
             Next
             Return SalonLista
         Catch ex As Exception

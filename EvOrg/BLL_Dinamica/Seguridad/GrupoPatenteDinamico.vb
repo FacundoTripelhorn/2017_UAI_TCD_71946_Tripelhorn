@@ -40,16 +40,21 @@ Public Class GrupoPatenteDinamico
     Private Sub AgregarHijos(pPadre As GrupoPatente, pTreeNode As TreeNode)
         For Each vPAbstracta As PatenteAbstracta In pPadre.ListaPatentes
             Dim vNode As New TreeNode
-            vNode.Text = vPAbstracta.Nombre
-            vNode.Tag = vPAbstracta
-            pTreeNode.Nodes.Add(vNode)
             If TypeOf vPAbstracta Is GrupoPatente Then
-                vNode.Text = vPAbstracta.Nombre
                 Dim vGPatente As GrupoPatente
                 vGPatente = DirectCast(vPAbstracta, GrupoPatente)
-                If Not vGPatente.ListaPatentes Is Nothing Then
+                vNode.Text = vGPatente.Nombre
+                vNode.Tag = vGPatente
+                pTreeNode.Nodes.Add(vNode)
+                If vGPatente.ListaPatentes.Count > 0 Then
                     AgregarHijos(vGPatente, pTreeNode.LastNode)
                 End If
+            Else
+                Dim vPatente As Patente
+                vPatente = DirectCast(vPAbstracta, Patente)
+                vNode.Text = vPatente.Nombre
+                vNode.Tag = vPatente
+                pTreeNode.Nodes.Add(vNode)
             End If
         Next
     End Sub
@@ -101,7 +106,7 @@ Public Class GrupoPatenteDinamico
                     vTool.BackgroundImage = System.Drawing.Image.FromFile(Application.StartupPath + "\Fondo.jpg")
                     pTool.DropDownItems.Add(vTool)
                     pTool.DropDownItems.Item(vTool.Name).Text = vPAbstracta.Nombre
-                    AddHandler vTool.Click, AddressOf Menu_Click
+                    If TypeOf vTool.Tag Is Patente Then AddHandler vTool.Click, AddressOf Menu_Click
                     If TypeOf vPAbstracta Is GrupoPatente Then
                         AgregarToolStrip(vPAbstracta, vTool, pFormulario)
                     End If

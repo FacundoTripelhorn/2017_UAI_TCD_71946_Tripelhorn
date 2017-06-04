@@ -63,7 +63,7 @@ Partial Class NuevaPatente
         Me.Label1.Location = New System.Drawing.Point(3, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(222, 24)
-        Me.Label1.TabIndex = 0
+        Me.Label1.TabIndex = 4
         Me.Label1.Text = "Ingrese el nombre"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.BottomLeft
         '
@@ -74,7 +74,7 @@ Partial Class NuevaPatente
         Me.NombreTxt.Location = New System.Drawing.Point(3, 27)
         Me.NombreTxt.Name = "NombreTxt"
         Me.NombreTxt.Size = New System.Drawing.Size(222, 23)
-        Me.NombreTxt.TabIndex = 1
+        Me.NombreTxt.TabIndex = 0
         '
         'Label2
         '
@@ -85,19 +85,20 @@ Partial Class NuevaPatente
         Me.Label2.Location = New System.Drawing.Point(3, 56)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(222, 24)
-        Me.Label2.TabIndex = 2
+        Me.Label2.TabIndex = 5
         Me.Label2.Text = "Seleccione el formulario"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.BottomLeft
         '
         'FormularioCombo
         '
         Me.FormularioCombo.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.FormularioCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.FormularioCombo.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormularioCombo.FormattingEnabled = True
         Me.FormularioCombo.Location = New System.Drawing.Point(3, 83)
         Me.FormularioCombo.Name = "FormularioCombo"
         Me.FormularioCombo.Size = New System.Drawing.Size(222, 24)
-        Me.FormularioCombo.TabIndex = 3
+        Me.FormularioCombo.TabIndex = 1
         '
         'Button1
         '
@@ -109,7 +110,7 @@ Partial Class NuevaPatente
         Me.Button1.Location = New System.Drawing.Point(3, 112)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(222, 45)
-        Me.Button1.TabIndex = 4
+        Me.Button1.TabIndex = 3
         Me.Button1.Text = "Aceptar"
         Me.Button1.UseVisualStyleBackColor = True
         '

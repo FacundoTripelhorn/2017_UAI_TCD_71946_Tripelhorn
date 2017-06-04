@@ -37,9 +37,17 @@ Public Class ABMPaso
 
     Private Sub Actualizar()
         Dim vLista As New List(Of VistaPaso)
+        For Each Evento As Evento In vEventoDinamico.ConsultaTodo
+            If Evento.Nombre = EventoCombo.SelectedItem Then
+                vEvento = Evento
+
+            End If
+        Next
+
         For Each Paso As Paso In vEvento.ListaPasos
             vLista.Add(New VistaPaso(Paso.Descripcion, Paso.Fecha, Paso.Prioridad, Paso.Tipo))
         Next
+
         GrillaPasos.DataSource = Nothing
         GrillaPasos.DataSource = vLista
         GrillaPasos.Columns(0).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
@@ -69,11 +77,12 @@ Public Class ABMPaso
     Private Sub AltaBtn_Click(sender As Object, e As EventArgs) Handles AltaBtn.Click
         If Not (EventoCombo.Text = "") Then
             If Not (DescripcionTxt.Text = "" And FechaDTP.Value > Date.Now And PrioridadCombo.Text = "") Then
-                vPaso = New Paso(GetPasoId(), DescripcionTxt.Text, FechaDTP.Value, PrioridadCombo.Text, "Concreto", vEvento)
+                vPaso = New Paso(GetPasoId(), DescripcionTxt.Text, FechaDTP.Value, PrioridadCombo.Text, "Concreto")
                 vPasoDinamico.Alta(vPaso)
                 vEventoDinamico.AgregarPaso(vEvento, vPaso, FechaDTP.Value)
                 vEvento.ListaPasos.Add(vPaso)
                 AgregarFechaACalendario(vPaso.Fecha)
+                Calendario.UpdateBoldedDates()
                 Limpiar()
                 Actualizar()
             Else
@@ -86,8 +95,10 @@ Public Class ABMPaso
 
     Private Sub BajaBtn_Click(sender As Object, e As EventArgs) Handles BajaBtn.Click
         vPaso = VistaAPaso()
+        vEventoDinamico.BorrarPaso(vEvento, vPaso)
         vPasoDinamico.Baja(vPaso)
         BorrarFechaDeCalendario(vPaso.Fecha)
+        Calendario.UpdateBoldedDates()
         Limpiar()
         Actualizar()
     End Sub
@@ -95,14 +106,18 @@ Public Class ABMPaso
     Private Sub ModificacionBtn_Click(sender As Object, e As EventArgs) Handles ModificacionBtn.Click
         Try
             vPaso = VistaAPaso()
+            vEvento.ListaPasos.Remove(vPaso)
             If vPaso.Fecha <> FechaDTP.Value Then
                 BorrarFechaDeCalendario(vPaso.Fecha)
                 AgregarFechaACalendario(FechaDTP.Value)
+                Calendario.UpdateBoldedDates()
             End If
             vPaso.Descripcion = DescripcionTxt.Text
-            If vPaso.Tipo = "Concreto" Then vPaso.Fecha = FechaDTP.Value
+            vPaso.Fecha = FechaDTP.Value
             vPaso.Prioridad = PrioridadCombo.SelectedItem
             vPasoDinamico.Modificacion(vPaso)
+            vEventoDinamico.ModificarPaso(vEvento, vPaso, FechaDTP.Value)
+            vEvento.ListaPasos.Add(vPaso)
             Limpiar()
             Actualizar()
         Catch ex As Exception
@@ -114,21 +129,20 @@ Public Class ABMPaso
         For Each Paso As Paso In vPasoDinamico.ConsultaTodo
             If Paso.Descripcion = DirectCast(GrillaPasos.SelectedRows(0).DataBoundItem, VistaPaso).Descripcion Then
                 vP = Paso
+                For Each vPaso As Paso In vEvento.ListaPasos
+                    If vPaso.Id = vP.Id Then vP.Fecha = vPaso.Fecha
+                Next
             End If
         Next
         Return vP
     End Function
 
     Private Sub EventoCombo_SelectedIndexChanged(sender As Object, e As EventArgs) Handles EventoCombo.SelectedIndexChanged
-        For Each Evento As Evento In vEventoDinamico.ConsultaTodo
-            If Evento.Nombre = EventoCombo.SelectedItem Then
-                vEvento = Evento
-                Actualizar()
-            End If
-        Next
+        Actualizar()
         Calendario.RemoveAllAnnuallyBoldedDates()
         For Each Paso As Paso In vEvento.ListaPasos
             AgregarFechaACalendario(Paso.Fecha)
         Next
+        Calendario.UpdateBoldedDates()
     End Sub
 End Class

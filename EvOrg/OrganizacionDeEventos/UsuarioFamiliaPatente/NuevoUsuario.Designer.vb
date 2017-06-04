@@ -80,7 +80,7 @@ Partial Class NuevoUsuario
         Me.Label1.Location = New System.Drawing.Point(3, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(178, 27)
-        Me.Label1.TabIndex = 0
+        Me.Label1.TabIndex = 7
         Me.Label1.Text = "Ingrese nombre de usuario"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -93,19 +93,20 @@ Partial Class NuevoUsuario
         Me.Label5.Location = New System.Drawing.Point(3, 111)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(178, 31)
-        Me.Label5.TabIndex = 4
+        Me.Label5.TabIndex = 11
         Me.Label5.Text = "Seleccione una familia"
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'FamiliaCombo
         '
         Me.FamiliaCombo.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.FamiliaCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.FamiliaCombo.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FamiliaCombo.FormattingEnabled = True
         Me.FamiliaCombo.Location = New System.Drawing.Point(187, 114)
         Me.FamiliaCombo.Name = "FamiliaCombo"
         Me.FamiliaCombo.Size = New System.Drawing.Size(162, 24)
-        Me.FamiliaCombo.TabIndex = 5
+        Me.FamiliaCombo.TabIndex = 4
         '
         'IdUsuarioTxt
         '
@@ -114,7 +115,7 @@ Partial Class NuevoUsuario
         Me.IdUsuarioTxt.Location = New System.Drawing.Point(187, 3)
         Me.IdUsuarioTxt.Name = "IdUsuarioTxt"
         Me.IdUsuarioTxt.Size = New System.Drawing.Size(162, 23)
-        Me.IdUsuarioTxt.TabIndex = 6
+        Me.IdUsuarioTxt.TabIndex = 0
         '
         'EmailTxt
         '
@@ -123,7 +124,7 @@ Partial Class NuevoUsuario
         Me.EmailTxt.Location = New System.Drawing.Point(187, 30)
         Me.EmailTxt.Name = "EmailTxt"
         Me.EmailTxt.Size = New System.Drawing.Size(162, 23)
-        Me.EmailTxt.TabIndex = 7
+        Me.EmailTxt.TabIndex = 1
         '
         'ContraseñaTxt
         '
@@ -132,7 +133,7 @@ Partial Class NuevoUsuario
         Me.ContraseñaTxt.Location = New System.Drawing.Point(187, 57)
         Me.ContraseñaTxt.Name = "ContraseñaTxt"
         Me.ContraseñaTxt.Size = New System.Drawing.Size(162, 23)
-        Me.ContraseñaTxt.TabIndex = 8
+        Me.ContraseñaTxt.TabIndex = 2
         Me.ContraseñaTxt.UseSystemPasswordChar = True
         '
         'RContraseñaTxt
@@ -142,7 +143,7 @@ Partial Class NuevoUsuario
         Me.RContraseñaTxt.Location = New System.Drawing.Point(187, 87)
         Me.RContraseñaTxt.Name = "RContraseñaTxt"
         Me.RContraseñaTxt.Size = New System.Drawing.Size(162, 23)
-        Me.RContraseñaTxt.TabIndex = 9
+        Me.RContraseñaTxt.TabIndex = 3
         Me.RContraseñaTxt.UseSystemPasswordChar = True
         '
         'Label4
@@ -154,7 +155,7 @@ Partial Class NuevoUsuario
         Me.Label4.Location = New System.Drawing.Point(3, 27)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(178, 27)
-        Me.Label4.TabIndex = 3
+        Me.Label4.TabIndex = 8
         Me.Label4.Text = "Ingrese correo electrónico"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -167,7 +168,7 @@ Partial Class NuevoUsuario
         Me.Label2.Location = New System.Drawing.Point(3, 54)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(178, 30)
-        Me.Label2.TabIndex = 1
+        Me.Label2.TabIndex = 9
         Me.Label2.Text = "Ingrese contraseña"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -180,7 +181,7 @@ Partial Class NuevoUsuario
         Me.Label3.Location = New System.Drawing.Point(3, 84)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(178, 27)
-        Me.Label3.TabIndex = 2
+        Me.Label3.TabIndex = 10
         Me.Label3.Text = "Repita la contraseña"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -210,7 +211,7 @@ Partial Class NuevoUsuario
         Me.AceptarBtn.Location = New System.Drawing.Point(3, 3)
         Me.AceptarBtn.Name = "AceptarBtn"
         Me.AceptarBtn.Size = New System.Drawing.Size(167, 30)
-        Me.AceptarBtn.TabIndex = 0
+        Me.AceptarBtn.TabIndex = 5
         Me.AceptarBtn.Text = "Aceptar"
         Me.AceptarBtn.UseVisualStyleBackColor = True
         '
@@ -224,7 +225,7 @@ Partial Class NuevoUsuario
         Me.CancelarBtn.Location = New System.Drawing.Point(176, 3)
         Me.CancelarBtn.Name = "CancelarBtn"
         Me.CancelarBtn.Size = New System.Drawing.Size(167, 30)
-        Me.CancelarBtn.TabIndex = 1
+        Me.CancelarBtn.TabIndex = 6
         Me.CancelarBtn.Text = "Cancelar"
         Me.CancelarBtn.UseVisualStyleBackColor = True
         '

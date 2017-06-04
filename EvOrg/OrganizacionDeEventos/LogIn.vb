@@ -3,6 +3,7 @@ Imports BLL_Estatica
 Imports Framework
 Public Class LogIn
     Dim vControladorLogin As ControladorLogIn = ControladorLogIn.GetInstance
+    Dim vContador As Integer
 
     Private Sub AceptarBtn_Click(sender As Object, e As EventArgs) Handles AceptarBtn.Click
         Try
@@ -12,17 +13,26 @@ Public Class LogIn
                 Else
                     UsuarioTxt.Text = ""
                     ContraseñaTxt.Text = ""
-                    ErrorLinkLabel.Visible = True
                 End If
             Else
                 MsgBox("Ingrese usuario y contraseña por favor")
+
+                'If vContador = 3 Then
+                'MsgBox("Desea restablecer su contraseña?")
+                'End If
+                'vContador += 1
             End If
+
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
     End Sub
 
-    Private Sub ErrorLinkLabel_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles ErrorLinkLabel.LinkClicked
-        MessageBox.Show("Por favor vuelva a ingresar usuario y contraseña", "Error")
+    Private Sub CancelarBtn_Click(sender As Object, e As EventArgs) Handles CancelarBtn.Click
+        Me.Close()
+    End Sub
+
+    Private Sub LogIn_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
     End Sub
 End Class

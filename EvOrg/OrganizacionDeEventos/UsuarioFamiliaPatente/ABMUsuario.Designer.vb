@@ -43,7 +43,7 @@ Partial Class ABMUsuario
         Me.Label1.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.Label1.Location = New System.Drawing.Point(3, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(245, 26)
+        Me.Label1.Size = New System.Drawing.Size(329, 26)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Lista de Usuarios"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.BottomLeft
@@ -57,7 +57,7 @@ Partial Class ABMUsuario
         Me.AltaBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.AltaBtn.Location = New System.Drawing.Point(3, 3)
         Me.AltaBtn.Name = "AltaBtn"
-        Me.AltaBtn.Size = New System.Drawing.Size(75, 32)
+        Me.AltaBtn.Size = New System.Drawing.Size(103, 32)
         Me.AltaBtn.TabIndex = 2
         Me.AltaBtn.Text = "Agregar"
         Me.AltaBtn.UseVisualStyleBackColor = True
@@ -69,9 +69,9 @@ Partial Class ABMUsuario
         Me.BajaBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BajaBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BajaBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.BajaBtn.Location = New System.Drawing.Point(84, 3)
+        Me.BajaBtn.Location = New System.Drawing.Point(112, 3)
         Me.BajaBtn.Name = "BajaBtn"
-        Me.BajaBtn.Size = New System.Drawing.Size(75, 32)
+        Me.BajaBtn.Size = New System.Drawing.Size(103, 32)
         Me.BajaBtn.TabIndex = 3
         Me.BajaBtn.Text = "Eliminar"
         Me.BajaBtn.UseVisualStyleBackColor = True
@@ -83,9 +83,9 @@ Partial Class ABMUsuario
         Me.ModificacionBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ModificacionBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ModificacionBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.ModificacionBtn.Location = New System.Drawing.Point(165, 3)
+        Me.ModificacionBtn.Location = New System.Drawing.Point(221, 3)
         Me.ModificacionBtn.Name = "ModificacionBtn"
-        Me.ModificacionBtn.Size = New System.Drawing.Size(77, 32)
+        Me.ModificacionBtn.Size = New System.Drawing.Size(105, 32)
         Me.ModificacionBtn.TabIndex = 4
         Me.ModificacionBtn.Text = "Modificar"
         Me.ModificacionBtn.UseVisualStyleBackColor = True
@@ -105,7 +105,7 @@ Partial Class ABMUsuario
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 44.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(251, 319)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(335, 319)
         Me.TableLayoutPanel1.TabIndex = 5
         '
         'TableLayoutPanel2
@@ -122,7 +122,7 @@ Partial Class ABMUsuario
         Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
         Me.TableLayoutPanel2.RowCount = 1
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel2.Size = New System.Drawing.Size(245, 38)
+        Me.TableLayoutPanel2.Size = New System.Drawing.Size(329, 38)
         Me.TableLayoutPanel2.TabIndex = 2
         '
         'GrillaUsuario
@@ -132,7 +132,7 @@ Partial Class ABMUsuario
         Me.GrillaUsuario.Location = New System.Drawing.Point(3, 29)
         Me.GrillaUsuario.Name = "GrillaUsuario"
         Me.GrillaUsuario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.GrillaUsuario.Size = New System.Drawing.Size(245, 243)
+        Me.GrillaUsuario.Size = New System.Drawing.Size(329, 243)
         Me.GrillaUsuario.TabIndex = 0
         '
         'ABMUsuario
@@ -140,7 +140,7 @@ Partial Class ABMUsuario
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
-        Me.ClientSize = New System.Drawing.Size(251, 319)
+        Me.ClientSize = New System.Drawing.Size(335, 319)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "ABMUsuario"
