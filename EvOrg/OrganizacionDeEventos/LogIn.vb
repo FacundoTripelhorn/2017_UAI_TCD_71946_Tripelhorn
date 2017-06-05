@@ -31,8 +31,4 @@ Public Class LogIn
     Private Sub CancelarBtn_Click(sender As Object, e As EventArgs) Handles CancelarBtn.Click
         Me.Close()
     End Sub
-
-    Private Sub LogIn_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
 End Class

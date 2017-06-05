@@ -11,13 +11,18 @@ Public Class ABMSalon
     End Sub
 
     Public Sub Actualizar()
-        Dim vLista As New List(Of VistaSalon)
-        For Each Salon As Salon In vSalonDinamico.ConsultaTodo
-            vLista.Add(New VistaSalon(Salon.Nombre, Salon.Capacidad, Salon.Email, Salon.Telefono, Salon.Precio))
-        Next
-        GrillaSalones.DataSource = Nothing
-        GrillaSalones.DataSource = vLista
-        GrillaSalones.Columns(2).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        Try
+            Dim vLista As New List(Of VistaSalon)
+            For Each Salon As Salon In vSalonDinamico.ConsultaTodo
+                vLista.Add(New VistaSalon(Salon.Nombre, Salon.Capacidad, Salon.Email, Salon.Telefono, Salon.Precio))
+            Next
+            GrillaSalones.DataSource = Nothing
+            GrillaSalones.DataSource = vLista
+            GrillaSalones.Columns(2).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        Catch ex As Exception
+
+        End Try
+
     End Sub
     Private Sub Limpiar()
         NombreTxt.Text = ""

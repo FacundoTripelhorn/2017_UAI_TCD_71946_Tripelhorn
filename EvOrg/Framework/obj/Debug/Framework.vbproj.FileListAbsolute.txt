@@ -7,3 +7,12 @@ C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\Framework\o
 C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\Framework\obj\Debug\Framework.dll
 C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\Framework\obj\Debug\Framework.xml
 C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\Framework\obj\Debug\Framework.pdb
+C:\Users\Navegador\Desktop\2017_UAI_TCD_71946_Tripelhorn-master\EvOrg\Framework\bin\Debug\Framework.dll
+C:\Users\Navegador\Desktop\2017_UAI_TCD_71946_Tripelhorn-master\EvOrg\Framework\bin\Debug\Framework.pdb
+C:\Users\Navegador\Desktop\2017_UAI_TCD_71946_Tripelhorn-master\EvOrg\Framework\bin\Debug\Framework.xml
+C:\Users\Navegador\Desktop\2017_UAI_TCD_71946_Tripelhorn-master\EvOrg\Framework\obj\Debug\Framework.vbprojResolveAssemblyReference.cache
+C:\Users\Navegador\Desktop\2017_UAI_TCD_71946_Tripelhorn-master\EvOrg\Framework\obj\Debug\Framework.Resources.resources
+C:\Users\Navegador\Desktop\2017_UAI_TCD_71946_Tripelhorn-master\EvOrg\Framework\obj\Debug\Framework.vbproj.GenerateResource.Cache
+C:\Users\Navegador\Desktop\2017_UAI_TCD_71946_Tripelhorn-master\EvOrg\Framework\obj\Debug\Framework.dll
+C:\Users\Navegador\Desktop\2017_UAI_TCD_71946_Tripelhorn-master\EvOrg\Framework\obj\Debug\Framework.xml
+C:\Users\Navegador\Desktop\2017_UAI_TCD_71946_Tripelhorn-master\EvOrg\Framework\obj\Debug\Framework.pdb

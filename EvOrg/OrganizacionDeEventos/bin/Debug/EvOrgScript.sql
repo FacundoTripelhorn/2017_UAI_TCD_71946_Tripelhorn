@@ -240,7 +240,7 @@ SET IDENTITY_INSERT [dbo].[Familia] OFF
 INSERT [dbo].[FamiliaGrupoPatente] ([Familia], [GrupoPatente], [Padre]) VALUES (1, 1, 1)
 INSERT [dbo].[FamiliaGrupoPatente] ([Familia], [GrupoPatente], [Padre]) VALUES (1, 2, 1)
 INSERT [dbo].[FamiliaGrupoPatente] ([Familia], [GrupoPatente], [Padre]) VALUES (1, 3, 1)
-INSERT [dbo].[FamiliaGrupoPatente] ([Familia], [GrupoPatente], [Padre]) VALUES (2, 2, 1
+INSERT [dbo].[FamiliaGrupoPatente] ([Familia], [GrupoPatente], [Padre]) VALUES (2, 2, 1)
 
 INSERT [dbo].[FamiliaPatente] ([Familia], [Patente], [Padre]) VALUES (1, 9, 2)
 INSERT [dbo].[FamiliaPatente] ([Familia], [Patente], [Padre]) VALUES (1, 10, 2)
@@ -290,7 +290,7 @@ INSERT [dbo].[Patente] ([Id], [Nombre], [Formulario], [Padre]) VALUES (18, N'Nue
 SET IDENTITY_INSERT [dbo].[Patente] OFF
 
 SET IDENTITY_INSERT [dbo].[Salon] ON 
-INSERT [dbo].[Salon] ([Id], [Nombre], [Capacidad], [Email], [Telefono], [Direccion], [Descripcion], [Precio]) VALUES (1, N'Salon1', 5000, N'salon1@gmail.com', 46631281, 0, N'asdasdasdasdsadasdas', NULL)
+INSERT [dbo].[Salon] ([Id], [Nombre], [Capacidad], [Email], [Telefono], [Direccion], [Descripcion], [Precio]) VALUES (1, N'Salon1', 5000, N'salon1@gmail.com', 46631281, 0, N'asdasdasdasdsadasdas', 20000)
 SET IDENTITY_INSERT [dbo].[Salon] OFF
 
 SET IDENTITY_INSERT [dbo].[TipoEvento] ON 

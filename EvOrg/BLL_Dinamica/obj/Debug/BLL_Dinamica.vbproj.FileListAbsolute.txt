@@ -91,3 +91,24 @@ D:\Trabajo de Campo I\24_04\EvOrg\BLL_Dinamica\obj\Debug\BLL_Dinamica.pdb
 C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\BLL_Dinamica\bin\Debug\Framework.dll
 C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\BLL_Dinamica\bin\Debug\Framework.pdb
 C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\BLL_Dinamica\bin\Debug\Framework.xml
+C:\Users\Navegador\Desktop\2017_UAI_TCD_71946_Tripelhorn-master\EvOrg\BLL_Dinamica\bin\Debug\BLL_Dinamica.dll
+C:\Users\Navegador\Desktop\2017_UAI_TCD_71946_Tripelhorn-master\EvOrg\BLL_Dinamica\bin\Debug\BLL_Dinamica.pdb
+C:\Users\Navegador\Desktop\2017_UAI_TCD_71946_Tripelhorn-master\EvOrg\BLL_Dinamica\bin\Debug\BLL_Dinamica.xml
+C:\Users\Navegador\Desktop\2017_UAI_TCD_71946_Tripelhorn-master\EvOrg\BLL_Dinamica\bin\Debug\BLL_Estatica.dll
+C:\Users\Navegador\Desktop\2017_UAI_TCD_71946_Tripelhorn-master\EvOrg\BLL_Dinamica\bin\Debug\DAL.dll
+C:\Users\Navegador\Desktop\2017_UAI_TCD_71946_Tripelhorn-master\EvOrg\BLL_Dinamica\bin\Debug\DAL_ABMC.dll
+C:\Users\Navegador\Desktop\2017_UAI_TCD_71946_Tripelhorn-master\EvOrg\BLL_Dinamica\bin\Debug\Framework.dll
+C:\Users\Navegador\Desktop\2017_UAI_TCD_71946_Tripelhorn-master\EvOrg\BLL_Dinamica\bin\Debug\BLL_Estatica.pdb
+C:\Users\Navegador\Desktop\2017_UAI_TCD_71946_Tripelhorn-master\EvOrg\BLL_Dinamica\bin\Debug\BLL_Estatica.xml
+C:\Users\Navegador\Desktop\2017_UAI_TCD_71946_Tripelhorn-master\EvOrg\BLL_Dinamica\bin\Debug\DAL.pdb
+C:\Users\Navegador\Desktop\2017_UAI_TCD_71946_Tripelhorn-master\EvOrg\BLL_Dinamica\bin\Debug\DAL.xml
+C:\Users\Navegador\Desktop\2017_UAI_TCD_71946_Tripelhorn-master\EvOrg\BLL_Dinamica\bin\Debug\DAL_ABMC.pdb
+C:\Users\Navegador\Desktop\2017_UAI_TCD_71946_Tripelhorn-master\EvOrg\BLL_Dinamica\bin\Debug\DAL_ABMC.xml
+C:\Users\Navegador\Desktop\2017_UAI_TCD_71946_Tripelhorn-master\EvOrg\BLL_Dinamica\bin\Debug\Framework.pdb
+C:\Users\Navegador\Desktop\2017_UAI_TCD_71946_Tripelhorn-master\EvOrg\BLL_Dinamica\bin\Debug\Framework.xml
+C:\Users\Navegador\Desktop\2017_UAI_TCD_71946_Tripelhorn-master\EvOrg\BLL_Dinamica\obj\Debug\BLL_Dinamica.vbprojResolveAssemblyReference.cache
+C:\Users\Navegador\Desktop\2017_UAI_TCD_71946_Tripelhorn-master\EvOrg\BLL_Dinamica\obj\Debug\BLL_Dinamica.Resources.resources
+C:\Users\Navegador\Desktop\2017_UAI_TCD_71946_Tripelhorn-master\EvOrg\BLL_Dinamica\obj\Debug\BLL_Dinamica.vbproj.GenerateResource.Cache
+C:\Users\Navegador\Desktop\2017_UAI_TCD_71946_Tripelhorn-master\EvOrg\BLL_Dinamica\obj\Debug\BLL_Dinamica.dll
+C:\Users\Navegador\Desktop\2017_UAI_TCD_71946_Tripelhorn-master\EvOrg\BLL_Dinamica\obj\Debug\BLL_Dinamica.xml
+C:\Users\Navegador\Desktop\2017_UAI_TCD_71946_Tripelhorn-master\EvOrg\BLL_Dinamica\obj\Debug\BLL_Dinamica.pdb
