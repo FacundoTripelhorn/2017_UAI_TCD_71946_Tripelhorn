@@ -13,7 +13,7 @@ Public Class SalonDatos
                 Dim DTDireccion As DataTable = Comando.GetDataTable("DireccionSalon")
                 Dim DRDireccion As DataRow = DTDireccion.NewRow
                 vSalon.Direccion.Id = GetDireccionId(DTDireccion)
-                DRDireccion.ItemArray = {vSalon.Direccion.Id, vSalon.Direccion.Calle, vSalon.Direccion.Numero, vSalon.Direccion.CP}
+                DRDireccion.ItemArray = {vSalon.Direccion.Id, vSalon.Direccion.Calle, vSalon.Direccion.Numero, vSalon.Direccion.Localidad}
                 DTDireccion.Rows.Add(DRDireccion)
                 Dim DRSalon As DataRow = DTSalon.NewRow
                 DRSalon.ItemArray = {vSalon.Id, vSalon.Nombre, vSalon.Capacidad, vSalon.Email, vSalon.Telefono, vSalon.Direccion.Id, vSalon.Descripcion, vSalon.Precio}
@@ -54,7 +54,7 @@ Public Class SalonDatos
                 Dim DTable As DataTable = Comando.GetData("SELECT * FROM Salon WHERE Id = " & vSalon.Id)
                 Dim DTDireccion As DataTable = Comando.GetData("SELECT * FROM DireccionSalon WHERE Id = " & vSalon.Direccion.Id)
                 Dim DRDireccion As DataRow = DTDireccion.NewRow
-                DRDireccion.ItemArray = {vSalon.Direccion.Id, vSalon.Direccion.Calle, vSalon.Direccion.Numero, vSalon.Direccion.CP}
+                DRDireccion.ItemArray = {vSalon.Direccion.Id, vSalon.Direccion.Calle, vSalon.Direccion.Numero, vSalon.Direccion.Localidad}
                 If DTDireccion.Rows.Count > 0 Then DTDireccion.Rows(0).ItemArray = DRDireccion.ItemArray
                 Dim DRow As DataRow = DTable.NewRow
                 DRow.ItemArray = {vSalon.Id, vSalon.Nombre, vSalon.Capacidad, vSalon.Email, vSalon.Telefono, vSalon.Direccion.Id, vSalon.Descripcion, vSalon.Precio}

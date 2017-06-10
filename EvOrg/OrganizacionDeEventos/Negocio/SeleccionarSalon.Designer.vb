@@ -24,102 +24,256 @@ Partial Class SeleccionarSalon
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(SeleccionarSalon))
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.DireccionGrp = New System.Windows.Forms.GroupBox()
+        Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
+        Me.CalleLbl = New System.Windows.Forms.Label()
+        Me.NumeroLbl = New System.Windows.Forms.Label()
+        Me.LocalidadLbl = New System.Windows.Forms.Label()
+        Me.CalleTxt = New System.Windows.Forms.TextBox()
+        Me.NumeroTxt = New System.Windows.Forms.TextBox()
+        Me.LocalidadTxt = New System.Windows.Forms.TextBox()
+        Me.GrillaSalones = New System.Windows.Forms.DataGridView()
+        Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
+        Me.AceptarBtn = New System.Windows.Forms.Button()
+        Me.CancelarBtn = New System.Windows.Forms.Button()
+        Me.GMapa = New GMap.NET.WindowsForms.GMapControl()
         Me.TableLayoutPanel1.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.DireccionGrp.SuspendLayout()
+        Me.TableLayoutPanel3.SuspendLayout()
+        CType(Me.GrillaSalones, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TableLayoutPanel2.SuspendLayout()
         Me.SuspendLayout()
         '
         'TableLayoutPanel1
         '
         Me.TableLayoutPanel1.BackColor = System.Drawing.Color.Transparent
         Me.TableLayoutPanel1.ColumnCount = 2
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.Controls.Add(Me.DataGridView1, 0, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.Label1, 1, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.Button1, 0, 1)
-        Me.TableLayoutPanel1.Controls.Add(Me.Button2, 1, 1)
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 532.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 8.0!))
+        Me.TableLayoutPanel1.Controls.Add(Me.DireccionGrp, 0, 1)
+        Me.TableLayoutPanel1.Controls.Add(Me.GrillaSalones, 0, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.TableLayoutPanel2, 0, 2)
+        Me.TableLayoutPanel1.Controls.Add(Me.GMapa, 1, 0)
         Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 0)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
-        Me.TableLayoutPanel1.RowCount = 2
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 84.59303!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.40698!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(527, 344)
+        Me.TableLayoutPanel1.RowCount = 3
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 58.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48.0!))
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(874, 396)
         Me.TableLayoutPanel1.TabIndex = 0
         '
-        'DataGridView1
+        'DireccionGrp
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.DataGridView1.Location = New System.Drawing.Point(3, 3)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(257, 285)
-        Me.DataGridView1.TabIndex = 0
+        Me.TableLayoutPanel1.SetColumnSpan(Me.DireccionGrp, 2)
+        Me.DireccionGrp.Controls.Add(Me.TableLayoutPanel3)
+        Me.DireccionGrp.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.DireccionGrp.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DireccionGrp.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.DireccionGrp.Location = New System.Drawing.Point(3, 293)
+        Me.DireccionGrp.Name = "DireccionGrp"
+        Me.DireccionGrp.Size = New System.Drawing.Size(868, 52)
+        Me.DireccionGrp.TabIndex = 22
+        Me.DireccionGrp.TabStop = False
+        Me.DireccionGrp.Text = "Dirección"
         '
-        'Label1
+        'TableLayoutPanel3
         '
-        Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(378, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(34, 13)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Mapa"
+        Me.TableLayoutPanel3.BackColor = System.Drawing.Color.Transparent
+        Me.TableLayoutPanel3.ColumnCount = 6
+        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 53.0!))
+        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 64.0!))
+        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 72.0!))
+        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 78.0!))
+        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 191.0!))
+        Me.TableLayoutPanel3.Controls.Add(Me.CalleLbl, 0, 0)
+        Me.TableLayoutPanel3.Controls.Add(Me.NumeroLbl, 2, 0)
+        Me.TableLayoutPanel3.Controls.Add(Me.LocalidadLbl, 4, 0)
+        Me.TableLayoutPanel3.Controls.Add(Me.CalleTxt, 1, 0)
+        Me.TableLayoutPanel3.Controls.Add(Me.NumeroTxt, 3, 0)
+        Me.TableLayoutPanel3.Controls.Add(Me.LocalidadTxt, 5, 0)
+        Me.TableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel3.Location = New System.Drawing.Point(3, 19)
+        Me.TableLayoutPanel3.Name = "TableLayoutPanel3"
+        Me.TableLayoutPanel3.RowCount = 1
+        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel3.Size = New System.Drawing.Size(862, 30)
+        Me.TableLayoutPanel3.TabIndex = 0
         '
-        'Button1
+        'CalleLbl
         '
-        Me.Button1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button1.BackColor = System.Drawing.Color.Transparent
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button1.Location = New System.Drawing.Point(3, 297)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(257, 44)
-        Me.Button1.TabIndex = 2
-        Me.Button1.Text = "Aceptar"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.CalleLbl.AutoSize = True
+        Me.CalleLbl.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.CalleLbl.Location = New System.Drawing.Point(3, 0)
+        Me.CalleLbl.Name = "CalleLbl"
+        Me.CalleLbl.Size = New System.Drawing.Size(47, 30)
+        Me.CalleLbl.TabIndex = 0
+        Me.CalleLbl.Text = "Calle"
+        Me.CalleLbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Button2
+        'NumeroLbl
         '
-        Me.Button2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button2.BackColor = System.Drawing.Color.Transparent
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button2.Location = New System.Drawing.Point(266, 297)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(258, 44)
-        Me.Button2.TabIndex = 3
-        Me.Button2.Text = "Cancelar"
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.NumeroLbl.AutoSize = True
+        Me.NumeroLbl.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.NumeroLbl.Location = New System.Drawing.Point(460, 0)
+        Me.NumeroLbl.Name = "NumeroLbl"
+        Me.NumeroLbl.Size = New System.Drawing.Size(58, 30)
+        Me.NumeroLbl.TabIndex = 1
+        Me.NumeroLbl.Text = "Número"
+        Me.NumeroLbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'LocalidadLbl
+        '
+        Me.LocalidadLbl.AutoSize = True
+        Me.LocalidadLbl.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.LocalidadLbl.Location = New System.Drawing.Point(596, 0)
+        Me.LocalidadLbl.Name = "LocalidadLbl"
+        Me.LocalidadLbl.Size = New System.Drawing.Size(72, 30)
+        Me.LocalidadLbl.TabIndex = 2
+        Me.LocalidadLbl.Text = "Localidad"
+        Me.LocalidadLbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'CalleTxt
+        '
+        Me.CalleTxt.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.CalleTxt.Enabled = False
+        Me.CalleTxt.Location = New System.Drawing.Point(56, 3)
+        Me.CalleTxt.Name = "CalleTxt"
+        Me.CalleTxt.Size = New System.Drawing.Size(398, 23)
+        Me.CalleTxt.TabIndex = 7
+        '
+        'NumeroTxt
+        '
+        Me.NumeroTxt.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.NumeroTxt.Enabled = False
+        Me.NumeroTxt.Location = New System.Drawing.Point(524, 3)
+        Me.NumeroTxt.Name = "NumeroTxt"
+        Me.NumeroTxt.Size = New System.Drawing.Size(66, 23)
+        Me.NumeroTxt.TabIndex = 8
+        '
+        'LocalidadTxt
+        '
+        Me.LocalidadTxt.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.LocalidadTxt.Enabled = False
+        Me.LocalidadTxt.Location = New System.Drawing.Point(674, 3)
+        Me.LocalidadTxt.Name = "LocalidadTxt"
+        Me.LocalidadTxt.Size = New System.Drawing.Size(185, 23)
+        Me.LocalidadTxt.TabIndex = 9
+        '
+        'GrillaSalones
+        '
+        Me.GrillaSalones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.GrillaSalones.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.GrillaSalones.Location = New System.Drawing.Point(3, 3)
+        Me.GrillaSalones.Name = "GrillaSalones"
+        Me.GrillaSalones.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.GrillaSalones.Size = New System.Drawing.Size(526, 284)
+        Me.GrillaSalones.TabIndex = 0
+        '
+        'TableLayoutPanel2
+        '
+        Me.TableLayoutPanel2.ColumnCount = 2
+        Me.TableLayoutPanel1.SetColumnSpan(Me.TableLayoutPanel2, 2)
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel2.Controls.Add(Me.AceptarBtn, 0, 0)
+        Me.TableLayoutPanel2.Controls.Add(Me.CancelarBtn, 1, 0)
+        Me.TableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel2.Location = New System.Drawing.Point(3, 351)
+        Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
+        Me.TableLayoutPanel2.RowCount = 1
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel2.Size = New System.Drawing.Size(868, 42)
+        Me.TableLayoutPanel2.TabIndex = 4
+        '
+        'AceptarBtn
+        '
+        Me.AceptarBtn.BackColor = System.Drawing.Color.Transparent
+        Me.AceptarBtn.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.AceptarBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.AceptarBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.AceptarBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.AceptarBtn.Location = New System.Drawing.Point(3, 3)
+        Me.AceptarBtn.Name = "AceptarBtn"
+        Me.AceptarBtn.Size = New System.Drawing.Size(428, 36)
+        Me.AceptarBtn.TabIndex = 2
+        Me.AceptarBtn.Text = "Aceptar"
+        Me.AceptarBtn.UseVisualStyleBackColor = False
+        '
+        'CancelarBtn
+        '
+        Me.CancelarBtn.BackColor = System.Drawing.Color.Transparent
+        Me.CancelarBtn.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.CancelarBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.CancelarBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CancelarBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.CancelarBtn.Location = New System.Drawing.Point(437, 3)
+        Me.CancelarBtn.Name = "CancelarBtn"
+        Me.CancelarBtn.Size = New System.Drawing.Size(428, 36)
+        Me.CancelarBtn.TabIndex = 3
+        Me.CancelarBtn.Text = "Cancelar"
+        Me.CancelarBtn.UseVisualStyleBackColor = False
+        '
+        'GMapa
+        '
+        Me.GMapa.Bearing = 0!
+        Me.GMapa.CanDragMap = True
+        Me.GMapa.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.GMapa.EmptyTileColor = System.Drawing.Color.Navy
+        Me.GMapa.GrayScaleMode = False
+        Me.GMapa.HelperLineOption = GMap.NET.WindowsForms.HelperLineOptions.DontShow
+        Me.GMapa.LevelsKeepInMemmory = 5
+        Me.GMapa.Location = New System.Drawing.Point(535, 3)
+        Me.GMapa.MarkersEnabled = True
+        Me.GMapa.MaxZoom = 2
+        Me.GMapa.MinZoom = 18
+        Me.GMapa.MouseWheelZoomType = GMap.NET.MouseWheelZoomType.MousePositionAndCenter
+        Me.GMapa.Name = "GMapa"
+        Me.GMapa.NegativeMode = False
+        Me.GMapa.PolygonsEnabled = True
+        Me.GMapa.RetryLoadTile = 0
+        Me.GMapa.RoutesEnabled = True
+        Me.GMapa.ScaleMode = GMap.NET.WindowsForms.ScaleModes.[Integer]
+        Me.GMapa.SelectedAreaFillColor = System.Drawing.Color.FromArgb(CType(CType(33, Byte), Integer), CType(CType(65, Byte), Integer), CType(CType(105, Byte), Integer), CType(CType(225, Byte), Integer))
+        Me.GMapa.ShowTileGridLines = False
+        Me.GMapa.Size = New System.Drawing.Size(336, 284)
+        Me.GMapa.TabIndex = 5
+        Me.GMapa.Zoom = 2.0R
         '
         'SeleccionarSalon
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
-        Me.ClientSize = New System.Drawing.Size(527, 344)
+        Me.ClientSize = New System.Drawing.Size(874, 396)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "SeleccionarSalon"
         Me.Text = "EvOrg"
         Me.TableLayoutPanel1.ResumeLayout(False)
-        Me.TableLayoutPanel1.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.DireccionGrp.ResumeLayout(False)
+        Me.TableLayoutPanel3.ResumeLayout(False)
+        Me.TableLayoutPanel3.PerformLayout()
+        CType(Me.GrillaSalones, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TableLayoutPanel2.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
-    Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
+    Friend WithEvents GrillaSalones As DataGridView
+    Friend WithEvents AceptarBtn As Button
+    Friend WithEvents CancelarBtn As Button
+    Friend WithEvents TableLayoutPanel2 As TableLayoutPanel
+    Friend WithEvents GMapa As GMap.NET.WindowsForms.GMapControl
+    Friend WithEvents DireccionGrp As GroupBox
+    Friend WithEvents TableLayoutPanel3 As TableLayoutPanel
+    Friend WithEvents CalleLbl As Label
+    Friend WithEvents NumeroLbl As Label
+    Friend WithEvents LocalidadLbl As Label
+    Friend WithEvents CalleTxt As TextBox
+    Friend WithEvents NumeroTxt As TextBox
+    Friend WithEvents LocalidadTxt As TextBox
 End Class

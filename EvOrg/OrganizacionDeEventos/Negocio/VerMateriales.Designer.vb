@@ -24,11 +24,11 @@ Partial Class VerMateriales
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(VerMateriales))
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.AceptarBtn = New System.Windows.Forms.Button()
+        Me.CancelarBtn = New System.Windows.Forms.Button()
+        Me.GrillaMateriales = New System.Windows.Forms.DataGridView()
         Me.TableLayoutPanel1.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.GrillaMateriales, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TableLayoutPanel1
@@ -37,9 +37,9 @@ Partial Class VerMateriales
         Me.TableLayoutPanel1.ColumnCount = 2
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.Controls.Add(Me.Button1, 0, 1)
-        Me.TableLayoutPanel1.Controls.Add(Me.Button2, 1, 1)
-        Me.TableLayoutPanel1.Controls.Add(Me.DataGridView1, 0, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.AceptarBtn, 0, 1)
+        Me.TableLayoutPanel1.Controls.Add(Me.CancelarBtn, 1, 1)
+        Me.TableLayoutPanel1.Controls.Add(Me.GrillaMateriales, 0, 0)
         Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 0)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
@@ -49,45 +49,45 @@ Partial Class VerMateriales
         Me.TableLayoutPanel1.Size = New System.Drawing.Size(375, 324)
         Me.TableLayoutPanel1.TabIndex = 0
         '
-        'Button1
+        'AceptarBtn
         '
-        Me.Button1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.AceptarBtn.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button1.BackColor = System.Drawing.Color.Transparent
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button1.Location = New System.Drawing.Point(3, 271)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(181, 50)
-        Me.Button1.TabIndex = 0
-        Me.Button1.Text = "Aceptar"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.AceptarBtn.BackColor = System.Drawing.Color.Transparent
+        Me.AceptarBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.AceptarBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.AceptarBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.AceptarBtn.Location = New System.Drawing.Point(3, 271)
+        Me.AceptarBtn.Name = "AceptarBtn"
+        Me.AceptarBtn.Size = New System.Drawing.Size(181, 50)
+        Me.AceptarBtn.TabIndex = 0
+        Me.AceptarBtn.Text = "Aceptar"
+        Me.AceptarBtn.UseVisualStyleBackColor = False
         '
-        'Button2
+        'CancelarBtn
         '
-        Me.Button2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.CancelarBtn.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button2.BackColor = System.Drawing.Color.Transparent
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button2.Location = New System.Drawing.Point(190, 271)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(182, 50)
-        Me.Button2.TabIndex = 1
-        Me.Button2.Text = "Cancelar"
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.CancelarBtn.BackColor = System.Drawing.Color.Transparent
+        Me.CancelarBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.CancelarBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CancelarBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.CancelarBtn.Location = New System.Drawing.Point(190, 271)
+        Me.CancelarBtn.Name = "CancelarBtn"
+        Me.CancelarBtn.Size = New System.Drawing.Size(182, 50)
+        Me.CancelarBtn.TabIndex = 1
+        Me.CancelarBtn.Text = "Cancelar"
+        Me.CancelarBtn.UseVisualStyleBackColor = False
         '
-        'DataGridView1
+        'GrillaMateriales
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.TableLayoutPanel1.SetColumnSpan(Me.DataGridView1, 2)
-        Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.DataGridView1.Location = New System.Drawing.Point(3, 3)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(369, 260)
-        Me.DataGridView1.TabIndex = 2
+        Me.GrillaMateriales.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.TableLayoutPanel1.SetColumnSpan(Me.GrillaMateriales, 2)
+        Me.GrillaMateriales.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.GrillaMateriales.Location = New System.Drawing.Point(3, 3)
+        Me.GrillaMateriales.Name = "GrillaMateriales"
+        Me.GrillaMateriales.Size = New System.Drawing.Size(369, 260)
+        Me.GrillaMateriales.TabIndex = 2
         '
         'VerMateriales
         '
@@ -98,13 +98,13 @@ Partial Class VerMateriales
         Me.Name = "VerMateriales"
         Me.Text = "VerMateriales"
         Me.TableLayoutPanel1.ResumeLayout(False)
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.GrillaMateriales, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents AceptarBtn As Button
+    Friend WithEvents CancelarBtn As Button
+    Friend WithEvents GrillaMateriales As DataGridView
 End Class

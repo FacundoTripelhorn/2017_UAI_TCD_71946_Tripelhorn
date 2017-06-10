@@ -31,15 +31,15 @@ Public Class ABMSalon
         TelefonoTxt.Text = ""
         CalleTxt.Text = ""
         NumeroTxt.Text = ""
-        CPTxt.Text = ""
+        LocalidadTxt.Text = ""
         DescripcionTxt.Text = ""
     End Sub
     Private Sub AltaBtn_Click(sender As Object, e As EventArgs) Handles AltaBtn.Click
         If Not (NombreTxt.Text = "" And CapacidadTxt.Text = "" And EmailTxt.Text = "" And TelefonoTxt.Text = "") Then
-            If Not (CalleTxt.Text = "" And NumeroTxt.Text = "" And CPTxt.Text = "") Then
+            If Not (CalleTxt.Text = "" And NumeroTxt.Text = "" And LocalidadTxt.Text = "") Then
                 If Regex.IsMatch(EmailTxt.Text, "^[\w]+@{1}[\w]+\.[a-z]{2,3}$") Then
                     If Regex.IsMatch(TelefonoTxt.Text, "[0-9]{8,10}") Then
-                        vDireccion = New Direccion(CalleTxt.Text, NumeroTxt.Text, CPTxt.Text)
+                        vDireccion = New Direccion(CalleTxt.Text, NumeroTxt.Text, LocalidadTxt.Text)
                         vSalon = New Salon(NombreTxt.Text, CapacidadTxt.Text, EmailTxt.Text, TelefonoTxt.Text, vDireccion, DescripcionTxt.Text, PrecioTxt.Text)
                         vSalonDinamico.Alta(vSalon)
                         Limpiar()
@@ -76,7 +76,7 @@ Public Class ABMSalon
                         vSalon.Capacidad = CapacidadTxt.Text
                         vSalon.Email = EmailTxt.Text
                         vSalon.Telefono = TelefonoTxt.Text
-                        vSalon.Direccion = New Direccion(CalleTxt.Text, NumeroTxt.Text, CPTxt.Text)
+                        vSalon.Direccion = New Direccion(CalleTxt.Text, NumeroTxt.Text, LocalidadTxt.Text)
                         vSalon.Descripcion = DescripcionTxt.Text
                         vSalon.Precio = PrecioTxt.Text
                         vSalonDinamico.Modificacion(vSalon)
@@ -104,7 +104,7 @@ Public Class ABMSalon
                     DescripcionTxt.Text = salon.Descripcion
                     CalleTxt.Text = salon.Direccion.Calle
                     NumeroTxt.Text = salon.Direccion.Numero
-                    CPTxt.Text = salon.Direccion.CP
+                    LocalidadTxt.Text = salon.Direccion.Localidad
                     PrecioTxt.Text = salon.Precio
                 End If
             Next
@@ -114,10 +114,6 @@ Public Class ABMSalon
     End Sub
 
     Private Sub CapacidadTxt_KeyPress(sender As Object, e As KeyPressEventArgs) Handles CapacidadTxt.KeyPress
-        If Not (Regex.IsMatch(e.KeyChar, "[0-9\b]")) Then e.KeyChar = Nothing
-    End Sub
-
-    Private Sub CPTxt_KeyPress(sender As Object, e As KeyPressEventArgs) Handles CPTxt.KeyPress
         If Not (Regex.IsMatch(e.KeyChar, "[0-9\b]")) Then e.KeyChar = Nothing
     End Sub
 

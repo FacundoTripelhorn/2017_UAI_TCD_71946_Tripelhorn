@@ -25,17 +25,17 @@ Public Class ABMServicio
         TelefonoTxt.Text = ""
         CalleTxt.Text = ""
         NumeroTxt.Text = ""
-        CPTxt.Text = ""
+        LocalidadTxt.Text = ""
         ObservacionTxt.Text = ""
         PrecioTxt.Text = ""
     End Sub
 
     Private Sub AltaBtn_Click(sender As Object, e As EventArgs) Handles AltaBtn.Click
         If Not (NombreTxt.Text = "" And EmailTxt.Text = "" And TelefonoTxt.Text = "") Then
-            If Not (CalleTxt.Text = "" And NumeroTxt.Text = "" And CPTxt.Text = "") Then
+            If Not (CalleTxt.Text = "" And NumeroTxt.Text = "" And LocalidadTxt.Text = "") Then
                 If Regex.IsMatch(EmailTxt.Text, "^[\w]+@{1}[\w]+\.[a-z]{2,3}$") Then
                     If Regex.IsMatch(TelefonoTxt.Text, "[0-9]{8,10}") Then
-                        vDireccion = New Direccion(CalleTxt.Text, NumeroTxt.Text, CPTxt.Text)
+                        vDireccion = New Direccion(CalleTxt.Text, NumeroTxt.Text, LocalidadTxt.Text)
                         vServicio = New Servicio(NombreTxt.Text, TelefonoTxt.Text, vDireccion, EmailTxt.Text, ObservacionTxt.Text, PrecioTxt.Text)
                         vServicioDinamico.Alta(vServicio)
                         Limpiar()
@@ -47,7 +47,7 @@ Public Class ABMServicio
                     MsgBox("El email ingresado es incorrecto")
                 End If
             End If
-                End If
+        End If
     End Sub
 
     Private Sub BajaBtn_Click(sender As Object, e As EventArgs) Handles BajaBtn.Click
@@ -66,7 +66,7 @@ Public Class ABMServicio
             If (Regex.IsMatch(TelefonoTxt.Text, "^[0-9]{8,10}")) Then
                 For Each Servicio As Servicio In vServicioDinamico.ConsultaTodo
                     If Servicio.Nombre = DirectCast(GrillaServicios.SelectedRows(0).DataBoundItem, VistaServicio).Nombre Then
-                        vDireccion = New Direccion(Servicio.Direccion.Id, CalleTxt.Text, NumeroTxt.Text, CPTxt.Text)
+                        vDireccion = New Direccion(Servicio.Direccion.Id, CalleTxt.Text, NumeroTxt.Text, LocalidadTxt.Text)
                         vServicio = New Servicio(Servicio.Id, NombreTxt.Text, TelefonoTxt.Text, vDireccion, EmailTxt.Text, ObservacionTxt.Text, PrecioTxt.Text)
                         vServicioDinamico.Modificacion(vServicio)
                         Limpiar()
@@ -90,13 +90,13 @@ Public Class ABMServicio
                 ObservacionTxt.Text = Servicio.Observacion
                 CalleTxt.Text = Servicio.Direccion.Calle
                 NumeroTxt.Text = Servicio.Direccion.Numero
-                CPTxt.Text = Servicio.Direccion.CP
+                LocalidadTxt.Text = Servicio.Direccion.Localidad
                 PrecioTxt.Text = Servicio.Precio
             End If
         Next
     End Sub
 
-    Private Sub CPTxt_KeyPress(sender As Object, e As KeyPressEventArgs) Handles CPTxt.KeyPress
+    Private Sub CPTxt_KeyPress(sender As Object, e As KeyPressEventArgs) Handles LocalidadTxt.KeyPress
         If Not (Regex.IsMatch(e.KeyChar, "[0-9\b]")) Then e.KeyChar = Nothing
     End Sub
 

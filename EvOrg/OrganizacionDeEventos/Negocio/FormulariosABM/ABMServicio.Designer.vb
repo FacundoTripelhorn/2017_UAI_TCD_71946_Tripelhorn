@@ -42,10 +42,10 @@ Partial Class ABMServicio
         Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
         Me.CalleLbl = New System.Windows.Forms.Label()
         Me.NumeroLbl = New System.Windows.Forms.Label()
-        Me.CPLbl = New System.Windows.Forms.Label()
+        Me.LocalidadLbl = New System.Windows.Forms.Label()
         Me.CalleTxt = New System.Windows.Forms.TextBox()
         Me.NumeroTxt = New System.Windows.Forms.TextBox()
-        Me.CPTxt = New System.Windows.Forms.TextBox()
+        Me.LocalidadTxt = New System.Windows.Forms.TextBox()
         Me.PrecioLbl = New System.Windows.Forms.Label()
         Me.PrecioTxt = New System.Windows.Forms.TextBox()
         Me.TableLayoutPanel1.SuspendLayout()
@@ -290,16 +290,16 @@ Partial Class ABMServicio
         Me.TableLayoutPanel3.ColumnCount = 6
         Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 73.0!))
         Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 68.0!))
-        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 119.0!))
-        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50.0!))
-        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 89.0!))
+        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 65.0!))
+        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 90.0!))
+        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 81.0!))
+        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 137.0!))
         Me.TableLayoutPanel3.Controls.Add(Me.CalleLbl, 0, 0)
         Me.TableLayoutPanel3.Controls.Add(Me.NumeroLbl, 2, 0)
-        Me.TableLayoutPanel3.Controls.Add(Me.CPLbl, 4, 0)
+        Me.TableLayoutPanel3.Controls.Add(Me.LocalidadLbl, 4, 0)
         Me.TableLayoutPanel3.Controls.Add(Me.CalleTxt, 1, 0)
         Me.TableLayoutPanel3.Controls.Add(Me.NumeroTxt, 3, 0)
-        Me.TableLayoutPanel3.Controls.Add(Me.CPTxt, 5, 0)
+        Me.TableLayoutPanel3.Controls.Add(Me.LocalidadTxt, 5, 0)
         Me.TableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel3.Location = New System.Drawing.Point(3, 19)
         Me.TableLayoutPanel3.Name = "TableLayoutPanel3"
@@ -323,47 +323,47 @@ Partial Class ABMServicio
         '
         Me.NumeroLbl.AutoSize = True
         Me.NumeroLbl.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.NumeroLbl.Location = New System.Drawing.Point(392, 0)
+        Me.NumeroLbl.Location = New System.Drawing.Point(345, 0)
         Me.NumeroLbl.Name = "NumeroLbl"
-        Me.NumeroLbl.Size = New System.Drawing.Size(62, 30)
+        Me.NumeroLbl.Size = New System.Drawing.Size(59, 30)
         Me.NumeroLbl.TabIndex = 1
         Me.NumeroLbl.Text = "Número"
         Me.NumeroLbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'CPLbl
+        'LocalidadLbl
         '
-        Me.CPLbl.AutoSize = True
-        Me.CPLbl.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.CPLbl.Location = New System.Drawing.Point(579, 0)
-        Me.CPLbl.Name = "CPLbl"
-        Me.CPLbl.Size = New System.Drawing.Size(44, 30)
-        Me.CPLbl.TabIndex = 2
-        Me.CPLbl.Text = "C. P."
-        Me.CPLbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LocalidadLbl.AutoSize = True
+        Me.LocalidadLbl.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.LocalidadLbl.Location = New System.Drawing.Point(500, 0)
+        Me.LocalidadLbl.Name = "LocalidadLbl"
+        Me.LocalidadLbl.Size = New System.Drawing.Size(75, 30)
+        Me.LocalidadLbl.TabIndex = 2
+        Me.LocalidadLbl.Text = "Localidad"
+        Me.LocalidadLbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'CalleTxt
         '
         Me.CalleTxt.Dock = System.Windows.Forms.DockStyle.Fill
         Me.CalleTxt.Location = New System.Drawing.Point(76, 3)
         Me.CalleTxt.Name = "CalleTxt"
-        Me.CalleTxt.Size = New System.Drawing.Size(310, 23)
+        Me.CalleTxt.Size = New System.Drawing.Size(263, 23)
         Me.CalleTxt.TabIndex = 6
         '
         'NumeroTxt
         '
         Me.NumeroTxt.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.NumeroTxt.Location = New System.Drawing.Point(460, 3)
+        Me.NumeroTxt.Location = New System.Drawing.Point(410, 3)
         Me.NumeroTxt.Name = "NumeroTxt"
-        Me.NumeroTxt.Size = New System.Drawing.Size(113, 23)
+        Me.NumeroTxt.Size = New System.Drawing.Size(84, 23)
         Me.NumeroTxt.TabIndex = 7
         '
-        'CPTxt
+        'LocalidadTxt
         '
-        Me.CPTxt.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.CPTxt.Location = New System.Drawing.Point(629, 3)
-        Me.CPTxt.Name = "CPTxt"
-        Me.CPTxt.Size = New System.Drawing.Size(83, 23)
-        Me.CPTxt.TabIndex = 8
+        Me.LocalidadTxt.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.LocalidadTxt.Location = New System.Drawing.Point(581, 3)
+        Me.LocalidadTxt.Name = "LocalidadTxt"
+        Me.LocalidadTxt.Size = New System.Drawing.Size(131, 23)
+        Me.LocalidadTxt.TabIndex = 8
         '
         'PrecioLbl
         '
@@ -428,10 +428,10 @@ Partial Class ABMServicio
     Friend WithEvents TableLayoutPanel3 As TableLayoutPanel
     Friend WithEvents CalleLbl As Label
     Friend WithEvents NumeroLbl As Label
-    Friend WithEvents CPLbl As Label
+    Friend WithEvents LocalidadLbl As Label
     Friend WithEvents CalleTxt As TextBox
     Friend WithEvents NumeroTxt As TextBox
-    Friend WithEvents CPTxt As TextBox
+    Friend WithEvents LocalidadTxt As TextBox
     Friend WithEvents PrecioLbl As Label
     Friend WithEvents PrecioTxt As TextBox
 End Class
