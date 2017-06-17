@@ -83,6 +83,7 @@ Partial Class ABMSalon
         Me.ListaSalonesLbl.Name = "ListaSalonesLbl"
         Me.ListaSalonesLbl.Size = New System.Drawing.Size(809, 17)
         Me.ListaSalonesLbl.TabIndex = 1
+        Me.ListaSalonesLbl.Tag = "Lista de salones"
         Me.ListaSalonesLbl.Text = "Lista de Salones"
         '
         'NombreLbl
@@ -95,6 +96,7 @@ Partial Class ABMSalon
         Me.NombreLbl.Name = "NombreLbl"
         Me.NombreLbl.Size = New System.Drawing.Size(67, 27)
         Me.NombreLbl.TabIndex = 2
+        Me.NombreLbl.Tag = "Nombre"
         Me.NombreLbl.Text = "Nombre"
         Me.NombreLbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -108,6 +110,7 @@ Partial Class ABMSalon
         Me.CapacidadLbl.Name = "CapacidadLbl"
         Me.CapacidadLbl.Size = New System.Drawing.Size(79, 27)
         Me.CapacidadLbl.TabIndex = 4
+        Me.CapacidadLbl.Tag = "Capacidad"
         Me.CapacidadLbl.Text = "Capacidad"
         Me.CapacidadLbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -122,6 +125,7 @@ Partial Class ABMSalon
         Me.DescripcionLbl.Name = "DescripcionLbl"
         Me.DescripcionLbl.Size = New System.Drawing.Size(260, 26)
         Me.DescripcionLbl.TabIndex = 5
+        Me.DescripcionLbl.Tag = "Descripcion"
         Me.DescripcionLbl.Text = "Descripción"
         Me.DescripcionLbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -135,6 +139,7 @@ Partial Class ABMSalon
         Me.TelefonoLbl.Name = "TelefonoLbl"
         Me.TelefonoLbl.Size = New System.Drawing.Size(79, 30)
         Me.TelefonoLbl.TabIndex = 6
+        Me.TelefonoLbl.Tag = "Telefono"
         Me.TelefonoLbl.Text = "Teléfono"
         Me.TelefonoLbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -148,6 +153,7 @@ Partial Class ABMSalon
         Me.EmailLbl.Name = "EmailLbl"
         Me.EmailLbl.Size = New System.Drawing.Size(67, 30)
         Me.EmailLbl.TabIndex = 7
+        Me.EmailLbl.Tag = "Email"
         Me.EmailLbl.Text = "E-mail"
         Me.EmailLbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -231,8 +237,8 @@ Partial Class ABMSalon
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 67.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 57.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49.0!))
         Me.TableLayoutPanel1.Size = New System.Drawing.Size(815, 396)
         Me.TableLayoutPanel1.TabIndex = 14
         '
@@ -248,11 +254,11 @@ Partial Class ABMSalon
         Me.TableLayoutPanel2.Controls.Add(Me.BajaBtn, 1, 0)
         Me.TableLayoutPanel2.Controls.Add(Me.ModificacionBtn, 2, 0)
         Me.TableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel2.Location = New System.Drawing.Point(3, 360)
+        Me.TableLayoutPanel2.Location = New System.Drawing.Point(3, 350)
         Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
         Me.TableLayoutPanel2.RowCount = 1
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel2.Size = New System.Drawing.Size(809, 33)
+        Me.TableLayoutPanel2.Size = New System.Drawing.Size(809, 43)
         Me.TableLayoutPanel2.TabIndex = 20
         '
         'AltaBtn
@@ -264,8 +270,9 @@ Partial Class ABMSalon
         Me.AltaBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.AltaBtn.Location = New System.Drawing.Point(3, 3)
         Me.AltaBtn.Name = "AltaBtn"
-        Me.AltaBtn.Size = New System.Drawing.Size(263, 27)
+        Me.AltaBtn.Size = New System.Drawing.Size(263, 37)
         Me.AltaBtn.TabIndex = 10
+        Me.AltaBtn.Tag = "Agregar"
         Me.AltaBtn.Text = "Agregar"
         Me.AltaBtn.UseVisualStyleBackColor = True
         '
@@ -278,8 +285,9 @@ Partial Class ABMSalon
         Me.BajaBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.BajaBtn.Location = New System.Drawing.Point(272, 3)
         Me.BajaBtn.Name = "BajaBtn"
-        Me.BajaBtn.Size = New System.Drawing.Size(263, 27)
+        Me.BajaBtn.Size = New System.Drawing.Size(263, 37)
         Me.BajaBtn.TabIndex = 11
+        Me.BajaBtn.Tag = "Borrar"
         Me.BajaBtn.Text = "Borrar"
         Me.BajaBtn.UseVisualStyleBackColor = True
         '
@@ -292,8 +300,9 @@ Partial Class ABMSalon
         Me.ModificacionBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.ModificacionBtn.Location = New System.Drawing.Point(541, 3)
         Me.ModificacionBtn.Name = "ModificacionBtn"
-        Me.ModificacionBtn.Size = New System.Drawing.Size(265, 27)
+        Me.ModificacionBtn.Size = New System.Drawing.Size(265, 37)
         Me.ModificacionBtn.TabIndex = 12
+        Me.ModificacionBtn.Tag = "Modificar"
         Me.ModificacionBtn.Text = "Modificar"
         Me.ModificacionBtn.UseVisualStyleBackColor = True
         '
@@ -306,9 +315,10 @@ Partial Class ABMSalon
         Me.DireccionGrp.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.DireccionGrp.Location = New System.Drawing.Point(3, 293)
         Me.DireccionGrp.Name = "DireccionGrp"
-        Me.DireccionGrp.Size = New System.Drawing.Size(809, 61)
+        Me.DireccionGrp.Size = New System.Drawing.Size(809, 51)
         Me.DireccionGrp.TabIndex = 21
         Me.DireccionGrp.TabStop = False
+        Me.DireccionGrp.Tag = "Direccion"
         Me.DireccionGrp.Text = "Dirección"
         '
         'TableLayoutPanel3
@@ -332,7 +342,7 @@ Partial Class ABMSalon
         Me.TableLayoutPanel3.Name = "TableLayoutPanel3"
         Me.TableLayoutPanel3.RowCount = 1
         Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel3.Size = New System.Drawing.Size(803, 39)
+        Me.TableLayoutPanel3.Size = New System.Drawing.Size(803, 29)
         Me.TableLayoutPanel3.TabIndex = 0
         '
         'CalleLbl
@@ -341,8 +351,9 @@ Partial Class ABMSalon
         Me.CalleLbl.Dock = System.Windows.Forms.DockStyle.Fill
         Me.CalleLbl.Location = New System.Drawing.Point(3, 0)
         Me.CalleLbl.Name = "CalleLbl"
-        Me.CalleLbl.Size = New System.Drawing.Size(67, 39)
+        Me.CalleLbl.Size = New System.Drawing.Size(67, 29)
         Me.CalleLbl.TabIndex = 0
+        Me.CalleLbl.Tag = "Calle"
         Me.CalleLbl.Text = "Calle"
         Me.CalleLbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -352,8 +363,9 @@ Partial Class ABMSalon
         Me.NumeroLbl.Dock = System.Windows.Forms.DockStyle.Fill
         Me.NumeroLbl.Location = New System.Drawing.Point(406, 0)
         Me.NumeroLbl.Name = "NumeroLbl"
-        Me.NumeroLbl.Size = New System.Drawing.Size(58, 39)
+        Me.NumeroLbl.Size = New System.Drawing.Size(58, 29)
         Me.NumeroLbl.TabIndex = 1
+        Me.NumeroLbl.Tag = "Numero"
         Me.NumeroLbl.Text = "Número"
         Me.NumeroLbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -363,8 +375,9 @@ Partial Class ABMSalon
         Me.LocalidadLbl.Dock = System.Windows.Forms.DockStyle.Fill
         Me.LocalidadLbl.Location = New System.Drawing.Point(561, 0)
         Me.LocalidadLbl.Name = "LocalidadLbl"
-        Me.LocalidadLbl.Size = New System.Drawing.Size(71, 39)
+        Me.LocalidadLbl.Size = New System.Drawing.Size(71, 29)
         Me.LocalidadLbl.TabIndex = 2
+        Me.LocalidadLbl.Tag = "Localidad"
         Me.LocalidadLbl.Text = "Localidad"
         Me.LocalidadLbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -402,6 +415,7 @@ Partial Class ABMSalon
         Me.PrecioLbl.Name = "PrecioLbl"
         Me.PrecioLbl.Size = New System.Drawing.Size(49, 30)
         Me.PrecioLbl.TabIndex = 22
+        Me.PrecioLbl.Tag = "Precio"
         Me.PrecioLbl.Text = "Precio"
         Me.PrecioLbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '

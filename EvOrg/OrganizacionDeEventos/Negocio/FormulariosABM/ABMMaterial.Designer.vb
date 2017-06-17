@@ -70,6 +70,7 @@ Partial Class ABMMaterial
         Me.IdLbl.Name = "IdLbl"
         Me.IdLbl.Size = New System.Drawing.Size(28, 27)
         Me.IdLbl.TabIndex = 1
+        Me.IdLbl.Tag = "Id"
         Me.IdLbl.Text = "ID"
         Me.IdLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -104,6 +105,7 @@ Partial Class ABMMaterial
         Me.NombreLbl.Name = "NombreLbl"
         Me.NombreLbl.Size = New System.Drawing.Size(59, 27)
         Me.NombreLbl.TabIndex = 3
+        Me.NombreLbl.Tag = "Nombre"
         Me.NombreLbl.Text = "Nombre"
         Me.NombreLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -118,6 +120,7 @@ Partial Class ABMMaterial
         Me.CantidadLbl.Name = "CantidadLbl"
         Me.CantidadLbl.Size = New System.Drawing.Size(68, 27)
         Me.CantidadLbl.TabIndex = 5
+        Me.CantidadLbl.Tag = "Cantidad"
         Me.CantidadLbl.Text = "Cantidad"
         Me.CantidadLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -223,6 +226,7 @@ Partial Class ABMMaterial
         Me.ListaMaterialesLbl.Name = "ListaMaterialesLbl"
         Me.ListaMaterialesLbl.Size = New System.Drawing.Size(169, 17)
         Me.ListaMaterialesLbl.TabIndex = 10
+        Me.ListaMaterialesLbl.Tag = "Lista de materiales"
         Me.ListaMaterialesLbl.Text = "Lista de Materiales"
         '
         'PrecioULbl
@@ -235,6 +239,7 @@ Partial Class ABMMaterial
         Me.PrecioULbl.Name = "PrecioULbl"
         Me.PrecioULbl.Size = New System.Drawing.Size(105, 27)
         Me.PrecioULbl.TabIndex = 11
+        Me.PrecioULbl.Tag = "Precio unitario"
         Me.PrecioULbl.Text = "Precio Unitario"
         Me.PrecioULbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '

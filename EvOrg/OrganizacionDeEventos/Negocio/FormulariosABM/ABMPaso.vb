@@ -1,6 +1,10 @@
 ﻿Imports BLL_Dinamica
 Imports BLL_Estatica
+Imports OrganizacionDeEventos
+
 Public Class ABMPaso
+    Implements IObservador
+    Dim vTraductor As Traductor = Traductor.GetInstance
     Dim vPaso As Paso
     Dim vPasoDinamico As New PasoDinamico
     Dim vEvento As Evento
@@ -19,6 +23,7 @@ Public Class ABMPaso
 
     Private Sub ABMPaso_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
+            vTraductor.Registrar(Me)
             Calendario.RemoveAllAnnuallyBoldedDates()
             CargarPrioridadCombo()
             CargarEventos()
@@ -29,15 +34,16 @@ Public Class ABMPaso
                 End If
             Next
             Actualizar()
+            ActualizarObservador(Me)
         Catch ex As Exception
 
         End Try
     End Sub
 
     Private Sub CargarPrioridadCombo()
-        PrioridadCombo.Items.Add("Baja")
-        PrioridadCombo.Items.Add("Media")
-        PrioridadCombo.Items.Add("Alta")
+        PrioridadCombo.Items.Add(vTraductor.Traducir("Baja"))
+        PrioridadCombo.Items.Add(vTraductor.Traducir("Media"))
+        PrioridadCombo.Items.Add(vTraductor.Traducir("Alta"))
     End Sub
 
     Private Sub CargarEventos()
@@ -67,6 +73,7 @@ Public Class ABMPaso
         GrillaPasos.DataSource = Nothing
         GrillaPasos.DataSource = vLista
         GrillaPasos.Columns(0).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        ActualizarObservador(GrillaPasos)
     End Sub
 
     Private Sub AgregarFechaACalendario(pFecha As Date)
@@ -91,22 +98,27 @@ Public Class ABMPaso
 
 
     Private Sub AltaBtn_Click(sender As Object, e As EventArgs) Handles AltaBtn.Click
-        If Not (EventoCombo.Text = "") Then
-            If Not (DescripcionTxt.Text = "" And FechaDTP.Value > Date.Now And PrioridadCombo.Text = "") Then
-                vPaso = New Paso(GetPasoId(), DescripcionTxt.Text, FechaDTP.Value, PrioridadCombo.Text, "Concreto")
-                vPasoDinamico.Alta(vPaso)
-                vEventoDinamico.AgregarPaso(vEvento, vPaso, FechaDTP.Value)
-                vEvento.ListaPasos.Add(vPaso)
-                AgregarFechaACalendario(vPaso.Fecha)
-                Calendario.UpdateBoldedDates()
-                Limpiar()
-                Actualizar()
+        Try
+            If Not (EventoCombo.Text = "") Then
+                If Not (DescripcionTxt.Text = "" And FechaDTP.Value > Date.Now And PrioridadCombo.Text = "") Then
+                    vPaso = New Paso(GetPasoId(), DescripcionTxt.Text, FechaDTP.Value, PrioridadCombo.Text, "Concreto")
+                    vPasoDinamico.Alta(vPaso)
+                    vEventoDinamico.AgregarPaso(vEvento, vPaso, FechaDTP.Value)
+                    vEvento.ListaPasos.Add(vPaso)
+                    AgregarFechaACalendario(vPaso.Fecha)
+                    Calendario.UpdateBoldedDates()
+                    Limpiar()
+                    Actualizar()
+                Else
+                    Throw New Exception("Ingrese los datos del paso")
+                End If
             Else
-                MsgBox("Ingrese los datos del paso")
+                Throw New Exception("Seleccione un evento")
             End If
-        Else
-            MsgBox("Seleccione un evento")
-        End If
+        Catch ex As Exception
+            MessageBox.Show(vTraductor.Traducir(ex.Message), "EvOrg")
+        End Try
+
     End Sub
 
     Private Sub BajaBtn_Click(sender As Object, e As EventArgs) Handles BajaBtn.Click
@@ -160,5 +172,27 @@ Public Class ABMPaso
             AgregarFechaACalendario(Paso.Fecha)
         Next
         Calendario.UpdateBoldedDates()
+    End Sub
+
+    Public Sub ActualizarObservador(Optional pControl As Control = Nothing) Implements IObservador.ActualizarObservador
+        For Each vControl As Control In pControl.Controls
+            Try
+                vControl.Text = vTraductor.IdiomaSeleccionado.Diccionario.Item(vControl.Tag.ToString)
+            Catch ex As Exception
+            Finally
+                If vControl.Controls.Count > 0 Then
+                    ActualizarObservador(vControl)
+                End If
+                If TypeOf vControl Is DataGridView Then
+                    For Each vColumna As DataGridViewColumn In DirectCast(vControl, DataGridView).Columns
+                        Try
+                            vColumna.HeaderText = vTraductor.IdiomaSeleccionado.Diccionario.Item(vColumna.Name)
+                        Catch ex As Exception
+
+                        End Try
+                    Next
+                End If
+            End Try
+        Next
     End Sub
 End Class

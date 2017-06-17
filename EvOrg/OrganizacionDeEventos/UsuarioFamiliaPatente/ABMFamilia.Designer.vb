@@ -30,9 +30,9 @@ Partial Class ABMFamilia
         Me.BajaBtn = New System.Windows.Forms.Button()
         Me.ModificacionBtn = New System.Windows.Forms.Button()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
+        Me.FamiliaLbl = New System.Windows.Forms.Label()
+        Me.ListaFamiliasLbl = New System.Windows.Forms.Label()
+        Me.SeleccionePatentesLbl = New System.Windows.Forms.Label()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
@@ -79,6 +79,7 @@ Partial Class ABMFamilia
         Me.AltaBtn.Name = "AltaBtn"
         Me.AltaBtn.Size = New System.Drawing.Size(124, 42)
         Me.AltaBtn.TabIndex = 3
+        Me.AltaBtn.Tag = "Agregar"
         Me.AltaBtn.Text = "Agregar"
         Me.AltaBtn.UseVisualStyleBackColor = True
         '
@@ -93,6 +94,7 @@ Partial Class ABMFamilia
         Me.BajaBtn.Name = "BajaBtn"
         Me.BajaBtn.Size = New System.Drawing.Size(124, 42)
         Me.BajaBtn.TabIndex = 4
+        Me.BajaBtn.Tag = "Eliminar"
         Me.BajaBtn.Text = "Eliminar"
         Me.BajaBtn.UseVisualStyleBackColor = True
         '
@@ -107,6 +109,7 @@ Partial Class ABMFamilia
         Me.ModificacionBtn.Name = "ModificacionBtn"
         Me.ModificacionBtn.Size = New System.Drawing.Size(125, 42)
         Me.ModificacionBtn.TabIndex = 5
+        Me.ModificacionBtn.Tag = "Modificar"
         Me.ModificacionBtn.Text = "Modificar"
         Me.ModificacionBtn.UseVisualStyleBackColor = True
         '
@@ -117,11 +120,11 @@ Partial Class ABMFamilia
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 44.58438!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 55.41562!))
         Me.TableLayoutPanel1.Controls.Add(Me.FamiliaTxt, 0, 1)
-        Me.TableLayoutPanel1.Controls.Add(Me.Label1, 0, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.FamiliaLbl, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.FamiliaListbox, 0, 3)
         Me.TableLayoutPanel1.Controls.Add(Me.TreePatente, 1, 3)
-        Me.TableLayoutPanel1.Controls.Add(Me.Label2, 0, 2)
-        Me.TableLayoutPanel1.Controls.Add(Me.Label3, 1, 2)
+        Me.TableLayoutPanel1.Controls.Add(Me.ListaFamiliasLbl, 0, 2)
+        Me.TableLayoutPanel1.Controls.Add(Me.SeleccionePatentesLbl, 1, 2)
         Me.TableLayoutPanel1.Controls.Add(Me.TableLayoutPanel2, 0, 4)
         Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel1.ForeColor = System.Drawing.SystemColors.ControlLightLight
@@ -136,39 +139,42 @@ Partial Class ABMFamilia
         Me.TableLayoutPanel1.Size = New System.Drawing.Size(397, 355)
         Me.TableLayoutPanel1.TabIndex = 6
         '
-        'Label1
+        'FamiliaLbl
         '
-        Me.Label1.AutoSize = True
-        Me.TableLayoutPanel1.SetColumnSpan(Me.Label1, 2)
-        Me.Label1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(3, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(391, 21)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Ingrese el nombre de la Familia"
+        Me.FamiliaLbl.AutoSize = True
+        Me.TableLayoutPanel1.SetColumnSpan(Me.FamiliaLbl, 2)
+        Me.FamiliaLbl.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.FamiliaLbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.FamiliaLbl.Location = New System.Drawing.Point(3, 0)
+        Me.FamiliaLbl.Name = "FamiliaLbl"
+        Me.FamiliaLbl.Size = New System.Drawing.Size(391, 21)
+        Me.FamiliaLbl.TabIndex = 1
+        Me.FamiliaLbl.Tag = "Ingrese el nombre de la familia"
+        Me.FamiliaLbl.Text = "Ingrese el nombre de la Familia"
         '
-        'Label2
+        'ListaFamiliasLbl
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(3, 51)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(170, 26)
-        Me.Label2.TabIndex = 3
-        Me.Label2.Text = "Lista de Familias"
+        Me.ListaFamiliasLbl.AutoSize = True
+        Me.ListaFamiliasLbl.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.ListaFamiliasLbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ListaFamiliasLbl.Location = New System.Drawing.Point(3, 51)
+        Me.ListaFamiliasLbl.Name = "ListaFamiliasLbl"
+        Me.ListaFamiliasLbl.Size = New System.Drawing.Size(170, 26)
+        Me.ListaFamiliasLbl.TabIndex = 3
+        Me.ListaFamiliasLbl.Tag = "Lista de familias"
+        Me.ListaFamiliasLbl.Text = "Lista de Familias"
         '
-        'Label3
+        'SeleccionePatentesLbl
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(179, 51)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(215, 26)
-        Me.Label3.TabIndex = 4
-        Me.Label3.Text = "Seleccione las patentes"
+        Me.SeleccionePatentesLbl.AutoSize = True
+        Me.SeleccionePatentesLbl.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.SeleccionePatentesLbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SeleccionePatentesLbl.Location = New System.Drawing.Point(179, 51)
+        Me.SeleccionePatentesLbl.Name = "SeleccionePatentesLbl"
+        Me.SeleccionePatentesLbl.Size = New System.Drawing.Size(215, 26)
+        Me.SeleccionePatentesLbl.TabIndex = 4
+        Me.SeleccionePatentesLbl.Tag = "Seleccione las patentes"
+        Me.SeleccionePatentesLbl.Text = "Seleccione las patentes"
         '
         'TableLayoutPanel2
         '
@@ -212,8 +218,8 @@ Partial Class ABMFamilia
     Friend WithEvents BajaBtn As Button
     Friend WithEvents ModificacionBtn As Button
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label3 As Label
+    Friend WithEvents FamiliaLbl As Label
+    Friend WithEvents ListaFamiliasLbl As Label
+    Friend WithEvents SeleccionePatentesLbl As Label
     Friend WithEvents TableLayoutPanel2 As TableLayoutPanel
 End Class

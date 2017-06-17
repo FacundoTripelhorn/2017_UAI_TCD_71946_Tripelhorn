@@ -18,7 +18,6 @@ Public Class PasoDatos
                 Comando.ActualizarBD("Paso", DTable)
             End If
         Catch ex As Exception
-            MsgBox("Error al agregar un nuevo paso")
         End Try
     End Sub
 
@@ -31,7 +30,6 @@ Public Class PasoDatos
                 Comando.ActualizarBD("Paso", DTable)
             End If
         Catch ex As Exception
-            MsgBox("Error al borrar el paso seleccionado")
         End Try
     End Sub
 
@@ -46,7 +44,6 @@ Public Class PasoDatos
                 Comando.ActualizarBD("Paso", DTable)
             End If
         Catch ex As Exception
-            MsgBox("Error al modificar el paso seleccionado")
         End Try
     End Sub
 

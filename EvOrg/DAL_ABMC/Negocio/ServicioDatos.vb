@@ -43,7 +43,6 @@ Public Class ServicioDatos
                 Comando.ActualizarBD("Servicio", DTable)
             End If
         Catch ex As Exception
-            MsgBox("Error al borrar el servicio seleccionado")
         End Try
     End Sub
 
@@ -63,7 +62,6 @@ Public Class ServicioDatos
                 Comando.ActualizarBD("Servicio", DTable)
             End If
         Catch ex As Exception
-            MsgBox("Error al modificar el servicio seleccionado")
         End Try
     End Sub
 

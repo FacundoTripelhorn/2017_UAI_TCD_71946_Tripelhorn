@@ -1,16 +1,21 @@
 ﻿Imports BLL_Dinamica
 Imports BLL_Estatica
-Public Class ABMPatente
+Imports OrganizacionDeEventos
 
+Public Class ABMPatente
+    Implements IObservador
+    Dim vTraductor As Traductor = Traductor.GetInstance
     Property PatenteDinamica As New PatenteDinamica
     Property Patente As New Patente
     Property GrupoPatenteDinamico As New GrupoPatenteDinamico
     Property GrupoPatente As New GrupoPatente
 
     Private Sub ABMPatente_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        vTraductor.Registrar(Me)
         Dim vLista As New List(Of Object)
         vLista = GrupoPatenteDinamico.ConsultaTodo()
         GrupoPatenteDinamico.MostrarEnTreeView(TreePatente)
+        ActualizarObservador(me)
     End Sub
 
     Private Sub AgregarPatenteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AgregarPatenteToolStripMenuItem.Click
@@ -49,7 +54,7 @@ Public Class ABMPatente
         Dim vSNode As TreeNode = TreePatente.SelectedNode
         If TypeOf vSNode.Tag Is GrupoPatente Then
             Dim vPadre As GrupoPatente = vSNode.Tag
-            Dim vNombre As String = InputBox("Ingrese el nombre del Grupo: ")
+            Dim vNombre As String = InputBox(vTraductor.Traducir("Ingrese el nombre del Grupo: "))
             If vNombre.Length > 0 Then
                 Dim vNNode As New TreeNode
                 vNNode.Text = vNombre
@@ -86,12 +91,34 @@ Public Class ABMPatente
                 PatenteDinamica.Baja(vSNode.Tag)
             End If
         Catch ex As Exception
-            MsgBox("Error al eliminar el elemento seleccionado")
+            MessageBox.Show(vTraductor.Traducir("Error al eliminar el elemento seleccionado"), "EvOrg")
         End Try
 
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles AceptarBtn.Click
         Me.Close()
+    End Sub
+
+    Public Sub ActualizarObservador(Optional pControl As Control = Nothing) Implements IObservador.ActualizarObservador
+        For Each vControl As Control In pControl.Controls
+            Try
+                vControl.Text = vTraductor.IdiomaSeleccionado.Diccionario.Item(vControl.Tag.ToString)
+            Catch ex As Exception
+            Finally
+                If vControl.Controls.Count > 0 Then
+                    ActualizarObservador(vControl)
+                End If
+                If TypeOf vControl Is DataGridView Then
+                    For Each vColumna As DataGridViewColumn In DirectCast(vControl, DataGridView).Columns
+                        Try
+                            vColumna.HeaderText = vTraductor.IdiomaSeleccionado.Diccionario.Item(vColumna.Name)
+                        Catch ex As Exception
+
+                        End Try
+                    Next
+                End If
+            End Try
+        Next
     End Sub
 End Class

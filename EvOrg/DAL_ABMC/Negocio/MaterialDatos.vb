@@ -18,7 +18,6 @@ Public Class MaterialDatos
                 Comando.ActualizarBD("Material", DTable)
             End If
         Catch ex As Exception
-            MsgBox("Error al ingresar el material")
         End Try
     End Sub
 
@@ -31,7 +30,6 @@ Public Class MaterialDatos
                 Comando.ActualizarBD("Material", DTable)
             End If
         Catch ex As Exception
-            MsgBox("Error al borrar el material seleccionado")
         End Try
     End Sub
 
@@ -47,7 +45,6 @@ Public Class MaterialDatos
                 ConsultaTodo()
             End If
         Catch ex As Exception
-            MsgBox("Error al modificar el material seleccionado")
         End Try
     End Sub
 

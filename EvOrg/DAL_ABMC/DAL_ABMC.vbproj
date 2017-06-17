@@ -88,6 +88,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Seguridad\IdiomaDatos.vb" />
     <Compile Include="Seguridad\PatenteDatos.vb" />
     <Compile Include="Seguridad\UsuarioDatos.vb" />
   </ItemGroup>

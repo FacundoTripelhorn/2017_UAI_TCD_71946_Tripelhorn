@@ -30,7 +30,7 @@ Partial Class ABMPatente
         Me.AgregarPatenteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AgregarGrupoDePatentesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EliminarElementoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.AceptarBtn = New System.Windows.Forms.Button()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.ContextMenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -41,7 +41,7 @@ Partial Class ABMPatente
         Me.TableLayoutPanel1.ColumnCount = 1
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.TreePatente, 0, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.Button1, 0, 1)
+        Me.TableLayoutPanel1.Controls.Add(Me.AceptarBtn, 0, 1)
         Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 0)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
@@ -72,33 +72,37 @@ Partial Class ABMPatente
         '
         Me.AgregarPatenteToolStripMenuItem.Name = "AgregarPatenteToolStripMenuItem"
         Me.AgregarPatenteToolStripMenuItem.Size = New System.Drawing.Size(216, 22)
+        Me.AgregarPatenteToolStripMenuItem.Tag = "Agregar patente"
         Me.AgregarPatenteToolStripMenuItem.Text = "Agregar Patente"
         '
         'AgregarGrupoDePatentesToolStripMenuItem
         '
         Me.AgregarGrupoDePatentesToolStripMenuItem.Name = "AgregarGrupoDePatentesToolStripMenuItem"
         Me.AgregarGrupoDePatentesToolStripMenuItem.Size = New System.Drawing.Size(216, 22)
+        Me.AgregarGrupoDePatentesToolStripMenuItem.Tag = "Agregar grupo de patentes"
         Me.AgregarGrupoDePatentesToolStripMenuItem.Text = "Agregar Grupo de Patentes"
         '
         'EliminarElementoToolStripMenuItem
         '
         Me.EliminarElementoToolStripMenuItem.Name = "EliminarElementoToolStripMenuItem"
         Me.EliminarElementoToolStripMenuItem.Size = New System.Drawing.Size(216, 22)
+        Me.EliminarElementoToolStripMenuItem.Tag = "Eliminar elemento"
         Me.EliminarElementoToolStripMenuItem.Text = "Eliminar Elemento"
         '
-        'Button1
+        'AceptarBtn
         '
-        Me.Button1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.AceptarBtn.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button1.Location = New System.Drawing.Point(3, 253)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(356, 49)
-        Me.Button1.TabIndex = 2
-        Me.Button1.Text = "Aceptar"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.AceptarBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.AceptarBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.AceptarBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.AceptarBtn.Location = New System.Drawing.Point(3, 253)
+        Me.AceptarBtn.Name = "AceptarBtn"
+        Me.AceptarBtn.Size = New System.Drawing.Size(356, 49)
+        Me.AceptarBtn.TabIndex = 2
+        Me.AceptarBtn.Tag = "Aceptar"
+        Me.AceptarBtn.Text = "Aceptar"
+        Me.AceptarBtn.UseVisualStyleBackColor = True
         '
         'ABMPatente
         '
@@ -119,7 +123,7 @@ Partial Class ABMPatente
 
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
     Friend WithEvents TreePatente As TreeView
-    Friend WithEvents Button1 As Button
+    Friend WithEvents AceptarBtn As Button
     Friend WithEvents ContextMenuStrip1 As ContextMenuStrip
     Friend WithEvents AgregarPatenteToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AgregarGrupoDePatentesToolStripMenuItem As ToolStripMenuItem

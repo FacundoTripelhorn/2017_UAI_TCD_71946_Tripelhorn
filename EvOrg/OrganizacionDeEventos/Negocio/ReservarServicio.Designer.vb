@@ -24,46 +24,46 @@ Partial Class ReservarServicio
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ReservarServicio))
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
-        Me.TextBox9 = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.DescripcionTxt = New System.Windows.Forms.TextBox()
+        Me.SeleccionarEventoLbl = New System.Windows.Forms.Label()
+        Me.EventoCombo = New System.Windows.Forms.ComboBox()
+        Me.SeleccionarServicioLbl = New System.Windows.Forms.Label()
+        Me.ServicioCombo = New System.Windows.Forms.ComboBox()
+        Me.ServicioGPB = New System.Windows.Forms.GroupBox()
         Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.TextBox8 = New System.Windows.Forms.TextBox()
-        Me.Label13 = New System.Windows.Forms.Label()
-        Me.TextBox10 = New System.Windows.Forms.TextBox()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Label12 = New System.Windows.Forms.Label()
+        Me.NombreLbl = New System.Windows.Forms.Label()
+        Me.TelefonoLbl = New System.Windows.Forms.Label()
+        Me.EmailLbl = New System.Windows.Forms.Label()
+        Me.DireccionLbl = New System.Windows.Forms.Label()
+        Me.NombreTxt = New System.Windows.Forms.TextBox()
+        Me.DireccionTxt = New System.Windows.Forms.TextBox()
+        Me.EmailTxt = New System.Windows.Forms.TextBox()
+        Me.TelefonoTxt = New System.Windows.Forms.TextBox()
+        Me.ObservacionLbl = New System.Windows.Forms.Label()
+        Me.ObservacionTxt = New System.Windows.Forms.TextBox()
+        Me.PrecioLbl = New System.Windows.Forms.Label()
+        Me.PrecioTxt = New System.Windows.Forms.TextBox()
+        Me.GrillaServicios = New System.Windows.Forms.DataGridView()
+        Me.DescripcionLbl = New System.Windows.Forms.Label()
         Me.TableLayoutPanel4 = New System.Windows.Forms.TableLayoutPanel()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.AgregarBtn = New System.Windows.Forms.Button()
+        Me.BorrarBtn = New System.Windows.Forms.Button()
+        Me.EventoGPB = New System.Windows.Forms.GroupBox()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.TipoEventoLbl = New System.Windows.Forms.Label()
+        Me.FechaLbl = New System.Windows.Forms.Label()
+        Me.CantidadLbl = New System.Windows.Forms.Label()
+        Me.SalonLbl = New System.Windows.Forms.Label()
+        Me.TipoEventoTxt = New System.Windows.Forms.TextBox()
+        Me.SalonTxt = New System.Windows.Forms.TextBox()
+        Me.FechaDTP = New System.Windows.Forms.DateTimePicker()
+        Me.CantidadTxt = New System.Windows.Forms.TextBox()
         Me.TableLayoutPanel1.SuspendLayout()
-        Me.GroupBox2.SuspendLayout()
+        Me.ServicioGPB.SuspendLayout()
         Me.TableLayoutPanel3.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.GrillaServicios, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TableLayoutPanel4.SuspendLayout()
-        Me.GroupBox1.SuspendLayout()
+        Me.EventoGPB.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -73,16 +73,16 @@ Partial Class ReservarServicio
         Me.TableLayoutPanel1.ColumnCount = 2
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 304.0!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 428.0!))
-        Me.TableLayoutPanel1.Controls.Add(Me.TextBox9, 0, 4)
-        Me.TableLayoutPanel1.Controls.Add(Me.Label1, 0, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.ComboBox1, 0, 1)
-        Me.TableLayoutPanel1.Controls.Add(Me.Label6, 1, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.ComboBox2, 1, 1)
-        Me.TableLayoutPanel1.Controls.Add(Me.GroupBox2, 1, 2)
-        Me.TableLayoutPanel1.Controls.Add(Me.DataGridView1, 1, 3)
-        Me.TableLayoutPanel1.Controls.Add(Me.Label12, 0, 3)
+        Me.TableLayoutPanel1.Controls.Add(Me.DescripcionTxt, 0, 4)
+        Me.TableLayoutPanel1.Controls.Add(Me.SeleccionarEventoLbl, 0, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.EventoCombo, 0, 1)
+        Me.TableLayoutPanel1.Controls.Add(Me.SeleccionarServicioLbl, 1, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.ServicioCombo, 1, 1)
+        Me.TableLayoutPanel1.Controls.Add(Me.ServicioGPB, 1, 2)
+        Me.TableLayoutPanel1.Controls.Add(Me.GrillaServicios, 1, 3)
+        Me.TableLayoutPanel1.Controls.Add(Me.DescripcionLbl, 0, 3)
         Me.TableLayoutPanel1.Controls.Add(Me.TableLayoutPanel4, 0, 5)
-        Me.TableLayoutPanel1.Controls.Add(Me.GroupBox1, 0, 2)
+        Me.TableLayoutPanel1.Controls.Add(Me.EventoGPB, 0, 2)
         Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 0)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
@@ -98,75 +98,77 @@ Partial Class ReservarServicio
         Me.TableLayoutPanel1.Size = New System.Drawing.Size(732, 368)
         Me.TableLayoutPanel1.TabIndex = 0
         '
-        'TextBox9
+        'DescripcionTxt
         '
-        Me.TextBox9.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TextBox9.Location = New System.Drawing.Point(3, 220)
-        Me.TextBox9.Multiline = True
-        Me.TextBox9.Name = "TextBox9"
-        Me.TextBox9.Size = New System.Drawing.Size(298, 101)
-        Me.TextBox9.TabIndex = 4
+        Me.DescripcionTxt.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.DescripcionTxt.Location = New System.Drawing.Point(3, 220)
+        Me.DescripcionTxt.Multiline = True
+        Me.DescripcionTxt.Name = "DescripcionTxt"
+        Me.DescripcionTxt.Size = New System.Drawing.Size(298, 101)
+        Me.DescripcionTxt.TabIndex = 4
         '
-        'Label1
+        'SeleccionarEventoLbl
         '
-        Me.Label1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.SeleccionarEventoLbl.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label1.Location = New System.Drawing.Point(3, 9)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(298, 17)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Seleccionar evento"
+        Me.SeleccionarEventoLbl.AutoSize = True
+        Me.SeleccionarEventoLbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SeleccionarEventoLbl.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.SeleccionarEventoLbl.Location = New System.Drawing.Point(3, 9)
+        Me.SeleccionarEventoLbl.Name = "SeleccionarEventoLbl"
+        Me.SeleccionarEventoLbl.Size = New System.Drawing.Size(298, 17)
+        Me.SeleccionarEventoLbl.TabIndex = 0
+        Me.SeleccionarEventoLbl.Tag = "Seleccionar evento"
+        Me.SeleccionarEventoLbl.Text = "Seleccionar evento"
         '
-        'ComboBox1
+        'EventoCombo
         '
-        Me.ComboBox1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(3, 29)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(298, 24)
-        Me.ComboBox1.TabIndex = 1
+        Me.EventoCombo.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.EventoCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.EventoCombo.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.EventoCombo.FormattingEnabled = True
+        Me.EventoCombo.Location = New System.Drawing.Point(3, 29)
+        Me.EventoCombo.Name = "EventoCombo"
+        Me.EventoCombo.Size = New System.Drawing.Size(298, 24)
+        Me.EventoCombo.TabIndex = 1
         '
-        'Label6
+        'SeleccionarServicioLbl
         '
-        Me.Label6.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.SeleccionarServicioLbl.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label6.Location = New System.Drawing.Point(307, 9)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(422, 17)
-        Me.Label6.TabIndex = 2
-        Me.Label6.Text = "Seleccionar servicio"
+        Me.SeleccionarServicioLbl.AutoSize = True
+        Me.SeleccionarServicioLbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SeleccionarServicioLbl.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.SeleccionarServicioLbl.Location = New System.Drawing.Point(307, 9)
+        Me.SeleccionarServicioLbl.Name = "SeleccionarServicioLbl"
+        Me.SeleccionarServicioLbl.Size = New System.Drawing.Size(422, 17)
+        Me.SeleccionarServicioLbl.TabIndex = 2
+        Me.SeleccionarServicioLbl.Tag = "Seleccionar servicio"
+        Me.SeleccionarServicioLbl.Text = "Seleccionar servicio"
         '
-        'ComboBox2
+        'ServicioCombo
         '
-        Me.ComboBox2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(307, 29)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(422, 21)
-        Me.ComboBox2.TabIndex = 3
+        Me.ServicioCombo.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.ServicioCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ServicioCombo.FormattingEnabled = True
+        Me.ServicioCombo.Location = New System.Drawing.Point(307, 29)
+        Me.ServicioCombo.Name = "ServicioCombo"
+        Me.ServicioCombo.Size = New System.Drawing.Size(422, 21)
+        Me.ServicioCombo.TabIndex = 3
         '
-        'GroupBox2
+        'ServicioGPB
         '
-        Me.GroupBox2.Controls.Add(Me.TableLayoutPanel3)
-        Me.GroupBox2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.GroupBox2.Enabled = False
-        Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox2.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.GroupBox2.Location = New System.Drawing.Point(307, 57)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(422, 135)
-        Me.GroupBox2.TabIndex = 201
-        Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "Datos del servicio"
+        Me.ServicioGPB.Controls.Add(Me.TableLayoutPanel3)
+        Me.ServicioGPB.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.ServicioGPB.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ServicioGPB.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.ServicioGPB.Location = New System.Drawing.Point(307, 57)
+        Me.ServicioGPB.Name = "ServicioGPB"
+        Me.ServicioGPB.Size = New System.Drawing.Size(422, 135)
+        Me.ServicioGPB.TabIndex = 201
+        Me.ServicioGPB.TabStop = False
+        Me.ServicioGPB.Tag = "Datos del servicio"
+        Me.ServicioGPB.Text = "Datos del servicio"
         '
         'TableLayoutPanel3
         '
@@ -175,18 +177,18 @@ Partial Class ReservarServicio
         Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 136.0!))
         Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 56.0!))
         Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 151.0!))
-        Me.TableLayoutPanel3.Controls.Add(Me.Label7, 0, 0)
-        Me.TableLayoutPanel3.Controls.Add(Me.Label8, 0, 1)
-        Me.TableLayoutPanel3.Controls.Add(Me.Label9, 0, 2)
-        Me.TableLayoutPanel3.Controls.Add(Me.Label10, 0, 3)
-        Me.TableLayoutPanel3.Controls.Add(Me.TextBox4, 1, 0)
-        Me.TableLayoutPanel3.Controls.Add(Me.TextBox5, 1, 3)
-        Me.TableLayoutPanel3.Controls.Add(Me.TextBox6, 1, 2)
-        Me.TableLayoutPanel3.Controls.Add(Me.TextBox7, 1, 1)
-        Me.TableLayoutPanel3.Controls.Add(Me.Label11, 2, 0)
-        Me.TableLayoutPanel3.Controls.Add(Me.TextBox8, 2, 1)
-        Me.TableLayoutPanel3.Controls.Add(Me.Label13, 2, 3)
-        Me.TableLayoutPanel3.Controls.Add(Me.TextBox10, 3, 3)
+        Me.TableLayoutPanel3.Controls.Add(Me.NombreLbl, 0, 0)
+        Me.TableLayoutPanel3.Controls.Add(Me.TelefonoLbl, 0, 1)
+        Me.TableLayoutPanel3.Controls.Add(Me.EmailLbl, 0, 2)
+        Me.TableLayoutPanel3.Controls.Add(Me.DireccionLbl, 0, 3)
+        Me.TableLayoutPanel3.Controls.Add(Me.NombreTxt, 1, 0)
+        Me.TableLayoutPanel3.Controls.Add(Me.DireccionTxt, 1, 3)
+        Me.TableLayoutPanel3.Controls.Add(Me.EmailTxt, 1, 2)
+        Me.TableLayoutPanel3.Controls.Add(Me.TelefonoTxt, 1, 1)
+        Me.TableLayoutPanel3.Controls.Add(Me.ObservacionLbl, 2, 0)
+        Me.TableLayoutPanel3.Controls.Add(Me.ObservacionTxt, 2, 1)
+        Me.TableLayoutPanel3.Controls.Add(Me.PrecioLbl, 2, 3)
+        Me.TableLayoutPanel3.Controls.Add(Me.PrecioTxt, 3, 3)
         Me.TableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel3.Location = New System.Drawing.Point(3, 19)
         Me.TableLayoutPanel3.Name = "TableLayoutPanel3"
@@ -227,144 +229,151 @@ Partial Class ReservarServicio
         Me.TableLayoutPanel3.Size = New System.Drawing.Size(416, 113)
         Me.TableLayoutPanel3.TabIndex = 0
         '
-        'Label7
+        'NombreLbl
         '
-        Me.Label7.AutoSize = True
-        Me.Label7.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label7.Location = New System.Drawing.Point(3, 0)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(67, 28)
-        Me.Label7.TabIndex = 0
-        Me.Label7.Text = "Nombre"
-        Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.NombreLbl.AutoSize = True
+        Me.NombreLbl.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.NombreLbl.Location = New System.Drawing.Point(3, 0)
+        Me.NombreLbl.Name = "NombreLbl"
+        Me.NombreLbl.Size = New System.Drawing.Size(67, 28)
+        Me.NombreLbl.TabIndex = 0
+        Me.NombreLbl.Tag = "Nombre"
+        Me.NombreLbl.Text = "Nombre"
+        Me.NombreLbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Label8
+        'TelefonoLbl
         '
-        Me.Label8.AutoSize = True
-        Me.Label8.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label8.Location = New System.Drawing.Point(3, 28)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(67, 28)
-        Me.Label8.TabIndex = 1
-        Me.Label8.Text = "Telefono"
-        Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.TelefonoLbl.AutoSize = True
+        Me.TelefonoLbl.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TelefonoLbl.Location = New System.Drawing.Point(3, 28)
+        Me.TelefonoLbl.Name = "TelefonoLbl"
+        Me.TelefonoLbl.Size = New System.Drawing.Size(67, 28)
+        Me.TelefonoLbl.TabIndex = 1
+        Me.TelefonoLbl.Tag = "Telefono"
+        Me.TelefonoLbl.Text = "Telefono"
+        Me.TelefonoLbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Label9
+        'EmailLbl
         '
-        Me.Label9.AutoSize = True
-        Me.Label9.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label9.Location = New System.Drawing.Point(3, 56)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(67, 28)
-        Me.Label9.TabIndex = 2
-        Me.Label9.Text = "Email"
-        Me.Label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.EmailLbl.AutoSize = True
+        Me.EmailLbl.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.EmailLbl.Location = New System.Drawing.Point(3, 56)
+        Me.EmailLbl.Name = "EmailLbl"
+        Me.EmailLbl.Size = New System.Drawing.Size(67, 28)
+        Me.EmailLbl.TabIndex = 2
+        Me.EmailLbl.Tag = "Email"
+        Me.EmailLbl.Text = "Email"
+        Me.EmailLbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Label10
+        'DireccionLbl
         '
-        Me.Label10.AutoSize = True
-        Me.Label10.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label10.Location = New System.Drawing.Point(3, 84)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(67, 29)
-        Me.Label10.TabIndex = 3
-        Me.Label10.Text = "Dirección"
-        Me.Label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.DireccionLbl.AutoSize = True
+        Me.DireccionLbl.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.DireccionLbl.Location = New System.Drawing.Point(3, 84)
+        Me.DireccionLbl.Name = "DireccionLbl"
+        Me.DireccionLbl.Size = New System.Drawing.Size(67, 29)
+        Me.DireccionLbl.TabIndex = 3
+        Me.DireccionLbl.Tag = "Direccion"
+        Me.DireccionLbl.Text = "Dirección"
+        Me.DireccionLbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'TextBox4
+        'NombreTxt
         '
-        Me.TextBox4.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TextBox4.Location = New System.Drawing.Point(76, 3)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(130, 23)
-        Me.TextBox4.TabIndex = 4
+        Me.NombreTxt.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.NombreTxt.Location = New System.Drawing.Point(76, 3)
+        Me.NombreTxt.Name = "NombreTxt"
+        Me.NombreTxt.Size = New System.Drawing.Size(130, 23)
+        Me.NombreTxt.TabIndex = 4
         '
-        'TextBox5
+        'DireccionTxt
         '
-        Me.TextBox5.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TextBox5.Location = New System.Drawing.Point(76, 87)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(130, 23)
-        Me.TextBox5.TabIndex = 5
+        Me.DireccionTxt.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.DireccionTxt.Location = New System.Drawing.Point(76, 87)
+        Me.DireccionTxt.Name = "DireccionTxt"
+        Me.DireccionTxt.Size = New System.Drawing.Size(130, 23)
+        Me.DireccionTxt.TabIndex = 5
         '
-        'TextBox6
+        'EmailTxt
         '
-        Me.TextBox6.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TextBox6.Location = New System.Drawing.Point(76, 59)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(130, 23)
-        Me.TextBox6.TabIndex = 7
+        Me.EmailTxt.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.EmailTxt.Location = New System.Drawing.Point(76, 59)
+        Me.EmailTxt.Name = "EmailTxt"
+        Me.EmailTxt.Size = New System.Drawing.Size(130, 23)
+        Me.EmailTxt.TabIndex = 7
         '
-        'TextBox7
+        'TelefonoTxt
         '
-        Me.TextBox7.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TextBox7.Location = New System.Drawing.Point(76, 31)
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(130, 23)
-        Me.TextBox7.TabIndex = 8
+        Me.TelefonoTxt.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TelefonoTxt.Location = New System.Drawing.Point(76, 31)
+        Me.TelefonoTxt.Name = "TelefonoTxt"
+        Me.TelefonoTxt.Size = New System.Drawing.Size(130, 23)
+        Me.TelefonoTxt.TabIndex = 8
         '
-        'Label11
+        'ObservacionLbl
         '
-        Me.Label11.AutoSize = True
-        Me.TableLayoutPanel3.SetColumnSpan(Me.Label11, 2)
-        Me.Label11.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label11.Location = New System.Drawing.Point(212, 0)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(201, 28)
-        Me.Label11.TabIndex = 9
-        Me.Label11.Text = "Observación"
-        Me.Label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.ObservacionLbl.AutoSize = True
+        Me.TableLayoutPanel3.SetColumnSpan(Me.ObservacionLbl, 2)
+        Me.ObservacionLbl.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.ObservacionLbl.Location = New System.Drawing.Point(212, 0)
+        Me.ObservacionLbl.Name = "ObservacionLbl"
+        Me.ObservacionLbl.Size = New System.Drawing.Size(201, 28)
+        Me.ObservacionLbl.TabIndex = 9
+        Me.ObservacionLbl.Tag = "Observacion"
+        Me.ObservacionLbl.Text = "Observación"
+        Me.ObservacionLbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'TextBox8
+        'ObservacionTxt
         '
-        Me.TableLayoutPanel3.SetColumnSpan(Me.TextBox8, 2)
-        Me.TextBox8.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TextBox8.Location = New System.Drawing.Point(212, 31)
-        Me.TextBox8.Multiline = True
-        Me.TextBox8.Name = "TextBox8"
-        Me.TableLayoutPanel3.SetRowSpan(Me.TextBox8, 2)
-        Me.TextBox8.Size = New System.Drawing.Size(201, 50)
-        Me.TextBox8.TabIndex = 10
+        Me.TableLayoutPanel3.SetColumnSpan(Me.ObservacionTxt, 2)
+        Me.ObservacionTxt.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.ObservacionTxt.Location = New System.Drawing.Point(212, 31)
+        Me.ObservacionTxt.Multiline = True
+        Me.ObservacionTxt.Name = "ObservacionTxt"
+        Me.TableLayoutPanel3.SetRowSpan(Me.ObservacionTxt, 2)
+        Me.ObservacionTxt.Size = New System.Drawing.Size(201, 50)
+        Me.ObservacionTxt.TabIndex = 10
         '
-        'Label13
+        'PrecioLbl
         '
-        Me.Label13.AutoSize = True
-        Me.Label13.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label13.Location = New System.Drawing.Point(212, 84)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(50, 29)
-        Me.Label13.TabIndex = 11
-        Me.Label13.Text = "Precio"
-        Me.Label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.PrecioLbl.AutoSize = True
+        Me.PrecioLbl.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.PrecioLbl.Location = New System.Drawing.Point(212, 84)
+        Me.PrecioLbl.Name = "PrecioLbl"
+        Me.PrecioLbl.Size = New System.Drawing.Size(50, 29)
+        Me.PrecioLbl.TabIndex = 11
+        Me.PrecioLbl.Tag = "Precio"
+        Me.PrecioLbl.Text = "Precio"
+        Me.PrecioLbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'TextBox10
+        'PrecioTxt
         '
-        Me.TextBox10.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TextBox10.Location = New System.Drawing.Point(268, 87)
-        Me.TextBox10.Name = "TextBox10"
-        Me.TextBox10.Size = New System.Drawing.Size(145, 23)
-        Me.TextBox10.TabIndex = 12
+        Me.PrecioTxt.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.PrecioTxt.Location = New System.Drawing.Point(268, 87)
+        Me.PrecioTxt.Name = "PrecioTxt"
+        Me.PrecioTxt.Size = New System.Drawing.Size(145, 23)
+        Me.PrecioTxt.TabIndex = 12
         '
-        'DataGridView1
+        'GrillaServicios
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.DataGridView1.Location = New System.Drawing.Point(307, 198)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.TableLayoutPanel1.SetRowSpan(Me.DataGridView1, 2)
-        Me.DataGridView1.Size = New System.Drawing.Size(422, 123)
-        Me.DataGridView1.TabIndex = 5
+        Me.GrillaServicios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.GrillaServicios.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.GrillaServicios.Location = New System.Drawing.Point(307, 198)
+        Me.GrillaServicios.Name = "GrillaServicios"
+        Me.TableLayoutPanel1.SetRowSpan(Me.GrillaServicios, 2)
+        Me.GrillaServicios.Size = New System.Drawing.Size(422, 123)
+        Me.GrillaServicios.TabIndex = 5
         '
-        'Label12
+        'DescripcionLbl
         '
-        Me.Label12.AutoSize = True
-        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label12.Location = New System.Drawing.Point(3, 195)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(135, 17)
-        Me.Label12.TabIndex = 7
-        Me.Label12.Text = "Agregar descripción"
+        Me.DescripcionLbl.AutoSize = True
+        Me.DescripcionLbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DescripcionLbl.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.DescripcionLbl.Location = New System.Drawing.Point(3, 195)
+        Me.DescripcionLbl.Name = "DescripcionLbl"
+        Me.DescripcionLbl.Size = New System.Drawing.Size(135, 17)
+        Me.DescripcionLbl.TabIndex = 7
+        Me.DescripcionLbl.Tag = "Agregar descripcion"
+        Me.DescripcionLbl.Text = "Agregar descripción"
         '
         'TableLayoutPanel4
         '
@@ -372,8 +381,8 @@ Partial Class ReservarServicio
         Me.TableLayoutPanel1.SetColumnSpan(Me.TableLayoutPanel4, 2)
         Me.TableLayoutPanel4.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel4.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel4.Controls.Add(Me.Button1, 0, 0)
-        Me.TableLayoutPanel4.Controls.Add(Me.Button2, 1, 0)
+        Me.TableLayoutPanel4.Controls.Add(Me.AgregarBtn, 0, 0)
+        Me.TableLayoutPanel4.Controls.Add(Me.BorrarBtn, 1, 0)
         Me.TableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel4.Location = New System.Drawing.Point(3, 327)
         Me.TableLayoutPanel4.Name = "TableLayoutPanel4"
@@ -382,61 +391,63 @@ Partial Class ReservarServicio
         Me.TableLayoutPanel4.Size = New System.Drawing.Size(726, 38)
         Me.TableLayoutPanel4.TabIndex = 12
         '
-        'Button1
+        'AgregarBtn
         '
-        Me.Button1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.AgregarBtn.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button1.Location = New System.Drawing.Point(3, 3)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(357, 32)
-        Me.Button1.TabIndex = 5
-        Me.Button1.Text = "Agregar"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.AgregarBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.AgregarBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.AgregarBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.AgregarBtn.Location = New System.Drawing.Point(3, 3)
+        Me.AgregarBtn.Name = "AgregarBtn"
+        Me.AgregarBtn.Size = New System.Drawing.Size(357, 32)
+        Me.AgregarBtn.TabIndex = 5
+        Me.AgregarBtn.Tag = "Agregar"
+        Me.AgregarBtn.Text = "Agregar"
+        Me.AgregarBtn.UseVisualStyleBackColor = True
         '
-        'Button2
+        'BorrarBtn
         '
-        Me.Button2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.BorrarBtn.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button2.Location = New System.Drawing.Point(366, 3)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(357, 32)
-        Me.Button2.TabIndex = 6
-        Me.Button2.Text = "Borrar"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.BorrarBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BorrarBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BorrarBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.BorrarBtn.Location = New System.Drawing.Point(366, 3)
+        Me.BorrarBtn.Name = "BorrarBtn"
+        Me.BorrarBtn.Size = New System.Drawing.Size(357, 32)
+        Me.BorrarBtn.TabIndex = 6
+        Me.BorrarBtn.Tag = "Borrar"
+        Me.BorrarBtn.Text = "Borrar"
+        Me.BorrarBtn.UseVisualStyleBackColor = True
         '
-        'GroupBox1
+        'EventoGPB
         '
-        Me.GroupBox1.Controls.Add(Me.TableLayoutPanel2)
-        Me.GroupBox1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.GroupBox1.Enabled = False
-        Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.GroupBox1.Location = New System.Drawing.Point(3, 57)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(298, 135)
-        Me.GroupBox1.TabIndex = 200
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Datos del evento"
+        Me.EventoGPB.Controls.Add(Me.TableLayoutPanel2)
+        Me.EventoGPB.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.EventoGPB.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.EventoGPB.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.EventoGPB.Location = New System.Drawing.Point(3, 57)
+        Me.EventoGPB.Name = "EventoGPB"
+        Me.EventoGPB.Size = New System.Drawing.Size(298, 135)
+        Me.EventoGPB.TabIndex = 200
+        Me.EventoGPB.TabStop = False
+        Me.EventoGPB.Tag = "Datos del evento"
+        Me.EventoGPB.Text = "Datos del evento"
         '
         'TableLayoutPanel2
         '
         Me.TableLayoutPanel2.ColumnCount = 2
         Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 150.0!))
         Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 142.0!))
-        Me.TableLayoutPanel2.Controls.Add(Me.Label2, 0, 0)
-        Me.TableLayoutPanel2.Controls.Add(Me.Label3, 0, 1)
-        Me.TableLayoutPanel2.Controls.Add(Me.Label4, 0, 2)
-        Me.TableLayoutPanel2.Controls.Add(Me.Label5, 0, 3)
-        Me.TableLayoutPanel2.Controls.Add(Me.TextBox1, 1, 0)
-        Me.TableLayoutPanel2.Controls.Add(Me.TextBox2, 1, 3)
-        Me.TableLayoutPanel2.Controls.Add(Me.DateTimePicker1, 1, 1)
-        Me.TableLayoutPanel2.Controls.Add(Me.TextBox3, 1, 2)
+        Me.TableLayoutPanel2.Controls.Add(Me.TipoEventoLbl, 0, 0)
+        Me.TableLayoutPanel2.Controls.Add(Me.FechaLbl, 0, 1)
+        Me.TableLayoutPanel2.Controls.Add(Me.CantidadLbl, 0, 2)
+        Me.TableLayoutPanel2.Controls.Add(Me.SalonLbl, 0, 3)
+        Me.TableLayoutPanel2.Controls.Add(Me.TipoEventoTxt, 1, 0)
+        Me.TableLayoutPanel2.Controls.Add(Me.SalonTxt, 1, 3)
+        Me.TableLayoutPanel2.Controls.Add(Me.FechaDTP, 1, 1)
+        Me.TableLayoutPanel2.Controls.Add(Me.CantidadTxt, 1, 2)
         Me.TableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel2.Location = New System.Drawing.Point(3, 19)
         Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
@@ -448,82 +459,90 @@ Partial Class ReservarServicio
         Me.TableLayoutPanel2.Size = New System.Drawing.Size(292, 113)
         Me.TableLayoutPanel2.TabIndex = 0
         '
-        'Label2
+        'TipoEventoLbl
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label2.Location = New System.Drawing.Point(3, 0)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(144, 28)
-        Me.Label2.TabIndex = 0
-        Me.Label2.Text = "Tipo de evento"
-        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.TipoEventoLbl.AutoSize = True
+        Me.TipoEventoLbl.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TipoEventoLbl.Location = New System.Drawing.Point(3, 0)
+        Me.TipoEventoLbl.Name = "TipoEventoLbl"
+        Me.TipoEventoLbl.Size = New System.Drawing.Size(144, 28)
+        Me.TipoEventoLbl.TabIndex = 0
+        Me.TipoEventoLbl.Tag = "Tipo de evento"
+        Me.TipoEventoLbl.Text = "Tipo de evento"
+        Me.TipoEventoLbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Label3
+        'FechaLbl
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label3.Location = New System.Drawing.Point(3, 28)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(144, 28)
-        Me.Label3.TabIndex = 1
-        Me.Label3.Text = "Fecha"
-        Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.FechaLbl.AutoSize = True
+        Me.FechaLbl.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.FechaLbl.Location = New System.Drawing.Point(3, 28)
+        Me.FechaLbl.Name = "FechaLbl"
+        Me.FechaLbl.Size = New System.Drawing.Size(144, 28)
+        Me.FechaLbl.TabIndex = 1
+        Me.FechaLbl.Tag = "Fecha"
+        Me.FechaLbl.Text = "Fecha"
+        Me.FechaLbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Label4
+        'CantidadLbl
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label4.Location = New System.Drawing.Point(3, 56)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(144, 28)
-        Me.Label4.TabIndex = 2
-        Me.Label4.Text = "Cantidad de invitados"
-        Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.CantidadLbl.AutoSize = True
+        Me.CantidadLbl.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.CantidadLbl.Location = New System.Drawing.Point(3, 56)
+        Me.CantidadLbl.Name = "CantidadLbl"
+        Me.CantidadLbl.Size = New System.Drawing.Size(144, 28)
+        Me.CantidadLbl.TabIndex = 2
+        Me.CantidadLbl.Tag = "Cantidad de invitados"
+        Me.CantidadLbl.Text = "Cantidad de invitados"
+        Me.CantidadLbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Label5
+        'SalonLbl
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label5.Location = New System.Drawing.Point(3, 84)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(144, 29)
-        Me.Label5.TabIndex = 3
-        Me.Label5.Text = "Salón"
-        Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.SalonLbl.AutoSize = True
+        Me.SalonLbl.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.SalonLbl.Location = New System.Drawing.Point(3, 84)
+        Me.SalonLbl.Name = "SalonLbl"
+        Me.SalonLbl.Size = New System.Drawing.Size(144, 29)
+        Me.SalonLbl.TabIndex = 3
+        Me.SalonLbl.Tag = "Salon"
+        Me.SalonLbl.Text = "Salón"
+        Me.SalonLbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'TextBox1
+        'TipoEventoTxt
         '
-        Me.TextBox1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TextBox1.Location = New System.Drawing.Point(153, 3)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(136, 23)
-        Me.TextBox1.TabIndex = 4
+        Me.TipoEventoTxt.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TipoEventoTxt.Enabled = False
+        Me.TipoEventoTxt.Location = New System.Drawing.Point(153, 3)
+        Me.TipoEventoTxt.Name = "TipoEventoTxt"
+        Me.TipoEventoTxt.Size = New System.Drawing.Size(136, 23)
+        Me.TipoEventoTxt.TabIndex = 4
         '
-        'TextBox2
+        'SalonTxt
         '
-        Me.TextBox2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TextBox2.Location = New System.Drawing.Point(153, 87)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(136, 23)
-        Me.TextBox2.TabIndex = 5
+        Me.SalonTxt.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.SalonTxt.Enabled = False
+        Me.SalonTxt.Location = New System.Drawing.Point(153, 87)
+        Me.SalonTxt.Name = "SalonTxt"
+        Me.SalonTxt.Size = New System.Drawing.Size(136, 23)
+        Me.SalonTxt.TabIndex = 5
         '
-        'DateTimePicker1
+        'FechaDTP
         '
-        Me.DateTimePicker1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker1.Location = New System.Drawing.Point(153, 31)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(136, 23)
-        Me.DateTimePicker1.TabIndex = 6
+        Me.FechaDTP.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.FechaDTP.Enabled = False
+        Me.FechaDTP.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.FechaDTP.Location = New System.Drawing.Point(153, 31)
+        Me.FechaDTP.Name = "FechaDTP"
+        Me.FechaDTP.Size = New System.Drawing.Size(136, 23)
+        Me.FechaDTP.TabIndex = 6
         '
-        'TextBox3
+        'CantidadTxt
         '
-        Me.TextBox3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TextBox3.Location = New System.Drawing.Point(153, 59)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(136, 23)
-        Me.TextBox3.TabIndex = 7
+        Me.CantidadTxt.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.CantidadTxt.Enabled = False
+        Me.CantidadTxt.Location = New System.Drawing.Point(153, 59)
+        Me.CantidadTxt.Name = "CantidadTxt"
+        Me.CantidadTxt.Size = New System.Drawing.Size(136, 23)
+        Me.CantidadTxt.TabIndex = 7
         '
         'ReservarServicio
         '
@@ -537,12 +556,12 @@ Partial Class ReservarServicio
         Me.Text = "EvOrg"
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.TableLayoutPanel1.PerformLayout()
-        Me.GroupBox2.ResumeLayout(False)
+        Me.ServicioGPB.ResumeLayout(False)
         Me.TableLayoutPanel3.ResumeLayout(False)
         Me.TableLayoutPanel3.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.GrillaServicios, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TableLayoutPanel4.ResumeLayout(False)
-        Me.GroupBox1.ResumeLayout(False)
+        Me.EventoGPB.ResumeLayout(False)
         Me.TableLayoutPanel2.ResumeLayout(False)
         Me.TableLayoutPanel2.PerformLayout()
         Me.ResumeLayout(False)
@@ -550,38 +569,38 @@ Partial Class ReservarServicio
     End Sub
 
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
-    Friend WithEvents Label1 As Label
-    Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents SeleccionarEventoLbl As Label
+    Friend WithEvents EventoCombo As ComboBox
+    Friend WithEvents EventoGPB As GroupBox
     Friend WithEvents TableLayoutPanel2 As TableLayoutPanel
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Label4 As Label
-    Friend WithEvents Label5 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents DateTimePicker1 As DateTimePicker
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents Label6 As Label
-    Friend WithEvents ComboBox2 As ComboBox
-    Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents GroupBox2 As GroupBox
+    Friend WithEvents TipoEventoLbl As Label
+    Friend WithEvents FechaLbl As Label
+    Friend WithEvents CantidadLbl As Label
+    Friend WithEvents SalonLbl As Label
+    Friend WithEvents TipoEventoTxt As TextBox
+    Friend WithEvents SalonTxt As TextBox
+    Friend WithEvents FechaDTP As DateTimePicker
+    Friend WithEvents CantidadTxt As TextBox
+    Friend WithEvents SeleccionarServicioLbl As Label
+    Friend WithEvents ServicioCombo As ComboBox
+    Friend WithEvents GrillaServicios As DataGridView
+    Friend WithEvents ServicioGPB As GroupBox
     Friend WithEvents TableLayoutPanel3 As TableLayoutPanel
-    Friend WithEvents Label7 As Label
-    Friend WithEvents Label8 As Label
-    Friend WithEvents Label9 As Label
-    Friend WithEvents Label10 As Label
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents TextBox5 As TextBox
-    Friend WithEvents TextBox6 As TextBox
-    Friend WithEvents TextBox7 As TextBox
-    Friend WithEvents TextBox9 As TextBox
-    Friend WithEvents Label11 As Label
-    Friend WithEvents TextBox8 As TextBox
-    Friend WithEvents Label12 As Label
+    Friend WithEvents NombreLbl As Label
+    Friend WithEvents TelefonoLbl As Label
+    Friend WithEvents EmailLbl As Label
+    Friend WithEvents DireccionLbl As Label
+    Friend WithEvents NombreTxt As TextBox
+    Friend WithEvents DireccionTxt As TextBox
+    Friend WithEvents EmailTxt As TextBox
+    Friend WithEvents TelefonoTxt As TextBox
+    Friend WithEvents DescripcionTxt As TextBox
+    Friend WithEvents ObservacionLbl As Label
+    Friend WithEvents ObservacionTxt As TextBox
+    Friend WithEvents DescripcionLbl As Label
     Friend WithEvents TableLayoutPanel4 As TableLayoutPanel
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Label13 As Label
-    Friend WithEvents TextBox10 As TextBox
+    Friend WithEvents AgregarBtn As Button
+    Friend WithEvents BorrarBtn As Button
+    Friend WithEvents PrecioLbl As Label
+    Friend WithEvents PrecioTxt As TextBox
 End Class

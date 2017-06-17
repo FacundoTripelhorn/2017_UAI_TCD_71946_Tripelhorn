@@ -61,6 +61,7 @@ Partial Class VerMateriales
         Me.AceptarBtn.Name = "AceptarBtn"
         Me.AceptarBtn.Size = New System.Drawing.Size(181, 50)
         Me.AceptarBtn.TabIndex = 0
+        Me.AceptarBtn.Tag = "Aceptar"
         Me.AceptarBtn.Text = "Aceptar"
         Me.AceptarBtn.UseVisualStyleBackColor = False
         '
@@ -76,6 +77,7 @@ Partial Class VerMateriales
         Me.CancelarBtn.Name = "CancelarBtn"
         Me.CancelarBtn.Size = New System.Drawing.Size(182, 50)
         Me.CancelarBtn.TabIndex = 1
+        Me.CancelarBtn.Tag = "Cancelar"
         Me.CancelarBtn.Text = "Cancelar"
         Me.CancelarBtn.UseVisualStyleBackColor = False
         '
@@ -95,6 +97,7 @@ Partial Class VerMateriales
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(375, 324)
         Me.Controls.Add(Me.TableLayoutPanel1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "VerMateriales"
         Me.Text = "VerMateriales"
         Me.TableLayoutPanel1.ResumeLayout(False)

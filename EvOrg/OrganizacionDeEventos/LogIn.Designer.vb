@@ -68,6 +68,7 @@ Partial Class LogIn
         Me.UsuarioLbl.Name = "UsuarioLbl"
         Me.UsuarioLbl.Size = New System.Drawing.Size(112, 31)
         Me.UsuarioLbl.TabIndex = 4
+        Me.UsuarioLbl.Tag = "Usuario"
         Me.UsuarioLbl.Text = "Usuario"
         Me.UsuarioLbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -81,6 +82,7 @@ Partial Class LogIn
         Me.ContraseñaLbl.Name = "ContraseñaLbl"
         Me.ContraseñaLbl.Size = New System.Drawing.Size(112, 28)
         Me.ContraseñaLbl.TabIndex = 5
+        Me.ContraseñaLbl.Tag = "Contraseña"
         Me.ContraseñaLbl.Text = "Contraseña"
         Me.ContraseñaLbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -111,6 +113,7 @@ Partial Class LogIn
         Me.AceptarBtn.Name = "AceptarBtn"
         Me.AceptarBtn.Size = New System.Drawing.Size(138, 42)
         Me.AceptarBtn.TabIndex = 2
+        Me.AceptarBtn.Tag = "Aceptar"
         Me.AceptarBtn.Text = "Aceptar"
         Me.AceptarBtn.UseVisualStyleBackColor = True
         '
@@ -125,6 +128,7 @@ Partial Class LogIn
         Me.CancelarBtn.Name = "CancelarBtn"
         Me.CancelarBtn.Size = New System.Drawing.Size(138, 42)
         Me.CancelarBtn.TabIndex = 3
+        Me.CancelarBtn.Tag = "Cancelar"
         Me.CancelarBtn.Text = "Cancelar"
         Me.CancelarBtn.UseVisualStyleBackColor = True
         '

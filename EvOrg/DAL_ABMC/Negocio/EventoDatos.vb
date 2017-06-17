@@ -17,7 +17,6 @@ Public Class EventoDatos
                 Comando.ActualizarBD("Evento", DTable)
             End If
         Catch ex As Exception
-            MsgBox("Error al agregar un nuevo evento")
         End Try
     End Sub
 
@@ -32,7 +31,6 @@ Public Class EventoDatos
                 Comando.ActualizarBD("Evento", DTable)
             End If
         Catch ex As Exception
-            MsgBox("Error al eliminar el evento seleccionado")
         End Try
     End Sub
 
@@ -71,7 +69,6 @@ Public Class EventoDatos
                 Comando.ActualizarBD("Evento", DTable)
             End If
         Catch ex As Exception
-            MsgBox("Error al modificar el evento")
         End Try
     End Sub
 
@@ -180,7 +177,6 @@ Public Class EventoDatos
             DTable.Rows.Add(DRow)
             Comando.ActualizarBD("EventoPaso", DTable)
         Catch ex As Exception
-            MsgBox("Error al agregar el paso al evento")
         End Try
     End Sub
 
@@ -190,7 +186,6 @@ Public Class EventoDatos
             If DTable.Rows.Count > 0 Then DTable.Rows(0).Delete()
             Comando.ActualizarBD("EventoPaso", DTable)
         Catch ex As Exception
-            MsgBox("Error al eliminar el paso")
         End Try
     End Sub
 
@@ -200,7 +195,6 @@ Public Class EventoDatos
             If DTable.Rows.Count > 0 Then DTable.Rows(0).Item(2) = pFecha
             Comando.ActualizarBD("EventoPaso", DTable)
         Catch ex As Exception
-            MsgBox("Error al modificar el paso")
         End Try
     End Sub
 End Class

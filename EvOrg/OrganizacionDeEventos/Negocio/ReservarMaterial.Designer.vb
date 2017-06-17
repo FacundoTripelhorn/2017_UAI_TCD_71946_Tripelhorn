@@ -24,7 +24,7 @@ Partial Class ReservarMaterial
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ReservarMaterial))
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.SeleccionarEventoLbl = New System.Windows.Forms.Label()
         Me.EventoCombo = New System.Windows.Forms.ComboBox()
         Me.GrillaMateriales = New System.Windows.Forms.DataGridView()
         Me.BuscarMaterialBtn = New System.Windows.Forms.Button()
@@ -51,7 +51,7 @@ Partial Class ReservarMaterial
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
-        Me.TableLayoutPanel1.Controls.Add(Me.Label1, 0, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.SeleccionarEventoLbl, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.EventoCombo, 0, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.GrillaMateriales, 0, 2)
         Me.TableLayoutPanel1.Controls.Add(Me.BuscarMaterialBtn, 0, 3)
@@ -78,17 +78,18 @@ Partial Class ReservarMaterial
         Me.TableLayoutPanel1.Size = New System.Drawing.Size(596, 350)
         Me.TableLayoutPanel1.TabIndex = 0
         '
-        'Label1
+        'SeleccionarEventoLbl
         '
-        Me.Label1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label1.Location = New System.Drawing.Point(3, 8)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(129, 17)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Seleccionar evento"
+        Me.SeleccionarEventoLbl.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.SeleccionarEventoLbl.AutoSize = True
+        Me.SeleccionarEventoLbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SeleccionarEventoLbl.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.SeleccionarEventoLbl.Location = New System.Drawing.Point(3, 8)
+        Me.SeleccionarEventoLbl.Name = "SeleccionarEventoLbl"
+        Me.SeleccionarEventoLbl.Size = New System.Drawing.Size(129, 17)
+        Me.SeleccionarEventoLbl.TabIndex = 0
+        Me.SeleccionarEventoLbl.Tag = "Seleccionar evento"
+        Me.SeleccionarEventoLbl.Text = "Seleccionar evento"
         '
         'EventoCombo
         '
@@ -123,6 +124,7 @@ Partial Class ReservarMaterial
         Me.TableLayoutPanel1.SetRowSpan(Me.BuscarMaterialBtn, 2)
         Me.BuscarMaterialBtn.Size = New System.Drawing.Size(143, 43)
         Me.BuscarMaterialBtn.TabIndex = 1
+        Me.BuscarMaterialBtn.Tag = "Buscar material"
         Me.BuscarMaterialBtn.Text = "Buscar material"
         Me.BuscarMaterialBtn.UseVisualStyleBackColor = True
         '
@@ -136,6 +138,7 @@ Partial Class ReservarMaterial
         Me.MaterialLbl.Name = "MaterialLbl"
         Me.MaterialLbl.Size = New System.Drawing.Size(143, 17)
         Me.MaterialLbl.TabIndex = 4
+        Me.MaterialLbl.Tag = "Material"
         Me.MaterialLbl.Text = "Material"
         '
         'CantidadLbl
@@ -148,6 +151,7 @@ Partial Class ReservarMaterial
         Me.CantidadLbl.Name = "CantidadLbl"
         Me.CantidadLbl.Size = New System.Drawing.Size(143, 17)
         Me.CantidadLbl.TabIndex = 5
+        Me.CantidadLbl.Tag = "Cantidad"
         Me.CantidadLbl.Text = "Cantidad"
         '
         'FechaLimiteLbl
@@ -160,6 +164,7 @@ Partial Class ReservarMaterial
         Me.FechaLimiteLbl.Name = "FechaLimiteLbl"
         Me.FechaLimiteLbl.Size = New System.Drawing.Size(143, 17)
         Me.FechaLimiteLbl.TabIndex = 6
+        Me.FechaLimiteLbl.Tag = "Fecha limite"
         Me.FechaLimiteLbl.Text = "Fecha Limite"
         '
         'MaterialTxt
@@ -200,6 +205,7 @@ Partial Class ReservarMaterial
         Me.AgregarBtn.Name = "AgregarBtn"
         Me.AgregarBtn.Size = New System.Drawing.Size(143, 30)
         Me.AgregarBtn.TabIndex = 4
+        Me.AgregarBtn.Tag = "Agregar"
         Me.AgregarBtn.Text = "Agregar"
         Me.AgregarBtn.UseVisualStyleBackColor = True
         '
@@ -213,6 +219,7 @@ Partial Class ReservarMaterial
         Me.VerDisponibilidadBtn.Name = "VerDisponibilidadBtn"
         Me.VerDisponibilidadBtn.Size = New System.Drawing.Size(143, 30)
         Me.VerDisponibilidadBtn.TabIndex = 5
+        Me.VerDisponibilidadBtn.Tag = "Ver disponibilidad"
         Me.VerDisponibilidadBtn.Text = "Ver disponibilidad"
         Me.VerDisponibilidadBtn.UseVisualStyleBackColor = True
         '
@@ -226,6 +233,7 @@ Partial Class ReservarMaterial
         Me.VerEventoBtn.Name = "VerEventoBtn"
         Me.VerEventoBtn.Size = New System.Drawing.Size(143, 30)
         Me.VerEventoBtn.TabIndex = 6
+        Me.VerEventoBtn.Tag = "Ver evento"
         Me.VerEventoBtn.Text = "Ver evento"
         Me.VerEventoBtn.UseVisualStyleBackColor = True
         '
@@ -239,6 +247,7 @@ Partial Class ReservarMaterial
         Me.TerminarBtn.Name = "TerminarBtn"
         Me.TerminarBtn.Size = New System.Drawing.Size(143, 30)
         Me.TerminarBtn.TabIndex = 7
+        Me.TerminarBtn.Tag = "Terminar"
         Me.TerminarBtn.Text = "Terminar"
         Me.TerminarBtn.UseVisualStyleBackColor = True
         '
@@ -261,7 +270,7 @@ Partial Class ReservarMaterial
     End Sub
 
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
-    Friend WithEvents Label1 As Label
+    Friend WithEvents SeleccionarEventoLbl As Label
     Friend WithEvents EventoCombo As ComboBox
     Friend WithEvents GrillaMateriales As DataGridView
     Friend WithEvents BuscarMaterialBtn As Button

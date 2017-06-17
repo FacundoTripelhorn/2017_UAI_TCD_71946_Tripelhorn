@@ -1,18 +1,23 @@
 ﻿Imports BLL_Dinamica
 Imports BLL_Estatica
+Imports OrganizacionDeEventos
 
 Public Class ABMFamilia
+    Implements IObservador
+    Dim vTraductor As Traductor = Traductor.GetInstance
     Property FamiliaDinamica As New FamiliaDinamica
     Property Familia As New Familia
     Property GrupoPatenteDinamico As New GrupoPatenteDinamico
 
 
     Private Sub ABMFamilia_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        vTraductor.Registrar(Me)
         Dim vLista As New List(Of Object)
         vLista = GrupoPatenteDinamico.ConsultaTodo()
         GrupoPatenteDinamico.MostrarEnTreeView(TreePatente)
         TreePatente.ExpandAll()
         ActualizarLista()
+        ActualizarObservador(Me)
     End Sub
 
     Private Sub ActualizarLista()
@@ -33,7 +38,7 @@ Public Class ABMFamilia
             AgregarPatentes(Familia, TreePatente.Nodes.Item(0))
             FamiliaDinamica.Alta(Familia)
         Else
-            MsgBox("La Familia tiene que tener un nombre")
+            MessageBox.Show(vTraductor.Traducir("La Familia tiene que tener un nombre"), "EvOrg")
         End If
         TreePatente.Nodes.Clear()
         ABMFamilia_Load(Nothing, Nothing)
@@ -128,5 +133,27 @@ Public Class ABMFamilia
                 vHijo.Checked = False
             Next
         End If
+    End Sub
+
+    Public Sub ActualizarObservador(Optional pControl As Control = Nothing) Implements IObservador.ActualizarObservador
+        For Each vControl As Control In pControl.Controls
+            Try
+                vControl.Text = vTraductor.IdiomaSeleccionado.Diccionario.Item(vControl.Tag.ToString)
+            Catch ex As Exception
+            Finally
+                If vControl.Controls.Count > 0 Then
+                    ActualizarObservador(vControl)
+                End If
+                If TypeOf vControl Is DataGridView Then
+                    For Each vColumna As DataGridViewColumn In DirectCast(vControl, DataGridView).Columns
+                        Try
+                            vColumna.HeaderText = vTraductor.IdiomaSeleccionado.Diccionario.Item(vColumna.Name)
+                        Catch ex As Exception
+
+                        End Try
+                    Next
+                End If
+            End Try
+        Next
     End Sub
 End Class

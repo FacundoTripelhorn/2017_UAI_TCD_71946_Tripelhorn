@@ -111,6 +111,7 @@ Partial Class ABMCliente
         Me.DNILbl.Name = "DNILbl"
         Me.DNILbl.Size = New System.Drawing.Size(86, 30)
         Me.DNILbl.TabIndex = 0
+        Me.DNILbl.Tag = "DNI"
         Me.DNILbl.Text = "DNI"
         Me.DNILbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -125,6 +126,7 @@ Partial Class ABMCliente
         Me.NombreLbl.Name = "NombreLbl"
         Me.NombreLbl.Size = New System.Drawing.Size(86, 30)
         Me.NombreLbl.TabIndex = 1
+        Me.NombreLbl.Tag = "Nombre"
         Me.NombreLbl.Text = "Nombre"
         Me.NombreLbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -139,6 +141,7 @@ Partial Class ABMCliente
         Me.ApellidoLbl.Name = "ApellidoLbl"
         Me.ApellidoLbl.Size = New System.Drawing.Size(86, 30)
         Me.ApellidoLbl.TabIndex = 2
+        Me.ApellidoLbl.Tag = "Apellido"
         Me.ApellidoLbl.Text = "Apellido"
         Me.ApellidoLbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -163,7 +166,8 @@ Partial Class ABMCliente
         Me.TelefonoLbl.Name = "TelefonoLbl"
         Me.TelefonoLbl.Size = New System.Drawing.Size(86, 30)
         Me.TelefonoLbl.TabIndex = 4
-        Me.TelefonoLbl.Text = "Telefono"
+        Me.TelefonoLbl.Tag = "Telefono"
+        Me.TelefonoLbl.Text = "Teléfono"
         Me.TelefonoLbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'EmailLbl
@@ -177,6 +181,7 @@ Partial Class ABMCliente
         Me.EmailLbl.Name = "EmailLbl"
         Me.EmailLbl.Size = New System.Drawing.Size(86, 30)
         Me.EmailLbl.TabIndex = 5
+        Me.EmailLbl.Tag = "Email"
         Me.EmailLbl.Text = "E-mail"
         Me.EmailLbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -211,6 +216,7 @@ Partial Class ABMCliente
         Me.AltaBtn.Name = "AltaBtn"
         Me.AltaBtn.Size = New System.Drawing.Size(86, 33)
         Me.AltaBtn.TabIndex = 10
+        Me.AltaBtn.Tag = "Agregar"
         Me.AltaBtn.Text = "Agregar"
         Me.AltaBtn.UseVisualStyleBackColor = True
         '
@@ -225,6 +231,7 @@ Partial Class ABMCliente
         Me.BajaBtn.Name = "BajaBtn"
         Me.BajaBtn.Size = New System.Drawing.Size(86, 33)
         Me.BajaBtn.TabIndex = 11
+        Me.BajaBtn.Tag = "Borrar"
         Me.BajaBtn.Text = "Borrar"
         Me.BajaBtn.UseVisualStyleBackColor = True
         '
@@ -239,6 +246,7 @@ Partial Class ABMCliente
         Me.ModificacionBtn.Name = "ModificacionBtn"
         Me.ModificacionBtn.Size = New System.Drawing.Size(79, 33)
         Me.ModificacionBtn.TabIndex = 12
+        Me.ModificacionBtn.Tag = "Modificar"
         Me.ModificacionBtn.Text = "Modificar"
         Me.ModificacionBtn.UseVisualStyleBackColor = True
         '
@@ -254,6 +262,7 @@ Partial Class ABMCliente
         Me.ListaClientesLbl.Name = "ListaClientesLbl"
         Me.ListaClientesLbl.Size = New System.Drawing.Size(857, 30)
         Me.ListaClientesLbl.TabIndex = 13
+        Me.ListaClientesLbl.Tag = "Lista de clientes"
         Me.ListaClientesLbl.Text = "Lista de Clientes"
         Me.ListaClientesLbl.TextAlign = System.Drawing.ContentAlignment.BottomLeft
         '

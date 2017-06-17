@@ -18,7 +18,6 @@ Public Class GrupoPatenteDatos
             DTGPatente.Rows.Add(DRow)
             Comando.ActualizarBD("GrupoPatente", DTGPatente)
         Catch ex As Exception
-            MsgBox("Error al crear el GrupoPatente")
         End Try
     End Sub
 
@@ -39,7 +38,6 @@ Public Class GrupoPatenteDatos
             End If
             Comando.ActualizarBD("GrupoPatente", DTGPatente)
         Catch ex As Exception
-            MsgBox("Error al eliminar el GrupoPatente")
         End Try
     End Sub
 
@@ -90,7 +88,6 @@ Public Class GrupoPatenteDatos
             If DTGPatente.Rows.Count > 0 Then DTGPatente.Rows(0).ItemArray = DRow.ItemArray
             Comando.ActualizarBD("GrupoPatente", DTGPatente)
         Catch ex As Exception
-            MsgBox("Error al modificar el GrupoPatente")
         End Try
     End Sub
 

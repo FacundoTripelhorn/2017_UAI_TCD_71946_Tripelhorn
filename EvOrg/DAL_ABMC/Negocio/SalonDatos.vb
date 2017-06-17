@@ -22,7 +22,6 @@ Public Class SalonDatos
                 Comando.ActualizarBD("Salon", DTSalon)
             End If
         Catch ex As Exception
-            MsgBox("Error al agregar un nuevo Salon")
         End Try
     End Sub
 
@@ -43,7 +42,6 @@ Public Class SalonDatos
                 Comando.ActualizarBD("Salon", DTable)
             End If
         Catch ex As Exception
-            MsgBox("Error al borrar el salon seleccionado")
         End Try
     End Sub
 
@@ -63,7 +61,6 @@ Public Class SalonDatos
                 Comando.ActualizarBD("Salon", DTable)
             End If
         Catch ex As Exception
-            MsgBox("Error al modificar el salón seleccionado")
         End Try
     End Sub
 

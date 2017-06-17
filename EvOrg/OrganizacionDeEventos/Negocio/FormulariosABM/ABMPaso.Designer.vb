@@ -67,6 +67,7 @@ Partial Class ABMPaso
         Me.ElegirEventoLbl.Name = "ElegirEventoLbl"
         Me.ElegirEventoLbl.Size = New System.Drawing.Size(188, 20)
         Me.ElegirEventoLbl.TabIndex = 1
+        Me.ElegirEventoLbl.Tag = "Elegir evento"
         Me.ElegirEventoLbl.Text = "Elegir evento"
         '
         'GrillaPasos
@@ -94,6 +95,7 @@ Partial Class ABMPaso
         Me.DescripcionLbl.Name = "DescripcionLbl"
         Me.DescripcionLbl.Size = New System.Drawing.Size(87, 24)
         Me.DescripcionLbl.TabIndex = 3
+        Me.DescripcionLbl.Tag = "Descripcion"
         Me.DescripcionLbl.Text = "Descripción"
         Me.DescripcionLbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -118,6 +120,7 @@ Partial Class ABMPaso
         Me.FechaLbl.Name = "FechaLbl"
         Me.FechaLbl.Size = New System.Drawing.Size(50, 24)
         Me.FechaLbl.TabIndex = 5
+        Me.FechaLbl.Tag = "Fecha"
         Me.FechaLbl.Text = "Fecha"
         Me.FechaLbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -141,6 +144,7 @@ Partial Class ABMPaso
         Me.PrioridadLbl.Name = "PrioridadLbl"
         Me.PrioridadLbl.Size = New System.Drawing.Size(68, 24)
         Me.PrioridadLbl.TabIndex = 8
+        Me.PrioridadLbl.Tag = "Prioridad"
         Me.PrioridadLbl.Text = "Prioridad"
         Me.PrioridadLbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -227,6 +231,7 @@ Partial Class ABMPaso
         Me.AltaBtn.Name = "AltaBtn"
         Me.AltaBtn.Size = New System.Drawing.Size(264, 56)
         Me.AltaBtn.TabIndex = 0
+        Me.AltaBtn.Tag = "Agregar"
         Me.AltaBtn.Text = "Agregar"
         Me.AltaBtn.UseVisualStyleBackColor = False
         '
@@ -242,6 +247,7 @@ Partial Class ABMPaso
         Me.BajaBtn.Name = "BajaBtn"
         Me.BajaBtn.Size = New System.Drawing.Size(264, 56)
         Me.BajaBtn.TabIndex = 1
+        Me.BajaBtn.Tag = "Borrar"
         Me.BajaBtn.Text = "Borrar"
         Me.BajaBtn.UseVisualStyleBackColor = False
         '
@@ -257,6 +263,7 @@ Partial Class ABMPaso
         Me.ModificacionBtn.Name = "ModificacionBtn"
         Me.ModificacionBtn.Size = New System.Drawing.Size(264, 56)
         Me.ModificacionBtn.TabIndex = 2
+        Me.ModificacionBtn.Tag = "Modificar"
         Me.ModificacionBtn.Text = "Modificar"
         Me.ModificacionBtn.UseVisualStyleBackColor = False
         '

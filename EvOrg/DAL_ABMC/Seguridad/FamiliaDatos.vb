@@ -18,7 +18,6 @@ Public Class FamiliaDatos
             Comando.ActualizarBD("Familia", DTFamilia)
             AgregarPatentes(vFamilia)
         Catch ex As Exception
-            MsgBox("Error al crear la Familia")
         End Try
     End Sub
 
@@ -35,7 +34,6 @@ Public Class FamiliaDatos
                 Comando.ActualizarBD("Familia", DTFamilia)
             End If
         Catch ex As Exception
-            MsgBox("Error al eliminar la Familia")
         End Try
     End Sub
 
@@ -53,7 +51,6 @@ Public Class FamiliaDatos
                 Comando.ActualizarBD("Familia", DTFamilia)
             End If
         Catch ex As Exception
-            MsgBox("Error al modificar la Familia")
         End Try
     End Sub
 
@@ -150,7 +147,6 @@ Public Class FamiliaDatos
                 End If
             End If
         Catch ex As Exception
-            MsgBox(ex.Message)
         End Try
         Return vLista
     End Function
@@ -180,7 +176,6 @@ Public Class FamiliaDatos
                     Next
                 End If
             Catch ex As Exception
-                MsgBox(ex.Message)
             End Try
         Else
             AgregarHijosPatente(pPadre, pFamilia)
@@ -201,7 +196,6 @@ Public Class FamiliaDatos
                     Next
                 End If
             Catch ex As Exception
-                MsgBox(ex.Message)
             End Try
         End If
 

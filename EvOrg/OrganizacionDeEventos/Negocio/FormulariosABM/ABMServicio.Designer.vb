@@ -105,6 +105,7 @@ Partial Class ABMServicio
         Me.ListaServiciosLbl.Name = "ListaServiciosLbl"
         Me.ListaServiciosLbl.Size = New System.Drawing.Size(721, 17)
         Me.ListaServiciosLbl.TabIndex = 1
+        Me.ListaServiciosLbl.Tag = "Lista de servicios"
         Me.ListaServiciosLbl.Text = "Lista de Servicios"
         '
         'GrillaServicios
@@ -141,6 +142,7 @@ Partial Class ABMServicio
         Me.EmailLbl.Name = "EmailLbl"
         Me.EmailLbl.Size = New System.Drawing.Size(67, 32)
         Me.EmailLbl.TabIndex = 7
+        Me.EmailLbl.Tag = "Email"
         Me.EmailLbl.Text = "E-mail"
         Me.EmailLbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -154,6 +156,7 @@ Partial Class ABMServicio
         Me.NombreLbl.Name = "NombreLbl"
         Me.NombreLbl.Size = New System.Drawing.Size(67, 25)
         Me.NombreLbl.TabIndex = 2
+        Me.NombreLbl.Tag = "Nombre"
         Me.NombreLbl.Text = "Nombre"
         Me.NombreLbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -183,6 +186,7 @@ Partial Class ABMServicio
         Me.TelefonoLbl.Name = "TelefonoLbl"
         Me.TelefonoLbl.Size = New System.Drawing.Size(69, 25)
         Me.TelefonoLbl.TabIndex = 6
+        Me.TelefonoLbl.Tag = "Telefono"
         Me.TelefonoLbl.Text = "Teléfono"
         Me.TelefonoLbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -208,6 +212,7 @@ Partial Class ABMServicio
         Me.ObservacionLbl.Name = "ObservacionLbl"
         Me.ObservacionLbl.Size = New System.Drawing.Size(228, 26)
         Me.ObservacionLbl.TabIndex = 5
+        Me.ObservacionLbl.Tag = "Observacion"
         Me.ObservacionLbl.Text = "Observación"
         Me.ObservacionLbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -236,10 +241,11 @@ Partial Class ABMServicio
         Me.AltaBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.AltaBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.AltaBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.AltaBtn.Location = New System.Drawing.Point(3, 10)
+        Me.AltaBtn.Location = New System.Drawing.Point(3, 3)
         Me.AltaBtn.Name = "AltaBtn"
-        Me.AltaBtn.Size = New System.Drawing.Size(234, 29)
+        Me.AltaBtn.Size = New System.Drawing.Size(234, 36)
         Me.AltaBtn.TabIndex = 9
+        Me.AltaBtn.Tag = "Agregar"
         Me.AltaBtn.Text = "Agregar"
         Me.AltaBtn.UseVisualStyleBackColor = True
         '
@@ -250,10 +256,11 @@ Partial Class ABMServicio
         Me.BajaBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BajaBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BajaBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.BajaBtn.Location = New System.Drawing.Point(243, 10)
+        Me.BajaBtn.Location = New System.Drawing.Point(243, 3)
         Me.BajaBtn.Name = "BajaBtn"
-        Me.BajaBtn.Size = New System.Drawing.Size(234, 29)
+        Me.BajaBtn.Size = New System.Drawing.Size(234, 36)
         Me.BajaBtn.TabIndex = 10
+        Me.BajaBtn.Tag = "Borrar"
         Me.BajaBtn.Text = "Borrar"
         Me.BajaBtn.UseVisualStyleBackColor = True
         '
@@ -264,10 +271,11 @@ Partial Class ABMServicio
         Me.ModificacionBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ModificacionBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ModificacionBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.ModificacionBtn.Location = New System.Drawing.Point(483, 10)
+        Me.ModificacionBtn.Location = New System.Drawing.Point(483, 3)
         Me.ModificacionBtn.Name = "ModificacionBtn"
-        Me.ModificacionBtn.Size = New System.Drawing.Size(235, 29)
+        Me.ModificacionBtn.Size = New System.Drawing.Size(235, 36)
         Me.ModificacionBtn.TabIndex = 11
+        Me.ModificacionBtn.Tag = "Modificar"
         Me.ModificacionBtn.Text = "Modificar"
         Me.ModificacionBtn.UseVisualStyleBackColor = True
         '
@@ -283,6 +291,7 @@ Partial Class ABMServicio
         Me.DireccionGrp.Size = New System.Drawing.Size(721, 52)
         Me.DireccionGrp.TabIndex = 21
         Me.DireccionGrp.TabStop = False
+        Me.DireccionGrp.Tag = "Direccion"
         Me.DireccionGrp.Text = "Dirección"
         '
         'TableLayoutPanel3
@@ -316,6 +325,7 @@ Partial Class ABMServicio
         Me.CalleLbl.Name = "CalleLbl"
         Me.CalleLbl.Size = New System.Drawing.Size(67, 30)
         Me.CalleLbl.TabIndex = 0
+        Me.CalleLbl.Tag = "Calle"
         Me.CalleLbl.Text = "Calle"
         Me.CalleLbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -327,6 +337,7 @@ Partial Class ABMServicio
         Me.NumeroLbl.Name = "NumeroLbl"
         Me.NumeroLbl.Size = New System.Drawing.Size(59, 30)
         Me.NumeroLbl.TabIndex = 1
+        Me.NumeroLbl.Tag = "Numero"
         Me.NumeroLbl.Text = "Número"
         Me.NumeroLbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -338,6 +349,7 @@ Partial Class ABMServicio
         Me.LocalidadLbl.Name = "LocalidadLbl"
         Me.LocalidadLbl.Size = New System.Drawing.Size(75, 30)
         Me.LocalidadLbl.TabIndex = 2
+        Me.LocalidadLbl.Tag = "Localidad"
         Me.LocalidadLbl.Text = "Localidad"
         Me.LocalidadLbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -375,6 +387,7 @@ Partial Class ABMServicio
         Me.PrecioLbl.Name = "PrecioLbl"
         Me.PrecioLbl.Size = New System.Drawing.Size(57, 32)
         Me.PrecioLbl.TabIndex = 22
+        Me.PrecioLbl.Tag = "Precio"
         Me.PrecioLbl.Text = "Precio"
         Me.PrecioLbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '

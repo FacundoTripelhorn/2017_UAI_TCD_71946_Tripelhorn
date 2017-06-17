@@ -17,7 +17,6 @@ Public Class TipoEventoDatos
                 Comando.ActualizarBD("TipoEvento", DTTE)
             End If
         Catch ex As Exception
-            MsgBox("Error al agregar el nuevo tipo de evento")
         End Try
     End Sub
 
@@ -44,7 +43,6 @@ Public Class TipoEventoDatos
                 Comando.ActualizarBD("TipoEventoPaso", DTTEP)
             End If
         Catch ex As Exception
-            MsgBox("Error al borrar el tipo de evento seleccionado")
         End Try
     End Sub
 
@@ -59,7 +57,6 @@ Public Class TipoEventoDatos
                 Comando.ActualizarBD("TipoEvento", DTTE)
             End If
         Catch ex As Exception
-            MsgBox("Error al borrar el tipo de evento seleccionado")
         End Try
     End Sub
 
@@ -105,7 +102,6 @@ Public Class TipoEventoDatos
             DTable.Rows.Add(DRow)
             Comando.ActualizarBD("TipoEventoPaso", DTable)
         Catch ex As Exception
-            MsgBox("Error al agregar el paso al tipo de evento")
         End Try
     End Sub
 
@@ -115,7 +111,6 @@ Public Class TipoEventoDatos
             If DTable.Rows.Count > 0 Then DTable.Rows(0).Delete()
             Comando.ActualizarBD("TipoEventoPaso", DTable)
         Catch ex As Exception
-            MsgBox("Error al eliminar el paso")
         End Try
     End Sub
 

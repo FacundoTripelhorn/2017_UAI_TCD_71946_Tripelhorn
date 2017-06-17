@@ -24,11 +24,11 @@ Partial Class NuevaPatente
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(NuevaPatente))
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.NombreLbl = New System.Windows.Forms.Label()
         Me.NombreTxt = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
+        Me.FormulariosLbl = New System.Windows.Forms.Label()
         Me.FormularioCombo = New System.Windows.Forms.ComboBox()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.AceptarBtn = New System.Windows.Forms.Button()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -37,11 +37,11 @@ Partial Class NuevaPatente
         Me.TableLayoutPanel1.BackColor = System.Drawing.Color.Transparent
         Me.TableLayoutPanel1.ColumnCount = 1
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel1.Controls.Add(Me.Label1, 0, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.NombreLbl, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.NombreTxt, 0, 1)
-        Me.TableLayoutPanel1.Controls.Add(Me.Label2, 0, 2)
+        Me.TableLayoutPanel1.Controls.Add(Me.FormulariosLbl, 0, 2)
         Me.TableLayoutPanel1.Controls.Add(Me.FormularioCombo, 0, 3)
-        Me.TableLayoutPanel1.Controls.Add(Me.Button1, 0, 4)
+        Me.TableLayoutPanel1.Controls.Add(Me.AceptarBtn, 0, 4)
         Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 0)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
@@ -54,18 +54,19 @@ Partial Class NuevaPatente
         Me.TableLayoutPanel1.Size = New System.Drawing.Size(228, 160)
         Me.TableLayoutPanel1.TabIndex = 0
         '
-        'Label1
+        'NombreLbl
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label1.Location = New System.Drawing.Point(3, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(222, 24)
-        Me.Label1.TabIndex = 4
-        Me.Label1.Text = "Ingrese el nombre"
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.BottomLeft
+        Me.NombreLbl.AutoSize = True
+        Me.NombreLbl.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.NombreLbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.NombreLbl.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.NombreLbl.Location = New System.Drawing.Point(3, 0)
+        Me.NombreLbl.Name = "NombreLbl"
+        Me.NombreLbl.Size = New System.Drawing.Size(222, 24)
+        Me.NombreLbl.TabIndex = 4
+        Me.NombreLbl.Tag = "Ingrese el nombre"
+        Me.NombreLbl.Text = "Ingrese el nombre"
+        Me.NombreLbl.TextAlign = System.Drawing.ContentAlignment.BottomLeft
         '
         'NombreTxt
         '
@@ -76,18 +77,19 @@ Partial Class NuevaPatente
         Me.NombreTxt.Size = New System.Drawing.Size(222, 23)
         Me.NombreTxt.TabIndex = 0
         '
-        'Label2
+        'FormulariosLbl
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label2.Location = New System.Drawing.Point(3, 56)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(222, 24)
-        Me.Label2.TabIndex = 5
-        Me.Label2.Text = "Seleccione el formulario"
-        Me.Label2.TextAlign = System.Drawing.ContentAlignment.BottomLeft
+        Me.FormulariosLbl.AutoSize = True
+        Me.FormulariosLbl.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.FormulariosLbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.FormulariosLbl.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.FormulariosLbl.Location = New System.Drawing.Point(3, 56)
+        Me.FormulariosLbl.Name = "FormulariosLbl"
+        Me.FormulariosLbl.Size = New System.Drawing.Size(222, 24)
+        Me.FormulariosLbl.TabIndex = 5
+        Me.FormulariosLbl.Tag = "Seleccione el formulario"
+        Me.FormulariosLbl.Text = "Seleccione el formulario"
+        Me.FormulariosLbl.TextAlign = System.Drawing.ContentAlignment.BottomLeft
         '
         'FormularioCombo
         '
@@ -100,19 +102,19 @@ Partial Class NuevaPatente
         Me.FormularioCombo.Size = New System.Drawing.Size(222, 24)
         Me.FormularioCombo.TabIndex = 1
         '
-        'Button1
+        'AceptarBtn
         '
-        Me.Button1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.AceptarBtn.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button1.Location = New System.Drawing.Point(3, 112)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(222, 45)
-        Me.Button1.TabIndex = 3
-        Me.Button1.Text = "Aceptar"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.AceptarBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.AceptarBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.AceptarBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.AceptarBtn.Location = New System.Drawing.Point(3, 112)
+        Me.AceptarBtn.Name = "AceptarBtn"
+        Me.AceptarBtn.Size = New System.Drawing.Size(222, 45)
+        Me.AceptarBtn.TabIndex = 3
+        Me.AceptarBtn.Text = "Aceptar"
+        Me.AceptarBtn.UseVisualStyleBackColor = True
         '
         'NuevaPatente
         '
@@ -131,9 +133,9 @@ Partial Class NuevaPatente
     End Sub
 
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
-    Friend WithEvents Label1 As Label
+    Friend WithEvents NombreLbl As Label
     Friend WithEvents NombreTxt As TextBox
-    Friend WithEvents Label2 As Label
+    Friend WithEvents FormulariosLbl As Label
     Friend WithEvents FormularioCombo As ComboBox
-    Friend WithEvents Button1 As Button
+    Friend WithEvents AceptarBtn As Button
 End Class

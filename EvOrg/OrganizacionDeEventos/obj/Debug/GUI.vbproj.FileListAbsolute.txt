@@ -236,3 +236,4 @@ C:\Users\Navegador\Desktop\2017_UAI_TCD_71946_Tripelhorn-master\EvOrg\Organizaci
 C:\Users\Navegador\Desktop\2017_UAI_TCD_71946_Tripelhorn-master\EvOrg\OrganizacionDeEventos\obj\Debug\GUI.vbproj.GenerateResource.Cache
 C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\OrganizacionDeEventos\bin\Debug\GMap.NET.Core.xml
 C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\OrganizacionDeEventos\bin\Debug\GMap.NET.WindowsForms.xml
+C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\OrganizacionDeEventos\obj\Debug\OrganizacionDeEventos.Idiomas.resources

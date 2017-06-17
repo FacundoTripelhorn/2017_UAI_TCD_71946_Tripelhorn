@@ -83,6 +83,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ControladorLogIn.vb" />
+    <Compile Include="MultiIdioma\Idiomas.Designer.vb">
+      <DependentUpon>Idiomas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MultiIdioma\Idiomas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MultiIdioma\IObservado.vb" />
+    <Compile Include="MultiIdioma\IObservador.vb" />
+    <Compile Include="MultiIdioma\Traductor.vb" />
+    <Compile Include="MultiIdioma\VistaDiccionario.vb" />
     <Compile Include="Negocio\FormulariosABM\ABMCliente.Designer.vb">
       <DependentUpon>ABMCliente.vb</DependentUpon>
     </Compile>
@@ -239,6 +249,9 @@
     <Compile Include="UsuarioFamiliaPatente\VistaUsuario.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="MultiIdioma\Idiomas.resx">
+      <DependentUpon>Idiomas.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Negocio\FormulariosABM\ABMCliente.resx">
       <DependentUpon>ABMCliente.vb</DependentUpon>
     </EmbeddedResource>

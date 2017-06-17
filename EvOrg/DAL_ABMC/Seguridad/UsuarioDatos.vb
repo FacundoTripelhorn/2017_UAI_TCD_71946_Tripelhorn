@@ -20,7 +20,6 @@ Public Class UsuarioDatos
                 Comando.ActualizarBD("Usuario", DTUsuario)
             End If
         Catch ex As Exception
-            MsgBox("Error al agregar un nuevo usuario")
         End Try
     End Sub
 
@@ -31,7 +30,6 @@ Public Class UsuarioDatos
             If DTUsuario.Rows.Count > 0 Then DTUsuario.Rows(0).Delete()
             Comando.ActualizarBD("Usuario", DTUsuario)
         Catch ex As Exception
-            MsgBox("Error al eliminar el usuario seleccionado")
         End Try
     End Sub
 
@@ -44,7 +42,6 @@ Public Class UsuarioDatos
             If DTUsuario.Rows.Count > 0 Then DTUsuario.Rows(0).ItemArray = DRow.ItemArray
             Comando.ActualizarBD("Usuario", DTUsuario)
         Catch ex As Exception
-            MsgBox("Error al eliminar el usuario seleccionado")
         End Try
     End Sub
 

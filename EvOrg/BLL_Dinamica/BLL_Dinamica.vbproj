@@ -89,6 +89,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Seguridad\IdiomaDinamico.vb" />
     <Compile Include="Seguridad\PatenteAbstractaDinamica.vb" />
     <Compile Include="Seguridad\PatenteDinamica.vb" />
     <Compile Include="Seguridad\UsuarioDinamico.vb" />

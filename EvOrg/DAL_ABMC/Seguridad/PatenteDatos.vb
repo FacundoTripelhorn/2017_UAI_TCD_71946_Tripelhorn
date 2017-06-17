@@ -11,13 +11,11 @@ Public Class PatenteDatos
         vPatente = DirectCast(pObjeto, Patente)
         Try
             Dim DTPatente As DataTable = Comando.GetDataTable("Patente")
-
             Dim DRow As DataRow = DTPatente.NewRow
             DRow.ItemArray = {vPatente.Id, vPatente.Nombre, vPatente.Formulario, vPatente.Padre}
             DTPatente.Rows.Add(DRow)
             Comando.ActualizarBD("Patente", DTPatente)
         Catch ex As Exception
-            MsgBox("Error al agregar la patente")
         End Try
     End Sub
 
@@ -38,7 +36,6 @@ Public Class PatenteDatos
             If DTPatente.Rows.Count > 0 Then DTPatente.Rows(0).Delete()
             Comando.ActualizarBD("Patente", DTPatente)
         Catch ex As Exception
-            MsgBox("Error al eliminar la patente")
         End Try
     End Sub
 
@@ -51,7 +48,6 @@ Public Class PatenteDatos
             If DTPatente.Rows.Count > 0 Then DTPatente.Rows(0).ItemArray = DRow.ItemArray
             Comando.ActualizarBD("Patente", DTPatente)
         Catch ex As Exception
-            MsgBox("Error al modificar la patente")
         End Try
     End Sub
 

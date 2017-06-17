@@ -23,7 +23,7 @@ Partial Class ABMUsuario
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ABMUsuario))
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.ListaUsuariosLbl = New System.Windows.Forms.Label()
         Me.AltaBtn = New System.Windows.Forms.Button()
         Me.BajaBtn = New System.Windows.Forms.Button()
         Me.ModificacionBtn = New System.Windows.Forms.Button()
@@ -35,18 +35,19 @@ Partial Class ABMUsuario
         CType(Me.GrillaUsuario, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'Label1
+        'ListaUsuariosLbl
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label1.Location = New System.Drawing.Point(3, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(329, 26)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Lista de Usuarios"
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.BottomLeft
+        Me.ListaUsuariosLbl.AutoSize = True
+        Me.ListaUsuariosLbl.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.ListaUsuariosLbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ListaUsuariosLbl.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.ListaUsuariosLbl.Location = New System.Drawing.Point(3, 0)
+        Me.ListaUsuariosLbl.Name = "ListaUsuariosLbl"
+        Me.ListaUsuariosLbl.Size = New System.Drawing.Size(329, 26)
+        Me.ListaUsuariosLbl.TabIndex = 1
+        Me.ListaUsuariosLbl.Tag = "Lista de usuarios"
+        Me.ListaUsuariosLbl.Text = "Lista de Usuarios"
+        Me.ListaUsuariosLbl.TextAlign = System.Drawing.ContentAlignment.BottomLeft
         '
         'AltaBtn
         '
@@ -59,6 +60,7 @@ Partial Class ABMUsuario
         Me.AltaBtn.Name = "AltaBtn"
         Me.AltaBtn.Size = New System.Drawing.Size(103, 32)
         Me.AltaBtn.TabIndex = 2
+        Me.AltaBtn.Tag = "Agregar"
         Me.AltaBtn.Text = "Agregar"
         Me.AltaBtn.UseVisualStyleBackColor = True
         '
@@ -73,6 +75,7 @@ Partial Class ABMUsuario
         Me.BajaBtn.Name = "BajaBtn"
         Me.BajaBtn.Size = New System.Drawing.Size(103, 32)
         Me.BajaBtn.TabIndex = 3
+        Me.BajaBtn.Tag = "Eliminar"
         Me.BajaBtn.Text = "Eliminar"
         Me.BajaBtn.UseVisualStyleBackColor = True
         '
@@ -87,6 +90,7 @@ Partial Class ABMUsuario
         Me.ModificacionBtn.Name = "ModificacionBtn"
         Me.ModificacionBtn.Size = New System.Drawing.Size(105, 32)
         Me.ModificacionBtn.TabIndex = 4
+        Me.ModificacionBtn.Tag = "Modificar"
         Me.ModificacionBtn.Text = "Modificar"
         Me.ModificacionBtn.UseVisualStyleBackColor = True
         '
@@ -95,7 +99,7 @@ Partial Class ABMUsuario
         Me.TableLayoutPanel1.BackColor = System.Drawing.Color.Transparent
         Me.TableLayoutPanel1.ColumnCount = 1
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel1.Controls.Add(Me.Label1, 0, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.ListaUsuariosLbl, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.TableLayoutPanel2, 0, 2)
         Me.TableLayoutPanel1.Controls.Add(Me.GrillaUsuario, 0, 1)
         Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
@@ -152,7 +156,7 @@ Partial Class ABMUsuario
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents Label1 As Label
+    Friend WithEvents ListaUsuariosLbl As Label
     Friend WithEvents AltaBtn As Button
     Friend WithEvents BajaBtn As Button
     Friend WithEvents ModificacionBtn As Button

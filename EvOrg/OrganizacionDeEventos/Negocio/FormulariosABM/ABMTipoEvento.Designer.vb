@@ -80,6 +80,7 @@ Partial Class ABMTipoEvento
         Me.TiposEventoLbl.Name = "TiposEventoLbl"
         Me.TiposEventoLbl.Size = New System.Drawing.Size(292, 23)
         Me.TiposEventoLbl.TabIndex = 1
+        Me.TiposEventoLbl.Tag = "Lista de tipos de evento"
         Me.TiposEventoLbl.Text = "Lista de Tipos de Evento"
         '
         'NombreLbl
@@ -92,6 +93,7 @@ Partial Class ABMTipoEvento
         Me.NombreLbl.Name = "NombreLbl"
         Me.NombreLbl.Size = New System.Drawing.Size(143, 20)
         Me.NombreLbl.TabIndex = 2
+        Me.NombreLbl.Tag = "Nombre"
         Me.NombreLbl.Text = "Nombre"
         '
         'DescripcionLbl
@@ -104,6 +106,7 @@ Partial Class ABMTipoEvento
         Me.DescripcionLbl.Name = "DescripcionLbl"
         Me.DescripcionLbl.Size = New System.Drawing.Size(143, 25)
         Me.DescripcionLbl.TabIndex = 3
+        Me.DescripcionLbl.Tag = "Descripcion"
         Me.DescripcionLbl.Text = "Descripción"
         '
         'PasosLbl
@@ -116,6 +119,7 @@ Partial Class ABMTipoEvento
         Me.PasosLbl.Name = "PasosLbl"
         Me.PasosLbl.Size = New System.Drawing.Size(414, 23)
         Me.PasosLbl.TabIndex = 4
+        Me.PasosLbl.Tag = "Lista de pasos"
         Me.PasosLbl.Text = "Lista de Pasos"
         '
         'GrillaPasos
@@ -163,6 +167,7 @@ Partial Class ABMTipoEvento
         Me.PasoGPB.Size = New System.Drawing.Size(414, 105)
         Me.PasoGPB.TabIndex = 8
         Me.PasoGPB.TabStop = False
+        Me.PasoGPB.Tag = "Paso"
         Me.PasoGPB.Text = "Paso"
         '
         'TableLayoutPanel3
@@ -210,6 +215,7 @@ Partial Class ABMTipoEvento
         Me.TableLayoutPanel3.SetRowSpan(Me.BajaPasoBtn, 2)
         Me.BajaPasoBtn.Size = New System.Drawing.Size(114, 36)
         Me.BajaPasoBtn.TabIndex = 6
+        Me.BajaPasoBtn.Tag = "Borrar paso"
         Me.BajaPasoBtn.Text = "Borrar Paso"
         Me.BajaPasoBtn.UseVisualStyleBackColor = True
         '
@@ -221,6 +227,7 @@ Partial Class ABMTipoEvento
         Me.PrioridadLbl.Name = "PrioridadLbl"
         Me.PrioridadLbl.Size = New System.Drawing.Size(95, 30)
         Me.PrioridadLbl.TabIndex = 3
+        Me.PrioridadLbl.Tag = "Prioridad"
         Me.PrioridadLbl.Text = "Prioridad"
         '
         'DescripcionLbl2
@@ -231,6 +238,7 @@ Partial Class ABMTipoEvento
         Me.DescripcionLbl2.Name = "DescripcionLbl2"
         Me.DescripcionLbl2.Size = New System.Drawing.Size(95, 27)
         Me.DescripcionLbl2.TabIndex = 0
+        Me.DescripcionLbl2.Tag = "Descripcion"
         Me.DescripcionLbl2.Text = "Descripción"
         '
         'AltaPasoBtn
@@ -243,6 +251,7 @@ Partial Class ABMTipoEvento
         Me.TableLayoutPanel3.SetRowSpan(Me.AltaPasoBtn, 2)
         Me.AltaPasoBtn.Size = New System.Drawing.Size(114, 35)
         Me.AltaPasoBtn.TabIndex = 5
+        Me.AltaPasoBtn.Tag = "Agregar paso"
         Me.AltaPasoBtn.Text = "Agregar Paso"
         Me.AltaPasoBtn.UseVisualStyleBackColor = True
         '
@@ -255,7 +264,8 @@ Partial Class ABMTipoEvento
         Me.TableLayoutPanel3.SetRowSpan(Me.DiasLbl, 2)
         Me.DiasLbl.Size = New System.Drawing.Size(95, 26)
         Me.DiasLbl.TabIndex = 2
-        Me.DiasLbl.Text = "Dias"
+        Me.DiasLbl.Tag = "Dias"
+        Me.DiasLbl.Text = "Días"
         '
         'DescripcionTxt2
         '
@@ -334,6 +344,7 @@ Partial Class ABMTipoEvento
         Me.AltaBtn.Name = "AltaBtn"
         Me.AltaBtn.Size = New System.Drawing.Size(231, 38)
         Me.AltaBtn.TabIndex = 7
+        Me.AltaBtn.Tag = "Agregar"
         Me.AltaBtn.Text = "Agregar"
         Me.AltaBtn.UseVisualStyleBackColor = True
         '
@@ -348,6 +359,7 @@ Partial Class ABMTipoEvento
         Me.BajaBtn.Name = "BajaBtn"
         Me.BajaBtn.Size = New System.Drawing.Size(231, 38)
         Me.BajaBtn.TabIndex = 8
+        Me.BajaBtn.Tag = "Borrar"
         Me.BajaBtn.Text = "Borrar"
         Me.BajaBtn.UseVisualStyleBackColor = True
         '
@@ -362,6 +374,7 @@ Partial Class ABMTipoEvento
         Me.ModificacionBtn.Name = "ModificacionBtn"
         Me.ModificacionBtn.Size = New System.Drawing.Size(232, 38)
         Me.ModificacionBtn.TabIndex = 9
+        Me.ModificacionBtn.Tag = "Modificar"
         Me.ModificacionBtn.Text = "Modificar"
         Me.ModificacionBtn.UseVisualStyleBackColor = True
         '

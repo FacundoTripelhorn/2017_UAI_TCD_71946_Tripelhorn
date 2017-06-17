@@ -76,6 +76,7 @@ Partial Class SeleccionarSalon
         Me.DireccionGrp.Size = New System.Drawing.Size(868, 52)
         Me.DireccionGrp.TabIndex = 22
         Me.DireccionGrp.TabStop = False
+        Me.DireccionGrp.Tag = "Direccion"
         Me.DireccionGrp.Text = "Dirección"
         '
         'TableLayoutPanel3
@@ -110,6 +111,7 @@ Partial Class SeleccionarSalon
         Me.CalleLbl.Name = "CalleLbl"
         Me.CalleLbl.Size = New System.Drawing.Size(47, 30)
         Me.CalleLbl.TabIndex = 0
+        Me.CalleLbl.Tag = "Calle"
         Me.CalleLbl.Text = "Calle"
         Me.CalleLbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -121,6 +123,7 @@ Partial Class SeleccionarSalon
         Me.NumeroLbl.Name = "NumeroLbl"
         Me.NumeroLbl.Size = New System.Drawing.Size(58, 30)
         Me.NumeroLbl.TabIndex = 1
+        Me.NumeroLbl.Tag = "Numero"
         Me.NumeroLbl.Text = "Número"
         Me.NumeroLbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -132,6 +135,7 @@ Partial Class SeleccionarSalon
         Me.LocalidadLbl.Name = "LocalidadLbl"
         Me.LocalidadLbl.Size = New System.Drawing.Size(72, 30)
         Me.LocalidadLbl.TabIndex = 2
+        Me.LocalidadLbl.Tag = "Localidad"
         Me.LocalidadLbl.Text = "Localidad"
         Me.LocalidadLbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -199,6 +203,7 @@ Partial Class SeleccionarSalon
         Me.AceptarBtn.Name = "AceptarBtn"
         Me.AceptarBtn.Size = New System.Drawing.Size(428, 36)
         Me.AceptarBtn.TabIndex = 2
+        Me.AceptarBtn.Tag = "Aceptar"
         Me.AceptarBtn.Text = "Aceptar"
         Me.AceptarBtn.UseVisualStyleBackColor = False
         '
@@ -213,6 +218,7 @@ Partial Class SeleccionarSalon
         Me.CancelarBtn.Name = "CancelarBtn"
         Me.CancelarBtn.Size = New System.Drawing.Size(428, 36)
         Me.CancelarBtn.TabIndex = 3
+        Me.CancelarBtn.Tag = "Cancelar"
         Me.CancelarBtn.Text = "Cancelar"
         Me.CancelarBtn.UseVisualStyleBackColor = False
         '
@@ -240,7 +246,7 @@ Partial Class SeleccionarSalon
         Me.GMapa.ShowTileGridLines = False
         Me.GMapa.Size = New System.Drawing.Size(336, 284)
         Me.GMapa.TabIndex = 5
-        Me.GMapa.Zoom = 2.0R
+        Me.GMapa.Zoom = 18.0R
         '
         'SeleccionarSalon
         '

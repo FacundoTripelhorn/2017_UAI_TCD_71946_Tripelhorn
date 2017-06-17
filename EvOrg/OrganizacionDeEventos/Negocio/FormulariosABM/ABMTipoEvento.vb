@@ -1,17 +1,22 @@
 ﻿Imports BLL_Dinamica
 Imports BLL_Estatica
-Public Class ABMTipoEvento
+Imports OrganizacionDeEventos
 
+Public Class ABMTipoEvento
+    Implements IObservador
+    Dim vTraductor As Traductor = Traductor.GetInstance
     Dim vTipoEvento As TipoEvento
     Dim vPaso As Paso
     Dim vTipoEventoDinamico As New TipoEventoDinamico
     Dim vPasoDinamico As New PasoDinamico
 
     Private Sub ABMTipoEvento_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        vTraductor.Registrar(Me)
         Actualizar()
-        PrioridadCombo.Items.Add("Baja")
-        PrioridadCombo.Items.Add("Media")
-        PrioridadCombo.Items.Add("Alta")
+        PrioridadCombo.Items.Add(vTraductor.Traducir("Baja"))
+        PrioridadCombo.Items.Add(vTraductor.Traducir("Media"))
+        PrioridadCombo.Items.Add(vTraductor.Traducir("Alta"))
+        ActualizarObservador(Me)
     End Sub
 
     Public Sub Actualizar()
@@ -22,6 +27,7 @@ Public Class ABMTipoEvento
         GrillaTipoEvento.DataSource = Nothing
         GrillaTipoEvento.DataSource = vLista
         GrillaTipoEvento.Columns(0).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        ActualizarObservador(GrillaTipoEvento)
     End Sub
 
     Public Sub ActualizarPasos()
@@ -32,6 +38,7 @@ Public Class ABMTipoEvento
         GrillaPasos.DataSource = Nothing
         GrillaPasos.DataSource = vLista
         GrillaPasos.Columns(0).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        ActualizarObservador(GrillaPasos)
     End Sub
 
     Private Sub Limpiar()
@@ -43,12 +50,18 @@ Public Class ABMTipoEvento
     End Sub
 
     Private Sub AltaBtn_Click(sender As Object, e As EventArgs) Handles AltaBtn.Click
-        If Not (NombreTxt.Text = "") Then
-            vTipoEvento = New TipoEvento(NombreTxt.Text, DescripcionTxt.Text)
-            vTipoEventoDinamico.Alta(vTipoEvento)
-            Limpiar()
-            Actualizar()
-        End If
+        Try
+            If Not (NombreTxt.Text = "") Then
+                vTipoEvento = New TipoEvento(NombreTxt.Text, DescripcionTxt.Text)
+                vTipoEventoDinamico.Alta(vTipoEvento)
+                Limpiar()
+                Actualizar()
+            Else
+                Throw New Exception("Ingrese el nombre")
+            End If
+        Catch ex As Exception
+            MessageBox.Show(vTraductor.Traducir(ex.Message), "EvOrg")
+        End Try
     End Sub
 
     Private Sub BajaBtn_Click(sender As Object, e As EventArgs) Handles BajaBtn.Click
@@ -68,15 +81,19 @@ Public Class ABMTipoEvento
     End Sub
 
     Private Sub AltaPasoBtn_Click(sender As Object, e As EventArgs) Handles AltaPasoBtn.Click
-        If Not (DescripcionTxt2.Text = "" And DiasNumeric.Value = 0 And PrioridadCombo.Text = "") Then
-            vPaso = New Paso(SetPasoId(), DescripcionTxt2.Text,, PrioridadCombo.Text, "Genérico")
-            vPasoDinamico.Alta(vPaso)
-            vTipoEventoDinamico.AgregarPaso(VistaATipoEvento, vPaso, DiasNumeric.Value)
-            Limpiar()
-            ActualizarPasos()
-        Else
-            MsgBox("Ingrese los datos del paso")
-        End If
+        Try
+            If Not (DescripcionTxt2.Text = "" And DiasNumeric.Value = 0 And PrioridadCombo.Text = "") Then
+                vPaso = New Paso(SetPasoId(), DescripcionTxt2.Text,, PrioridadCombo.Text, vTraductor.Traducir("Generico"))
+                vPasoDinamico.Alta(vPaso)
+                vTipoEventoDinamico.AgregarPaso(VistaATipoEvento, vPaso, DiasNumeric.Value)
+                Limpiar()
+                ActualizarPasos()
+            Else
+                Throw New Exception("Ingrese los datos del paso")
+            End If
+        Catch ex As Exception
+            MessageBox.Show(vTraductor.Traducir(ex.Message), "EvOrg")
+        End Try
     End Sub
 
     Private Sub BajaPasoBtn_Click(sender As Object, e As EventArgs) Handles BajaPasoBtn.Click
@@ -143,5 +160,27 @@ Public Class ABMTipoEvento
         DescripcionTxt2.Text = vP.Descripcion
         DiasNumeric.Value = DirectCast(GrillaPasos.SelectedRows(0).DataBoundItem, VistaPasoTE).Dias
         PrioridadCombo.SelectedItem = vP.Prioridad
+    End Sub
+
+    Public Sub ActualizarObservador(Optional pControl As Control = Nothing) Implements IObservador.ActualizarObservador
+        For Each vControl As Control In pControl.Controls
+            Try
+                vControl.Text = vTraductor.IdiomaSeleccionado.Diccionario.Item(vControl.Tag.ToString)
+            Catch ex As Exception
+            Finally
+                If vControl.Controls.Count > 0 Then
+                    ActualizarObservador(vControl)
+                End If
+                If TypeOf vControl Is DataGridView Then
+                    For Each vColumna As DataGridViewColumn In DirectCast(vControl, DataGridView).Columns
+                        Try
+                            vColumna.HeaderText = vTraductor.IdiomaSeleccionado.Diccionario.Item(vColumna.Name)
+                        Catch ex As Exception
+
+                        End Try
+                    Next
+                End If
+            End Try
+        Next
     End Sub
 End Class

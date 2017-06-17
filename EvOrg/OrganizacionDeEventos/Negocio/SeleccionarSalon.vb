@@ -4,10 +4,15 @@ Imports GMap.NET
 Imports GMap.NET.MapProviders
 Imports BLL_Dinamica
 Imports BLL_Estatica
+Imports OrganizacionDeEventos
+
 Public Class SeleccionarSalon
+    Implements IObservador
+    Dim vTraductor As Traductor = Traductor.GetInstance
     Dim vSalon As Salon
     Dim vSalonDinamico As New SalonDinamico
     Private Sub SeleccionarSalon_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        vTraductor.Registrar(Me)
         Actualizar()
         SetGMap()
         GMapa.SetPositionByKeywords("Av. San Juan 951, Capital Federal, Argentina")
@@ -15,6 +20,7 @@ Public Class SeleccionarSalon
         For Each Salon As Salon In vSalonDinamico.ConsultaTodo
             AddMarkers(Salon.Direccion.Calle & " " & Salon.Direccion.Numero & ", " & Salon.Direccion.Localidad & ", Argentina")
         Next
+        ActualizarObservador(Me)
     End Sub
 
     Public Sub Actualizar()
@@ -29,7 +35,6 @@ Public Class SeleccionarSalon
         Catch ex As Exception
 
         End Try
-
     End Sub
 
     Private Sub SetGMap()
@@ -68,5 +73,27 @@ Public Class SeleccionarSalon
         Catch ex As Exception
 
         End Try
+    End Sub
+
+    Public Sub ActualizarObservador(Optional pControl As Control = Nothing) Implements IObservador.ActualizarObservador
+        For Each vControl As Control In pControl.Controls
+            Try
+                vControl.Text = vTraductor.IdiomaSeleccionado.Diccionario.Item(vControl.Tag.ToString)
+            Catch ex As Exception
+            Finally
+                If vControl.Controls.Count > 0 Then
+                    ActualizarObservador(vControl)
+                End If
+                If TypeOf vControl Is DataGridView Then
+                    For Each vColumna As DataGridViewColumn In DirectCast(vControl, DataGridView).Columns
+                        Try
+                            vColumna.HeaderText = vTraductor.IdiomaSeleccionado.Diccionario.Item(vColumna.Name)
+                        Catch ex As Exception
+
+                        End Try
+                    Next
+                End If
+            End Try
+        Next
     End Sub
 End Class

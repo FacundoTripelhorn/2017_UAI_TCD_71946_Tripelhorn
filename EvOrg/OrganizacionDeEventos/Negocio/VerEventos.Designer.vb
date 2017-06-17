@@ -24,85 +24,71 @@ Partial Class VerEventos
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(VerEventos))
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
+        Me.BorrarEventoBtn = New System.Windows.Forms.Button()
+        Me.ModificarEventoBtn = New System.Windows.Forms.Button()
+        Me.GrillaEventos = New System.Windows.Forms.DataGridView()
         Me.TableLayoutPanel1.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.GrillaEventos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TableLayoutPanel1
         '
         Me.TableLayoutPanel1.BackColor = System.Drawing.Color.Transparent
-        Me.TableLayoutPanel1.ColumnCount = 3
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
-        Me.TableLayoutPanel1.Controls.Add(Me.DataGridView1, 0, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.Button1, 0, 1)
-        Me.TableLayoutPanel1.Controls.Add(Me.Button2, 1, 1)
-        Me.TableLayoutPanel1.Controls.Add(Me.Button3, 2, 1)
+        Me.TableLayoutPanel1.ColumnCount = 2
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
+        Me.TableLayoutPanel1.Controls.Add(Me.GrillaEventos, 0, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.BorrarEventoBtn, 0, 1)
+        Me.TableLayoutPanel1.Controls.Add(Me.ModificarEventoBtn, 1, 1)
         Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 0)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 2
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 81.60919!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 81.6092!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 18.3908!))
         Me.TableLayoutPanel1.Size = New System.Drawing.Size(442, 304)
         Me.TableLayoutPanel1.TabIndex = 0
         '
-        'DataGridView1
+        'BorrarEventoBtn
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.TableLayoutPanel1.SetColumnSpan(Me.DataGridView1, 3)
-        Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.DataGridView1.Location = New System.Drawing.Point(3, 3)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(436, 242)
-        Me.DataGridView1.TabIndex = 0
-        '
-        'Button1
-        '
-        Me.Button1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.BorrarEventoBtn.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button1.Location = New System.Drawing.Point(3, 251)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(141, 50)
-        Me.Button1.TabIndex = 1
-        Me.Button1.Text = "Crear evento"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.BorrarEventoBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BorrarEventoBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BorrarEventoBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.BorrarEventoBtn.Location = New System.Drawing.Point(3, 251)
+        Me.BorrarEventoBtn.Name = "BorrarEventoBtn"
+        Me.BorrarEventoBtn.Size = New System.Drawing.Size(215, 50)
+        Me.BorrarEventoBtn.TabIndex = 2
+        Me.BorrarEventoBtn.Tag = "Borrar evento"
+        Me.BorrarEventoBtn.Text = "Borrar evento"
+        Me.BorrarEventoBtn.UseVisualStyleBackColor = True
         '
-        'Button2
+        'ModificarEventoBtn
         '
-        Me.Button2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.ModificarEventoBtn.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button2.Location = New System.Drawing.Point(150, 251)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(141, 50)
-        Me.Button2.TabIndex = 2
-        Me.Button2.Text = "Borrar evento"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.ModificarEventoBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ModificarEventoBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ModificarEventoBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.ModificarEventoBtn.Location = New System.Drawing.Point(224, 251)
+        Me.ModificarEventoBtn.Name = "ModificarEventoBtn"
+        Me.ModificarEventoBtn.Size = New System.Drawing.Size(215, 50)
+        Me.ModificarEventoBtn.TabIndex = 3
+        Me.ModificarEventoBtn.Tag = "Modificar evento"
+        Me.ModificarEventoBtn.Text = "Modificar evento"
+        Me.ModificarEventoBtn.UseVisualStyleBackColor = True
         '
-        'Button3
+        'GrillaEventos
         '
-        Me.Button3.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button3.Location = New System.Drawing.Point(297, 251)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(142, 50)
-        Me.Button3.TabIndex = 3
-        Me.Button3.Text = "Modificar evento"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.GrillaEventos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.TableLayoutPanel1.SetColumnSpan(Me.GrillaEventos, 2)
+        Me.GrillaEventos.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.GrillaEventos.Location = New System.Drawing.Point(3, 3)
+        Me.GrillaEventos.Name = "GrillaEventos"
+        Me.GrillaEventos.Size = New System.Drawing.Size(436, 242)
+        Me.GrillaEventos.TabIndex = 0
         '
         'VerEventos
         '
@@ -115,14 +101,13 @@ Partial Class VerEventos
         Me.Name = "VerEventos"
         Me.Text = "EvOrg"
         Me.TableLayoutPanel1.ResumeLayout(False)
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.GrillaEventos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
-    Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
+    Friend WithEvents BorrarEventoBtn As Button
+    Friend WithEvents ModificarEventoBtn As Button
+    Friend WithEvents GrillaEventos As DataGridView
 End Class
