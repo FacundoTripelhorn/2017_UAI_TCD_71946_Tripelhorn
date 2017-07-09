@@ -1,8 +1,27 @@
 ﻿Imports OrganizacionDeEventos
-
+Imports BLL_Estatica
 Public Class ReservarServicio
     Implements IObservador
     Dim vTraductor As Traductor = Traductor.GetInstance
+    Dim vEvento As Evento
+
+    Sub New()
+
+        ' This call is required by the designer.
+        InitializeComponent()
+
+        ' Add any initialization after the InitializeComponent() call.
+
+    End Sub
+
+    Sub New(ByRef pEvento As Evento)
+
+        ' This call is required by the designer.
+        InitializeComponent()
+
+        ' Add any initialization after the InitializeComponent() call.
+        vEvento = pEvento
+    End Sub
 
     Public Sub ActualizarObservador(Optional pControl As Control = Nothing) Implements IObservador.ActualizarObservador
         For Each vControl As Control In pControl.Controls

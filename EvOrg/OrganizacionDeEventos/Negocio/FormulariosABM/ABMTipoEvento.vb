@@ -27,7 +27,7 @@ Public Class ABMTipoEvento
         GrillaTipoEvento.DataSource = Nothing
         GrillaTipoEvento.DataSource = vLista
         GrillaTipoEvento.Columns(0).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
-        ActualizarObservador(GrillaTipoEvento)
+        ActualizarObservador(Me)
     End Sub
 
     Public Sub ActualizarPasos()
@@ -38,7 +38,7 @@ Public Class ABMTipoEvento
         GrillaPasos.DataSource = Nothing
         GrillaPasos.DataSource = vLista
         GrillaPasos.Columns(0).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
-        ActualizarObservador(GrillaPasos)
+        ActualizarObservador(Me)
     End Sub
 
     Private Sub Limpiar()

@@ -59,4 +59,30 @@ Public Class ClienteDatos
             Return Nothing
         End Try
     End Function
+
+    Public Function GetCliente(pDNI As Integer) As Cliente
+        Dim vCliente As New Cliente
+        Try
+            Dim DTable As DataTable = Comando.GetData("SELECT * FROM Cliente WHERE DNI = " & pDNI)
+            If DTable.Rows.Count > 0 Then
+                vCliente.DNI = pDNI
+                vCliente.Nombre = DTable.Rows(0).Item(1)
+                vCliente.Apellido = DTable.Rows(0).Item(2)
+                vCliente.Telefono = DTable.Rows(0).Item(3)
+                vCliente.Email = DTable.Rows(0).Item(4)
+            End If
+            Return vCliente
+        Catch ex As Exception
+            Return Nothing
+        End Try
+    End Function
+
+    Public Function CheckCliente(pDNI As Integer) As Boolean
+        Dim DTable As DataTable = Comando.GetData("SELECT * FROM Cliente WHERE DNI = " & pDNI)
+        If DTable.Rows.Count > 0 Then
+            Return True
+        Else
+            Return False
+        End If
+    End Function
 End Class

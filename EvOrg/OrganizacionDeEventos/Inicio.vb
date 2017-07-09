@@ -52,20 +52,25 @@ Public Class Inicio
                 End If
                 If TypeOf vControl Is MenuStrip Then
                     For Each vToolStrip As ToolStripMenuItem In DirectCast(vControl, MenuStrip).Items
-                        Try
-                            vToolStrip.Text = vTraductor.IdiomaSeleccionado.Diccionario.Item(vToolStrip.Name)
-                            If vToolStrip.DropDownItems.Count > 0 Then
-                                For Each vItem As ToolStripDropDownItem In vToolStrip.DropDownItems
-                                    vItem.Text = vTraductor.IdiomaSeleccionado.Diccionario.Item(vItem.Name)
-                                Next
-                            End If
-                        Catch ex As Exception
-
-                        End Try
+                        TraducirItems(vToolStrip)
                     Next
                 End If
             End Try
         Next
+    End Sub
+
+    Private Sub TraducirItems(pTool As ToolStripMenuItem)
+        Try
+            pTool.Text = vTraductor.IdiomaSeleccionado.Diccionario.Item(pTool.Name)
+            For Each vItem As ToolStripDropDownItem In pTool.DropDownItems
+                vItem.Text = vTraductor.IdiomaSeleccionado.Diccionario.Item(vItem.Name)
+                If vItem.DropDownItems.Count > 0 Then
+                    TraducirItems(vItem)
+                End If
+            Next
+        Catch ex As Exception
+
+        End Try
     End Sub
 
     Private Sub IdiomaCombo_SelectedIndexChanged(sender As Object, e As EventArgs) Handles IdiomaCombo.SelectedIndexChanged

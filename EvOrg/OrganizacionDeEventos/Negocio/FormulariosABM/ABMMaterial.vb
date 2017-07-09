@@ -17,8 +17,12 @@ Public Class ABMMaterial
 
     Private Sub Actualizar()
         Try
+            Dim vLista As New List(Of VistaMaterial)
+            For Each Material As Material In vMaterialDinamico.ConsultaTodo
+                vLista.Add(New VistaMaterial(Material.Id, Material.Nombre, Material.Cantidad, Material.Precio))
+            Next
             GrillaMateriales.DataSource = Nothing
-            GrillaMateriales.DataSource = vMaterialDinamico.ConsultaTodo()
+            GrillaMateriales.DataSource = vLista
             GrillaMateriales.Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
             ActualizarObservador(GrillaMateriales)
         Catch ex As Exception
@@ -36,7 +40,7 @@ Public Class ABMMaterial
     Private Sub BtnAlta_Click(sender As Object, e As EventArgs) Handles AltaBtn.Click
         Try
             If Not (IdTxt.Text = "" And NombreTxt.Text = "" And CantidadNumeric.Value = 0 And PrecioTxt.Text = "") Then
-                vMaterial = New Material(IdTxt.Text, NombreTxt.Text, CantidadNumeric.Value, PrecioTxt.Text)
+                vMaterial = New Material(IdTxt.Text, NombreTxt.Text, CantidadNumeric.Value, Decimal.Parse(PrecioTxt.Text))
                 vMaterialDinamico.Alta(vMaterial)
                 Limpiar()
                 Actualizar()

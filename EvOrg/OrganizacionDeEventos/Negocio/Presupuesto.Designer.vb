@@ -306,7 +306,7 @@ Partial Class Presupuesto
         Me.SalonLbl.Name = "SalonLbl"
         Me.SalonLbl.Size = New System.Drawing.Size(144, 28)
         Me.SalonLbl.TabIndex = 3
-        Me.SalonLbl.Tag = "Salon"
+        Me.SalonLbl.Tag = "Salón"
         Me.SalonLbl.Text = "Salón"
         Me.SalonLbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '

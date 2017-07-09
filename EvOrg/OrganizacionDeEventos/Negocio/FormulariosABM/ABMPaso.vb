@@ -10,7 +10,16 @@ Public Class ABMPaso
     Dim vEvento As Evento
     Dim vEventoDinamico As New EventoDinamico
 
-    Sub New(Optional pEvento As Evento = Nothing)
+    Sub New()
+
+        ' This call is required by the designer.
+        InitializeComponent()
+
+        ' Add any initialization after the InitializeComponent() call.
+
+    End Sub
+
+    Sub New(ByRef pEvento As Evento)
 
         ' This call is required by the designer.
         InitializeComponent()
@@ -22,22 +31,21 @@ Public Class ABMPaso
     End Sub
 
     Private Sub ABMPaso_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        vTraductor.Registrar(Me)
+        Calendario.RemoveAllAnnuallyBoldedDates()
+        CargarPrioridadCombo()
+        CargarEventos()
         Try
-            vTraductor.Registrar(Me)
-            Calendario.RemoveAllAnnuallyBoldedDates()
-            CargarPrioridadCombo()
-            CargarEventos()
-            For Each Evento As String In EventoCombo.Items
-                If vEvento.Nombre = Evento Then
+            For Each Evento As Evento In EventoCombo.Items
+                If vEvento.Nombre = Evento.Nombre Then
                     EventoCombo.SelectedItem = Evento
                     EventoCombo.Enabled = False
                 End If
+                Actualizar()
             Next
-            Actualizar()
-            ActualizarObservador(Me)
         Catch ex As Exception
-
         End Try
+        ActualizarObservador(Me)
     End Sub
 
     Private Sub CargarPrioridadCombo()
@@ -48,7 +56,7 @@ Public Class ABMPaso
 
     Private Sub CargarEventos()
         For Each Evento As Evento In vEventoDinamico.ConsultaTodo
-            EventoCombo.Items.Add(Evento.Nombre)
+            EventoCombo.Items.Add(Evento)
         Next
     End Sub
     Private Sub Limpiar()

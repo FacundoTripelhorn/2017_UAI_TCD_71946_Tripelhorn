@@ -66,7 +66,7 @@ Partial Class ABMPatente
         '
         Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AgregarPatenteToolStripMenuItem, Me.AgregarGrupoDePatentesToolStripMenuItem, Me.EliminarElementoToolStripMenuItem})
         Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(217, 70)
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(217, 92)
         '
         'AgregarPatenteToolStripMenuItem
         '

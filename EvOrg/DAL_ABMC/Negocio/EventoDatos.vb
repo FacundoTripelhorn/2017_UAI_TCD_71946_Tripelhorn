@@ -6,12 +6,15 @@ Public Class EventoDatos
     Implements IABMC
 
     Dim vEvento As New Evento
+    Dim vMaterialDatos As New MaterialDatos
+
     Public Sub Alta(Optional pObjeto As Object = Nothing) Implements IABMC.Alta
         Try
             If TypeOf pObjeto Is Evento Then
                 vEvento = DirectCast(pObjeto, Evento)
                 Dim DTable As DataTable = Comando.GetDataTable("Evento")
                 Dim DRow As DataRow = DTable.NewRow
+                vEvento.Id = DirectCast(ConsultaTodo.Last, Evento).Id + 1
                 DRow.ItemArray = {vEvento.Id, vEvento.Nombre, vEvento.Fecha, vEvento.CantidadInvitados, vEvento.Tipo.Id, vEvento.Salon.Id, vEvento.Cliente.DNI}
                 DTable.Rows.Add(DRow)
                 Comando.ActualizarBD("Evento", DTable)
@@ -32,6 +35,25 @@ Public Class EventoDatos
             End If
         Catch ex As Exception
         End Try
+    End Sub
+
+    Public Sub ReservarMaterial(pEvento As Evento, pMaterial As Material)
+        Dim DTMateriales As DataTable = Comando.GetDataTable("ReservaMaterial")
+        Dim DRow As DataRow = DTMateriales.NewRow
+        For Each dr As DataRow In DTMateriales.Rows
+            If dr(0) = pEvento.Id And dr(1) = pMaterial.Id Then
+                dr(2) += pMaterial.Cantidad
+                If dr(3) < pMaterial.Fecha Then dr(3) = pMaterial.Fecha
+                Exit For
+            End If
+            If dr(0) <> pEvento.Id And dr(1) <> pMaterial.Id Then
+                vMaterialDatos.AltaMaterialTemporal(pMaterial)
+                DRow.ItemArray = {pEvento.Id, pMaterial.Id, pMaterial.Cantidad, pMaterial.Fecha}
+                DTMateriales.Rows.Add(DRow)
+                Exit For
+            End If
+        Next
+        Comando.ActualizarBD("ReservaMaterial", DTMateriales)
     End Sub
 
     Private Sub BorrarMateriales(pEvento As Evento)
@@ -98,10 +120,11 @@ Public Class EventoDatos
         For Each Drow As DataRow In DTable.Rows
             For Each Material As Material In vMateriales
                 If Drow(1) = Material.Id Then
-                    vLista.Add(Material)
+                    vLista.Add(New Material(Material.Id, Material.Nombre, Drow(2), Date.Parse(Drow(3))))
                 End If
             Next
         Next
+
         Return vLista
     End Function
 

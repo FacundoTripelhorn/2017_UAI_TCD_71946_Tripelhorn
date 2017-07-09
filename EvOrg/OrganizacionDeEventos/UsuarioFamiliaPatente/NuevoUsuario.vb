@@ -14,6 +14,7 @@ Public Class NuevoUsuario
     Property Modificacion As New Boolean
 
     Private Sub NuevoUsuario_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        vTraductor.Registrar(Me)
         Dim vLista As List(Of Object) = FamiliaDinamica.ConsultaTodo
         For Each vFamilia As Familia In vLista
             FamiliaCombo.Items.Add(vFamilia.Nombre)
@@ -23,6 +24,7 @@ Public Class NuevoUsuario
             IdUsuarioTxt.Enabled = False
             EmailTxt.Text = Usuario.Email
         End If
+        ActualizarObservador(Me)
     End Sub
 
     Private Sub AceptarBtn_Click(sender As Object, e As EventArgs) Handles AceptarBtn.Click

@@ -113,6 +113,7 @@ Partial Class NuevaPatente
         Me.AceptarBtn.Name = "AceptarBtn"
         Me.AceptarBtn.Size = New System.Drawing.Size(222, 45)
         Me.AceptarBtn.TabIndex = 3
+        Me.AceptarBtn.Tag = "Aceptar"
         Me.AceptarBtn.Text = "Aceptar"
         Me.AceptarBtn.UseVisualStyleBackColor = True
         '

@@ -1,5 +1,5 @@
 ﻿Imports DAL_ABMC
-
+Imports BLL_Estatica
 Public Class ClienteDinamico
     Implements IABMC
 
@@ -22,5 +22,13 @@ Public Class ClienteDinamico
 
     Public Function ConsultaTodo() As List(Of Object) Implements IABMC.ConsultaTodo
         Return ClienteDatos.ConsultaTodo()
+    End Function
+
+    Public Function GetCliente(pDNI As Integer) As Cliente
+        Return ClienteDatos.GetCliente(pDNI)
+    End Function
+
+    Public Function CheckCliente(pDNI As Integer) As Boolean
+        Return ClienteDatos.CheckCliente(pDNI)
     End Function
 End Class

@@ -44,8 +44,8 @@ Partial Class Idiomas
         '
         Me.TableLayoutPanel1.BackColor = System.Drawing.Color.Transparent
         Me.TableLayoutPanel1.ColumnCount = 3
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 60.0!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 162.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 86.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 136.0!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.IdiomaCombo, 1, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.IdiomaLbl, 0, 0)
@@ -74,9 +74,9 @@ Partial Class Idiomas
         Me.TableLayoutPanel1.SetColumnSpan(Me.IdiomaCombo, 2)
         Me.IdiomaCombo.Dock = System.Windows.Forms.DockStyle.Fill
         Me.IdiomaCombo.FormattingEnabled = True
-        Me.IdiomaCombo.Location = New System.Drawing.Point(63, 3)
+        Me.IdiomaCombo.Location = New System.Drawing.Point(89, 3)
         Me.IdiomaCombo.Name = "IdiomaCombo"
-        Me.IdiomaCombo.Size = New System.Drawing.Size(513, 24)
+        Me.IdiomaCombo.Size = New System.Drawing.Size(487, 24)
         Me.IdiomaCombo.TabIndex = 1
         '
         'IdiomaLbl
@@ -87,7 +87,7 @@ Partial Class Idiomas
         Me.IdiomaLbl.Location = New System.Drawing.Point(4, 0)
         Me.IdiomaLbl.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.IdiomaLbl.Name = "IdiomaLbl"
-        Me.IdiomaLbl.Size = New System.Drawing.Size(52, 28)
+        Me.IdiomaLbl.Size = New System.Drawing.Size(78, 28)
         Me.IdiomaLbl.TabIndex = 0
         Me.IdiomaLbl.Tag = "Idioma"
         Me.IdiomaLbl.Text = "Idioma"
@@ -130,18 +130,18 @@ Partial Class Idiomas
         '
         Me.ClaveTxt.Dock = System.Windows.Forms.DockStyle.Fill
         Me.ClaveTxt.Enabled = False
-        Me.ClaveTxt.Location = New System.Drawing.Point(63, 31)
+        Me.ClaveTxt.Location = New System.Drawing.Point(89, 31)
         Me.ClaveTxt.Name = "ClaveTxt"
-        Me.ClaveTxt.Size = New System.Drawing.Size(156, 23)
+        Me.ClaveTxt.Size = New System.Drawing.Size(130, 23)
         Me.ClaveTxt.TabIndex = 5
         '
         'ValorTxt
         '
         Me.ValorTxt.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.ValorTxt.Location = New System.Drawing.Point(63, 61)
+        Me.ValorTxt.Location = New System.Drawing.Point(89, 61)
         Me.ValorTxt.Multiline = True
         Me.ValorTxt.Name = "ValorTxt"
-        Me.ValorTxt.Size = New System.Drawing.Size(156, 108)
+        Me.ValorTxt.Size = New System.Drawing.Size(130, 108)
         Me.ValorTxt.TabIndex = 6
         '
         'CambiarValorBtn

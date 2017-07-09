@@ -19,8 +19,12 @@ Public Class VerMateriales
 
     Private Sub Actualizar()
         Try
+            Dim vLista As New List(Of VistaMaterial)
+            For Each Material As Material In vMaterialDinamico.ConsultaTodo
+                vLista.Add(New VistaMaterial(Material.Id, Material.Nombre, Material.Cantidad, Material.Precio))
+            Next
             GrillaMateriales.DataSource = Nothing
-            GrillaMateriales.DataSource = vMaterialDinamico.ConsultaTodo()
+            GrillaMateriales.DataSource = vLista
             GrillaMateriales.Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
             ActualizarObservador(GrillaMateriales)
         Catch ex As Exception
@@ -31,7 +35,9 @@ Public Class VerMateriales
     Private Sub AceptarBtn_Click(sender As Object, e As EventArgs) Handles AceptarBtn.Click
         vMaterial = DirectCast(GrillaMateriales.SelectedRows(0).DataBoundItem, Material)
         CType(CallerForm, ReservarMaterial).vMaterial = vMaterial
+        CType(CallerForm, ReservarMaterial).IdTxt.Text = vMaterial.Id
         CType(CallerForm, ReservarMaterial).MaterialTxt.Text = vMaterial.Nombre
+        CType(CallerForm, ReservarMaterial).CantidadNumeric.Maximum = vMaterial.Cantidad
         Me.Close()
     End Sub
 

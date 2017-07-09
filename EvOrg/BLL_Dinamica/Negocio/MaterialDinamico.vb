@@ -25,4 +25,8 @@ Public Class MaterialDinamico
     Public Function ConsultaTodo() As List(Of Object) Implements IABMC.ConsultaTodo
         Return Me.MaterialDatos.ConsultaTodo()
     End Function
+
+    Public Function ConsultaReservas() As List(Of Material)
+        Return Me.MaterialDatos.ConsultaReservas()
+    End Function
 End Class

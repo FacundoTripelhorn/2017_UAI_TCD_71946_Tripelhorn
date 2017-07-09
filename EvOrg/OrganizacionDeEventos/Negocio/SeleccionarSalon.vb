@@ -11,9 +11,32 @@ Public Class SeleccionarSalon
     Dim vTraductor As Traductor = Traductor.GetInstance
     Dim vSalon As Salon
     Dim vSalonDinamico As New SalonDinamico
+    Dim vEvento As Evento
+
+    Sub New()
+
+        ' This call is required by the designer.
+        InitializeComponent()
+
+        ' Add any initialization after the InitializeComponent() call.
+
+    End Sub
+
+    Sub New(ByRef pEvento As Evento)
+
+        ' This call is required by the designer.
+        InitializeComponent()
+
+        ' Add any initialization after the InitializeComponent() call.
+        vEvento = pEvento
+    End Sub
     Private Sub SeleccionarSalon_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         vTraductor.Registrar(Me)
-        Actualizar()
+        If vEvento.Localidad = "" Then
+            Actualizar()
+        Else
+            FiltroPorLocalidad()
+        End If
         SetGMap()
         GMapa.SetPositionByKeywords("Av. San Juan 951, Capital Federal, Argentina")
         GMapa.Overlays.Clear()
@@ -21,6 +44,22 @@ Public Class SeleccionarSalon
             AddMarkers(Salon.Direccion.Calle & " " & Salon.Direccion.Numero & ", " & Salon.Direccion.Localidad & ", Argentina")
         Next
         ActualizarObservador(Me)
+    End Sub
+
+    Private Sub FiltroPorLocalidad()
+        Try
+            Dim vLista As New List(Of VistaSalon)
+            For Each Salon As Salon In vSalonDinamico.ConsultaTodo
+                If Salon.Direccion.Localidad = vEvento.Localidad Then
+                    vLista.Add(New VistaSalon(Salon.Nombre, Salon.Capacidad, Salon.Email, Salon.Telefono, Salon.Precio))
+                End If
+            Next
+            GrillaSalones.DataSource = Nothing
+            GrillaSalones.DataSource = vLista
+            GrillaSalones.Columns(2).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        Catch ex As Exception
+
+        End Try
     End Sub
 
     Public Sub Actualizar()
@@ -95,5 +134,23 @@ Public Class SeleccionarSalon
                 End If
             End Try
         Next
+    End Sub
+
+    Private Sub FiltroLocalidadBtn_Click(sender As Object, e As EventArgs) Handles FiltroLocalidadBtn.Click
+        vEvento.Localidad = InputBox("Ingrese la localidad")
+        FiltroPorLocalidad()
+    End Sub
+
+    Private Sub VerTodosBtn_Click(sender As Object, e As EventArgs) Handles VerTodosBtn.Click
+        Actualizar()
+    End Sub
+
+    Private Sub AceptarBtn_Click(sender As Object, e As EventArgs) Handles AceptarBtn.Click
+        For Each Salon As Salon In vSalonDinamico.ConsultaTodo
+            If Salon.Nombre = GrillaSalones.SelectedRows(0).Cells(0).Value Then
+                vEvento.Salon = Salon
+            End If
+        Next
+        Me.Close()
     End Sub
 End Class

@@ -10,7 +10,16 @@ Public Class ReservarMaterial
     Property vMaterial As Material
     Dim vMaterialDinamico As New MaterialDinamico
 
-    Sub New(Optional pEvento As Evento = Nothing)
+    Sub New()
+
+        ' This call is required by the designer.
+        InitializeComponent()
+
+        ' Add any initialization after the InitializeComponent() call.
+
+    End Sub
+
+    Sub New(pEvento As Evento)
         ' This call is required by the designer.
         InitializeComponent()
 
@@ -23,30 +32,52 @@ Public Class ReservarMaterial
     Private Sub ReservarMaterial_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         vTraductor.Registrar(Me)
         CargarEventos()
-        For Each Evento As String In EventoCombo.Items
-            If vEvento.Nombre = Evento Then
-                EventoCombo.SelectedItem = Evento
-                EventoCombo.Enabled = False
-            End If
-        Next
+
+        If Not vEvento Is Nothing Then
+            CargarMateriales()
+            For Each Evento As Evento In EventoCombo.Items
+                If vEvento.Id = Evento.Id Then
+                    EventoCombo.SelectedItem = Evento
+                    EventoCombo.Enabled = False
+                End If
+            Next
+        End If
         Actualizar()
         ActualizarObservador(Me)
     End Sub
 
+    Private Sub CargarMateriales()
+        Try
+            GrillaMateriales.DataSource = vEvento.ListaMateriales
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
     Private Sub CargarEventos()
         For Each Evento As Evento In vEventoDinamico.ConsultaTodo
-            EventoCombo.Items.Add(Evento.Nombre)
+            EventoCombo.Items.Add(Evento)
+        Next
+    End Sub
+
+    Private Sub ActualizarEvento()
+        For Each Evento As Evento In vEventoDinamico.ConsultaTodo
+            If Evento.Id = vEvento.Id Then
+                vEvento = Evento
+            End If
         Next
     End Sub
 
     Private Sub Actualizar()
         Try
-            Dim vLista As New List(Of Material)
+            Dim vLista As New List(Of VistaReservaMaterial)
+            ActualizarEvento()
             For Each Material As Material In vEvento.ListaMateriales
-                vLista.Add(Material)
+                vLista.Add(New VistaReservaMaterial(Material.Nombre, Material.Cantidad, Material.Fecha))
             Next
             GrillaMateriales.DataSource = Nothing
             GrillaMateriales.DataSource = vLista
+            GrillaMateriales.Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
             ActualizarObservador(GrillaMateriales)
         Catch ex As Exception
 
@@ -60,7 +91,8 @@ Public Class ReservarMaterial
     End Sub
 
     Private Sub VerDisponibilidad_Click(sender As Object, e As EventArgs) Handles VerDisponibilidadBtn.Click
-        ListaMateriales.Show()
+        Dim Disponibilidad As New DisponibilidadMateriales
+        Disponibilidad.Show()
     End Sub
 
     Private Sub TerminarBtn_Click(sender As Object, e As EventArgs) Handles TerminarBtn.Click
@@ -68,11 +100,19 @@ Public Class ReservarMaterial
     End Sub
 
     Private Sub AgregarBtn_Click(sender As Object, e As EventArgs) Handles AgregarBtn.Click
-        vEvento.ListaMateriales.Add(vMaterial)
+        Dim Material As New Material
+        If vMaterial Is Nothing Then vMaterial = New Material
+        vMaterial.Id = IdTxt.Text
+        vMaterial.Nombre = MaterialTxt.Text
+        vMaterial.Cantidad = CantidadNumeric.Value
+        vMaterial.Fecha = FechaLimiteDTP.Value
+        vEventoDinamico.ReservarMaterial(vEvento, vMaterial)
         Actualizar()
     End Sub
 
     Private Sub EventoCombo_SelectedValueChanged(sender As Object, e As EventArgs) Handles EventoCombo.SelectedValueChanged
+        vEvento = EventoCombo.SelectedItem
+        CargarMateriales
         Actualizar()
     End Sub
 

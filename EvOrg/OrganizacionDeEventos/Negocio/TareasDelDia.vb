@@ -28,7 +28,7 @@ Public Class TareasDelDia
 
     Private Sub TareasDelDia_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         vTraductor.Registrar(Me)
-        TareasDelDiaLbl.Text = TareasDelDiaLbl.Text & Today.Day & "/" & Today.Month & "/" & Today.Year
         ActualizarObservador(Me)
+        TareasDelDiaLbl.Text = TareasDelDiaLbl.Text & " " & Today.Day & "/" & Today.Month & "/" & Today.Year
     End Sub
 End Class

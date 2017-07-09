@@ -9,6 +9,7 @@
     Property ListaServicios As List(Of Servicio)
     Property ListaMateriales As List(Of Material)
     Property ListaPasos As List(Of Paso)
+    Property Localidad As String
 
     Sub New()
 
@@ -31,4 +32,8 @@
         Salon = pSalon
         Cliente = pCliente
     End Sub
+
+    Public Overrides Function ToString() As String
+        Return Me.Nombre
+    End Function
 End Class

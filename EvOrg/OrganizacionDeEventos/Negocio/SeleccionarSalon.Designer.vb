@@ -34,8 +34,10 @@ Partial Class SeleccionarSalon
         Me.LocalidadTxt = New System.Windows.Forms.TextBox()
         Me.GrillaSalones = New System.Windows.Forms.DataGridView()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
+        Me.FiltroLocalidadBtn = New System.Windows.Forms.Button()
         Me.AceptarBtn = New System.Windows.Forms.Button()
         Me.CancelarBtn = New System.Windows.Forms.Button()
+        Me.VerTodosBtn = New System.Windows.Forms.Button()
         Me.GMapa = New GMap.NET.WindowsForms.GMapControl()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.DireccionGrp.SuspendLayout()
@@ -178,19 +180,37 @@ Partial Class SeleccionarSalon
         '
         'TableLayoutPanel2
         '
-        Me.TableLayoutPanel2.ColumnCount = 2
+        Me.TableLayoutPanel2.ColumnCount = 4
         Me.TableLayoutPanel1.SetColumnSpan(Me.TableLayoutPanel2, 2)
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
+        Me.TableLayoutPanel2.Controls.Add(Me.FiltroLocalidadBtn, 2, 0)
         Me.TableLayoutPanel2.Controls.Add(Me.AceptarBtn, 0, 0)
-        Me.TableLayoutPanel2.Controls.Add(Me.CancelarBtn, 1, 0)
+        Me.TableLayoutPanel2.Controls.Add(Me.CancelarBtn, 3, 0)
+        Me.TableLayoutPanel2.Controls.Add(Me.VerTodosBtn, 1, 0)
         Me.TableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel2.Location = New System.Drawing.Point(3, 351)
         Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
         Me.TableLayoutPanel2.RowCount = 1
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel2.Size = New System.Drawing.Size(868, 42)
         Me.TableLayoutPanel2.TabIndex = 4
+        '
+        'FiltroLocalidadBtn
+        '
+        Me.FiltroLocalidadBtn.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.FiltroLocalidadBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.FiltroLocalidadBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.FiltroLocalidadBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.FiltroLocalidadBtn.Location = New System.Drawing.Point(437, 3)
+        Me.FiltroLocalidadBtn.Name = "FiltroLocalidadBtn"
+        Me.FiltroLocalidadBtn.Size = New System.Drawing.Size(211, 36)
+        Me.FiltroLocalidadBtn.TabIndex = 5
+        Me.FiltroLocalidadBtn.Tag = "Filtrar por localidad"
+        Me.FiltroLocalidadBtn.Text = "Filtrar por localidad"
+        Me.FiltroLocalidadBtn.UseVisualStyleBackColor = True
         '
         'AceptarBtn
         '
@@ -201,7 +221,7 @@ Partial Class SeleccionarSalon
         Me.AceptarBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.AceptarBtn.Location = New System.Drawing.Point(3, 3)
         Me.AceptarBtn.Name = "AceptarBtn"
-        Me.AceptarBtn.Size = New System.Drawing.Size(428, 36)
+        Me.AceptarBtn.Size = New System.Drawing.Size(211, 36)
         Me.AceptarBtn.TabIndex = 2
         Me.AceptarBtn.Tag = "Aceptar"
         Me.AceptarBtn.Text = "Aceptar"
@@ -214,13 +234,27 @@ Partial Class SeleccionarSalon
         Me.CancelarBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.CancelarBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CancelarBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.CancelarBtn.Location = New System.Drawing.Point(437, 3)
+        Me.CancelarBtn.Location = New System.Drawing.Point(654, 3)
         Me.CancelarBtn.Name = "CancelarBtn"
-        Me.CancelarBtn.Size = New System.Drawing.Size(428, 36)
+        Me.CancelarBtn.Size = New System.Drawing.Size(211, 36)
         Me.CancelarBtn.TabIndex = 3
         Me.CancelarBtn.Tag = "Cancelar"
         Me.CancelarBtn.Text = "Cancelar"
         Me.CancelarBtn.UseVisualStyleBackColor = False
+        '
+        'VerTodosBtn
+        '
+        Me.VerTodosBtn.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.VerTodosBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.VerTodosBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.VerTodosBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.VerTodosBtn.Location = New System.Drawing.Point(220, 3)
+        Me.VerTodosBtn.Name = "VerTodosBtn"
+        Me.VerTodosBtn.Size = New System.Drawing.Size(211, 36)
+        Me.VerTodosBtn.TabIndex = 4
+        Me.VerTodosBtn.Tag = "Ver todos"
+        Me.VerTodosBtn.Text = "Ver todos"
+        Me.VerTodosBtn.UseVisualStyleBackColor = True
         '
         'GMapa
         '
@@ -282,4 +316,6 @@ Partial Class SeleccionarSalon
     Friend WithEvents CalleTxt As TextBox
     Friend WithEvents NumeroTxt As TextBox
     Friend WithEvents LocalidadTxt As TextBox
+    Friend WithEvents FiltroLocalidadBtn As Button
+    Friend WithEvents VerTodosBtn As Button
 End Class

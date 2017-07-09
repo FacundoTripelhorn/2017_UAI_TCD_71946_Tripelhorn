@@ -147,6 +147,7 @@ Partial Class ABMMaterial
         Me.AltaBtn.Name = "AltaBtn"
         Me.AltaBtn.Size = New System.Drawing.Size(197, 30)
         Me.AltaBtn.TabIndex = 4
+        Me.AltaBtn.Tag = "Agregar"
         Me.AltaBtn.Text = "Agregar"
         Me.AltaBtn.UseVisualStyleBackColor = False
         '
@@ -162,6 +163,7 @@ Partial Class ABMMaterial
         Me.BajaBtn.Name = "BajaBtn"
         Me.BajaBtn.Size = New System.Drawing.Size(197, 30)
         Me.BajaBtn.TabIndex = 5
+        Me.BajaBtn.Tag = "Borrar"
         Me.BajaBtn.Text = "Borrar"
         Me.BajaBtn.UseVisualStyleBackColor = False
         '
@@ -177,6 +179,7 @@ Partial Class ABMMaterial
         Me.ModificacionBtn.Name = "ModificacionBtn"
         Me.ModificacionBtn.Size = New System.Drawing.Size(198, 30)
         Me.ModificacionBtn.TabIndex = 6
+        Me.ModificacionBtn.Tag = "Modificar"
         Me.ModificacionBtn.Text = "Modificar"
         Me.ModificacionBtn.UseVisualStyleBackColor = False
         '

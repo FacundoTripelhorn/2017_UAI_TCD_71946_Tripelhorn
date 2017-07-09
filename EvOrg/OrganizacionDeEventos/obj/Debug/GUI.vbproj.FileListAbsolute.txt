@@ -183,8 +183,6 @@ C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\Organizacio
 C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\OrganizacionDeEventos\obj\Debug\OrganizacionDeEventos.TareasDelDia.resources
 C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\OrganizacionDeEventos\obj\Debug\OrganizacionDeEventos.VerEventos.resources
 C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\OrganizacionDeEventos\obj\Debug\OrganizacionDeEventos.VerMateriales.resources
-C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\OrganizacionDeEventos\obj\Debug\OrganizacionDeEventos.CrearEvento.resources
-C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\OrganizacionDeEventos\obj\Debug\OrganizacionDeEventos.ListaMateriales.resources
 C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\OrganizacionDeEventos\obj\Debug\OrganizacionDeEventos.Presupuesto.resources
 C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\OrganizacionDeEventos\obj\Debug\OrganizacionDeEventos.ReservarServicio.resources
 C:\Users\Navegador\Desktop\2017_UAI_TCD_71946_Tripelhorn-master\EvOrg\OrganizacionDeEventos\bin\Debug\OrganizacionDeEventos.exe.config
@@ -237,3 +235,5 @@ C:\Users\Navegador\Desktop\2017_UAI_TCD_71946_Tripelhorn-master\EvOrg\Organizaci
 C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\OrganizacionDeEventos\bin\Debug\GMap.NET.Core.xml
 C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\OrganizacionDeEventos\bin\Debug\GMap.NET.WindowsForms.xml
 C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\OrganizacionDeEventos\obj\Debug\OrganizacionDeEventos.Idiomas.resources
+C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\OrganizacionDeEventos\obj\Debug\OrganizacionDeEventos.OrganizarEvento.resources
+C:\Users\Facu\Desktop\Campo 2017\2017_UAI_TCD_71946_Tripelhorn\EvOrg\OrganizacionDeEventos\obj\Debug\OrganizacionDeEventos.DisponibilidadMateriales.resources

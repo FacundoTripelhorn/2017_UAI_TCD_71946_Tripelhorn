@@ -21,6 +21,18 @@ Public Class MaterialDatos
         End Try
     End Sub
 
+    Public Sub AltaMaterialTemporal(pMaterial As Material)
+        Try
+            Dim DTable As DataTable = Comando.GetDataTable("MaterialTemporal")
+            Dim DRow As DataRow = DTable.NewRow
+
+            DRow.ItemArray = {pMaterial.Id, pMaterial.Nombre}
+            DTable.Rows.Add(DRow)
+            Comando.ActualizarBD("MaterialTemporal", DTable)
+        Catch ex As Exception
+        End Try
+    End Sub
+
     Public Sub Baja(Optional pObjeto As Object = Nothing) Implements IABMC.Baja
         Try
             If TypeOf pObjeto Is Material Then
@@ -52,10 +64,34 @@ Public Class MaterialDatos
         Dim MaterialLista As List(Of Object) = Nothing
         Try
             Dim DTable As DataTable = Comando.GetDataTable("Material")
+            Dim DTMT As DataTable = Comando.GetDataTable("MaterialTemporal")
             MaterialLista = New List(Of Object)
-            If DTable.Rows.Count > 0 Then
+            If DTable.Rows.Count > 0 Or DTMT.Rows.Count > 0 Then
                 For Each DRow As DataRow In DTable.Rows
-                    MaterialLista.Add(New Material(DRow(0), DRow(1), DRow(2), DRow(3)))
+                    MaterialLista.Add(New Material(DRow(0), DRow(1), DRow(2), Decimal.Parse(DRow(3))))
+                Next
+                For Each DRow As DataRow In DTMT.Rows
+                    MaterialLista.Add(New Material(DRow(0), DRow(1), 0, 0))
+                Next
+            End If
+            Return MaterialLista
+        Catch ex As Exception
+            Return Nothing
+        End Try
+    End Function
+
+    Public Function ConsultaReservas() As List(Of Material)
+        Dim MaterialLista As New List(Of Material)
+        Try
+            Dim DTable As DataTable = Comando.GetDataTable("Material")
+            Dim DTReserva As DataTable = Comando.GetDataTable("ReservaMaterial")
+            If DTReserva.Rows.Count > 0 Then
+                For Each Drow As DataRow In DTable.Rows
+                    For Each DRReserva As DataRow In DTReserva.Rows
+                        If Drow(0) = DRReserva(1) Then
+                            MaterialLista.Add(New Material(Drow(0), Drow(1), DRReserva(2), Date.Parse(DRReserva(3))))
+                        End If
+                    Next
                 Next
             End If
             Return MaterialLista

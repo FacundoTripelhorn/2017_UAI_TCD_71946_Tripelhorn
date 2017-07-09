@@ -15,7 +15,8 @@ Public Class ABMPatente
         Dim vLista As New List(Of Object)
         vLista = GrupoPatenteDinamico.ConsultaTodo()
         GrupoPatenteDinamico.MostrarEnTreeView(TreePatente)
-        ActualizarObservador(me)
+        ActualizarObservador(Me)
+        ActualizarObservador(ContextMenuStrip1)
     End Sub
 
     Private Sub AgregarPatenteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AgregarPatenteToolStripMenuItem.Click
@@ -109,16 +110,19 @@ Public Class ABMPatente
                 If vControl.Controls.Count > 0 Then
                     ActualizarObservador(vControl)
                 End If
-                If TypeOf vControl Is DataGridView Then
-                    For Each vColumna As DataGridViewColumn In DirectCast(vControl, DataGridView).Columns
-                        Try
-                            vColumna.HeaderText = vTraductor.IdiomaSeleccionado.Diccionario.Item(vColumna.Name)
-                        Catch ex As Exception
 
-                        End Try
-                    Next
-                End If
+
             End Try
+
         Next
+        If TypeOf pControl Is ContextMenuStrip Then
+            For Each vItem As ToolStripMenuItem In DirectCast(pControl, ContextMenuStrip).Items
+                Try
+                    vItem.Text = vTraductor.IdiomaSeleccionado.Diccionario.Item(vItem.Tag)
+                Catch ex As Exception
+
+                End Try
+            Next
+        End If
     End Sub
 End Class

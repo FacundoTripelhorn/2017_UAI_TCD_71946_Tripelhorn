@@ -103,7 +103,7 @@ Partial Class TareasDelDia
         Me.TareasDelDiaLbl.Name = "TareasDelDiaLbl"
         Me.TareasDelDiaLbl.Size = New System.Drawing.Size(230, 17)
         Me.TareasDelDiaLbl.TabIndex = 3
-        Me.TareasDelDiaLbl.Tag = "Tareas del dia"
+        Me.TareasDelDiaLbl.Tag = "Tareas del día"
         Me.TareasDelDiaLbl.Text = "Tareas del día"
         '
         'TareasDelDia

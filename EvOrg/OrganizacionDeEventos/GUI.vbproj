@@ -112,6 +112,7 @@
     <Compile Include="Negocio\FormulariosABM\ABMPaso.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Negocio\FormulariosABM\VistaMaterial.vb" />
     <Compile Include="Negocio\FormulariosABM\VistaPaso.vb" />
     <Compile Include="Negocio\FormulariosABM\VistaPasoTE.vb" />
     <Compile Include="Negocio\FormulariosABM\VistaSalon.vb" />
@@ -123,16 +124,16 @@
     <Compile Include="Inicio.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Negocio\CrearEvento.Designer.vb">
-      <DependentUpon>CrearEvento.vb</DependentUpon>
+    <Compile Include="Negocio\DisponibilidadMateriales.Designer.vb">
+      <DependentUpon>DisponibilidadMateriales.vb</DependentUpon>
     </Compile>
-    <Compile Include="Negocio\CrearEvento.vb">
+    <Compile Include="Negocio\DisponibilidadMateriales.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Negocio\ListaMateriales.Designer.vb">
-      <DependentUpon>ListaMateriales.vb</DependentUpon>
+    <Compile Include="Negocio\OrganizarEvento.Designer.vb">
+      <DependentUpon>OrganizarEvento.vb</DependentUpon>
     </Compile>
-    <Compile Include="Negocio\ListaMateriales.vb">
+    <Compile Include="Negocio\OrganizarEvento.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Negocio\Presupuesto.Designer.vb">
@@ -247,6 +248,7 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UsuarioFamiliaPatente\VistaUsuario.vb" />
+    <Compile Include="VistaReservaMaterial.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="MultiIdioma\Idiomas.resx">
@@ -264,11 +266,11 @@
     <EmbeddedResource Include="Inicio.resx">
       <DependentUpon>Inicio.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Negocio\CrearEvento.resx">
-      <DependentUpon>CrearEvento.vb</DependentUpon>
+    <EmbeddedResource Include="Negocio\DisponibilidadMateriales.resx">
+      <DependentUpon>DisponibilidadMateriales.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Negocio\ListaMateriales.resx">
-      <DependentUpon>ListaMateriales.vb</DependentUpon>
+    <EmbeddedResource Include="Negocio\OrganizarEvento.resx">
+      <DependentUpon>OrganizarEvento.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Negocio\Presupuesto.resx">
       <DependentUpon>Presupuesto.vb</DependentUpon>

@@ -31,4 +31,8 @@ Public Class EventoDinamico
     Public Sub ModificarPaso(pEvento As Evento, pPaso As Paso, pFecha As Date)
         vEventoDatos.ModificarPaso(pEvento, pPaso, pFecha)
     End Sub
+
+    Public Sub ReservarMaterial(pEvento As Evento, pMaterial As Material)
+        vEventoDatos.ReservarMaterial(pEvento, pMaterial)
+    End Sub
 End Class
