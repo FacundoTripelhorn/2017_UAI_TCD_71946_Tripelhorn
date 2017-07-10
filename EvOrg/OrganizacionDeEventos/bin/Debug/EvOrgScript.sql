@@ -384,6 +384,7 @@ INSERT [dbo].[Diccionario] ([Id], [Clave]) VALUES (123, N'Eliminar elemento')
 INSERT [dbo].[Diccionario] ([Id], [Clave]) VALUES (124, N'Nombre del evento')
 INSERT [dbo].[Diccionario] ([Id], [Clave]) VALUES (125, N'Ver todos')
 INSERT [dbo].[Diccionario] ([Id], [Clave]) VALUES (126, N'Filtrar por localidad')
+INSERT [dbo].[Diccionario] ([Id], [Clave]) VALUES (127, N'El nombre de usuario ingresado ya existe')
 SET IDENTITY_INSERT [dbo].[Diccionario] OFF
 
 SET IDENTITY_INSERT [dbo].[DireccionSalon] ON 
@@ -571,6 +572,7 @@ INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (1, 1
 INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (1, 124, N'Nombre del evento')
 INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (1, 125, N'Ver todos')
 INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (1, 126, N'Filtrar por localidad')
+INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (1, 127, N'El nombre de usuario ingresado ya existe')
 INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 1, N'Accept')
 INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 2, N'Add')
 INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 3, N'Add description')
@@ -697,6 +699,7 @@ INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 1
 INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 124, N'Event name')
 INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 125, N'View all')
 INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 126, N'Filter by town')
+INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 127, N'Username already exists')
 
 INSERT [dbo].[Material] ([Id], [Nombre], [Cantidad], [Precio]) VALUES (4564, N'Mantel', 200, 2)
 

@@ -42,7 +42,18 @@ Public Class NuevoUsuario
                                 If vFamilia.Nombre = FamiliaCombo.Text Then Familia = vFamilia
                             Next
                             Usuario.Familia = Familia
-                            If Modificacion Then UsuarioDinamico.Modificacion(Usuario) Else UsuarioDinamico.Alta(Usuario)
+                            If Modificacion Then
+                                UsuarioDinamico.Modificacion(Usuario)
+                            Else
+                                Dim vCheckUsuario As Usuario = UsuarioDinamico.DevuelveUsuario(Usuario.IdUsuario)
+                                If vCheckUsuario Is Nothing Then
+                                    UsuarioDinamico.Alta(Usuario)
+                                Else
+                                    Throw New Exception("El nombre de usuario ingresado ya existe")
+                                    ContraseñaTxt.Text = ""
+                                    RContraseñaTxt.Text = ""
+                                End If
+                            End If
                             Me.Close()
                         Else
                             Throw New Exception("El email ingresado es incorrecto")
