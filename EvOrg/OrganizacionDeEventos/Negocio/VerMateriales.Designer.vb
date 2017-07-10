@@ -46,7 +46,7 @@ Partial Class VerMateriales
         Me.TableLayoutPanel1.RowCount = 2
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 82.09876!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 17.90123!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(375, 324)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(554, 324)
         Me.TableLayoutPanel1.TabIndex = 0
         '
         'AceptarBtn
@@ -59,7 +59,7 @@ Partial Class VerMateriales
         Me.AceptarBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.AceptarBtn.Location = New System.Drawing.Point(3, 271)
         Me.AceptarBtn.Name = "AceptarBtn"
-        Me.AceptarBtn.Size = New System.Drawing.Size(181, 50)
+        Me.AceptarBtn.Size = New System.Drawing.Size(271, 50)
         Me.AceptarBtn.TabIndex = 0
         Me.AceptarBtn.Tag = "Aceptar"
         Me.AceptarBtn.Text = "Aceptar"
@@ -73,9 +73,9 @@ Partial Class VerMateriales
         Me.CancelarBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.CancelarBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CancelarBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.CancelarBtn.Location = New System.Drawing.Point(190, 271)
+        Me.CancelarBtn.Location = New System.Drawing.Point(280, 271)
         Me.CancelarBtn.Name = "CancelarBtn"
-        Me.CancelarBtn.Size = New System.Drawing.Size(182, 50)
+        Me.CancelarBtn.Size = New System.Drawing.Size(271, 50)
         Me.CancelarBtn.TabIndex = 1
         Me.CancelarBtn.Tag = "Cancelar"
         Me.CancelarBtn.Text = "Cancelar"
@@ -88,14 +88,14 @@ Partial Class VerMateriales
         Me.GrillaMateriales.Dock = System.Windows.Forms.DockStyle.Fill
         Me.GrillaMateriales.Location = New System.Drawing.Point(3, 3)
         Me.GrillaMateriales.Name = "GrillaMateriales"
-        Me.GrillaMateriales.Size = New System.Drawing.Size(369, 260)
+        Me.GrillaMateriales.Size = New System.Drawing.Size(548, 260)
         Me.GrillaMateriales.TabIndex = 2
         '
         'VerMateriales
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(375, 324)
+        Me.ClientSize = New System.Drawing.Size(554, 324)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "VerMateriales"

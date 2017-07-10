@@ -31,4 +31,12 @@ Public Class TareasDelDia
         ActualizarObservador(Me)
         TareasDelDiaLbl.Text = TareasDelDiaLbl.Text & " " & Today.Day & "/" & Today.Month & "/" & Today.Year
     End Sub
+
+    Private Sub TareaNuevaBtn_Click(sender As Object, e As EventArgs) Handles TareaNuevaBtn.Click
+        MsgBox("Agrega una tarea a la lista")
+    End Sub
+
+    Private Sub TareaTerminadaBtn_Click(sender As Object, e As EventArgs) Handles TareaTerminadaBtn.Click
+        MsgBox("Elimina una tarea")
+    End Sub
 End Class

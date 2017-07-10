@@ -85,11 +85,13 @@ Public Class MaterialDatos
         Try
             Dim DTable As DataTable = Comando.GetDataTable("Material")
             Dim DTReserva As DataTable = Comando.GetDataTable("ReservaMaterial")
+            Dim DTEvento As DataTable = Comando.GetDataTable("Evento")
+            DTEvento.PrimaryKey = {DTEvento.Columns(0)}
             If DTReserva.Rows.Count > 0 Then
                 For Each Drow As DataRow In DTable.Rows
                     For Each DRReserva As DataRow In DTReserva.Rows
                         If Drow(0) = DRReserva(1) Then
-                            MaterialLista.Add(New Material(Drow(0), Drow(1), DRReserva(2), Date.Parse(DRReserva(3))))
+                            MaterialLista.Add(New Material(Drow(0), Drow(1), DRReserva(2), Date.Parse(DRReserva(3)), DTEvento.Rows.Find(DRReserva(0)).Item(2)))
                         End If
                     Next
                 Next

@@ -34,11 +34,11 @@ Partial Class ReservarMaterial
         Me.MaterialTxt = New System.Windows.Forms.TextBox()
         Me.CantidadNumeric = New System.Windows.Forms.NumericUpDown()
         Me.FechaLimiteDTP = New System.Windows.Forms.DateTimePicker()
-        Me.AgregarBtn = New System.Windows.Forms.Button()
-        Me.VerDisponibilidadBtn = New System.Windows.Forms.Button()
-        Me.VerEventoBtn = New System.Windows.Forms.Button()
-        Me.TerminarBtn = New System.Windows.Forms.Button()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
+        Me.TerminarBtn = New System.Windows.Forms.Button()
+        Me.VerEventoBtn = New System.Windows.Forms.Button()
+        Me.VerDisponibilidadBtn = New System.Windows.Forms.Button()
+        Me.AgregarBtn = New System.Windows.Forms.Button()
         Me.IdLbl = New System.Windows.Forms.Label()
         Me.IdTxt = New System.Windows.Forms.TextBox()
         Me.TableLayoutPanel1.SuspendLayout()
@@ -55,7 +55,7 @@ Partial Class ReservarMaterial
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.40862!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.64066!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.69405!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 107.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 109.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.SeleccionarEventoLbl, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.EventoCombo, 0, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.GrillaMateriales, 0, 2)
@@ -126,7 +126,7 @@ Partial Class ReservarMaterial
         Me.BuscarMaterialBtn.Location = New System.Drawing.Point(3, 263)
         Me.BuscarMaterialBtn.Name = "BuscarMaterialBtn"
         Me.TableLayoutPanel1.SetRowSpan(Me.BuscarMaterialBtn, 2)
-        Me.BuscarMaterialBtn.Size = New System.Drawing.Size(117, 43)
+        Me.BuscarMaterialBtn.Size = New System.Drawing.Size(116, 43)
         Me.BuscarMaterialBtn.TabIndex = 1
         Me.BuscarMaterialBtn.Tag = "Buscar material"
         Me.BuscarMaterialBtn.Text = "Buscar material"
@@ -138,7 +138,7 @@ Partial Class ReservarMaterial
         Me.MaterialLbl.Dock = System.Windows.Forms.DockStyle.Fill
         Me.MaterialLbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.MaterialLbl.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.MaterialLbl.Location = New System.Drawing.Point(240, 260)
+        Me.MaterialLbl.Location = New System.Drawing.Point(238, 260)
         Me.MaterialLbl.Name = "MaterialLbl"
         Me.MaterialLbl.Size = New System.Drawing.Size(114, 22)
         Me.MaterialLbl.TabIndex = 4
@@ -151,7 +151,7 @@ Partial Class ReservarMaterial
         Me.CantidadLbl.Dock = System.Windows.Forms.DockStyle.Fill
         Me.CantidadLbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CantidadLbl.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.CantidadLbl.Location = New System.Drawing.Point(360, 260)
+        Me.CantidadLbl.Location = New System.Drawing.Point(358, 260)
         Me.CantidadLbl.Name = "CantidadLbl"
         Me.CantidadLbl.Size = New System.Drawing.Size(124, 22)
         Me.CantidadLbl.TabIndex = 5
@@ -164,9 +164,9 @@ Partial Class ReservarMaterial
         Me.FechaLimiteLbl.Dock = System.Windows.Forms.DockStyle.Fill
         Me.FechaLimiteLbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FechaLimiteLbl.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.FechaLimiteLbl.Location = New System.Drawing.Point(490, 260)
+        Me.FechaLimiteLbl.Location = New System.Drawing.Point(488, 260)
         Me.FechaLimiteLbl.Name = "FechaLimiteLbl"
-        Me.FechaLimiteLbl.Size = New System.Drawing.Size(103, 22)
+        Me.FechaLimiteLbl.Size = New System.Drawing.Size(105, 22)
         Me.FechaLimiteLbl.TabIndex = 6
         Me.FechaLimiteLbl.Tag = "Fecha limite"
         Me.FechaLimiteLbl.Text = "Fecha Limite"
@@ -175,7 +175,7 @@ Partial Class ReservarMaterial
         '
         Me.MaterialTxt.Dock = System.Windows.Forms.DockStyle.Fill
         Me.MaterialTxt.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.MaterialTxt.Location = New System.Drawing.Point(240, 285)
+        Me.MaterialTxt.Location = New System.Drawing.Point(238, 285)
         Me.MaterialTxt.Name = "MaterialTxt"
         Me.MaterialTxt.Size = New System.Drawing.Size(114, 23)
         Me.MaterialTxt.TabIndex = 8
@@ -184,7 +184,7 @@ Partial Class ReservarMaterial
         '
         Me.CantidadNumeric.Dock = System.Windows.Forms.DockStyle.Fill
         Me.CantidadNumeric.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CantidadNumeric.Location = New System.Drawing.Point(360, 285)
+        Me.CantidadNumeric.Location = New System.Drawing.Point(358, 285)
         Me.CantidadNumeric.Name = "CantidadNumeric"
         Me.CantidadNumeric.Size = New System.Drawing.Size(124, 23)
         Me.CantidadNumeric.TabIndex = 2
@@ -194,62 +194,10 @@ Partial Class ReservarMaterial
         Me.FechaLimiteDTP.Dock = System.Windows.Forms.DockStyle.Fill
         Me.FechaLimiteDTP.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FechaLimiteDTP.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.FechaLimiteDTP.Location = New System.Drawing.Point(490, 285)
+        Me.FechaLimiteDTP.Location = New System.Drawing.Point(488, 285)
         Me.FechaLimiteDTP.Name = "FechaLimiteDTP"
-        Me.FechaLimiteDTP.Size = New System.Drawing.Size(103, 23)
+        Me.FechaLimiteDTP.Size = New System.Drawing.Size(105, 23)
         Me.FechaLimiteDTP.TabIndex = 3
-        '
-        'AgregarBtn
-        '
-        Me.AgregarBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.AgregarBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.AgregarBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.AgregarBtn.Location = New System.Drawing.Point(3, 3)
-        Me.AgregarBtn.Name = "AgregarBtn"
-        Me.AgregarBtn.Size = New System.Drawing.Size(141, 29)
-        Me.AgregarBtn.TabIndex = 4
-        Me.AgregarBtn.Tag = "Agregar"
-        Me.AgregarBtn.Text = "Agregar"
-        Me.AgregarBtn.UseVisualStyleBackColor = True
-        '
-        'VerDisponibilidadBtn
-        '
-        Me.VerDisponibilidadBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.VerDisponibilidadBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.VerDisponibilidadBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.VerDisponibilidadBtn.Location = New System.Drawing.Point(150, 3)
-        Me.VerDisponibilidadBtn.Name = "VerDisponibilidadBtn"
-        Me.VerDisponibilidadBtn.Size = New System.Drawing.Size(141, 29)
-        Me.VerDisponibilidadBtn.TabIndex = 5
-        Me.VerDisponibilidadBtn.Tag = "Ver disponibilidad"
-        Me.VerDisponibilidadBtn.Text = "Ver disponibilidad"
-        Me.VerDisponibilidadBtn.UseVisualStyleBackColor = True
-        '
-        'VerEventoBtn
-        '
-        Me.VerEventoBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.VerEventoBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.VerEventoBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.VerEventoBtn.Location = New System.Drawing.Point(297, 3)
-        Me.VerEventoBtn.Name = "VerEventoBtn"
-        Me.VerEventoBtn.Size = New System.Drawing.Size(141, 29)
-        Me.VerEventoBtn.TabIndex = 6
-        Me.VerEventoBtn.Tag = "Ver evento"
-        Me.VerEventoBtn.Text = "Ver evento"
-        Me.VerEventoBtn.UseVisualStyleBackColor = True
-        '
-        'TerminarBtn
-        '
-        Me.TerminarBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.TerminarBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TerminarBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.TerminarBtn.Location = New System.Drawing.Point(444, 3)
-        Me.TerminarBtn.Name = "TerminarBtn"
-        Me.TerminarBtn.Size = New System.Drawing.Size(143, 29)
-        Me.TerminarBtn.TabIndex = 7
-        Me.TerminarBtn.Tag = "Terminar"
-        Me.TerminarBtn.Text = "Terminar"
-        Me.TerminarBtn.UseVisualStyleBackColor = True
         '
         'TableLayoutPanel2
         '
@@ -271,15 +219,67 @@ Partial Class ReservarMaterial
         Me.TableLayoutPanel2.Size = New System.Drawing.Size(590, 35)
         Me.TableLayoutPanel2.TabIndex = 9
         '
+        'TerminarBtn
+        '
+        Me.TerminarBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.TerminarBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TerminarBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.TerminarBtn.Location = New System.Drawing.Point(444, 3)
+        Me.TerminarBtn.Name = "TerminarBtn"
+        Me.TerminarBtn.Size = New System.Drawing.Size(143, 29)
+        Me.TerminarBtn.TabIndex = 7
+        Me.TerminarBtn.Tag = "Terminar"
+        Me.TerminarBtn.Text = "Terminar"
+        Me.TerminarBtn.UseVisualStyleBackColor = True
+        '
+        'VerEventoBtn
+        '
+        Me.VerEventoBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.VerEventoBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.VerEventoBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.VerEventoBtn.Location = New System.Drawing.Point(297, 3)
+        Me.VerEventoBtn.Name = "VerEventoBtn"
+        Me.VerEventoBtn.Size = New System.Drawing.Size(141, 29)
+        Me.VerEventoBtn.TabIndex = 6
+        Me.VerEventoBtn.Tag = "Ver evento"
+        Me.VerEventoBtn.Text = "Ver evento"
+        Me.VerEventoBtn.UseVisualStyleBackColor = True
+        '
+        'VerDisponibilidadBtn
+        '
+        Me.VerDisponibilidadBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.VerDisponibilidadBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.VerDisponibilidadBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.VerDisponibilidadBtn.Location = New System.Drawing.Point(150, 3)
+        Me.VerDisponibilidadBtn.Name = "VerDisponibilidadBtn"
+        Me.VerDisponibilidadBtn.Size = New System.Drawing.Size(141, 29)
+        Me.VerDisponibilidadBtn.TabIndex = 5
+        Me.VerDisponibilidadBtn.Tag = "Ver disponibilidad"
+        Me.VerDisponibilidadBtn.Text = "Ver disponibilidad"
+        Me.VerDisponibilidadBtn.UseVisualStyleBackColor = True
+        '
+        'AgregarBtn
+        '
+        Me.AgregarBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.AgregarBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.AgregarBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.AgregarBtn.Location = New System.Drawing.Point(3, 3)
+        Me.AgregarBtn.Name = "AgregarBtn"
+        Me.AgregarBtn.Size = New System.Drawing.Size(141, 29)
+        Me.AgregarBtn.TabIndex = 4
+        Me.AgregarBtn.Tag = "Agregar"
+        Me.AgregarBtn.Text = "Agregar"
+        Me.AgregarBtn.UseVisualStyleBackColor = True
+        '
         'IdLbl
         '
         Me.IdLbl.AutoSize = True
         Me.IdLbl.Dock = System.Windows.Forms.DockStyle.Fill
         Me.IdLbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.IdLbl.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.IdLbl.Location = New System.Drawing.Point(126, 260)
+        Me.IdLbl.Location = New System.Drawing.Point(125, 260)
         Me.IdLbl.Name = "IdLbl"
-        Me.IdLbl.Size = New System.Drawing.Size(108, 22)
+        Me.IdLbl.Size = New System.Drawing.Size(107, 22)
         Me.IdLbl.TabIndex = 10
         Me.IdLbl.Tag = "Id"
         Me.IdLbl.Text = "Id"
@@ -288,9 +288,9 @@ Partial Class ReservarMaterial
         '
         Me.IdTxt.Dock = System.Windows.Forms.DockStyle.Fill
         Me.IdTxt.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.IdTxt.Location = New System.Drawing.Point(126, 285)
+        Me.IdTxt.Location = New System.Drawing.Point(125, 285)
         Me.IdTxt.Name = "IdTxt"
-        Me.IdTxt.Size = New System.Drawing.Size(108, 23)
+        Me.IdTxt.Size = New System.Drawing.Size(107, 23)
         Me.IdTxt.TabIndex = 11
         '
         'ReservarMaterial

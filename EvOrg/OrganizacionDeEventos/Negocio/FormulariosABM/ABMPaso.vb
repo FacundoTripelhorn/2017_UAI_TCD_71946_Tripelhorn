@@ -69,7 +69,7 @@ Public Class ABMPaso
     Private Sub Actualizar()
         Dim vLista As New List(Of VistaPaso)
         For Each Evento As Evento In vEventoDinamico.ConsultaTodo
-            If Evento.Nombre = EventoCombo.SelectedItem Then
+            If Evento.Nombre = EventoCombo.Text Then
                 vEvento = Evento
             End If
         Next

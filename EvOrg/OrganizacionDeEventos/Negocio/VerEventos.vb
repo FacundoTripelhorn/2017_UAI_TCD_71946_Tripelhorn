@@ -30,4 +30,12 @@ Public Class VerEventos
         vTraductor.Registrar(Me)
         ActualizarObservador(Me)
     End Sub
+
+    Private Sub BorrarEventoBtn_Click(sender As Object, e As EventArgs) Handles BorrarEventoBtn.Click
+        MsgBox("Borra un evento de la base de datos")
+    End Sub
+
+    Private Sub ModificarEventoBtn_Click(sender As Object, e As EventArgs) Handles ModificarEventoBtn.Click
+        MsgBox("Modifica un evento de la base de datos")
+    End Sub
 End Class

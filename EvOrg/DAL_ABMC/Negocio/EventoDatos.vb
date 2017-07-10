@@ -43,12 +43,12 @@ Public Class EventoDatos
         For Each dr As DataRow In DTMateriales.Rows
             If dr(0) = pEvento.Id And dr(1) = pMaterial.Id Then
                 dr(2) += pMaterial.Cantidad
-                If dr(3) < pMaterial.Fecha Then dr(3) = pMaterial.Fecha
+                If dr(3) < pMaterial.FechaDesde Then dr(3) = pMaterial.FechaDesde
                 Exit For
             End If
             If dr(0) <> pEvento.Id And dr(1) <> pMaterial.Id Then
                 vMaterialDatos.AltaMaterialTemporal(pMaterial)
-                DRow.ItemArray = {pEvento.Id, pMaterial.Id, pMaterial.Cantidad, pMaterial.Fecha}
+                DRow.ItemArray = {pEvento.Id, pMaterial.Id, pMaterial.Cantidad, pMaterial.FechaDesde}
                 DTMateriales.Rows.Add(DRow)
                 Exit For
             End If
@@ -115,12 +115,13 @@ Public Class EventoDatos
     Private Function GetMateriales(pEventoId As Integer) As List(Of Material)
         Dim vLista As New List(Of Material)
         Dim vMaterialDatos As New MaterialDatos
+        Dim vEventoDatos As New EventoDatos
         Dim DTable As DataTable = Comando.GetData("SELECT * FROM ReservaMaterial WHERE Evento = " & pEventoId)
         Dim vMateriales As List(Of Object) = vMaterialDatos.ConsultaTodo
         For Each Drow As DataRow In DTable.Rows
             For Each Material As Material In vMateriales
                 If Drow(1) = Material.Id Then
-                    vLista.Add(New Material(Material.Id, Material.Nombre, Drow(2), Date.Parse(Drow(3))))
+                    vLista.Add(New Material(Material.Id, Material.Nombre, Drow(2), Date.Parse(Drow(3)), vEvento.Fecha))
                 End If
             Next
         Next

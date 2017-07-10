@@ -62,4 +62,8 @@ Public Class VerMateriales
             End Try
         Next
     End Sub
+
+    Private Sub CancelarBtn_Click(sender As Object, e As EventArgs) Handles CancelarBtn.Click
+        Me.Close()
+    End Sub
 End Class

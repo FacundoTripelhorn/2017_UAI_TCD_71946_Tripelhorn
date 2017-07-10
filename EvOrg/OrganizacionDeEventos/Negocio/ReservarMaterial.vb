@@ -9,6 +9,7 @@ Public Class ReservarMaterial
     Dim vEventoDinamico As New EventoDinamico
     Property vMaterial As Material
     Dim vMaterialDinamico As New MaterialDinamico
+    Dim vFlag As Boolean = False
 
     Sub New()
 
@@ -19,13 +20,14 @@ Public Class ReservarMaterial
 
     End Sub
 
-    Sub New(pEvento As Evento)
+    Sub New(ByRef pEvento As Evento)
         ' This call is required by the designer.
         InitializeComponent()
 
         ' Add any initialization after the InitializeComponent() call.
         If Not pEvento Is Nothing Then
             vEvento = pEvento
+            vFlag = True
         End If
     End Sub
 
@@ -73,7 +75,7 @@ Public Class ReservarMaterial
             Dim vLista As New List(Of VistaReservaMaterial)
             ActualizarEvento()
             For Each Material As Material In vEvento.ListaMateriales
-                vLista.Add(New VistaReservaMaterial(Material.Nombre, Material.Cantidad, Material.Fecha))
+                vLista.Add(New VistaReservaMaterial(Material.Nombre, Material.Cantidad, Material.FechaDesde))
             Next
             GrillaMateriales.DataSource = Nothing
             GrillaMateriales.DataSource = vLista
@@ -105,8 +107,13 @@ Public Class ReservarMaterial
         vMaterial.Id = IdTxt.Text
         vMaterial.Nombre = MaterialTxt.Text
         vMaterial.Cantidad = CantidadNumeric.Value
-        vMaterial.Fecha = FechaLimiteDTP.Value
-        vEventoDinamico.ReservarMaterial(vEvento, vMaterial)
+        vMaterial.FechaDesde = FechaLimiteDTP.Value
+        vMaterial.FechaHasta = vEvento.Fecha
+        If Not vFlag Then
+            vEventoDinamico.ReservarMaterial(vEvento, vMaterial)
+        Else
+            vEvento.ListaMateriales.Add(vMaterial)
+        End If
         Actualizar()
     End Sub
 

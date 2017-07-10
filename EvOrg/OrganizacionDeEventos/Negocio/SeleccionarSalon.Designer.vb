@@ -280,7 +280,7 @@ Partial Class SeleccionarSalon
         Me.GMapa.ShowTileGridLines = False
         Me.GMapa.Size = New System.Drawing.Size(336, 284)
         Me.GMapa.TabIndex = 5
-        Me.GMapa.Zoom = 18.0R
+        Me.GMapa.Zoom = 2.0R
         '
         'SeleccionarSalon
         '

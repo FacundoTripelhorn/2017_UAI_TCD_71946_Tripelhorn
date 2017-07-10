@@ -24,9 +24,9 @@ Partial Class VerEventos
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(VerEventos))
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
+        Me.GrillaEventos = New System.Windows.Forms.DataGridView()
         Me.BorrarEventoBtn = New System.Windows.Forms.Button()
         Me.ModificarEventoBtn = New System.Windows.Forms.Button()
-        Me.GrillaEventos = New System.Windows.Forms.DataGridView()
         Me.TableLayoutPanel1.SuspendLayout()
         CType(Me.GrillaEventos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -49,6 +49,16 @@ Partial Class VerEventos
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 18.3908!))
         Me.TableLayoutPanel1.Size = New System.Drawing.Size(442, 304)
         Me.TableLayoutPanel1.TabIndex = 0
+        '
+        'GrillaEventos
+        '
+        Me.GrillaEventos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.TableLayoutPanel1.SetColumnSpan(Me.GrillaEventos, 2)
+        Me.GrillaEventos.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.GrillaEventos.Location = New System.Drawing.Point(3, 3)
+        Me.GrillaEventos.Name = "GrillaEventos"
+        Me.GrillaEventos.Size = New System.Drawing.Size(436, 242)
+        Me.GrillaEventos.TabIndex = 0
         '
         'BorrarEventoBtn
         '
@@ -79,16 +89,6 @@ Partial Class VerEventos
         Me.ModificarEventoBtn.Tag = "Modificar evento"
         Me.ModificarEventoBtn.Text = "Modificar evento"
         Me.ModificarEventoBtn.UseVisualStyleBackColor = True
-        '
-        'GrillaEventos
-        '
-        Me.GrillaEventos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.TableLayoutPanel1.SetColumnSpan(Me.GrillaEventos, 2)
-        Me.GrillaEventos.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.GrillaEventos.Location = New System.Drawing.Point(3, 3)
-        Me.GrillaEventos.Name = "GrillaEventos"
-        Me.GrillaEventos.Size = New System.Drawing.Size(436, 242)
-        Me.GrillaEventos.TabIndex = 0
         '
         'VerEventos
         '

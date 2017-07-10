@@ -31,6 +31,7 @@ Public Class DisponibilidadMateriales
     Private Sub ListaMateriales_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         vTraductor.Registrar(Me)
         GrillaMateriales.DataSource = GetMateriales()
+        GrillaMateriales.Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
         ActualizarObservador(Me)
     End Sub
 
@@ -39,22 +40,11 @@ Public Class DisponibilidadMateriales
         Dim vListaMateriales As List(Of Object) = vMaterialDinamico.ConsultaTodo
         Dim vListaVista As New List(Of VistaMaterial)
 
-        If Not FiltroDTP.Value.Date = Today.Date.Date Then
-            Try
-                For i = 0 To vLista.Count
-                    If vLista.Item(i).Fecha > FiltroDTP.Value Then
-                        vLista.Remove(vLista.Item(i))
-                    End If
-                Next
-            Catch ex As Exception
-
-            End Try
-        End If
-
         For Each material As Material In vListaMateriales
             For Each reserva As Material In vLista
-                If material.Id = reserva.Id Then
+                If material.Id = reserva.Id And reserva.FechaDesde < FiltroDTP.Value And reserva.FechaHasta > FiltroDTP.Value Then
                     material.Cantidad = material.Cantidad - reserva.Cantidad
+
                 End If
             Next
             vListaVista.Add(New VistaMaterial(material.Id, material.Nombre, material.Cantidad, material.Precio))

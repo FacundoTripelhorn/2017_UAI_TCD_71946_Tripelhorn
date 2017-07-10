@@ -174,9 +174,9 @@ Partial Class ReservarServicio
         '
         Me.TableLayoutPanel3.ColumnCount = 4
         Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 73.0!))
-        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 136.0!))
-        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 56.0!))
-        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 151.0!))
+        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 147.0!))
+        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 85.0!))
+        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 111.0!))
         Me.TableLayoutPanel3.Controls.Add(Me.NombreLbl, 0, 0)
         Me.TableLayoutPanel3.Controls.Add(Me.TelefonoLbl, 0, 1)
         Me.TableLayoutPanel3.Controls.Add(Me.EmailLbl, 0, 2)
@@ -282,7 +282,7 @@ Partial Class ReservarServicio
         Me.NombreTxt.Dock = System.Windows.Forms.DockStyle.Fill
         Me.NombreTxt.Location = New System.Drawing.Point(76, 3)
         Me.NombreTxt.Name = "NombreTxt"
-        Me.NombreTxt.Size = New System.Drawing.Size(130, 23)
+        Me.NombreTxt.Size = New System.Drawing.Size(141, 23)
         Me.NombreTxt.TabIndex = 4
         '
         'DireccionTxt
@@ -290,7 +290,7 @@ Partial Class ReservarServicio
         Me.DireccionTxt.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DireccionTxt.Location = New System.Drawing.Point(76, 87)
         Me.DireccionTxt.Name = "DireccionTxt"
-        Me.DireccionTxt.Size = New System.Drawing.Size(130, 23)
+        Me.DireccionTxt.Size = New System.Drawing.Size(141, 23)
         Me.DireccionTxt.TabIndex = 5
         '
         'EmailTxt
@@ -298,7 +298,7 @@ Partial Class ReservarServicio
         Me.EmailTxt.Dock = System.Windows.Forms.DockStyle.Fill
         Me.EmailTxt.Location = New System.Drawing.Point(76, 59)
         Me.EmailTxt.Name = "EmailTxt"
-        Me.EmailTxt.Size = New System.Drawing.Size(130, 23)
+        Me.EmailTxt.Size = New System.Drawing.Size(141, 23)
         Me.EmailTxt.TabIndex = 7
         '
         'TelefonoTxt
@@ -306,7 +306,7 @@ Partial Class ReservarServicio
         Me.TelefonoTxt.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TelefonoTxt.Location = New System.Drawing.Point(76, 31)
         Me.TelefonoTxt.Name = "TelefonoTxt"
-        Me.TelefonoTxt.Size = New System.Drawing.Size(130, 23)
+        Me.TelefonoTxt.Size = New System.Drawing.Size(141, 23)
         Me.TelefonoTxt.TabIndex = 8
         '
         'ObservacionLbl
@@ -314,9 +314,9 @@ Partial Class ReservarServicio
         Me.ObservacionLbl.AutoSize = True
         Me.TableLayoutPanel3.SetColumnSpan(Me.ObservacionLbl, 2)
         Me.ObservacionLbl.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.ObservacionLbl.Location = New System.Drawing.Point(212, 0)
+        Me.ObservacionLbl.Location = New System.Drawing.Point(223, 0)
         Me.ObservacionLbl.Name = "ObservacionLbl"
-        Me.ObservacionLbl.Size = New System.Drawing.Size(201, 28)
+        Me.ObservacionLbl.Size = New System.Drawing.Size(190, 28)
         Me.ObservacionLbl.TabIndex = 9
         Me.ObservacionLbl.Tag = "Observacion"
         Me.ObservacionLbl.Text = "Observación"
@@ -326,20 +326,20 @@ Partial Class ReservarServicio
         '
         Me.TableLayoutPanel3.SetColumnSpan(Me.ObservacionTxt, 2)
         Me.ObservacionTxt.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.ObservacionTxt.Location = New System.Drawing.Point(212, 31)
+        Me.ObservacionTxt.Location = New System.Drawing.Point(223, 31)
         Me.ObservacionTxt.Multiline = True
         Me.ObservacionTxt.Name = "ObservacionTxt"
         Me.TableLayoutPanel3.SetRowSpan(Me.ObservacionTxt, 2)
-        Me.ObservacionTxt.Size = New System.Drawing.Size(201, 50)
+        Me.ObservacionTxt.Size = New System.Drawing.Size(190, 50)
         Me.ObservacionTxt.TabIndex = 10
         '
         'PrecioLbl
         '
         Me.PrecioLbl.AutoSize = True
         Me.PrecioLbl.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.PrecioLbl.Location = New System.Drawing.Point(212, 84)
+        Me.PrecioLbl.Location = New System.Drawing.Point(223, 84)
         Me.PrecioLbl.Name = "PrecioLbl"
-        Me.PrecioLbl.Size = New System.Drawing.Size(50, 29)
+        Me.PrecioLbl.Size = New System.Drawing.Size(79, 29)
         Me.PrecioLbl.TabIndex = 11
         Me.PrecioLbl.Tag = "Precio"
         Me.PrecioLbl.Text = "Precio"
@@ -348,9 +348,9 @@ Partial Class ReservarServicio
         'PrecioTxt
         '
         Me.PrecioTxt.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.PrecioTxt.Location = New System.Drawing.Point(268, 87)
+        Me.PrecioTxt.Location = New System.Drawing.Point(308, 87)
         Me.PrecioTxt.Name = "PrecioTxt"
-        Me.PrecioTxt.Size = New System.Drawing.Size(145, 23)
+        Me.PrecioTxt.Size = New System.Drawing.Size(105, 23)
         Me.PrecioTxt.TabIndex = 12
         '
         'GrillaServicios

@@ -95,4 +95,8 @@ Public Class OrganizarEvento
         vEvento.Tipo = TipoEventoCombo.SelectedItem
         vEventoDinamico.Alta(vEvento)
     End Sub
+
+    Private Sub CancelarBtn_Click(sender As Object, e As EventArgs) Handles CancelarBtn.Click
+        Me.Close()
+    End Sub
 End Class

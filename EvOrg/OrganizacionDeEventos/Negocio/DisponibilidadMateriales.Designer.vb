@@ -47,7 +47,7 @@ Partial Class DisponibilidadMateriales
         Me.TableLayoutPanel1.RowCount = 2
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.4!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 87.6!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(434, 250)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(553, 250)
         Me.TableLayoutPanel1.TabIndex = 0
         '
         'MaterialesLbl
@@ -59,7 +59,7 @@ Partial Class DisponibilidadMateriales
         Me.MaterialesLbl.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.MaterialesLbl.Location = New System.Drawing.Point(3, 13)
         Me.MaterialesLbl.Name = "MaterialesLbl"
-        Me.MaterialesLbl.Size = New System.Drawing.Size(175, 17)
+        Me.MaterialesLbl.Size = New System.Drawing.Size(225, 17)
         Me.MaterialesLbl.TabIndex = 0
         Me.MaterialesLbl.Tag = "Materiales"
         Me.MaterialesLbl.Text = "Materiales"
@@ -68,9 +68,9 @@ Partial Class DisponibilidadMateriales
         '
         Me.FiltroDTP.Dock = System.Windows.Forms.DockStyle.Fill
         Me.FiltroDTP.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.FiltroDTP.Location = New System.Drawing.Point(184, 3)
+        Me.FiltroDTP.Location = New System.Drawing.Point(234, 3)
         Me.FiltroDTP.Name = "FiltroDTP"
-        Me.FiltroDTP.Size = New System.Drawing.Size(247, 23)
+        Me.FiltroDTP.Size = New System.Drawing.Size(316, 23)
         Me.FiltroDTP.TabIndex = 1
         '
         'GrillaMateriales
@@ -80,14 +80,14 @@ Partial Class DisponibilidadMateriales
         Me.GrillaMateriales.Dock = System.Windows.Forms.DockStyle.Fill
         Me.GrillaMateriales.Location = New System.Drawing.Point(3, 33)
         Me.GrillaMateriales.Name = "GrillaMateriales"
-        Me.GrillaMateriales.Size = New System.Drawing.Size(428, 214)
+        Me.GrillaMateriales.Size = New System.Drawing.Size(547, 214)
         Me.GrillaMateriales.TabIndex = 2
         '
         'DisponibilidadMateriales
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(434, 250)
+        Me.ClientSize = New System.Drawing.Size(553, 250)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "DisponibilidadMateriales"
