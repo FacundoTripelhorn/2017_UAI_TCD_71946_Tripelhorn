@@ -48,6 +48,9 @@
   <PropertyGroup>
     <ApplicationIcon>EvOrgIcon.ico</ApplicationIcon>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="GMap.NET.Core, Version=1.7.0.0, Culture=neutral, PublicKeyToken=b85b9027b614afef, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -248,7 +251,7 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UsuarioFamiliaPatente\VistaUsuario.vb" />
-    <Compile Include="VistaReservaMaterial.vb" />
+    <Compile Include="Negocio\VistaReservaMaterial.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="MultiIdioma\Idiomas.resx">
@@ -328,6 +331,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="My Project\app.manifest" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>

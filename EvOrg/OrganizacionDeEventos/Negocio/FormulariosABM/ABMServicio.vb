@@ -38,16 +38,20 @@ Public Class ABMServicio
 
     Private Sub AltaBtn_Click(sender As Object, e As EventArgs) Handles AltaBtn.Click
         Try
-            If Not (NombreTxt.Text = "" And EmailTxt.Text = "" And TelefonoTxt.Text = "" And CalleTxt.Text = "" And NumeroTxt.Text = "" And LocalidadTxt.Text = "") Then
-                If Regex.IsMatch(EmailTxt.Text, "^[\w]+@{1}[\w]+\.[a-z]{2,3}$") Then
+            If NombreTxt.Text <> "" And EmailTxt.Text <> "" And TelefonoTxt.Text <> "" And CalleTxt.Text <> "" And NumeroTxt.Text <> "" And LocalidadTxt.Text <> "" Then
+                If Regex.IsMatch(EmailTxt.Text, "^[\w._-]+@{1}[\w]+\.[a-z]{2,3}$") Then
                     If Regex.IsMatch(TelefonoTxt.Text, "[0-9]{8,10}") Then
-                        vDireccion = New Direccion(CalleTxt.Text, NumeroTxt.Text, LocalidadTxt.Text)
+                        vDireccion = New Direccion(CalleTxt.Text, Integer.Parse(NumeroTxt.Text), LocalidadTxt.Text)
                         vServicio = New Servicio(NombreTxt.Text, TelefonoTxt.Text, vDireccion, EmailTxt.Text, ObservacionTxt.Text, PrecioTxt.Text)
-                        vServicioDinamico.Alta(vServicio)
+                        If Not vServicioDinamico.CheckServicio(vServicio.Nombre) Then
+                            vServicioDinamico.Alta(vServicio)
+                        Else
+                            Throw New Exception("El nombre del servicio ingresado ya existe")
+                        End If
                         Limpiar()
-                        Actualizar()
-                    Else
-                        Throw New Exception("El numero de telefono ingresado es incorrecto")
+                            Actualizar()
+                        Else
+                            Throw New Exception("El numero de telefono ingresado es incorrecto")
                     End If
                 Else
                     Throw New Exception("El email ingresado es incorrecto")
@@ -61,38 +65,51 @@ Public Class ABMServicio
     End Sub
 
     Private Sub BajaBtn_Click(sender As Object, e As EventArgs) Handles BajaBtn.Click
-        For Each Servicio As Servicio In vServicioDinamico.ConsultaTodo
-            If Servicio.Nombre = DirectCast(GrillaServicios.SelectedRows(0).DataBoundItem, VistaServicio).Nombre Then
-                vServicio = Servicio
-                vServicioDinamico.Baja(vServicio)
-                Limpiar()
-                Actualizar()
+        Try
+            If GrillaServicios.SelectedRows.Count > 0 Then
+                For Each Servicio As Servicio In vServicioDinamico.ConsultaTodo
+                    If Servicio.Nombre = DirectCast(GrillaServicios.SelectedRows(0).DataBoundItem, VistaServicio).Nombre Then
+                        vServicio = Servicio
+                        vServicioDinamico.Baja(vServicio)
+                        Limpiar()
+                        Actualizar()
+                    End If
+                Next
+            Else
+                Throw New Exception("Seleccione el servicio que desea borrar")
             End If
-        Next
+        Catch ex As Exception
+            MessageBox.Show(vTraductor.Traducir(ex.Message), "EvOrg")
+        End Try
+
     End Sub
 
     Private Sub ModificacionBtn_Click(sender As Object, e As EventArgs) Handles ModificacionBtn.Click
         Try
-            If Not (NombreTxt.Text = "" And EmailTxt.Text = "" And TelefonoTxt.Text = "" And CalleTxt.Text = "" And NumeroTxt.Text = "" And LocalidadTxt.Text = "") Then
-                If (Regex.IsMatch(EmailTxt.Text, "^[\w]+@{1}[\w]+\.[a-z]{2,3}$")) Then
-                    If (Regex.IsMatch(TelefonoTxt.Text, "^[0-9]{8,10}")) Then
-                        For Each Servicio As Servicio In vServicioDinamico.ConsultaTodo
-                            If Servicio.Nombre = DirectCast(GrillaServicios.SelectedRows(0).DataBoundItem, VistaServicio).Nombre Then
-                                vDireccion = New Direccion(Servicio.Direccion.Id, CalleTxt.Text, NumeroTxt.Text, LocalidadTxt.Text)
-                                vServicio = New Servicio(Servicio.Id, NombreTxt.Text, TelefonoTxt.Text, vDireccion, EmailTxt.Text, ObservacionTxt.Text, PrecioTxt.Text)
-                                vServicioDinamico.Modificacion(vServicio)
-                                Limpiar()
-                                Actualizar()
-                            End If
-                        Next
+            If GrillaServicios.SelectedRows.Count > 0 Then
+                If Not (NombreTxt.Text = "" And EmailTxt.Text = "" And TelefonoTxt.Text = "" And CalleTxt.Text = "" And NumeroTxt.Text = "" And LocalidadTxt.Text = "") Then
+                    If Regex.IsMatch(EmailTxt.Text, "^[\w._-]+@{1}[\w]+\.[a-z]{2,3}$") Then
+                        If Regex.IsMatch(TelefonoTxt.Text, "^[0-9]{8,10}") Then
+                            For Each Servicio As Servicio In vServicioDinamico.ConsultaTodo
+                                If Servicio.Nombre = DirectCast(GrillaServicios.SelectedRows(0).DataBoundItem, VistaServicio).Nombre Then
+                                    vDireccion = New Direccion(Servicio.Direccion.Id, CalleTxt.Text, NumeroTxt.Text, LocalidadTxt.Text)
+                                    vServicio = New Servicio(Servicio.Id, NombreTxt.Text, TelefonoTxt.Text, vDireccion, EmailTxt.Text, ObservacionTxt.Text, PrecioTxt.Text)
+                                    vServicioDinamico.Modificacion(vServicio)
+                                    Limpiar()
+                                    Actualizar()
+                                End If
+                            Next
+                        Else
+                            Throw New Exception("El numero de telefono ingresado es incorrecto")
+                        End If
                     Else
-                        Throw New Exception("El numero de telefono ingresado es incorrecto")
+                        Throw New Exception("El email ingresado es incorrecto")
                     End If
                 Else
-                    Throw New Exception("El email ingresado es incorrecto")
+                    Throw New Exception("Por favor complete todos los campos")
                 End If
             Else
-                Throw New Exception("Por favor complete todos los campos")
+                Throw New Exception("Seleccione el servicio que desea modificar")
             End If
         Catch ex As Exception
             MessageBox.Show(vTraductor.Traducir(ex.Message), "EvOrg")
@@ -114,8 +131,8 @@ Public Class ABMServicio
         Next
     End Sub
 
-    Private Sub CPTxt_KeyPress(sender As Object, e As KeyPressEventArgs) Handles LocalidadTxt.KeyPress
-        If Not (Regex.IsMatch(e.KeyChar, "[0-9\b]")) Then e.KeyChar = Nothing
+    Private Sub LocalidadTxt_KeyPress(sender As Object, e As KeyPressEventArgs) Handles LocalidadTxt.KeyPress
+        If (Regex.IsMatch(e.KeyChar, "[0-9]")) Then e.KeyChar = Nothing
     End Sub
 
     Private Sub NumeroTxt_KeyPress(sender As Object, e As KeyPressEventArgs) Handles NumeroTxt.KeyPress
@@ -150,5 +167,9 @@ Public Class ABMServicio
                 End If
             End Try
         Next
+    End Sub
+
+    Private Sub CalleTxt_KeyPress(sender As Object, e As KeyPressEventArgs) Handles CalleTxt.KeyPress
+        If (Regex.IsMatch(e.KeyChar, "[0-9]")) Then e.KeyChar = Nothing
     End Sub
 End Class

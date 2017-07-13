@@ -120,4 +120,13 @@ Public Class TipoEventoDatos
         If DTable.Rows.Count > 0 Then vDias = DTable.Rows(0).Item(2)
         Return vDias
     End Function
+
+    Public Function CheckTipoEvento(pNombre As String) As Boolean
+        Dim DTable As DataTable = Comando.GetData("SELECT * FROM TipoEvento WHERE Nombre = '" & pNombre & "'")
+        If DTable.Rows.Count > 0 Then
+            Return True
+        Else
+            Return False
+        End If
+    End Function
 End Class

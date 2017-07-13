@@ -74,4 +74,31 @@ Public Class PasoDatos
         Return vEvento
     End Function
 
+    Public Function CheckPaso(pDescripcion As String) As Boolean
+        Dim DTable As DataTable = Comando.GetData("SELECT * FROM Paso WHERE Descripcion = '" & pDescripcion & "'")
+        If DTable.Rows.Count > 0 Then
+            Dim DTEvento As DataTable = Comando.GetData("SELECT * FROM EventoPaso WHERE Paso = " & DTable.Rows(0).Item(0))
+            If DTEvento.Rows.Count > 0 Then
+                Return True
+            Else
+                Return False
+            End If
+        Else
+            Return False
+        End If
+    End Function
+
+    Public Function CheckPasoTipoEvento(pDescripcion As String) As Boolean
+        Dim DTable As DataTable = Comando.GetData("SELECT * FROM Paso WHERE Descripcion = '" & pDescripcion & "'")
+        If DTable.Rows.Count > 0 Then
+            Dim DTEvento As DataTable = Comando.GetData("SELECT * FROM TipoEventoPaso WHERE Paso = " & DTable.Rows(0).Item(0))
+            If DTEvento.Rows.Count > 0 Then
+                Return True
+            Else
+                Return False
+            End If
+        Else
+            Return False
+        End If
+    End Function
 End Class

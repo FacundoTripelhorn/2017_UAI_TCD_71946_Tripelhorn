@@ -198,6 +198,14 @@ Public Class FamiliaDatos
             Catch ex As Exception
             End Try
         End If
-
     End Sub
+
+    Public Function CheckFamilia(pNombre As String) As Boolean
+        Dim DTable As DataTable = Comando.GetData("SELECT * FROM Familia WHERE Nombre = '" & pNombre & "'")
+        If DTable.Rows.Count > 0 Then
+            Return True
+        Else
+            Return False
+        End If
+    End Function
 End Class

@@ -18,4 +18,8 @@ Public Class ServicioDinamico
     Public Function ConsultaTodo() As List(Of Object) Implements IABMC.ConsultaTodo
         Return vServicioDatos.ConsultaTodo()
     End Function
+
+    Public Function CheckServicio(pNombre As String) As Boolean
+        Return vServicioDatos.CheckServicio(pNombre)
+    End Function
 End Class

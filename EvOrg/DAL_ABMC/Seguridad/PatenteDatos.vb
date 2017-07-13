@@ -61,4 +61,13 @@ Public Class PatenteDatos
         End If
         Return vLista
     End Function
+
+    Public Function CheckPatente(pNombre As String) As String
+        Dim DTable As DataTable = Comando.GetData("SELECT * FROM Patente WHERE Nombre = '" & pNombre & "'")
+        If DTable.Rows.Count > 0 Then
+            Return True
+        Else
+            Return False
+        End If
+    End Function
 End Class

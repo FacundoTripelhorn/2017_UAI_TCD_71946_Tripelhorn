@@ -18,4 +18,8 @@ Public Class SalonDinamico
     Public Function ConsultaTodo() As List(Of Object) Implements IABMC.ConsultaTodo
         Return vSalonDatos.ConsultaTodo()
     End Function
+
+    Public Function CheckSalon(pNombre As String) As Boolean
+        Return vSalonDatos.CheckSalon(pNombre)
+    End Function
 End Class

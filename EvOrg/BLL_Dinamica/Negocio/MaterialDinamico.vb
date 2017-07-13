@@ -29,4 +29,8 @@ Public Class MaterialDinamico
     Public Function ConsultaReservas() As List(Of Material)
         Return Me.MaterialDatos.ConsultaReservas()
     End Function
+
+    Public Function CheckMaterial(pId As Integer, pNombre As String) As Boolean
+        Return Me.MaterialDatos.CheckMaterial(pId, pNombre)
+    End Function
 End Class

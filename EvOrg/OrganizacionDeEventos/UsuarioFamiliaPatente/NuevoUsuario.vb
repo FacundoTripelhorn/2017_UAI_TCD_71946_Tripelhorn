@@ -30,50 +30,54 @@ Public Class NuevoUsuario
     Private Sub AceptarBtn_Click(sender As Object, e As EventArgs) Handles AceptarBtn.Click
         Try
             Dim vEncriptar As Encriptador = Encriptador.GetInstance
-            If ContraseñaTxt.Text = RContraseñaTxt.Text Then
-                If Regex.IsMatch(ContraseñaTxt.Text, "[a-zA-Z0-9._]{6,16}") And Regex.IsMatch(RContraseñaTxt.Text, "[a-zA-Z0-9._]{6,16}") Then
-                    If Regex.IsMatch(IdUsuarioTxt.Text, "[a-zA-Z0-9_.]{6,18}") Then
-                        If Regex.IsMatch(EmailTxt.Text, "^[\w]+@{1}[\w]+\.[a-z]{2,3}$") Then
-                            Usuario.IdUsuario = IdUsuarioTxt.Text
-                            Usuario.Email = EmailTxt.Text
-                            Usuario.Contraseña = vEncriptar.Encriptar(ContraseñaTxt.Text)
-                            Dim vLista As List(Of Object) = FamiliaDinamica.ConsultaTodo
-                            For Each vFamilia As Familia In vLista
-                                If vFamilia.Nombre = FamiliaCombo.Text Then Familia = vFamilia
-                            Next
-                            Usuario.Familia = Familia
-                            If Modificacion Then
-                                UsuarioDinamico.Modificacion(Usuario)
-                            Else
-                                Dim vCheckUsuario As Usuario = UsuarioDinamico.DevuelveUsuario(Usuario.IdUsuario)
-                                If vCheckUsuario Is Nothing Then
-                                    UsuarioDinamico.Alta(Usuario)
+            If IdUsuarioTxt.Text <> "" And ContraseñaTxt.Text <> "" And EmailTxt.Text <> "" And RContraseñaTxt.Text <> "" Then
+                If ContraseñaTxt.Text = RContraseñaTxt.Text Then
+                    If Regex.IsMatch(ContraseñaTxt.Text, "[a-zA-Z0-9._]{6,16}") And Regex.IsMatch(RContraseñaTxt.Text, "[a-zA-Z0-9._]{6,16}") Then
+                        If Regex.IsMatch(IdUsuarioTxt.Text, "[a-zA-Z0-9_.]{6,18}") Then
+                            If Regex.IsMatch(EmailTxt.Text, "^[\w]+@{1}[\w]+\.[a-z]{2,3}$") Then
+                                Usuario.IdUsuario = IdUsuarioTxt.Text
+                                Usuario.Email = EmailTxt.Text
+                                Usuario.Contraseña = vEncriptar.Encriptar(ContraseñaTxt.Text)
+                                Dim vLista As List(Of Object) = FamiliaDinamica.ConsultaTodo
+                                For Each vFamilia As Familia In vLista
+                                    If vFamilia.Nombre = FamiliaCombo.Text Then Familia = vFamilia
+                                Next
+                                Usuario.Familia = Familia
+                                If Modificacion Then
+                                    UsuarioDinamico.Modificacion(Usuario)
                                 Else
-                                    Throw New Exception("El nombre de usuario ingresado ya existe")
-                                    ContraseñaTxt.Text = ""
-                                    RContraseñaTxt.Text = ""
+                                    Dim vCheckUsuario As Usuario = UsuarioDinamico.DevuelveUsuario(Usuario.IdUsuario)
+                                    If vCheckUsuario Is Nothing Then
+                                        UsuarioDinamico.Alta(Usuario)
+                                    Else
+                                        Throw New Exception("El nombre de usuario ingresado ya existe")
+                                        ContraseñaTxt.Text = ""
+                                        RContraseñaTxt.Text = ""
+                                    End If
                                 End If
+                                Me.Close()
+                            Else
+                                Throw New Exception("El email ingresado es incorrecto")
+                                ContraseñaTxt.Text = ""
+                                RContraseñaTxt.Text = ""
                             End If
-                            Me.Close()
                         Else
-                            Throw New Exception("El email ingresado es incorrecto")
+                            Throw New Exception("El nombre de usuario es incorrecto")
                             ContraseñaTxt.Text = ""
                             RContraseñaTxt.Text = ""
                         End If
                     Else
-                        Throw New Exception("El nombre de usuario es incorrecto")
+                        Throw New Exception("Las contraseñas son incorrectas")
                         ContraseñaTxt.Text = ""
                         RContraseñaTxt.Text = ""
                     End If
                 Else
-                    Throw New Exception("Las contraseñas son incorrectas")
+                    Throw New Exception("Las contraseñas no coinciden")
                     ContraseñaTxt.Text = ""
                     RContraseñaTxt.Text = ""
                 End If
             Else
-                Throw New Exception("Las contraseñas no coinciden")
-                ContraseñaTxt.Text = ""
-                RContraseñaTxt.Text = ""
+                Throw New Exception("Ingrese los datos del usuario")
             End If
         Catch ex As Exception
             MessageBox.Show(vtraductor.traducir(ex.Message), "EvOrg")

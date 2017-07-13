@@ -70,9 +70,9 @@ Public Class MaterialDatos
                 For Each DRow As DataRow In DTable.Rows
                     MaterialLista.Add(New Material(DRow(0), DRow(1), DRow(2), Decimal.Parse(DRow(3))))
                 Next
-                For Each DRow As DataRow In DTMT.Rows
-                    MaterialLista.Add(New Material(DRow(0), DRow(1), 0, 0))
-                Next
+                'For Each DRow As DataRow In DTMT.Rows
+                '    MaterialLista.Add(New Material(DRow(0), DRow(1), 0, 0))
+                'Next
             End If
             Return MaterialLista
         Catch ex As Exception
@@ -100,5 +100,19 @@ Public Class MaterialDatos
         Catch ex As Exception
             Return Nothing
         End Try
+    End Function
+
+    Public Function CheckMaterial(pId As Integer, pNombre As String) As Boolean
+        Dim DTable As DataTable = Comando.GetData("SELECT * FROM Material WHERE Nombre = '" & pNombre & "'")
+        Dim DTableId As DataTable = Comando.GetData("SELECT * FROM Material WHERE Id = " & pId)
+        If DTable.Rows.Count > 0 Then
+            If DTableId.Rows.Count > 0 Then
+                Return True
+            Else
+                Return False
+            End If
+        Else
+            Return False
+        End If
     End Function
 End Class

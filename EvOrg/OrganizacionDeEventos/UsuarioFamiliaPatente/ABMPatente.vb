@@ -46,9 +46,7 @@ Public Class ABMPatente
                 End If
             End If
         Catch ex As Exception
-
         End Try
-
     End Sub
 
     Private Sub AgregarGrupoDePatentesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AgregarGrupoDePatentesToolStripMenuItem.Click
@@ -57,44 +55,51 @@ Public Class ABMPatente
             Dim vPadre As GrupoPatente = vSNode.Tag
             Dim vNombre As String = InputBox(vTraductor.Traducir("Ingrese el nombre del Grupo: "))
             If vNombre.Length > 0 Then
-                Dim vNNode As New TreeNode
-                vNNode.Text = vNombre
-                GrupoPatente.Nombre = vNombre
-                vNNode.Tag = GrupoPatente
-                vSNode.Nodes.Add(vNNode)
-                vPadre.ListaPatentes.Add(GrupoPatente)
-                GrupoPatente.Padre = vPadre.Id
-                GrupoPatenteDinamico.Alta(GrupoPatente)
-                TreePatente.Nodes.Clear()
-                ABMPatente_Load(Nothing, Nothing)
-                TreePatente.ExpandAll()
+                If Not GrupoPatenteDinamico.CheckGrupoPatente(vNombre) Then
+                    Dim vNNode As New TreeNode
+                    vNNode.Text = vNombre
+                    GrupoPatente.Nombre = vNombre
+                    vNNode.Tag = GrupoPatente
+                    vSNode.Nodes.Add(vNNode)
+                    vPadre.ListaPatentes.Add(GrupoPatente)
+                    GrupoPatente.Padre = vPadre.Id
+                    GrupoPatenteDinamico.Alta(GrupoPatente)
+                    TreePatente.Nodes.Clear()
+                    ABMPatente_Load(Nothing, Nothing)
+                    TreePatente.ExpandAll()
+                Else
+                    MessageBox.Show(vTraductor.Traducir("El nombre del grupo de patentes ingresado ya existe"), "EvOrg")
+                End If
             End If
         End If
     End Sub
 
     Private Sub EliminarElementoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EliminarElementoToolStripMenuItem.Click
         Try
-            Dim vSNode As TreeNode = TreePatente.SelectedNode
+            If TreePatente.SelectedNode Is Nothing Then
+                Dim vSNode As TreeNode = TreePatente.SelectedNode
 
-            If TypeOf vSNode.Tag Is GrupoPatente Then
-                If Not vSNode.Parent Is Nothing Then
-                    Dim vPadre As GrupoPatente = vSNode.Parent.Tag()
-                    vSNode.Remove()
-                    vPadre.ListaPatentes.Remove(vSNode.Tag)
-                    If TypeOf vSNode.Tag Is GrupoPatente Then
-                        GrupoPatenteDinamico.Baja((vSNode.Tag))
-                    Else
-                        PatenteDinamica.Baja(vSNode.Tag)
+                If TypeOf vSNode.Tag Is GrupoPatente Then
+                    If Not vSNode.Parent Is Nothing Then
+                        Dim vPadre As GrupoPatente = vSNode.Parent.Tag()
+                        vSNode.Remove()
+                        vPadre.ListaPatentes.Remove(vSNode.Tag)
+                        If TypeOf vSNode.Tag Is GrupoPatente Then
+                            GrupoPatenteDinamico.Baja((vSNode.Tag))
+                        Else
+                            PatenteDinamica.Baja(vSNode.Tag)
+                        End If
                     End If
+                Else
+                    vSNode.Remove()
+                    PatenteDinamica.Baja(vSNode.Tag)
                 End If
             Else
-                vSNode.Remove()
-                PatenteDinamica.Baja(vSNode.Tag)
+                MessageBox.Show(vTraductor.Traducir("Seleccione el elemento que desea eliminar"), "EvOrg")
             End If
         Catch ex As Exception
             MessageBox.Show(vTraductor.Traducir("Error al eliminar el elemento seleccionado"), "EvOrg")
         End Try
-
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles AceptarBtn.Click
@@ -110,10 +115,7 @@ Public Class ABMPatente
                 If vControl.Controls.Count > 0 Then
                     ActualizarObservador(vControl)
                 End If
-
-
             End Try
-
         Next
         If TypeOf pControl Is ContextMenuStrip Then
             For Each vItem As ToolStripMenuItem In DirectCast(pControl, ContextMenuStrip).Items

@@ -39,13 +39,17 @@ Public Class ABMMaterial
 
     Private Sub BtnAlta_Click(sender As Object, e As EventArgs) Handles AltaBtn.Click
         Try
-            If Not (IdTxt.Text = "" And NombreTxt.Text = "" And CantidadNumeric.Value = 0 And PrecioTxt.Text = "") Then
+            If IdTxt.Text <> "" And NombreTxt.Text <> "" And CantidadNumeric.Value <> 0 And PrecioTxt.Text <> "" Then
                 vMaterial = New Material(IdTxt.Text, NombreTxt.Text, CantidadNumeric.Value, Decimal.Parse(PrecioTxt.Text))
-                vMaterialDinamico.Alta(vMaterial)
+                If Not vMaterialDinamico.CheckMaterial(vMaterial.Nombre) Then
+                    vMaterialDinamico.Alta(vMaterial)
+                Else
+                    Throw New Exception("El nombre de material ingresado ya existe")
+                End If
                 Limpiar()
                 Actualizar()
             Else
-                Throw New Exception("Debe ingresar un id, un nombre de material y una cantidad")
+                Throw New Exception("Debe ingresar un id, un nombre de material, una cantidad y un precio")
             End If
         Catch ex As Exception
             MessageBox.Show(vTraductor.Traducir(ex.Message), "EvOrg", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -54,28 +58,61 @@ Public Class ABMMaterial
     End Sub
 
     Private Sub BtnBaja_Click(sender As Object, e As EventArgs) Handles BajaBtn.Click
-        vMaterial = DirectCast(GrillaMateriales.SelectedRows(0).DataBoundItem, Material)
-        vMaterialDinamico.Baja(vMaterial)
-        Limpiar()
-        Actualizar()
+        Try
+            If GrillaMateriales.SelectedRows.Count > 0 Then
+                Dim VistaMaterial As VistaMaterial = DirectCast(GrillaMateriales.SelectedRows(0).DataBoundItem, VistaMaterial)
+                For Each Material As Material In vMaterialDinamico.ConsultaTodo
+                    If Material.Nombre = VistaMaterial.Nombre Then
+                        vMaterial = Material
+                    End If
+                Next
+                vMaterialDinamico.Baja(vMaterial)
+                Limpiar()
+                Actualizar()
+            Else
+                Throw New Exception("Seleccione el material que desea borrar")
+            End If
+        Catch ex As Exception
+            MessageBox.Show(vTraductor.Traducir(ex.Message), "EvOrg")
+        End Try
     End Sub
 
     Private Sub BtnModificar_Click(sender As Object, e As EventArgs) Handles ModificacionBtn.Click
-        vMaterial = DirectCast(GrillaMateriales.SelectedRows(0).DataBoundItem, Material)
-        vMaterial.Nombre = NombreTxt.Text
-        vMaterial.Cantidad = CantidadNumeric.Value
-        vMaterial.Precio = PrecioTxt.Text
-        vMaterialDinamico.Modificacion(vMaterial)
-        Limpiar()
-        Actualizar()
+
+
+        Try
+            If GrillaMateriales.SelectedRows.Count > 0 Then
+                Dim VistaMaterial As VistaMaterial = DirectCast(GrillaMateriales.SelectedRows(0).DataBoundItem, VistaMaterial)
+                For Each Material As Material In vMaterialDinamico.ConsultaTodo
+                    If Material.Nombre = VistaMaterial.Nombre Then
+                        If IdTxt.Text <> "" And NombreTxt.Text <> "" And CantidadNumeric.Value <> 0 And PrecioTxt.Text <> "" Then
+                            vMaterial = Material
+                            vMaterial.Nombre = NombreTxt.Text
+                            vMaterial.Cantidad = CantidadNumeric.Value
+                            vMaterial.Precio = PrecioTxt.Text
+                        Else
+                            Throw New Exception("Debe ingresar un id, un nombre de material, una cantidad y un precio")
+                        End If
+                    End If
+                Next
+                vMaterialDinamico.Modificacion(vMaterial)
+                Limpiar()
+                Actualizar()
+            Else
+                Throw New Exception("Seleccione el material que desea modificar")
+            End If
+        Catch ex As Exception
+            MessageBox.Show(vTraductor.Traducir(ex.Message), "EvOrg", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
     End Sub
 
     Private Sub GrillaMateriales_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles GrillaMateriales.CellClick
         Try
-            Dim M As Material = DirectCast(GrillaMateriales.SelectedRows(0).DataBoundItem, Material)
+            Dim M As VistaMaterial = DirectCast(GrillaMateriales.SelectedRows(0).DataBoundItem, VistaMaterial)
             IdTxt.Text = M.Id
             NombreTxt.Text = M.Nombre
             CantidadNumeric.Value = M.Cantidad
+            PrecioTxt.Text = M.Precio
         Catch ex As Exception
         End Try
     End Sub

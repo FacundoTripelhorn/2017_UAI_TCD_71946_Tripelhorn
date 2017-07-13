@@ -16,3 +16,12 @@ C:\Users\Navegador\Desktop\2017_UAI_TCD_71946_Tripelhorn-master\EvOrg\Framework\
 C:\Users\Navegador\Desktop\2017_UAI_TCD_71946_Tripelhorn-master\EvOrg\Framework\obj\Debug\Framework.dll
 C:\Users\Navegador\Desktop\2017_UAI_TCD_71946_Tripelhorn-master\EvOrg\Framework\obj\Debug\Framework.xml
 C:\Users\Navegador\Desktop\2017_UAI_TCD_71946_Tripelhorn-master\EvOrg\Framework\obj\Debug\Framework.pdb
+F:\2017_UAI_TCD_71946_Tripelhorn-master\EvOrg\Framework\bin\Debug\Framework.dll
+F:\2017_UAI_TCD_71946_Tripelhorn-master\EvOrg\Framework\bin\Debug\Framework.pdb
+F:\2017_UAI_TCD_71946_Tripelhorn-master\EvOrg\Framework\bin\Debug\Framework.xml
+F:\2017_UAI_TCD_71946_Tripelhorn-master\EvOrg\Framework\obj\Debug\Framework.vbprojResolveAssemblyReference.cache
+F:\2017_UAI_TCD_71946_Tripelhorn-master\EvOrg\Framework\obj\Debug\Framework.Resources.resources
+F:\2017_UAI_TCD_71946_Tripelhorn-master\EvOrg\Framework\obj\Debug\Framework.vbproj.GenerateResource.Cache
+F:\2017_UAI_TCD_71946_Tripelhorn-master\EvOrg\Framework\obj\Debug\Framework.dll
+F:\2017_UAI_TCD_71946_Tripelhorn-master\EvOrg\Framework\obj\Debug\Framework.xml
+F:\2017_UAI_TCD_71946_Tripelhorn-master\EvOrg\Framework\obj\Debug\Framework.pdb

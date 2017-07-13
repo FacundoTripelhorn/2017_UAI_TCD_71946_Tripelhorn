@@ -30,18 +30,25 @@ Public Class ABMFamilia
     End Sub
 
     Private Sub AltaBtn_Click(sender As Object, e As EventArgs) Handles AltaBtn.Click
+
         If Not FamiliaTxt.Text = "" Then
             Familia.Nombre = FamiliaTxt.Text
-            If TreePatente.Nodes.Item(0).Checked Then
-                Familia.ListaPatentes.Add(TreePatente.Nodes.Item(0).Tag)
+            If FamiliaDinamica.CheckFamilia(Familia.Nombre) Then
+
+                If TreePatente.Nodes.Item(0).Checked Then
+                    Familia.ListaPatentes.Add(TreePatente.Nodes.Item(0).Tag)
+                End If
+                AgregarPatentes(Familia, TreePatente.Nodes.Item(0))
+                FamiliaDinamica.Alta(Familia)
+            Else
+                MessageBox.Show(vTraductor.Traducir("El nombre de familia ingresado ya existe"), "EvOrg")
             End If
-            AgregarPatentes(Familia, TreePatente.Nodes.Item(0))
-            FamiliaDinamica.Alta(Familia)
         Else
-            MessageBox.Show(vTraductor.Traducir("La Familia tiene que tener un nombre"), "EvOrg")
-        End If
-        TreePatente.Nodes.Clear()
-        ABMFamilia_Load(Nothing, Nothing)
+                MessageBox.Show(vTraductor.Traducir("La Familia tiene que tener un nombre"), "EvOrg")
+            End If
+
+            TreePatente.Nodes.Clear()
+            ABMFamilia_Load(Nothing, Nothing)
     End Sub
 
     Private Sub AgregarPatentes(pFamilia As Familia, pTreeNode As TreeNode)

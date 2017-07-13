@@ -70,3 +70,15 @@ C:\Users\Navegador\Desktop\2017_UAI_TCD_71946_Tripelhorn-master\EvOrg\DAL\obj\De
 C:\Users\Navegador\Desktop\2017_UAI_TCD_71946_Tripelhorn-master\EvOrg\DAL\obj\Debug\DAL.dll
 C:\Users\Navegador\Desktop\2017_UAI_TCD_71946_Tripelhorn-master\EvOrg\DAL\obj\Debug\DAL.xml
 C:\Users\Navegador\Desktop\2017_UAI_TCD_71946_Tripelhorn-master\EvOrg\DAL\obj\Debug\DAL.pdb
+F:\2017_UAI_TCD_71946_Tripelhorn-master\EvOrg\DAL\bin\Debug\DAL.dll
+F:\2017_UAI_TCD_71946_Tripelhorn-master\EvOrg\DAL\bin\Debug\DAL.pdb
+F:\2017_UAI_TCD_71946_Tripelhorn-master\EvOrg\DAL\bin\Debug\DAL.xml
+F:\2017_UAI_TCD_71946_Tripelhorn-master\EvOrg\DAL\bin\Debug\BLL_Estatica.dll
+F:\2017_UAI_TCD_71946_Tripelhorn-master\EvOrg\DAL\bin\Debug\BLL_Estatica.pdb
+F:\2017_UAI_TCD_71946_Tripelhorn-master\EvOrg\DAL\bin\Debug\BLL_Estatica.xml
+F:\2017_UAI_TCD_71946_Tripelhorn-master\EvOrg\DAL\obj\Debug\DAL.vbprojResolveAssemblyReference.cache
+F:\2017_UAI_TCD_71946_Tripelhorn-master\EvOrg\DAL\obj\Debug\DAL.Resources.resources
+F:\2017_UAI_TCD_71946_Tripelhorn-master\EvOrg\DAL\obj\Debug\DAL.vbproj.GenerateResource.Cache
+F:\2017_UAI_TCD_71946_Tripelhorn-master\EvOrg\DAL\obj\Debug\DAL.dll
+F:\2017_UAI_TCD_71946_Tripelhorn-master\EvOrg\DAL\obj\Debug\DAL.xml
+F:\2017_UAI_TCD_71946_Tripelhorn-master\EvOrg\DAL\obj\Debug\DAL.pdb

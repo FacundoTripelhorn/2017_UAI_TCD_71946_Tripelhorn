@@ -1,10 +1,12 @@
 ﻿Imports System.ComponentModel
 Imports System.Reflection
 Imports OrganizacionDeEventos
+Imports BLL_Dinamica
 
 Public Class NuevaPatente
     Implements IObservador
     Dim vTraductor As Traductor = Traductor.GetInstance
+    Dim vPatenteDinamica As New patentedinamica
     Private Sub NuevaPatente_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         vTraductor.Registrar(me)
         Dim vAsm As Assembly = Assembly.GetExecutingAssembly

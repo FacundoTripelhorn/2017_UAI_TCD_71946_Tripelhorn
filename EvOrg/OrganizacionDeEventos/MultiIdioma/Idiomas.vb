@@ -87,6 +87,7 @@ Public Class Idiomas
                 If vNombreIdioma.Length > 0 Then
                     vIdioma = New Idioma(vNombreIdioma, CrearDiccionario())
                     vIdiomaDinamico.Alta(vIdioma)
+                    MessageBox.Show(vTraductor.Traducir("Para ver el nuevo idioma cierre sesión y vuelva a iniciar"), "EvOrg")
                 End If
             Else
                 vIdioma = IdiomaCombo.SelectedItem

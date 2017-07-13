@@ -128,4 +128,13 @@ Public Class IdiomaDatos
             Return Nothing
         End Try
     End Function
+
+    Public Function CheckIdioma(pNombre As String) As String
+        Dim DTable As DataTable = Comando.GetData("SELECT * FROM Idioma WHERE Nombre = '" & pNombre & "'")
+        If DTable.Rows.Count > 0 Then
+            Return True
+        Else
+            Return False
+        End If
+    End Function
 End Class

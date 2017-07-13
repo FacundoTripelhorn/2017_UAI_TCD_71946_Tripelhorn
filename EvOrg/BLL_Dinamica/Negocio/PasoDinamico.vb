@@ -22,4 +22,12 @@ Public Class PasoDinamico
     Public Function ConsultaTodo() As List(Of Object) Implements IABMC.ConsultaTodo
         Return PasoDatos.ConsultaTodo()
     End Function
+
+    Public Function CheckPaso(pDescripcion As String) As Boolean
+        Return PasoDatos.CheckPaso(pDescripcion)
+    End Function
+
+    Public Function CheckPasoTipoEvento(pDescripcion As String) As Boolean
+        Return PasoDatos.CheckPasoTipoEvento(pDescripcion)
+    End Function
 End Class

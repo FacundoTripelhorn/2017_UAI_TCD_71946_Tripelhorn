@@ -82,4 +82,13 @@ Public Class SalonDatos
             Return Nothing
         End Try
     End Function
+
+    Public Function CheckSalon(pNombre As String) As Boolean
+        Dim DTable As DataTable = Comando.GetData("SELECT * FROM Salon WHERE Nombre = '" & pNombre & "'")
+        If DTable.Rows.Count > 0 Then
+            Return True
+        Else
+            Return False
+        End If
+    End Function
 End Class

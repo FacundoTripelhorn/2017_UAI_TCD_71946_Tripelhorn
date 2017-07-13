@@ -31,7 +31,7 @@ Public Class CreadorBD
 
     Public Sub CrearBD()
         Dim vScript As New FileStream(Application.StartupPath & "\EvOrgScript.sql", FileMode.Open)
-        Dim vLector As New StreamReader(vScript)
+        Dim vLector As New StreamReader(vScript, New Text.UTF8Encoding)
         Dim vStringConexion As String = ConfigurationManager.ConnectionStrings.Item("MiConexion").ConnectionString
         Dim vStringBuilder As New SqlConnectionStringBuilder
         vStringBuilder.ConnectionString = vStringConexion

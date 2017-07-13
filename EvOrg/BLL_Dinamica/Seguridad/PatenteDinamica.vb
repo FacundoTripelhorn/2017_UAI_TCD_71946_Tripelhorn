@@ -31,4 +31,8 @@ Public Class PatenteDinamica
     Public Overrides Function MostrarEnTreeView(pTreeView As TreeView) As TreeView
         Throw New NotImplementedException()
     End Function
+
+    Public Function CheckPatente(pNombre As String) As Boolean
+        Return PatenteDatos.CheckPatente(pNombre)
+    End Function
 End Class

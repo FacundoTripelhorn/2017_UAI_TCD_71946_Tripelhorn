@@ -39,28 +39,36 @@ Public Class ABMUsuario
     End Sub
 
     Private Sub BajaBtn_Click(sender As Object, e As EventArgs) Handles BajaBtn.Click
-        Usuario.IdUsuario = DirectCast(GrillaUsuario.SelectedRows(0).DataBoundItem, VistaUsuario).Nombre
-        For Each vUsuario As Usuario In UsuarioDinamico.ConsultaTodo
-            If vUsuario.IdUsuario = Usuario.IdUsuario Then Usuario = vUsuario
-        Next
-        UsuarioDinamico.Baja(Usuario)
-        Actualizar()
+        If GrillaUsuario.SelectedRows.Count > 0 Then
+            Usuario.IdUsuario = DirectCast(GrillaUsuario.SelectedRows(0).DataBoundItem, VistaUsuario).Nombre
+            For Each vUsuario As Usuario In UsuarioDinamico.ConsultaTodo
+                If vUsuario.IdUsuario = Usuario.IdUsuario Then Usuario = vUsuario
+            Next
+            UsuarioDinamico.Baja(Usuario)
+            Actualizar()
+        Else
+            MessageBox.Show(vTraductor.Traducir("Seleccione el usuario que desea borrar"), "EvOrg")
+        End If
     End Sub
 
     Private Sub ModificacionBtn_Click(sender As Object, e As EventArgs) Handles ModificacionBtn.Click
-        Usuario.IdUsuario = DirectCast(GrillaUsuario.SelectedRows(0).DataBoundItem, VistaUsuario).Nombre
-        For Each vUsuario As Usuario In UsuarioDinamico.ConsultaTodo
-            If vUsuario.IdUsuario = Usuario.IdUsuario Then Usuario = vUsuario
-        Next
-        For Each vFamilia As Familia In FamiliaDinamica.ConsultaTodo
-            If vFamilia.Nombre = Usuario.Familia.Nombre Then
-                Usuario.Familia = vFamilia
-            End If
-        Next
-        Dim vNuevoUsuario As New NuevoUsuario
-        vNuevoUsuario.Modificacion = True
-        vNuevoUsuario.Usuario = Usuario
-        vNuevoUsuario.ShowDialog()
+        If GrillaUsuario.SelectedRows.Count > 0 Then
+            Usuario.IdUsuario = DirectCast(GrillaUsuario.SelectedRows(0).DataBoundItem, VistaUsuario).Nombre
+            For Each vUsuario As Usuario In UsuarioDinamico.ConsultaTodo
+                If vUsuario.IdUsuario = Usuario.IdUsuario Then Usuario = vUsuario
+            Next
+            For Each vFamilia As Familia In FamiliaDinamica.ConsultaTodo
+                If vFamilia.Nombre = Usuario.Familia.Nombre Then
+                    Usuario.Familia = vFamilia
+                End If
+            Next
+            Dim vNuevoUsuario As New NuevoUsuario
+            vNuevoUsuario.Modificacion = True
+            vNuevoUsuario.Usuario = Usuario
+            vNuevoUsuario.ShowDialog()
+        Else
+            MessageBox.Show(vTraductor.Traducir("Seleccione el usuario que desea modificar"), "EvOrg")
+        End If
     End Sub
 
     Public Sub ActualizarObservador(Optional pControl As Control = Nothing) Implements IObservador.ActualizarObservador

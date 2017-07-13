@@ -127,6 +127,10 @@ Public Class GrupoPatenteDinamico
         Dim vAsm As Assembly = Assembly.GetEntryAssembly
         Dim vTipo As Type = vAsm.GetType(vFName)
         Dim vForm = Activator.CreateInstance(vTipo)
-        vForm.ShowDialog()
+        vForm.Show()
     End Sub
+
+    Public Function CheckGrupoPatente(pNombre As String) As Boolean
+        Return GrupoPatenteDatos.CheckGrupoPatente(pNombre)
+    End Function
 End Class

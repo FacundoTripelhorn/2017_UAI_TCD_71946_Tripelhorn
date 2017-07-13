@@ -53,11 +53,15 @@ Public Class ABMTipoEvento
         Try
             If Not (NombreTxt.Text = "") Then
                 vTipoEvento = New TipoEvento(NombreTxt.Text, DescripcionTxt.Text)
-                vTipoEventoDinamico.Alta(vTipoEvento)
+                If Not vTipoEventoDinamico.CheckTipoEvento(vTipoEvento.Nombre) Then
+                    vTipoEventoDinamico.Alta(vTipoEvento)
+                Else
+                    Throw New Exception("El nombre del tipo de evento ingresado ya existe")
+                End If
                 Limpiar()
-                Actualizar()
-            Else
-                Throw New Exception("Ingrese el nombre")
+                    Actualizar()
+                Else
+                    Throw New Exception("Ingrese el nombre")
             End If
         Catch ex As Exception
             MessageBox.Show(vTraductor.Traducir(ex.Message), "EvOrg")
@@ -65,31 +69,52 @@ Public Class ABMTipoEvento
     End Sub
 
     Private Sub BajaBtn_Click(sender As Object, e As EventArgs) Handles BajaBtn.Click
-        vTipoEvento = VistaATipoEvento()
-        vTipoEventoDinamico.Baja(vTipoEvento)
-        Limpiar()
-        Actualizar()
+        Try
+            If GrillaTipoEvento.SelectedRows.Count > 0 Then
+                vTipoEvento = VistaATipoEvento()
+                vTipoEventoDinamico.Baja(vTipoEvento)
+                Limpiar()
+                Actualizar()
+            Else
+                Throw New Exception("Seleccione el tipo de evento que desea borrar")
+            End If
+        Catch ex As Exception
+            MessageBox.Show(vTraductor.Traducir(ex.Message), "EvOrg")
+        End Try
     End Sub
 
     Private Sub ModificacionBtn_Click(sender As Object, e As EventArgs) Handles ModificacionBtn.Click
-        vTipoEvento.Id = VistaATipoEvento.Id
-        vTipoEvento.Nombre = NombreTxt.Text
-        vTipoEvento.Descripcion = DescripcionTxt.Text
-        vTipoEventoDinamico.Modificacion(vTipoEvento)
-        Limpiar()
-        Actualizar()
+        Try
+            If GrillaTipoEvento.SelectedRows.Count > 0 Then
+                vTipoEvento.Id = VistaATipoEvento.Id
+                vTipoEvento.Nombre = NombreTxt.Text
+                vTipoEvento.Descripcion = DescripcionTxt.Text
+                vTipoEventoDinamico.Modificacion(vTipoEvento)
+                Limpiar()
+                Actualizar()
+            Else
+                Throw New Exception("Seleccione el tipo de evento que desea modificar")
+            End If
+        Catch ex As Exception
+            MessageBox.Show(vTraductor.Traducir(ex.Message), "EvOrg")
+        End Try
+
     End Sub
 
     Private Sub AltaPasoBtn_Click(sender As Object, e As EventArgs) Handles AltaPasoBtn.Click
         Try
-            If Not (DescripcionTxt2.Text = "" And DiasNumeric.Value = 0 And PrioridadCombo.Text = "") Then
+            If DescripcionTxt2.Text <> "" And DiasNumeric.Value <> 0 And PrioridadCombo.Text <> "" Then
                 vPaso = New Paso(SetPasoId(), DescripcionTxt2.Text,, PrioridadCombo.Text, vTraductor.Traducir("Generico"))
-                vPasoDinamico.Alta(vPaso)
-                vTipoEventoDinamico.AgregarPaso(VistaATipoEvento, vPaso, DiasNumeric.Value)
+                If Not vPasoDinamico.CheckPasoTipoEvento(vPaso.Descripcion) Then
+                    vPasoDinamico.Alta(vPaso)
+                    vTipoEventoDinamico.AgregarPaso(VistaATipoEvento, vPaso, DiasNumeric.Value)
+                Else
+                    Throw New Exception("El paso ingresado ya existe en el tipo de evento seleccionado")
+                End If
                 Limpiar()
-                ActualizarPasos()
-            Else
-                Throw New Exception("Ingrese los datos del paso")
+                    ActualizarPasos()
+                Else
+                    Throw New Exception("Ingrese los datos del paso")
             End If
         Catch ex As Exception
             MessageBox.Show(vTraductor.Traducir(ex.Message), "EvOrg")
@@ -98,13 +123,17 @@ Public Class ABMTipoEvento
 
     Private Sub BajaPasoBtn_Click(sender As Object, e As EventArgs) Handles BajaPasoBtn.Click
         Try
-            vTipoEvento = VistaATipoEvento()
-            vPaso = VistaAPaso()
-            vTipoEventoDinamico.BorrarPaso(vTipoEvento, vPaso)
-            vPasoDinamico.Baja(vPaso)
-            ActualizarPasos()
+            If GrillaPasos.SelectedRows.Count > 0 Then
+                vTipoEvento = VistaATipoEvento()
+                vPaso = VistaAPaso()
+                vTipoEventoDinamico.BorrarPaso(vTipoEvento, vPaso)
+                vPasoDinamico.Baja(vPaso)
+                ActualizarPasos()
+            Else
+                Throw New Exception("Seleccione el paso que desea borrar")
+            End If
         Catch ex As Exception
-
+            MessageBox.Show(vTraductor.Traducir(ex.Message), "EvOrg")
         End Try
     End Sub
 

@@ -94,8 +94,13 @@ Public Class SeleccionarSalon
     End Sub
 
     Public Function GetLatLong(pDireccion As String) As PointLatLng
-        Dim vStatus As New GeoCoderStatusCode
-        Return GMapProviders.GoogleMap.GetPoint(pDireccion, vStatus)
+        Try
+            Dim vStatus As New GeoCoderStatusCode
+            Return GMapProviders.GoogleMap.GetPoint(pDireccion, vStatus)
+        Catch ex As Exception
+
+        End Try
+
     End Function
 
 
@@ -137,7 +142,7 @@ Public Class SeleccionarSalon
     End Sub
 
     Private Sub FiltroLocalidadBtn_Click(sender As Object, e As EventArgs) Handles FiltroLocalidadBtn.Click
-        vEvento.Localidad = InputBox("Ingrese la localidad")
+        vEvento.Localidad = InputBox(vTraductor.Traducir("Ingrese la localidad"))
         FiltroPorLocalidad()
     End Sub
 

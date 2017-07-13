@@ -31,4 +31,8 @@ Public Class TipoEventoDinamico
     Public Function ConsultaDias(pTipoEvento As TipoEvento, pPaso As Paso) As Integer
         Return vTipoEventoDatos.ConsultaDias(pTipoEvento, pPaso)
     End Function
+
+    Public Function CheckTipoEvento(pNombre As String) As Boolean
+        Return vTipoEventoDatos.CheckTipoEvento(pNombre)
+    End Function
 End Class

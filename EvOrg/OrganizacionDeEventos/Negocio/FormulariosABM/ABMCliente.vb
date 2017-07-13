@@ -30,16 +30,20 @@ Public Class ABMCliente
     End Sub
     Private Sub AltaBtn_Click(sender As Object, e As EventArgs) Handles AltaBtn.Click
         Try
-            If Not (DNITxt.Text = "" And NombreTxt.Text = "" And ApellidoTxt.Text And TelefonoTxt.Text = "" And EmailTxt.Text = "") Then
+            If DNITxt.Text <> "" And NombreTxt.Text <> "" And ApellidoTxt.Text <> "" And TelefonoTxt.Text <> "" And EmailTxt.Text <> "" Then
                 If Regex.IsMatch(NombreTxt.Text, "^([A-ZÁÉÍÓÚ]{1}[a-zñáéíóú]+[\s]*)+$") And Regex.IsMatch(ApellidoTxt.Text, "^([A-ZÁÉÍÓÚ]{1}[a-zñáéíóú]+[\s]*)+$") Then
                     If Regex.IsMatch(TelefonoTxt.Text, "[0-9]{8,10}") Then
-                        If Regex.IsMatch(EmailTxt.Text, "^[\w]+@{1}[\w]+\.[a-z]{2,3}$") Then
+                        If Regex.IsMatch(EmailTxt.Text, "^[\w._-]+@{1}[\w]+\.[a-z]{2,3}$") Then
                             vCliente = New Cliente(Integer.Parse(DNITxt.Text), NombreTxt.Text, ApellidoTxt.Text, Integer.Parse(TelefonoTxt.Text), EmailTxt.Text)
-                            vClienteDinamico.Alta(vCliente)
-                            Limpiar()
-                            GrillaClientes.DataSource = vClienteDinamico.ConsultaTodo()
+                            If Not vClienteDinamico.CheckCliente(vCliente.DNI) Then
+                                vClienteDinamico.Alta(vCliente)
+                                Limpiar()
+                                GrillaClientes.DataSource = vClienteDinamico.ConsultaTodo()
+                            Else
+                                Throw New Exception("El DNI del cliente ingresado ya existe")
+                            End If
                         Else
-                            Throw New Exception("El email ingresado es incorrecto")
+                                Throw New Exception("El email ingresado es incorrecto")
                         End If
                     Else
                         Throw New Exception("El numero de telefono ingresado es incorrecto")
@@ -56,38 +60,50 @@ Public Class ABMCliente
     End Sub
 
     Private Sub BajaBtn_Click(sender As Object, e As EventArgs) Handles BajaBtn.Click
-        vCliente = DirectCast(GrillaClientes.SelectedRows(0).DataBoundItem, Cliente)
-        vClienteDinamico.Baja(vCliente)
-        Limpiar()
-        GrillaClientes.DataSource = vClienteDinamico.ConsultaTodo()
+        Try
+            If GrillaClientes.SelectedRows.Count > 0 Then
+                vCliente = DirectCast(GrillaClientes.SelectedRows(0).DataBoundItem, Cliente)
+                vClienteDinamico.Baja(vCliente)
+                Limpiar()
+                GrillaClientes.DataSource = vClienteDinamico.ConsultaTodo()
+            Else
+                Throw New Exception("Seleccione el cliente que desea borrar")
+            End If
+        Catch ex As Exception
+            MessageBox.Show(vTraductor.Traducir(ex.Message), "EvOrg")
+        End Try
     End Sub
 
     Private Sub ModificacionBtn_Click(sender As Object, e As EventArgs) Handles ModificacionBtn.Click
         Try
-            If Regex.IsMatch(DNITxt.Text, "[0-9]*") Then
-                If Regex.IsMatch(NombreTxt.Text, "^([A-ZÁÉÍÓÚ]{1}[a-zñáéíóú]+[\s]*)+$") And Regex.IsMatch(ApellidoTxt.Text, "^([A-ZÁÉÍÓÚ]{1}[a-zñáéíóú]+[\s]*)+$") Then
-                    If Regex.IsMatch(TelefonoTxt.Text, "^11\d{8}") Then
-                        If Regex.IsMatch(EmailTxt.Text, "^[\w]+@{1}[\w]+\.[a-z]{2,3}$") Then
-                            vCliente = DirectCast(GrillaClientes.SelectedRows(0).DataBoundItem, Cliente)
-                            vCliente.DNI = DNITxt.Text
-                            vCliente.Nombre = NombreTxt.Text
-                            vCliente.Apellido = ApellidoTxt.Text
-                            vCliente.Telefono = TelefonoTxt.Text
-                            vCliente.Email = EmailTxt.Text
-                            vClienteDinamico.Modificacion(vCliente)
-                            Limpiar()
-                            GrillaClientes.DataSource = vClienteDinamico.ConsultaTodo()
+            If GrillaClientes.SelectedRows.Count > 0 Then
+                If Regex.IsMatch(DNITxt.Text, "[0-9]*") Then
+                    If Regex.IsMatch(NombreTxt.Text, "^([A-ZÁÉÍÓÚ]{1}[a-zñáéíóú]+[\s]*)+$") And Regex.IsMatch(ApellidoTxt.Text, "^([A-ZÁÉÍÓÚ]{1}[a-zñáéíóú]+[\s]*)+$") Then
+                        If Regex.IsMatch(TelefonoTxt.Text, "^11\d{8}") Then
+                            If Regex.IsMatch(EmailTxt.Text, "^[\w._-]+@{1}[\w]+\.[a-z]{2,3}$") Then
+                                vCliente = DirectCast(GrillaClientes.SelectedRows(0).DataBoundItem, Cliente)
+                                vCliente.DNI = DNITxt.Text
+                                vCliente.Nombre = NombreTxt.Text
+                                vCliente.Apellido = ApellidoTxt.Text
+                                vCliente.Telefono = TelefonoTxt.Text
+                                vCliente.Email = EmailTxt.Text
+                                vClienteDinamico.Modificacion(vCliente)
+                                Limpiar()
+                                GrillaClientes.DataSource = vClienteDinamico.ConsultaTodo()
+                            Else
+                                Throw New Exception("El email ingresado es incorrecto")
+                            End If
                         Else
-                            Throw New Exception("El email ingresado es incorrecto")
+                            Throw New Exception("El numero de telefono ingresado es incorrecto")
                         End If
                     Else
-                        Throw New Exception("El numero de telefono ingresado es incorrecto")
+                        Throw New Exception("Nombre o apellido incorrectos")
                     End If
                 Else
-                    Throw New Exception("Nombre o apellido incorrectos")
+                    Throw New Exception("DNI incorrecto, no puede contener letras")
                 End If
             Else
-                Throw New Exception("DNI incorrecto, no puede contener letras")
+                Throw New Exception("Seleccione el cliente que desea modificar")
             End If
         Catch ex As Exception
             MessageBox.Show(vTraductor.Traducir(ex.Message), "EvOrg")

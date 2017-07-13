@@ -21,6 +21,10 @@ Public Class FamiliaDinamica
         Return FamiliaDatos.ConsultaTodo()
     End Function
 
+    Public Function CheckFamilia(pNombre As String) As String
+        Return FamiliaDatos.CheckFamilia(pNombre)
+    End Function
+
     Public Function ListarPatentes(pObjeto As Object) As List(Of Object)
         Return FamiliaDatos.ListarPatentes(pObjeto)
     End Function

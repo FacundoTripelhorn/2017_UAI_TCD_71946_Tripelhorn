@@ -107,14 +107,18 @@ Public Class ABMPaso
 
     Private Sub AltaBtn_Click(sender As Object, e As EventArgs) Handles AltaBtn.Click
         Try
-            If Not (EventoCombo.Text = "") Then
-                If Not (DescripcionTxt.Text = "" And FechaDTP.Value > Date.Now And PrioridadCombo.Text = "") Then
+            If EventoCombo.Text <> "" Then
+                If DescripcionTxt.Text <> "" And FechaDTP.Value > Date.Now And PrioridadCombo.Text <> "" Then
                     vPaso = New Paso(GetPasoId(), DescripcionTxt.Text, FechaDTP.Value, PrioridadCombo.Text, "Concreto")
-                    vPasoDinamico.Alta(vPaso)
-                    vEventoDinamico.AgregarPaso(vEvento, vPaso, FechaDTP.Value)
-                    vEvento.ListaPasos.Add(vPaso)
-                    AgregarFechaACalendario(vPaso.Fecha)
-                    Calendario.UpdateBoldedDates()
+                    If Not vPasoDinamico.CheckPaso(vPaso.Descripcion) Then
+                        vPasoDinamico.Alta(vPaso)
+                        vEventoDinamico.AgregarPaso(vEvento, vPaso, FechaDTP.Value)
+                        vEvento.ListaPasos.Add(vPaso)
+                        AgregarFechaACalendario(vPaso.Fecha)
+                        Calendario.UpdateBoldedDates()
+                    Else
+                        Throw New Exception("El paso ingresado ya existe en el evento seleccionado")
+                    End If
                     Limpiar()
                     Actualizar()
                 Else
@@ -130,33 +134,46 @@ Public Class ABMPaso
     End Sub
 
     Private Sub BajaBtn_Click(sender As Object, e As EventArgs) Handles BajaBtn.Click
-        vPaso = VistaAPaso()
-        vEventoDinamico.BorrarPaso(vEvento, vPaso)
-        vPasoDinamico.Baja(vPaso)
-        BorrarFechaDeCalendario(vPaso.Fecha)
-        Calendario.UpdateBoldedDates()
-        Limpiar()
-        Actualizar()
+        Try
+            If GrillaPasos.SelectedRows.Count > 0 Then
+                vPaso = VistaAPaso()
+                vEventoDinamico.BorrarPaso(vEvento, vPaso)
+                vPasoDinamico.Baja(vPaso)
+                BorrarFechaDeCalendario(vPaso.Fecha)
+                Calendario.UpdateBoldedDates()
+                Limpiar()
+                Actualizar()
+            Else
+                Throw New Exception("Seleccione el paso que desea borrar")
+            End If
+        Catch ex As Exception
+            MessageBox.Show(vTraductor.Traducir(ex.Message), "EvOrg")
+        End Try
     End Sub
 
     Private Sub ModificacionBtn_Click(sender As Object, e As EventArgs) Handles ModificacionBtn.Click
         Try
-            vPaso = VistaAPaso()
-            vEvento.ListaPasos.Remove(vPaso)
-            If vPaso.Fecha <> FechaDTP.Value Then
-                BorrarFechaDeCalendario(vPaso.Fecha)
-                AgregarFechaACalendario(FechaDTP.Value)
-                Calendario.UpdateBoldedDates()
+            If GrillaPasos.SelectedRows.Count > 0 Then
+                vPaso = VistaAPaso()
+                vEvento.ListaPasos.Remove(vPaso)
+                If vPaso.Fecha <> FechaDTP.Value Then
+                    BorrarFechaDeCalendario(vPaso.Fecha)
+                    AgregarFechaACalendario(FechaDTP.Value)
+                    Calendario.UpdateBoldedDates()
+                End If
+                vPaso.Descripcion = DescripcionTxt.Text
+                vPaso.Fecha = FechaDTP.Value
+                vPaso.Prioridad = PrioridadCombo.SelectedItem
+                vPasoDinamico.Modificacion(vPaso)
+                vEventoDinamico.ModificarPaso(vEvento, vPaso, FechaDTP.Value)
+                vEvento.ListaPasos.Add(vPaso)
+                Limpiar()
+                Actualizar()
+            Else
+                Throw New Exception("Seleccione el paso que desea modificar")
             End If
-            vPaso.Descripcion = DescripcionTxt.Text
-            vPaso.Fecha = FechaDTP.Value
-            vPaso.Prioridad = PrioridadCombo.SelectedItem
-            vPasoDinamico.Modificacion(vPaso)
-            vEventoDinamico.ModificarPaso(vEvento, vPaso, FechaDTP.Value)
-            vEvento.ListaPasos.Add(vPaso)
-            Limpiar()
-            Actualizar()
         Catch ex As Exception
+            MessageBox.Show(vTraductor.Traducir(ex.Message), "EvOrg")
         End Try
     End Sub
 
@@ -202,5 +219,11 @@ Public Class ABMPaso
                 End If
             End Try
         Next
+    End Sub
+
+    Private Sub GrillaPasos_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles GrillaPasos.CellClick
+        DescripcionTxt.Text = DirectCast(GrillaPasos.SelectedRows(0).DataBoundItem, VistaPaso).Descripcion
+        FechaDTP.Value = DirectCast(GrillaPasos.SelectedRows(0).DataBoundItem, VistaPaso).Fecha
+        PrioridadCombo.SelectedItem = DirectCast(GrillaPasos.SelectedRows(0).DataBoundItem, VistaPaso).Prioridad
     End Sub
 End Class

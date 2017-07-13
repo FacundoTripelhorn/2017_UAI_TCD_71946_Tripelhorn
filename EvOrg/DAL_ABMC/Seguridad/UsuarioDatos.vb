@@ -90,10 +90,12 @@ Public Class UsuarioDatos
                     vFamilia.ListaPatentes.Add(vPAbstracta)
                 Next
                 vUsuario.Familia = vFamilia
+                Return vUsuario
+            Else
+                Return Nothing
             End If
         Catch ex As Exception
-
+            Return Nothing
         End Try
-        Return vUsuario
     End Function
 End Class

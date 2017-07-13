@@ -32,4 +32,8 @@ Public Class IdiomaDinamico
     Public Function ConsultaTodo() As List(Of Object) Implements IABMC.ConsultaTodo
         Return vIdiomaDatos.ConsultaTodo()
     End Function
+
+    Public Function CheckIdioma(pNombre As String) As Boolean
+        Return vIdiomaDatos.CheckIdioma(pNombre)
+    End Function
 End Class
