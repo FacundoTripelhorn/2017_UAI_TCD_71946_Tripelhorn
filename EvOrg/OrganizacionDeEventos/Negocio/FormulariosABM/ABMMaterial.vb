@@ -41,7 +41,7 @@ Public Class ABMMaterial
         Try
             If IdTxt.Text <> "" And NombreTxt.Text <> "" And CantidadNumeric.Value <> 0 And PrecioTxt.Text <> "" Then
                 vMaterial = New Material(IdTxt.Text, NombreTxt.Text, CantidadNumeric.Value, Decimal.Parse(PrecioTxt.Text))
-                If Not vMaterialDinamico.CheckMaterial(vMaterial.Nombre) Then
+                If Not vMaterialDinamico.CheckMaterial(vMaterial.Id, vMaterial.Nombre) Then
                     vMaterialDinamico.Alta(vMaterial)
                 Else
                     Throw New Exception("El nombre de material ingresado ya existe")

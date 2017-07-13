@@ -69,11 +69,15 @@ Public Class Traductor
     End Sub
 
     Public Function GetIdiomas() As List(Of Idioma)
-        Dim vLista As New List(Of Idioma)
-        For Each vIdioma As Idioma In vIdiomaDinamico.ConsultaTodo
-            vLista.Add(vIdioma)
-        Next
-        Return vLista
+        Try
+            Dim vLista As New List(Of Idioma)
+            For Each vIdioma As Idioma In vIdiomaDinamico.ConsultaTodo
+                vLista.Add(vIdioma)
+            Next
+            Return vLista
+        Catch ex As Exception
+            Return Nothing
+        End Try
     End Function
 
     Public Sub AltaIdioma(pNombre As String, pDiccionario As Dictionary(Of String, String))
