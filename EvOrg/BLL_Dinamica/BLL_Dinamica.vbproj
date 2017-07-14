@@ -118,17 +118,9 @@
       <Project>{59d5e0c2-c12f-4b3c-9c10-f71482a6f542}</Project>
       <Name>BLL_Estatica</Name>
     </ProjectReference>
-    <ProjectReference Include="..\DAL\DAL.vbproj">
-      <Project>{a3495576-6bcc-4b02-8dfa-154ae6e9e507}</Project>
-      <Name>DAL</Name>
-    </ProjectReference>
     <ProjectReference Include="..\DAL_ABMC\DAL_ABMC.vbproj">
       <Project>{a3d67e2f-7bde-4559-af99-aa944ec06e17}</Project>
       <Name>DAL_ABMC</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Framework\Framework.vbproj">
-      <Project>{d38db499-0b05-4283-a636-d8b3435fa277}</Project>
-      <Name>Framework</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />

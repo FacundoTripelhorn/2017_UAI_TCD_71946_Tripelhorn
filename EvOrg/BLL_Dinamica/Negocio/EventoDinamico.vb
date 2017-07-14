@@ -36,7 +36,7 @@ Public Class EventoDinamico
         vEventoDatos.ReservarMaterial(pEvento, pMaterial)
     End Sub
 
-    Public Function CheckMaterial(pNombre As String) As Boolean
-        vEventoDatos.CheckEvento(pNombre)
+    Public Function CheckEvento(pNombre As String) As Boolean
+        Return vEventoDatos.CheckEvento(pNombre)
     End Function
 End Class

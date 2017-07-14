@@ -1,5 +1,4 @@
-﻿Imports DAL
-Imports DAL_ABMC
+﻿Imports DAL_ABMC
 Imports BLL_Estatica
 Public Class MaterialDinamico
     Implements IABMC
