@@ -79,7 +79,7 @@ Public Class ABMCliente
             If GrillaClientes.SelectedRows.Count > 0 Then
                 If Regex.IsMatch(DNITxt.Text, "[0-9]*") Then
                     If Regex.IsMatch(NombreTxt.Text, "^([A-ZÁÉÍÓÚ]{1}[a-zñáéíóú]+[\s]*)+$") And Regex.IsMatch(ApellidoTxt.Text, "^([A-ZÁÉÍÓÚ]{1}[a-zñáéíóú]+[\s]*)+$") Then
-                        If Regex.IsMatch(TelefonoTxt.Text, "^11\d{8}") Then
+                        If Regex.IsMatch(TelefonoTxt.Text, "[0-9]{8,10}") Then
                             If Regex.IsMatch(EmailTxt.Text, "^[\w._-]+@{1}[\w]+\.[a-z]{2,3}$") Then
                                 vCliente = DirectCast(GrillaClientes.SelectedRows(0).DataBoundItem, Cliente)
                                 vCliente.DNI = DNITxt.Text
@@ -151,5 +151,13 @@ Public Class ABMCliente
                 End If
             End Try
         Next
+    End Sub
+
+    Private Sub NombreTxt_KeyPress(sender As Object, e As KeyPressEventArgs) Handles NombreTxt.KeyPress
+        If (Regex.IsMatch(e.KeyChar, "[0-9]")) Then e.KeyChar = Nothing
+    End Sub
+
+    Private Sub ApellidoTxt_KeyPress(sender As Object, e As KeyPressEventArgs) Handles ApellidoTxt.KeyPress
+        If (Regex.IsMatch(e.KeyChar, "[0-9]")) Then e.KeyChar = Nothing
     End Sub
 End Class

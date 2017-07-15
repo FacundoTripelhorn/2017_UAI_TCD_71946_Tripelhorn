@@ -102,7 +102,7 @@ Public Class ABMSalon
                                     vSalon.Capacidad = CapacidadTxt.Text
                                     vSalon.Email = EmailTxt.Text
                                     vSalon.Telefono = TelefonoTxt.Text
-                                    vSalon.Direccion = New Direccion(CalleTxt.Text, NumeroTxt.Text, LocalidadTxt.Text)
+                                    vSalon.Direccion = New Direccion(salon.Direccion.Id, CalleTxt.Text, NumeroTxt.Text, LocalidadTxt.Text)
                                     vSalon.Descripcion = DescripcionTxt.Text
                                     vSalon.Precio = PrecioTxt.Text
                                     vSalonDinamico.Modificacion(vSalon)

@@ -252,6 +252,12 @@
     </Compile>
     <Compile Include="UsuarioFamiliaPatente\VistaUsuario.vb" />
     <Compile Include="Negocio\VistaReservaMaterial.vb" />
+    <Compile Include="VerEvento.Designer.vb">
+      <DependentUpon>VerEvento.vb</DependentUpon>
+    </Compile>
+    <Compile Include="VerEvento.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="MultiIdioma\Idiomas.resx">

@@ -191,6 +191,7 @@ Partial Class ABMCliente
         Me.TelefonoTxt.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TelefonoTxt.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TelefonoTxt.Location = New System.Drawing.Point(689, 123)
+        Me.TelefonoTxt.MaxLength = 10
         Me.TelefonoTxt.Name = "TelefonoTxt"
         Me.TelefonoTxt.Size = New System.Drawing.Size(171, 23)
         Me.TelefonoTxt.TabIndex = 8

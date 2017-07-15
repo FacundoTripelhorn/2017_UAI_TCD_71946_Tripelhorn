@@ -146,4 +146,8 @@ Public Class ABMMaterial
             End Try
         Next
     End Sub
+
+    Private Sub NombreTxt_KeyPress(sender As Object, e As KeyPressEventArgs) Handles NombreTxt.KeyPress
+        If (Regex.IsMatch(e.KeyChar, "[0-9]")) Then e.KeyChar = Nothing
+    End Sub
 End Class
