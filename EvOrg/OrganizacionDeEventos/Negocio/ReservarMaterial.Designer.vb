@@ -54,7 +54,7 @@ Partial Class ReservarMaterial
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17.7453!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.64066!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.69405!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 117.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 118.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.SeleccionarEventoLbl, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.EventoCombo, 0, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.GrillaMateriales, 0, 2)
@@ -125,7 +125,7 @@ Partial Class ReservarMaterial
         Me.BuscarMaterialBtn.Location = New System.Drawing.Point(3, 263)
         Me.BuscarMaterialBtn.Name = "BuscarMaterialBtn"
         Me.TableLayoutPanel1.SetRowSpan(Me.BuscarMaterialBtn, 2)
-        Me.BuscarMaterialBtn.Size = New System.Drawing.Size(142, 43)
+        Me.BuscarMaterialBtn.Size = New System.Drawing.Size(141, 43)
         Me.BuscarMaterialBtn.TabIndex = 1
         Me.BuscarMaterialBtn.Tag = "Buscar material"
         Me.BuscarMaterialBtn.Text = "Buscar material"
@@ -137,9 +137,9 @@ Partial Class ReservarMaterial
         Me.MaterialLbl.Dock = System.Windows.Forms.DockStyle.Fill
         Me.MaterialLbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.MaterialLbl.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.MaterialLbl.Location = New System.Drawing.Point(236, 260)
+        Me.MaterialLbl.Location = New System.Drawing.Point(234, 260)
         Me.MaterialLbl.Name = "MaterialLbl"
-        Me.MaterialLbl.Size = New System.Drawing.Size(112, 22)
+        Me.MaterialLbl.Size = New System.Drawing.Size(111, 22)
         Me.MaterialLbl.TabIndex = 4
         Me.MaterialLbl.Tag = "Material"
         Me.MaterialLbl.Text = "Material"
@@ -150,7 +150,7 @@ Partial Class ReservarMaterial
         Me.CantidadLbl.Dock = System.Windows.Forms.DockStyle.Fill
         Me.CantidadLbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CantidadLbl.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.CantidadLbl.Location = New System.Drawing.Point(354, 260)
+        Me.CantidadLbl.Location = New System.Drawing.Point(351, 260)
         Me.CantidadLbl.Name = "CantidadLbl"
         Me.CantidadLbl.Size = New System.Drawing.Size(121, 22)
         Me.CantidadLbl.TabIndex = 5
@@ -163,9 +163,9 @@ Partial Class ReservarMaterial
         Me.FechaLimiteLbl.Dock = System.Windows.Forms.DockStyle.Fill
         Me.FechaLimiteLbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FechaLimiteLbl.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.FechaLimiteLbl.Location = New System.Drawing.Point(481, 260)
+        Me.FechaLimiteLbl.Location = New System.Drawing.Point(478, 260)
         Me.FechaLimiteLbl.Name = "FechaLimiteLbl"
-        Me.FechaLimiteLbl.Size = New System.Drawing.Size(112, 22)
+        Me.FechaLimiteLbl.Size = New System.Drawing.Size(115, 22)
         Me.FechaLimiteLbl.TabIndex = 6
         Me.FechaLimiteLbl.Tag = "Fecha limite"
         Me.FechaLimiteLbl.Text = "Fecha Limite"
@@ -174,16 +174,16 @@ Partial Class ReservarMaterial
         '
         Me.MaterialTxt.Dock = System.Windows.Forms.DockStyle.Fill
         Me.MaterialTxt.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.MaterialTxt.Location = New System.Drawing.Point(236, 285)
+        Me.MaterialTxt.Location = New System.Drawing.Point(234, 285)
         Me.MaterialTxt.Name = "MaterialTxt"
-        Me.MaterialTxt.Size = New System.Drawing.Size(112, 23)
+        Me.MaterialTxt.Size = New System.Drawing.Size(111, 23)
         Me.MaterialTxt.TabIndex = 8
         '
         'CantidadNumeric
         '
         Me.CantidadNumeric.Dock = System.Windows.Forms.DockStyle.Fill
         Me.CantidadNumeric.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CantidadNumeric.Location = New System.Drawing.Point(354, 285)
+        Me.CantidadNumeric.Location = New System.Drawing.Point(351, 285)
         Me.CantidadNumeric.Name = "CantidadNumeric"
         Me.CantidadNumeric.Size = New System.Drawing.Size(121, 23)
         Me.CantidadNumeric.TabIndex = 2
@@ -193,9 +193,9 @@ Partial Class ReservarMaterial
         Me.FechaLimiteDTP.Dock = System.Windows.Forms.DockStyle.Fill
         Me.FechaLimiteDTP.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FechaLimiteDTP.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.FechaLimiteDTP.Location = New System.Drawing.Point(481, 285)
+        Me.FechaLimiteDTP.Location = New System.Drawing.Point(478, 285)
         Me.FechaLimiteDTP.Name = "FechaLimiteDTP"
-        Me.FechaLimiteDTP.Size = New System.Drawing.Size(112, 23)
+        Me.FechaLimiteDTP.Size = New System.Drawing.Size(115, 23)
         Me.FechaLimiteDTP.TabIndex = 3
         '
         'TableLayoutPanel2
@@ -268,9 +268,9 @@ Partial Class ReservarMaterial
         Me.IdLbl.Dock = System.Windows.Forms.DockStyle.Fill
         Me.IdLbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.IdLbl.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.IdLbl.Location = New System.Drawing.Point(151, 260)
+        Me.IdLbl.Location = New System.Drawing.Point(150, 260)
         Me.IdLbl.Name = "IdLbl"
-        Me.IdLbl.Size = New System.Drawing.Size(79, 22)
+        Me.IdLbl.Size = New System.Drawing.Size(78, 22)
         Me.IdLbl.TabIndex = 10
         Me.IdLbl.Tag = "Id"
         Me.IdLbl.Text = "Id"
@@ -279,9 +279,9 @@ Partial Class ReservarMaterial
         '
         Me.IdTxt.Dock = System.Windows.Forms.DockStyle.Fill
         Me.IdTxt.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.IdTxt.Location = New System.Drawing.Point(151, 285)
+        Me.IdTxt.Location = New System.Drawing.Point(150, 285)
         Me.IdTxt.Name = "IdTxt"
-        Me.IdTxt.Size = New System.Drawing.Size(79, 23)
+        Me.IdTxt.Size = New System.Drawing.Size(78, 23)
         Me.IdTxt.TabIndex = 11
         '
         'ReservarMaterial
