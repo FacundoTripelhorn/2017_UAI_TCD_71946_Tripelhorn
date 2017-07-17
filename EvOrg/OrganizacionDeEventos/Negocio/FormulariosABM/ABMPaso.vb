@@ -154,23 +154,27 @@ Public Class ABMPaso
     Private Sub ModificacionBtn_Click(sender As Object, e As EventArgs) Handles ModificacionBtn.Click
         Try
             If GrillaPasos.SelectedRows.Count > 0 Then
-                vPaso = VistaAPaso()
-                vEvento.ListaPasos.Remove(vPaso)
-                If vPaso.Fecha <> FechaDTP.Value Then
-                    BorrarFechaDeCalendario(vPaso.Fecha)
-                    AgregarFechaACalendario(FechaDTP.Value)
-                    Calendario.UpdateBoldedDates()
+                If DescripcionTxt.Text <> "" And FechaDTP.Value > Date.Now And PrioridadCombo.Text <> "" Then
+                    vPaso = VistaAPaso()
+                    vEvento.ListaPasos.Remove(vPaso)
+                    If vPaso.Fecha <> FechaDTP.Value Then
+                        BorrarFechaDeCalendario(vPaso.Fecha)
+                        AgregarFechaACalendario(FechaDTP.Value)
+                        Calendario.UpdateBoldedDates()
+                    End If
+                    vPaso.Descripcion = DescripcionTxt.Text
+                    vPaso.Fecha = FechaDTP.Value
+                    vPaso.Prioridad = PrioridadCombo.SelectedItem
+                    vPasoDinamico.Modificacion(vPaso)
+                    vEventoDinamico.ModificarPaso(vEvento, vPaso, FechaDTP.Value)
+                    vEvento.ListaPasos.Add(vPaso)
+                    Limpiar()
+                    Actualizar()
+                Else
+                    Throw New Exception("Ingrese los datos del paso")
                 End If
-                vPaso.Descripcion = DescripcionTxt.Text
-                vPaso.Fecha = FechaDTP.Value
-                vPaso.Prioridad = PrioridadCombo.SelectedItem
-                vPasoDinamico.Modificacion(vPaso)
-                vEventoDinamico.ModificarPaso(vEvento, vPaso, FechaDTP.Value)
-                vEvento.ListaPasos.Add(vPaso)
-                Limpiar()
-                Actualizar()
             Else
-                Throw New Exception("Seleccione el paso que desea modificar")
+                    Throw New Exception("Seleccione el paso que desea modificar")
             End If
         Catch ex As Exception
             MessageBox.Show(vTraductor.Traducir(ex.Message), "EvOrg")
