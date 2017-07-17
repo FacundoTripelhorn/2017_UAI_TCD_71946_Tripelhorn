@@ -208,4 +208,13 @@ Public Class FamiliaDatos
             Return False
         End If
     End Function
+
+    Public Function CheckUsuarios(pId As Integer) As Boolean
+        Dim DTable As DataTable = Comando.GetData("SELECT * FROM Usuario WHERE Familia = " & pId)
+        If DTable.Rows.Count > 0 Then
+            Return True
+        Else
+            Return False
+        End If
+    End Function
 End Class

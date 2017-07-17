@@ -15,10 +15,15 @@ Public Class ABMCliente
     End Sub
 
     Private Sub Actualizar()
-        GrillaClientes.DataSource = Nothing
-        GrillaClientes.DataSource = vClienteDinamico.ConsultaTodo
-        GrillaClientes.Columns(4).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
-        ActualizarObservador(GrillaClientes)
+        Try
+            Dim vLista As List(Of Object) = vClienteDinamico.ConsultaTodo
+            GrillaClientes.DataSource = Nothing
+            GrillaClientes.DataSource = vLista
+            GrillaClientes.Columns(4).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+            ActualizarObservador(GrillaClientes)
+        Catch ex As Exception
+
+        End Try
     End Sub
 
     Private Sub Limpiar()
@@ -38,7 +43,7 @@ Public Class ABMCliente
                             If Not vClienteDinamico.CheckCliente(vCliente.DNI) Then
                                 vClienteDinamico.Alta(vCliente)
                                 Limpiar()
-                                GrillaClientes.DataSource = vClienteDinamico.ConsultaTodo()
+                                Actualizar()
                             Else
                                 Throw New Exception("El DNI del cliente ingresado ya existe")
                             End If
@@ -63,9 +68,18 @@ Public Class ABMCliente
         Try
             If GrillaClientes.SelectedRows.Count > 0 Then
                 vCliente = DirectCast(GrillaClientes.SelectedRows(0).DataBoundItem, Cliente)
-                vClienteDinamico.Baja(vCliente)
-                Limpiar()
-                GrillaClientes.DataSource = vClienteDinamico.ConsultaTodo()
+                If vClienteDinamico.CheckEventosCliente(vCliente.DNI) Then
+                    Dim vOpcion As Integer = MessageBox.Show(vTraductor.Traducir("El cliente seleccionado tiene eventos relacionados ¿Desea borrar al cliente junto con sus eventos?"), "EvOrg", MessageBoxButtons.YesNo)
+                    If vOpcion = DialogResult.Yes Then
+                        vClienteDinamico.Baja(vCliente)
+                        Limpiar()
+                        Actualizar()
+                    End If
+                Else
+                    vClienteDinamico.Baja(vCliente)
+                    Limpiar()
+                    Actualizar()
+                End If
             Else
                 Throw New Exception("Seleccione el cliente que desea borrar")
             End If
@@ -89,7 +103,7 @@ Public Class ABMCliente
                                 vCliente.Email = EmailTxt.Text
                                 vClienteDinamico.Modificacion(vCliente)
                                 Limpiar()
-                                GrillaClientes.DataSource = vClienteDinamico.ConsultaTodo()
+                                Actualizar()
                             Else
                                 Throw New Exception("El email ingresado es incorrecto")
                             End If

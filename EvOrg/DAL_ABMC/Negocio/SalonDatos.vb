@@ -35,14 +35,36 @@ Public Class SalonDatos
 
     Public Sub Baja(Optional pObjeto As Object = Nothing) Implements IABMC.Baja
         Try
+            Dim vDireccionId As Integer
             If TypeOf pObjeto Is Salon Then
                 vSalon = DirectCast(pObjeto, Salon)
                 Dim DTable As DataTable = Comando.GetData("SELECT * FROM Salon WHERE Id = " & vSalon.Id)
-                If DTable.Rows.Count > 0 Then DTable.Rows(0).Delete()
+                SetEventoNull(vSalon.Id)
+                If DTable.Rows.Count > 0 Then
+                    vDireccionId = DTable.Rows(0).Item(5)
+                    DTable.Rows(0).Delete()
+                End If
                 Comando.ActualizarBD("Salon", DTable)
+                BorrarDireccion(vDireccionId)
             End If
         Catch ex As Exception
         End Try
+    End Sub
+
+    Private Sub BorrarDireccion(pIdDireccion As Integer)
+        Dim DTable As DataTable = Comando.GetData("SELECT * FROM DireccionSalon WHERE Id = " & pIdDireccion)
+        If DTable.Rows.Count > 0 Then DTable.Rows(0).Delete()
+        Comando.ActualizarBD("DireccionSalon", DTable)
+    End Sub
+
+    Private Sub SetEventoNull(pId As Integer)
+        Dim DTable As DataTable = Comando.GetData("SELECT * FROM Evento WHERE Salon = " & pId)
+        If DTable.Rows.Count > 0 Then
+            For Each DRow As DataRow In DTable.Rows
+                DRow(5) = DBNull.Value
+            Next
+        End If
+        Comando.ActualizarBD("Evento", DTable)
     End Sub
 
     Public Sub Modificacion(Optional pObjeto As Object = Nothing) Implements IABMC.Modificacion
@@ -85,6 +107,15 @@ Public Class SalonDatos
 
     Public Function CheckSalon(pNombre As String) As Boolean
         Dim DTable As DataTable = Comando.GetData("SELECT * FROM Salon WHERE Nombre = '" & pNombre & "'")
+        If DTable.Rows.Count > 0 Then
+            Return True
+        Else
+            Return False
+        End If
+    End Function
+
+    Public Function CheckReserva(pId As Integer) As Boolean
+        Dim DTable As DataTable = Comando.GetData("SELECT * FROM Evento WHERE Salon = " & pId)
         If DTable.Rows.Count > 0 Then
             Return True
         Else

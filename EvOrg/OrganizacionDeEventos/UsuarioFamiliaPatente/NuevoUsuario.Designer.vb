@@ -115,6 +115,7 @@ Partial Class NuevoUsuario
         Me.IdUsuarioTxt.Dock = System.Windows.Forms.DockStyle.Fill
         Me.IdUsuarioTxt.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.IdUsuarioTxt.Location = New System.Drawing.Point(148, 3)
+        Me.IdUsuarioTxt.MaxLength = 18
         Me.IdUsuarioTxt.Name = "IdUsuarioTxt"
         Me.IdUsuarioTxt.Size = New System.Drawing.Size(201, 23)
         Me.IdUsuarioTxt.TabIndex = 0
@@ -133,6 +134,7 @@ Partial Class NuevoUsuario
         Me.ContraseñaTxt.Dock = System.Windows.Forms.DockStyle.Fill
         Me.ContraseñaTxt.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ContraseñaTxt.Location = New System.Drawing.Point(148, 57)
+        Me.ContraseñaTxt.MaxLength = 16
         Me.ContraseñaTxt.Name = "ContraseñaTxt"
         Me.ContraseñaTxt.Size = New System.Drawing.Size(201, 23)
         Me.ContraseñaTxt.TabIndex = 2
@@ -143,6 +145,7 @@ Partial Class NuevoUsuario
         Me.RContraseñaTxt.Dock = System.Windows.Forms.DockStyle.Fill
         Me.RContraseñaTxt.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.RContraseñaTxt.Location = New System.Drawing.Point(148, 87)
+        Me.RContraseñaTxt.MaxLength = 16
         Me.RContraseñaTxt.Name = "RContraseñaTxt"
         Me.RContraseñaTxt.Size = New System.Drawing.Size(201, 23)
         Me.RContraseñaTxt.TabIndex = 3

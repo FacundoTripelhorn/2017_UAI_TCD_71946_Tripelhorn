@@ -2,7 +2,7 @@
 Imports BLL_Estatica
 Imports Framework
 Imports OrganizacionDeEventos
-
+Imports System.Text.RegularExpressions
 Public Class LogIn
     Implements IObservador
 
@@ -12,22 +12,24 @@ Public Class LogIn
 
     Private Sub AceptarBtn_Click(sender As Object, e As EventArgs) Handles AceptarBtn.Click
         Try
-            If Not (UsuarioTxt.Text = "" And ContraseñaTxt.Text = "") Then
-                If vControladorLogin.Aceptar(UsuarioTxt.Text, ContraseñaTxt.Text) Then
-                    Me.Close()
+            If UsuarioTxt.Text <> "" And ContraseñaTxt.Text <> "" Then
+                If Regex.IsMatch(UsuarioTxt.Text, "[a-zA-Z0-9]{6,18}") Then
+                    If Regex.IsMatch(ContraseñaTxt.Text, "[a-zA-Z0-9]{6,16}") Then
+                        If vControladorLogin.Aceptar(UsuarioTxt.Text, ContraseñaTxt.Text) Then
+                            Me.Close()
+                        Else
+                            UsuarioTxt.Text = ""
+                            ContraseñaTxt.Text = ""
+                        End If
+                    Else
+                        MessageBox.Show(vTraductor.Traducir("La contraseña tiene que tener al menos 6 caracteres y solo puede contener letras y números"), "EvOrg")
+                    End If
                 Else
-                    UsuarioTxt.Text = ""
-                    ContraseñaTxt.Text = ""
+                    MessageBox.Show(vTraductor.Traducir("El nombre de usuario tiene que tener al menos 6 caracteres y solo puede contener letras y números"), "EvOrg")
                 End If
             Else
                 MessageBox.Show(vTraductor.Traducir("Ingrese usuario y contraseña por favor"), "EvOrg")
-
-                'If vContador = 3 Then
-                'MsgBox("Desea restablecer su contraseña?")
-                'End If
-                'vContador += 1
             End If
-
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try

@@ -32,8 +32,8 @@ Public Class NuevoUsuario
             Dim vEncriptar As Encriptador = Encriptador.GetInstance
             If IdUsuarioTxt.Text <> "" And ContraseñaTxt.Text <> "" And EmailTxt.Text <> "" And RContraseñaTxt.Text <> "" Then
                 If ContraseñaTxt.Text = RContraseñaTxt.Text Then
-                    If Regex.IsMatch(ContraseñaTxt.Text, "[a-zA-Z0-9._]{6,16}") And Regex.IsMatch(RContraseñaTxt.Text, "[a-zA-Z0-9._]{6,16}") Then
-                        If Regex.IsMatch(IdUsuarioTxt.Text, "[a-zA-Z0-9_.]{6,18}") Then
+                    If Regex.IsMatch(ContraseñaTxt.Text, "[a-zA-Z0-9]{6,16}") Then
+                        If Regex.IsMatch(IdUsuarioTxt.Text, "[a-zA-Z0-9]{6,18}") Then
                             If Regex.IsMatch(EmailTxt.Text, "^[\w]+@{1}[\w]+\.[a-z]{2,3}$") Then
                                 Usuario.IdUsuario = IdUsuarioTxt.Text
                                 Usuario.Email = EmailTxt.Text
@@ -62,12 +62,12 @@ Public Class NuevoUsuario
                                 RContraseñaTxt.Text = ""
                             End If
                         Else
-                            Throw New Exception("El nombre de usuario es incorrecto")
+                            Throw New Exception("El nombre de usuario tiene que tener al menos 6 caracteres y solo puede contener letras y números")
                             ContraseñaTxt.Text = ""
                             RContraseñaTxt.Text = ""
                         End If
                     Else
-                        Throw New Exception("Las contraseñas son incorrectas")
+                        Throw New Exception("La contraseña tiene que tener al menos 6 caracteres y solo puede contener letras y números")
                         ContraseñaTxt.Text = ""
                         RContraseñaTxt.Text = ""
                     End If

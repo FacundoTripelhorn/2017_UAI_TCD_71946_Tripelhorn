@@ -22,4 +22,8 @@ Public Class ServicioDinamico
     Public Function CheckServicio(pNombre As String) As Boolean
         Return vServicioDatos.CheckServicio(pNombre)
     End Function
+
+    Public Function CheckReserva(pId As Integer) As Boolean
+        Return vServicioDatos.CheckReserva(pId)
+    End Function
 End Class

@@ -39,7 +39,12 @@ Public Class ServicioDatos
             If TypeOf pObjeto Is Servicio Then
                 vServicio = DirectCast(pObjeto, Servicio)
                 Dim DTable As DataTable = Comando.GetData("SELECT * FROM Servicio WHERE Id = " & vServicio.Id)
+                Dim DTReserva As DataTable = Comando.GetData("SELECT * FROM ReservaServicio WHERE Servicio = " & vServicio.Id)
+                For Each DRow As DataRow In DTReserva.Rows
+                    DRow.Delete()
+                Next
                 If DTable.Rows.Count > 0 Then DTable.Rows(0).Delete()
+                Comando.ActualizarBD("ReservaServicio", DTReserva)
                 Comando.ActualizarBD("Servicio", DTable)
             End If
         Catch ex As Exception
@@ -86,6 +91,15 @@ Public Class ServicioDatos
 
     Public Function CheckServicio(pNombre As String) As Boolean
         Dim DTable As DataTable = Comando.GetData("SELECT * FROM Servicio WHERE Nombre = '" & pNombre & "'")
+        If DTable.Rows.Count > 0 Then
+            Return True
+        Else
+            Return False
+        End If
+    End Function
+
+    Public Function CheckReserva(pId As Integer) As Boolean
+        Dim DTable As DataTable = Comando.GetData("SELECT * FROM ReservaServicio WHERE Servicio = " & pId)
         If DTable.Rows.Count > 0 Then
             Return True
         Else

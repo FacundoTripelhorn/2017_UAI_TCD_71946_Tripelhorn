@@ -1,5 +1,5 @@
 USE [EvOrg];
-/****** Object:  Table [dbo].[Cliente]    Script Date: 12/7/2017 9:54:49 p. m. ******/
+/****** Object:  Table [dbo].[Cliente]    Script Date: 16/7/2017 10:53:46 p. m. ******/
 CREATE TABLE [dbo].[Cliente](
 	[DNI] [int] NOT NULL,
 	[Nombre] [nvarchar](50) NOT NULL,
@@ -11,7 +11,7 @@ CREATE TABLE [dbo].[Cliente](
 	[DNI] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY];
-/****** Object:  Table [dbo].[Diccionario]    Script Date: 12/7/2017 9:54:49 p. m. ******/
+/****** Object:  Table [dbo].[Diccionario]    Script Date: 16/7/2017 10:53:46 p. m. ******/
 CREATE TABLE [dbo].[Diccionario](
 	[Id] [int] IDENTITY(1,1) NOT NULL,
 	[Clave] [nvarchar](500) NOT NULL,
@@ -20,7 +20,7 @@ CREATE TABLE [dbo].[Diccionario](
 	[Id] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY];
-/****** Object:  Table [dbo].[DireccionSalon]    Script Date: 12/7/2017 9:54:49 p. m. ******/
+/****** Object:  Table [dbo].[DireccionSalon]    Script Date: 16/7/2017 10:53:46 p. m. ******/
 CREATE TABLE [dbo].[DireccionSalon](
 	[Id] [int] IDENTITY(1,1) NOT NULL,
 	[Calle] [nvarchar](50) NULL,
@@ -31,7 +31,7 @@ CREATE TABLE [dbo].[DireccionSalon](
 	[Id] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY];
-/****** Object:  Table [dbo].[DireccionServicio]    Script Date: 12/7/2017 9:54:49 p. m. ******/
+/****** Object:  Table [dbo].[DireccionServicio]    Script Date: 16/7/2017 10:53:46 p. m. ******/
 CREATE TABLE [dbo].[DireccionServicio](
 	[Id] [int] NOT NULL,
 	[Calle] [nvarchar](50) NULL,
@@ -42,7 +42,7 @@ CREATE TABLE [dbo].[DireccionServicio](
 	[Id] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY];
-/****** Object:  Table [dbo].[Evento]    Script Date: 12/7/2017 9:54:49 p. m. ******/
+/****** Object:  Table [dbo].[Evento]    Script Date: 16/7/2017 10:53:46 p. m. ******/
 CREATE TABLE [dbo].[Evento](
 	[Id] [int] NOT NULL,
 	[Nombre] [nvarchar](50) NOT NULL,
@@ -56,7 +56,7 @@ CREATE TABLE [dbo].[Evento](
 	[Id] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY];
-/****** Object:  Table [dbo].[EventoPaso]    Script Date: 12/7/2017 9:54:49 p. m. ******/
+/****** Object:  Table [dbo].[EventoPaso]    Script Date: 16/7/2017 10:53:46 p. m. ******/
 CREATE TABLE [dbo].[EventoPaso](
 	[Evento] [int] NOT NULL,
 	[Paso] [int] NOT NULL,
@@ -67,7 +67,7 @@ CREATE TABLE [dbo].[EventoPaso](
 	[Paso] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY];
-/****** Object:  Table [dbo].[Familia]    Script Date: 12/7/2017 9:54:49 p. m. ******/
+/****** Object:  Table [dbo].[Familia]    Script Date: 16/7/2017 10:53:46 p. m. ******/
 CREATE TABLE [dbo].[Familia](
 	[Id] [int] IDENTITY(1,1) NOT NULL,
 	[Nombre] [nvarchar](50) NOT NULL,
@@ -76,7 +76,7 @@ CREATE TABLE [dbo].[Familia](
 	[Id] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY];
-/****** Object:  Table [dbo].[FamiliaGrupoPatente]    Script Date: 12/7/2017 9:54:49 p. m. ******/
+/****** Object:  Table [dbo].[FamiliaGrupoPatente]    Script Date: 16/7/2017 10:53:46 p. m. ******/
 CREATE TABLE [dbo].[FamiliaGrupoPatente](
 	[Familia] [int] NOT NULL,
 	[GrupoPatente] [int] NOT NULL,
@@ -87,7 +87,7 @@ CREATE TABLE [dbo].[FamiliaGrupoPatente](
 	[GrupoPatente] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY];
-/****** Object:  Table [dbo].[FamiliaPatente]    Script Date: 12/7/2017 9:54:49 p. m. ******/
+/****** Object:  Table [dbo].[FamiliaPatente]    Script Date: 16/7/2017 10:53:46 p. m. ******/
 CREATE TABLE [dbo].[FamiliaPatente](
 	[Familia] [int] NOT NULL,
 	[Patente] [int] NOT NULL,
@@ -98,7 +98,7 @@ CREATE TABLE [dbo].[FamiliaPatente](
 	[Patente] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY];
-/****** Object:  Table [dbo].[GrupoPatente]    Script Date: 12/7/2017 9:54:49 p. m. ******/
+/****** Object:  Table [dbo].[GrupoPatente]    Script Date: 16/7/2017 10:53:46 p. m. ******/
 CREATE TABLE [dbo].[GrupoPatente](
 	[Id] [int] IDENTITY(1,1) NOT NULL,
 	[Nombre] [nvarchar](50) NULL,
@@ -108,7 +108,7 @@ CREATE TABLE [dbo].[GrupoPatente](
 	[Id] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY];
-/****** Object:  Table [dbo].[Idioma]    Script Date: 12/7/2017 9:54:49 p. m. ******/
+/****** Object:  Table [dbo].[Idioma]    Script Date: 16/7/2017 10:53:46 p. m. ******/
 CREATE TABLE [dbo].[Idioma](
 	[Id] [int] NOT NULL,
 	[Nombre] [nvarchar](50) NOT NULL,
@@ -117,7 +117,7 @@ CREATE TABLE [dbo].[Idioma](
 	[Id] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY];
-/****** Object:  Table [dbo].[IdiomaDiccionario]    Script Date: 12/7/2017 9:54:49 p. m. ******/
+/****** Object:  Table [dbo].[IdiomaDiccionario]    Script Date: 16/7/2017 10:53:46 p. m. ******/
 CREATE TABLE [dbo].[IdiomaDiccionario](
 	[Idioma] [int] NOT NULL,
 	[Diccionario] [int] NOT NULL,
@@ -128,7 +128,7 @@ CREATE TABLE [dbo].[IdiomaDiccionario](
 	[Diccionario] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY];
-/****** Object:  Table [dbo].[Material]    Script Date: 12/7/2017 9:54:49 p. m. ******/
+/****** Object:  Table [dbo].[Material]    Script Date: 16/7/2017 10:53:46 p. m. ******/
 CREATE TABLE [dbo].[Material](
 	[Id] [int] NOT NULL,
 	[Nombre] [nvarchar](50) NOT NULL,
@@ -139,7 +139,7 @@ CREATE TABLE [dbo].[Material](
 	[Id] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY];
-/****** Object:  Table [dbo].[MaterialTemporal]    Script Date: 12/7/2017 9:54:49 p. m. ******/
+/****** Object:  Table [dbo].[MaterialTemporal]    Script Date: 16/7/2017 10:53:46 p. m. ******/
 CREATE TABLE [dbo].[MaterialTemporal](
 	[Id] [int] NOT NULL,
 	[Nombre] [nvarchar](50) NOT NULL,
@@ -148,7 +148,7 @@ CREATE TABLE [dbo].[MaterialTemporal](
 	[Id] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY];
-/****** Object:  Table [dbo].[Paso]    Script Date: 12/7/2017 9:54:49 p. m. ******/
+/****** Object:  Table [dbo].[Paso]    Script Date: 16/7/2017 10:53:46 p. m. ******/
 CREATE TABLE [dbo].[Paso](
 	[Id] [int] NOT NULL,
 	[Descripcion] [nvarchar](100) NULL,
@@ -159,7 +159,7 @@ CREATE TABLE [dbo].[Paso](
 	[Id] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY];
-/****** Object:  Table [dbo].[Patente]    Script Date: 12/7/2017 9:54:49 p. m. ******/
+/****** Object:  Table [dbo].[Patente]    Script Date: 16/7/2017 10:53:46 p. m. ******/
 CREATE TABLE [dbo].[Patente](
 	[Id] [int] IDENTITY(1,1) NOT NULL,
 	[Nombre] [nvarchar](50) NOT NULL,
@@ -170,7 +170,7 @@ CREATE TABLE [dbo].[Patente](
 	[Id] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY];
-/****** Object:  Table [dbo].[ReservaMaterial]    Script Date: 12/7/2017 9:54:49 p. m. ******/
+/****** Object:  Table [dbo].[ReservaMaterial]    Script Date: 16/7/2017 10:53:46 p. m. ******/
 CREATE TABLE [dbo].[ReservaMaterial](
 	[Evento] [int] NOT NULL,
 	[Material] [int] NOT NULL,
@@ -182,7 +182,7 @@ CREATE TABLE [dbo].[ReservaMaterial](
 	[Material] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY];
-/****** Object:  Table [dbo].[ReservaServicio]    Script Date: 12/7/2017 9:54:49 p. m. ******/
+/****** Object:  Table [dbo].[ReservaServicio]    Script Date: 16/7/2017 10:53:46 p. m. ******/
 CREATE TABLE [dbo].[ReservaServicio](
 	[Evento] [int] NOT NULL,
 	[Servicio] [int] NOT NULL,
@@ -193,7 +193,7 @@ CREATE TABLE [dbo].[ReservaServicio](
 	[Servicio] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY];
-/****** Object:  Table [dbo].[Salon]    Script Date: 12/7/2017 9:54:49 p. m. ******/
+/****** Object:  Table [dbo].[Salon]    Script Date: 16/7/2017 10:53:46 p. m. ******/
 CREATE TABLE [dbo].[Salon](
 	[Id] [int] IDENTITY(1,1) NOT NULL,
 	[Nombre] [nvarchar](50) NULL,
@@ -208,7 +208,7 @@ CREATE TABLE [dbo].[Salon](
 	[Id] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY];
-/****** Object:  Table [dbo].[Servicio]    Script Date: 12/7/2017 9:54:49 p. m. ******/
+/****** Object:  Table [dbo].[Servicio]    Script Date: 16/7/2017 10:53:46 p. m. ******/
 CREATE TABLE [dbo].[Servicio](
 	[Id] [int] IDENTITY(1,1) NOT NULL,
 	[Nombre] [nvarchar](50) NULL,
@@ -222,17 +222,18 @@ CREATE TABLE [dbo].[Servicio](
 	[Id] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY];
-/****** Object:  Table [dbo].[TipoEvento]    Script Date: 12/7/2017 9:54:49 p. m. ******/
+/****** Object:  Table [dbo].[TipoEvento]    Script Date: 16/7/2017 10:53:46 p. m. ******/
 CREATE TABLE [dbo].[TipoEvento](
 	[Id] [int] IDENTITY(1,1) NOT NULL,
 	[Nombre] [nvarchar](50) NULL,
 	[Descripcion] [nvarchar](500) NULL,
+	[Activo] [bit] NULL,
  CONSTRAINT [PK_TipoEvento] PRIMARY KEY CLUSTERED 
 (
 	[Id] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY];
-/****** Object:  Table [dbo].[TipoEventoPaso]    Script Date: 12/7/2017 9:54:49 p. m. ******/
+/****** Object:  Table [dbo].[TipoEventoPaso]    Script Date: 16/7/2017 10:53:46 p. m. ******/
 CREATE TABLE [dbo].[TipoEventoPaso](
 	[TipoEv] [int] NOT NULL,
 	[Paso] [int] NOT NULL,
@@ -243,7 +244,7 @@ CREATE TABLE [dbo].[TipoEventoPaso](
 	[Paso] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY];
-/****** Object:  Table [dbo].[Usuario]    Script Date: 12/7/2017 9:54:49 p. m. ******/
+/****** Object:  Table [dbo].[Usuario]    Script Date: 16/7/2017 10:53:46 p. m. ******/
 CREATE TABLE [dbo].[Usuario](
 	[Id] [nvarchar](16) NOT NULL,
 	[Email] [nvarchar](50) NULL,
@@ -366,8 +367,8 @@ INSERT [dbo].[Diccionario] ([Id], [Clave]) VALUES (105, N'Ingrese los datos del 
 INSERT [dbo].[Diccionario] ([Id], [Clave]) VALUES (106, N'Seleccione un evento')
 INSERT [dbo].[Diccionario] ([Id], [Clave]) VALUES (107, N'La Familia tiene que tener un nombre')
 INSERT [dbo].[Diccionario] ([Id], [Clave]) VALUES (108, N'Error al eliminar el elemento seleccionado')
-INSERT [dbo].[Diccionario] ([Id], [Clave]) VALUES (109, N'El nombre de usuario es incorrecto')
-INSERT [dbo].[Diccionario] ([Id], [Clave]) VALUES (110, N'Las contraseñas son incorrectas')
+INSERT [dbo].[Diccionario] ([Id], [Clave]) VALUES (109, N'El nombre de usuario tiene que tener al menos 6 caracteres y solo puede contener letras y números')
+INSERT [dbo].[Diccionario] ([Id], [Clave]) VALUES (110, N'La contraseña tiene que tener al menos 6 caracteres y solo puede contener letras y números')
 INSERT [dbo].[Diccionario] ([Id], [Clave]) VALUES (111, N'Las contraseñas no coinciden')
 INSERT [dbo].[Diccionario] ([Id], [Clave]) VALUES (112, N'Cerrando sesion')
 INSERT [dbo].[Diccionario] ([Id], [Clave]) VALUES (113, N'Ingrese usuario y contraseña por favor')
@@ -386,7 +387,7 @@ INSERT [dbo].[Diccionario] ([Id], [Clave]) VALUES (125, N'Ver todos')
 INSERT [dbo].[Diccionario] ([Id], [Clave]) VALUES (126, N'Filtrar por localidad')
 INSERT [dbo].[Diccionario] ([Id], [Clave]) VALUES (127, N'El nombre de usuario ingresado ya existe')
 INSERT [dbo].[Diccionario] ([Id], [Clave]) VALUES (128, N'El DNI del cliente ingresado ya existe')
-INSERT [dbo].[Diccionario] ([Id], [Clave]) VALUES (129, N'El nombre de material ingresado ya existe')
+INSERT [dbo].[Diccionario] ([Id], [Clave]) VALUES (129, N'El nombre o el id del material ingresado ya existe')
 INSERT [dbo].[Diccionario] ([Id], [Clave]) VALUES (130, N'El paso ingresado ya existe en el evento seleccionado')
 INSERT [dbo].[Diccionario] ([Id], [Clave]) VALUES (131, N'El nombre del servicio ingresado ya existe')
 INSERT [dbo].[Diccionario] ([Id], [Clave]) VALUES (132, N'El nombre del tipo de evento ingresado ya existe')
@@ -411,19 +412,45 @@ INSERT [dbo].[Diccionario] ([Id], [Clave]) VALUES (150, N'Seleccione el usuario 
 INSERT [dbo].[Diccionario] ([Id], [Clave]) VALUES (151, N'Seleccione el usuario que desea borrar')
 INSERT [dbo].[Diccionario] ([Id], [Clave]) VALUES (152, N'Seleccione el elemento que desea eliminar')
 INSERT [dbo].[Diccionario] ([Id], [Clave]) VALUES (153, N'Ingrese los datos del usuario')
+INSERT [dbo].[Diccionario] ([Id], [Clave]) VALUES (154, N'Ingrese los datos del material a reservar')
+INSERT [dbo].[Diccionario] ([Id], [Clave]) VALUES (155, N'Ingrese el DNI del cliente')
+INSERT [dbo].[Diccionario] ([Id], [Clave]) VALUES (156, N'Ingrese los datos del evento')
+INSERT [dbo].[Diccionario] ([Id], [Clave]) VALUES (157, N'Ingrese un nombre y seleccione un formulario para la patente nueva')
+INSERT [dbo].[Diccionario] ([Id], [Clave]) VALUES (158, N'Ingrese un nombre para el grupo de patentes nuevo')
+INSERT [dbo].[Diccionario] ([Id], [Clave]) VALUES (159, N'No se le pueden agregar grupos de patente al elemento seleccionado, seleccione un grupo')
+INSERT [dbo].[Diccionario] ([Id], [Clave]) VALUES (160, N'No se le pueden agregar patentes al elemento seleccionado, seleccione un grupo')
+INSERT [dbo].[Diccionario] ([Id], [Clave]) VALUES (161, N'Seleccione la familia que desea eliminar')
+INSERT [dbo].[Diccionario] ([Id], [Clave]) VALUES (162, N'Seleccione la familia que desea modificar')
+INSERT [dbo].[Diccionario] ([Id], [Clave]) VALUES (163, N'Seleccione un elemento del árbol para agregarle una patente')
+INSERT [dbo].[Diccionario] ([Id], [Clave]) VALUES (164, N'Seleccione un elemento del árbol para agregarle un grupo de patentes')
+INSERT [dbo].[Diccionario] ([Id], [Clave]) VALUES (165, N'El cliente seleccionado tiene eventos relacionados ¿Desea borrar el cliente junto con sus eventos?')
+INSERT [dbo].[Diccionario] ([Id], [Clave]) VALUES (166, N'El material seleccionado tiene reservas pendientes ¿Desea eliminar el material y cancelar las reservas?')
+INSERT [dbo].[Diccionario] ([Id], [Clave]) VALUES (167, N'El salón seleccionado posee eventos relacionados ¿Desea eliminarlo de todas formas?')
+INSERT [dbo].[Diccionario] ([Id], [Clave]) VALUES (168, N'El servicio seleccionado posee reservas pendientes ¿Desea eliminarlo de todas formas y cancelar las reservas?')
+INSERT [dbo].[Diccionario] ([Id], [Clave]) VALUES (169, N'Como el tipo de evento seleccionado tiene eventos relacionados se deshabilitará hasta que se realicen o cancelen estos eventos')
+INSERT [dbo].[Diccionario] ([Id], [Clave]) VALUES (170, N'Generico')
+INSERT [dbo].[Diccionario] ([Id], [Clave]) VALUES (171, N'Concreto')
+INSERT [dbo].[Diccionario] ([Id], [Clave]) VALUES (172, N'Seleccione un tipo de evento')
+INSERT [dbo].[Diccionario] ([Id], [Clave]) VALUES (173, N'Seleccione un salón')
+INSERT [dbo].[Diccionario] ([Id], [Clave]) VALUES (174, N'La familia seleccionada no se puede eliminar, tiene usuarios asociados')
 SET IDENTITY_INSERT [dbo].[Diccionario] OFF
 
 SET IDENTITY_INSERT [dbo].[DireccionSalon] ON 
-INSERT [dbo].[DireccionSalon] ([Id], [Calle], [Numero], [Localidad]) VALUES (1, N'Maestro Ferreyra', 3690, N'San Miguel')
-INSERT [dbo].[DireccionSalon] ([Id], [Calle], [Numero], [Localidad]) VALUES (2, N'José León Suarez', 3095, N'Los Polvorines')
+INSERT [dbo].[DireccionSalon] ([Id], [Calle], [Numero], [Localidad]) VALUES (3, N'asdasd', 1212, N'asda')
+INSERT [dbo].[DireccionSalon] ([Id], [Calle], [Numero], [Localidad]) VALUES (1003, N'Suipacha', 1172, N'CABA')
+INSERT [dbo].[DireccionSalon] ([Id], [Calle], [Numero], [Localidad]) VALUES (1005, N'Callao', 1234, N'CABA')
+INSERT [dbo].[DireccionSalon] ([Id], [Calle], [Numero], [Localidad]) VALUES (1006, N'Callao', 1125, N'CABA')
 SET IDENTITY_INSERT [dbo].[DireccionSalon] OFF
 
-INSERT [dbo].[Evento] ([Id], [Nombre], [Fecha], [Cant_Invitados], [Tipo], [Salon], [Cliente]) VALUES (1, N'Casamiento de messi', CAST(N'2017-08-22' AS Date), 100, 0, 1, 39507742)
-INSERT [dbo].[Evento] ([Id], [Nombre], [Fecha], [Cant_Invitados], [Tipo], [Salon], [Cliente]) VALUES (2, N'Cumple de Juanito', CAST(N'2018-04-16' AS Date), 5000, 0, 1, 39507742)
+INSERT [dbo].[DireccionServicio] ([Id], [Calle], [Numero], [Localidad]) VALUES (1, N'Pueyrredon', 1170, N'CABA')
+
+INSERT [dbo].[Evento] ([Id], [Nombre], [Fecha], [Cant_Invitados], [Tipo], [Salon], [Cliente]) VALUES (1, N'Cumpleaños 1', CAST(N'2018-01-06' AS Date), 50, 3, 1013, 39507742)
+
+INSERT [dbo].[EventoPaso] ([Evento], [Paso], [Fecha]) VALUES (1, 4, CAST(N'2017-07-29' AS Date))
 
 SET IDENTITY_INSERT [dbo].[Familia] ON 
 INSERT [dbo].[Familia] ([Id], [Nombre]) VALUES (1, N'Administrador')
-INSERT [dbo].[Familia] ([Id], [Nombre]) VALUES (8, N'Prueba')
+INSERT [dbo].[Familia] ([Id], [Nombre]) VALUES (9, N'Usuario')
 SET IDENTITY_INSERT [dbo].[Familia] OFF
 
 INSERT [dbo].[FamiliaGrupoPatente] ([Familia], [GrupoPatente], [Padre]) VALUES (1, 1, 1)
@@ -433,9 +460,12 @@ INSERT [dbo].[FamiliaGrupoPatente] ([Familia], [GrupoPatente], [Padre]) VALUES (
 INSERT [dbo].[FamiliaGrupoPatente] ([Familia], [GrupoPatente], [Padre]) VALUES (1, 12, 1)
 INSERT [dbo].[FamiliaGrupoPatente] ([Familia], [GrupoPatente], [Padre]) VALUES (1, 13, 1)
 INSERT [dbo].[FamiliaGrupoPatente] ([Familia], [GrupoPatente], [Padre]) VALUES (1, 14, 5)
-INSERT [dbo].[FamiliaGrupoPatente] ([Familia], [GrupoPatente], [Padre]) VALUES (8, 5, 1)
-INSERT [dbo].[FamiliaGrupoPatente] ([Familia], [GrupoPatente], [Padre]) VALUES (8, 12, 1)
-INSERT [dbo].[FamiliaGrupoPatente] ([Familia], [GrupoPatente], [Padre]) VALUES (8, 14, 5)
+INSERT [dbo].[FamiliaGrupoPatente] ([Familia], [GrupoPatente], [Padre]) VALUES (9, 1, 1)
+INSERT [dbo].[FamiliaGrupoPatente] ([Familia], [GrupoPatente], [Padre]) VALUES (9, 5, 1)
+INSERT [dbo].[FamiliaGrupoPatente] ([Familia], [GrupoPatente], [Padre]) VALUES (9, 10, 1)
+INSERT [dbo].[FamiliaGrupoPatente] ([Familia], [GrupoPatente], [Padre]) VALUES (9, 11, 1)
+INSERT [dbo].[FamiliaGrupoPatente] ([Familia], [GrupoPatente], [Padre]) VALUES (9, 13, 1)
+
 INSERT [dbo].[FamiliaPatente] ([Familia], [Patente], [Padre]) VALUES (1, 22, 5)
 INSERT [dbo].[FamiliaPatente] ([Familia], [Patente], [Padre]) VALUES (1, 38, 10)
 INSERT [dbo].[FamiliaPatente] ([Familia], [Patente], [Padre]) VALUES (1, 39, 10)
@@ -454,9 +484,19 @@ INSERT [dbo].[FamiliaPatente] ([Familia], [Patente], [Padre]) VALUES (1, 52, 13)
 INSERT [dbo].[FamiliaPatente] ([Familia], [Patente], [Padre]) VALUES (1, 53, 13)
 INSERT [dbo].[FamiliaPatente] ([Familia], [Patente], [Padre]) VALUES (1, 54, 14)
 INSERT [dbo].[FamiliaPatente] ([Familia], [Patente], [Padre]) VALUES (1, 55, 12)
-INSERT [dbo].[FamiliaPatente] ([Familia], [Patente], [Padre]) VALUES (8, 22, 5)
-INSERT [dbo].[FamiliaPatente] ([Familia], [Patente], [Padre]) VALUES (8, 50, 12)
-INSERT [dbo].[FamiliaPatente] ([Familia], [Patente], [Padre]) VALUES (8, 54, 14)
+INSERT [dbo].[FamiliaPatente] ([Familia], [Patente], [Padre]) VALUES (9, 22, 5)
+INSERT [dbo].[FamiliaPatente] ([Familia], [Patente], [Padre]) VALUES (9, 38, 10)
+INSERT [dbo].[FamiliaPatente] ([Familia], [Patente], [Padre]) VALUES (9, 39, 10)
+INSERT [dbo].[FamiliaPatente] ([Familia], [Patente], [Padre]) VALUES (9, 40, 10)
+INSERT [dbo].[FamiliaPatente] ([Familia], [Patente], [Padre]) VALUES (9, 41, 11)
+INSERT [dbo].[FamiliaPatente] ([Familia], [Patente], [Padre]) VALUES (9, 42, 11)
+INSERT [dbo].[FamiliaPatente] ([Familia], [Patente], [Padre]) VALUES (9, 43, 11)
+INSERT [dbo].[FamiliaPatente] ([Familia], [Patente], [Padre]) VALUES (9, 44, 11)
+INSERT [dbo].[FamiliaPatente] ([Familia], [Patente], [Padre]) VALUES (9, 45, 11)
+INSERT [dbo].[FamiliaPatente] ([Familia], [Patente], [Padre]) VALUES (9, 46, 11)
+INSERT [dbo].[FamiliaPatente] ([Familia], [Patente], [Padre]) VALUES (9, 51, 13)
+INSERT [dbo].[FamiliaPatente] ([Familia], [Patente], [Padre]) VALUES (9, 52, 13)
+INSERT [dbo].[FamiliaPatente] ([Familia], [Patente], [Padre]) VALUES (9, 53, 13)
 
 SET IDENTITY_INSERT [dbo].[GrupoPatente] ON 
 INSERT [dbo].[GrupoPatente] ([Id], [Nombre], [Padre]) VALUES (1, N'Patentes del Sistema', NULL)
@@ -580,7 +620,7 @@ INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (1, 1
 INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (1, 107, N'La familia tiene que contener un nombre')
 INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (1, 108, N'Error al eliminar el elemento seleccionado')
 INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (1, 109, N'El nombre de usuario es incorrecto')
-INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (1, 110, N'Las contraseñas son incorrectas')
+INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (1, 110, N'El nombre de usuario tiene que tener al menos 6 caracteres y solo puede contener letras y números')
 INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (1, 111, N'Las contraseñas no coinciden')
 INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (1, 112, N'Cerrando sesión')
 INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (1, 113, N'Ingrese usuario y contraseña por favor')
@@ -599,7 +639,7 @@ INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (1, 1
 INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (1, 126, N'Filtrar por localidad')
 INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (1, 127, N'El nombre de usuario ingresado ya existe')
 INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (1, 128, N'El DNI del cliente ingresado ya existe')
-INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (1, 129, N'El nombre de material ingresado ya existe')
+INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (1, 129, N'El nombre o el id del material ingresado ya existe')
 INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (1, 130, N'El paso ingresado ya existe en el evento seleccionado')
 INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (1, 131, N'El nombre del servicio ingresado ya existe')
 INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (1, 132, N'El nombre del tipo de evento ingresado ya existe')
@@ -624,6 +664,27 @@ INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (1, 1
 INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (1, 151, N'Seleccione el usuario que desea borrar')
 INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (1, 152, N'Seleccione el elemento que desea eliminar')
 INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (1, 153, N'Ingrese los datos del usuario')
+INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (1, 154, N'Ingrese los datos del material a reservar')
+INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (1, 155, N'Ingrese el DNI del cliente')
+INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (1, 156, N'Ingrese los datos del evento')
+INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (1, 157, N'Ingrese un nombre y seleccione un formulario para la patente nueva')
+INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (1, 158, N'Ingrese un nombre para el grupo de patentes nuevo')
+INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (1, 159, N'No se le pueden agregar grupos de patente al elemento seleccionado, seleccione un grupo')
+INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (1, 160, N'No se le pueden agregar patentes al elemento seleccionado, seleccione un grupo')
+INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (1, 161, N'Seleccione la familia que desea eliminar')
+INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (1, 162, N'Seleccione la familia que desea modificar')
+INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (1, 163, N'Seleccione un elemento del árbol para agregarle una patente')
+INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (1, 164, N'Seleccione un elemento del árbol para agregarle un grupo de patentes')
+INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (1, 165, N'El cliente seleccionado tiene eventos relacionados ¿Desea borrar el cliente junto con sus eventos?')
+INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (1, 166, N'El material seleccionado tiene reservas pendientes ¿Desea borrar el material y cancelar las reservas?')
+INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (1, 167, N'El salón seleccionado posee eventos relacionados ¿Desea eliminarlo de todas formas?')
+INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (1, 168, N'El servicio seleccionado posee reservas pendientes ¿Desea eliminarlo de todas formas y cancelar las reservas?')
+INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (1, 169, N'Como el tipo de evento seleccionado tiene eventos relacionados se deshabilitará hasta que se realicen o cancelen estos eventos')
+INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (1, 170, N'Genérico')
+INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (1, 171, N'Concreto')
+INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (1, 172, N'Seleccione un tipo de evento')
+INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (1, 173, N'Seleccione un salón')
+INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (1, 174, N'La familia seleccionada no se puede eliminar, tiene usuarios asociados')
 INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 1, N'Accept')
 INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 2, N'Add')
 INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 3, N'Add description')
@@ -642,9 +703,9 @@ INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 1
 INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 16, N'Key')
 INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 17, N'Client')
 INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 18, N'Password')
-INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 19, N'Client data')
-INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 20, N'Event data')
-INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 21, N'Service data')
+INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 19, N'Client info')
+INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 20, N'Event info')
+INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 21, N'Service info')
 INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 22, N'Description')
 INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 23, N'DNI')
 INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 24, N'Choose event')
@@ -668,9 +729,9 @@ INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 4
 INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 42, N'Event type list')
 INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 43, N'User list')
 INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 44, N'Town')
-INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 45, N'Material')
-INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 46, N'Materials')
-INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 47, N'Reserved materials')
+INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 45, N'Item')
+INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 46, N'Items')
+INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 47, N'Reserved items')
 INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 48, N'Modify')
 INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 49, N'Modify event')
 INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 50, N'Name')
@@ -682,7 +743,7 @@ INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 5
 INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 56, N'Unitary price')
 INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 57, N'Priority')
 INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 58, N'Repeat password')
-INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 59, N'Reserve material')
+INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 59, N'Reserve item')
 INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 60, N'Reserve service')
 INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 61, N'Venue')
 INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 62, N'Select event')
@@ -698,7 +759,7 @@ INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 7
 INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 72, N'End')
 INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 73, N'Event type')
 INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 74, N'Total')
-INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 75, N'Materials')
+INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 75, N'Items')
 INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 76, N'Services')
 INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 77, N'Venue')
 INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 78, N'Value')
@@ -716,7 +777,7 @@ INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 8
 INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 90, N'Service')
 INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 91, N'Patent')
 INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 92, N'User')
-INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 93, N'Materials availability')
+INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 93, N'Items availability')
 INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 94, N'Events')
 INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 95, N'Create language')
 INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 96, N'The email you entered is incorrect')
@@ -728,12 +789,12 @@ INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 1
 INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 102, N'Low')
 INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 103, N'Medium')
 INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 104, N'High')
-INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 105, N'Enter steps data')
+INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 105, N'Enter steps info')
 INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 106, N'Select an event')
 INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 107, N'The family must have a name')
 INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 108, N'Error deleting the selected item')
 INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 109, N'Wrong username')
-INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 110, N'Wrong password')
+INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 110, N'The username must contain at least 6 characters and it can only contain letters and numbers')
 INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 111, N'Passwords don''t match')
 INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 112, N'Logging out')
 INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 113, N'Please enter username and password')
@@ -752,7 +813,7 @@ INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 1
 INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 126, N'Filter by town')
 INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 127, N'Username already exists')
 INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 128, N'The DNI you entered already exists')
-INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 129, N'The name of the material you entered already exists')
+INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 129, N'The name or the id of the item you entered already exists')
 INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 130, N'The step you entered already exists in the selected event')
 INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 131, N'The name of the service you entered already exists')
 INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 132, N'The name of the type of event you entered already exists')
@@ -765,8 +826,8 @@ INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 1
 INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 139, N'Select the step you want to delete')
 INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 140, N'Select the client you want to modify')
 INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 141, N'Select the client you want to delete')
-INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 142, N'Select the material you want to modify')
-INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 143, N'Select the material you want to delete')
+INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 142, N'Select the item you want to modify')
+INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 143, N'Select the item you want to delete')
 INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 144, N'Select the venue you want to modify')
 INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 145, N'Select the venue you want to delete')
 INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 146, N'Select the service you want to modify')
@@ -776,13 +837,33 @@ INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 1
 INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 150, N'Select the user you want to modify')
 INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 151, N'Select the user you want to delete')
 INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 152, N'Select the element you want to delete')
-INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 153, N'Insert user data')
+INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 153, N'Enter user info')
+INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 154, N'Enter the items info for your reservation')
+INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 155, N'Enter client''s DNI')
+INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 156, N'Enter event info')
+INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 157, N'Enter a name and select a form for the new patent')
+INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 158, N'Enter a name for the new patent group')
+INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 159, N'The selected item can''t add patent groups, please select a group')
+INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 160, N'The selected item can''t add patents, please select a group')
+INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 161, N'Select the family you want to delete')
+INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 162, N'Select the family you want to modify')
+INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 163, N'Select an elemento to add a patent')
+INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 164, N'Select an elemento to add a patent group')
+INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 165, N'Selected client has some related events. Do you wish to delete the client and the related events?')
+INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 166, N'Selected item has some pending reserves. Do you wish to delete the item and cancel the reserves?')
+INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 167, N'Selected venue has some related events. Do you wish to delete it anyway?')
+INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 168, N'Selected service has some pending reserves. Do you wish to delete it anyway and cancel the reserves?')
+INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 169, N'The selected type of event has somw related events. It will be disabled until those events are canceled or finished')
+INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 170, N'Generic')
+INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 171, N'Concrete')
+INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 172, N'Select a type of event')
+INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 173, N'Select a venue')
+INSERT [dbo].[IdiomaDiccionario] ([Idioma], [Diccionario], [Valor]) VALUES (2, 174, N'The selected family can''t be deleted because it has users asociated to it')
 
-INSERT [dbo].[Material] ([Id], [Nombre], [Cantidad], [Precio]) VALUES (4564, N'Mantel', 200, 20)
-
-INSERT [dbo].[MaterialTemporal] ([Id], [Nombre]) VALUES (12345, N'Gatos')
+INSERT [dbo].[Material] ([Id], [Nombre], [Cantidad], [Precio]) VALUES (444, N'Manteles', 200, 20)
 
 INSERT [dbo].[Paso] ([Id], [Descripcion], [Prioridad], [Tipo]) VALUES (2, N'Llamar al cliente', N'Baja', N'Genérico')
+INSERT [dbo].[Paso] ([Id], [Descripcion], [Prioridad], [Tipo]) VALUES (4, N'Paso 2', N'Baja', N'Concreto')
 
 SET IDENTITY_INSERT [dbo].[Patente] ON 
 INSERT [dbo].[Patente] ([Id], [Nombre], [Formulario], [Padre]) VALUES (22, N'Organizar evento', N'OrganizarEvento', 5)
@@ -805,23 +886,18 @@ INSERT [dbo].[Patente] ([Id], [Nombre], [Formulario], [Padre]) VALUES (54, N'Eve
 INSERT [dbo].[Patente] ([Id], [Nombre], [Formulario], [Padre]) VALUES (55, N'Gestionar idiomas', N'Idiomas', 12)
 SET IDENTITY_INSERT [dbo].[Patente] OFF
 
-INSERT [dbo].[ReservaMaterial] ([Evento], [Material], [Cantidad], [Fecha]) VALUES (1, 4564, 100, CAST(N'2017-07-12' AS Date))
-INSERT [dbo].[ReservaMaterial] ([Evento], [Material], [Cantidad], [Fecha]) VALUES (1, 12345, 50, CAST(N'2017-07-20' AS Date))
-
 SET IDENTITY_INSERT [dbo].[Salon] ON 
-INSERT [dbo].[Salon] ([Id], [Nombre], [Capacidad], [Email], [Telefono], [Direccion], [Descripcion], [Precio]) VALUES (1, N'Salon1', 5000, N'salon1@gmail.com', 46631281, 1, N'asdasdasdasdsadasdas', 20000)
-INSERT [dbo].[Salon] ([Id], [Nombre], [Capacidad], [Email], [Telefono], [Direccion], [Descripcion], [Precio]) VALUES (9, N'Salon 2', 4000, N'salon2@gmail.com', 45662113, 2, N'Salon 2 esta en casa', 50000)
+INSERT [dbo].[Salon] ([Id], [Nombre], [Capacidad], [Email], [Telefono], [Direccion], [Descripcion], [Precio]) VALUES (1013, N'Salón1', 454, N'salon1@gmail.com', 46631281, 1006, N'', 555555)
 SET IDENTITY_INSERT [dbo].[Salon] OFF
 
 SET IDENTITY_INSERT [dbo].[TipoEvento] ON 
-INSERT [dbo].[TipoEvento] ([Id], [Nombre], [Descripcion]) VALUES (0, N'Casamiento', N'Es un casamiento')
+INSERT [dbo].[TipoEvento] ([Id], [Nombre], [Descripcion], [Activo]) VALUES (0, N'Casamiento', N'Es un casamiento', 0)
+INSERT [dbo].[TipoEvento] ([Id], [Nombre], [Descripcion], [Activo]) VALUES (3, N'Cumpleaños', N'Es un cumpleaños', 1)
 SET IDENTITY_INSERT [dbo].[TipoEvento] OFF
 
 INSERT [dbo].[TipoEventoPaso] ([TipoEv], [Paso], [Dias]) VALUES (0, 2, 20)
 
 INSERT [dbo].[Usuario] ([Id], [Email], [Password], [Familia]) VALUES (N'Administrador', N'facundo.tripelhorn@gmail.com', N'91F5167C34C400758115C2A6826EC2E3', 1)
-INSERT [dbo].[Usuario] ([Id], [Email], [Password], [Familia]) VALUES (N'lkjklj', N'lkj@gmail.com', N'25F9E794323B453885F5181F1B624D0B', 8)
-INSERT [dbo].[Usuario] ([Id], [Email], [Password], [Familia]) VALUES (N'Usuario_Prueba', N'prueba@gmail.com', N'C893BAD68927B457DBED39460E6AFD62', 8)
 
 ALTER TABLE [dbo].[Evento]  WITH CHECK ADD  CONSTRAINT [FK_Evento_Cliente] FOREIGN KEY([Cliente])
 REFERENCES [dbo].[Cliente] ([DNI])

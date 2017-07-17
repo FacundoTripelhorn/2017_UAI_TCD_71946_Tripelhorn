@@ -6,9 +6,9 @@
     Property Tipo As TipoEvento
     Property Salon As Salon
     Property Cliente As Cliente
-    Property ListaServicios As List(Of Servicio)
-    Property ListaMateriales As List(Of Material)
-    Property ListaPasos As List(Of Paso)
+    Property ListaServicios As New List(Of Servicio)
+    Property ListaMateriales As New List(Of Material)
+    Property ListaPasos As New List(Of Paso)
     Property Localidad As String
 
     Sub New()
@@ -31,6 +31,13 @@
         Tipo = pTipo
         Salon = pSalon
         Cliente = pCliente
+    End Sub
+
+    Sub New(pId As Integer, pNombre As String, pFecha As Date, pCantidadInvitados As Integer)
+        Id = pId
+        Nombre = pNombre
+        Fecha = pFecha
+        CantidadInvitados = pCantidadInvitados
     End Sub
 
     Public Overrides Function ToString() As String

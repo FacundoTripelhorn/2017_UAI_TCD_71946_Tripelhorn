@@ -31,4 +31,8 @@ Public Class ClienteDinamico
     Public Function CheckCliente(pDNI As Integer) As Boolean
         Return ClienteDatos.CheckCliente(pDNI)
     End Function
+
+    Public Function CheckEventosCliente(pDNI As Integer) As Boolean
+        Return ClienteDatos.CheckEventosCliente(pDNI)
+    End Function
 End Class

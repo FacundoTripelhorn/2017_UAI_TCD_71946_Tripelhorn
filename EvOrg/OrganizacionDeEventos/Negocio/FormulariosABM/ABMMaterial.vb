@@ -44,7 +44,7 @@ Public Class ABMMaterial
                 If Not vMaterialDinamico.CheckMaterial(vMaterial.Id, vMaterial.Nombre) Then
                     vMaterialDinamico.Alta(vMaterial)
                 Else
-                    Throw New Exception("El nombre de material ingresado ya existe")
+                    Throw New Exception("El nombre o el id del material ingresado ya existe")
                 End If
                 Limpiar()
                 Actualizar()
@@ -52,7 +52,7 @@ Public Class ABMMaterial
                 Throw New Exception("Debe ingresar un id, un nombre de material, una cantidad y un precio")
             End If
         Catch ex As Exception
-            MessageBox.Show(vTraductor.Traducir(ex.Message), "EvOrg", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show(vTraductor.Traducir(ex.Message), "EvOrg")
         End Try
 
     End Sub
@@ -66,9 +66,18 @@ Public Class ABMMaterial
                         vMaterial = Material
                     End If
                 Next
-                vMaterialDinamico.Baja(vMaterial)
-                Limpiar()
-                Actualizar()
+                If vMaterialDinamico.CheckReservas(vMaterial.Id) Then
+                    Dim vOpcion As Integer = MessageBox.Show(vTraductor.Traducir("El material seleccionado tiene reservas pendientes ¿Desea eliminar el material y cancelar las reservas?"), "EvOrg", MessageBoxButtons.YesNo)
+                    If vOpcion = DialogResult.Yes Then
+                        vMaterialDinamico.Baja(vMaterial)
+                        Limpiar()
+                        Actualizar()
+                    End If
+                Else
+                    vMaterialDinamico.Baja(vMaterial)
+                    Limpiar()
+                    Actualizar()
+                End If
             Else
                 Throw New Exception("Seleccione el material que desea borrar")
             End If
@@ -102,7 +111,7 @@ Public Class ABMMaterial
                 Throw New Exception("Seleccione el material que desea modificar")
             End If
         Catch ex As Exception
-            MessageBox.Show(vTraductor.Traducir(ex.Message), "EvOrg", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show(vTraductor.Traducir(ex.Message), "EvOrg")
         End Try
     End Sub
 

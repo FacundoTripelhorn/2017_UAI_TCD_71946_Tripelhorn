@@ -102,19 +102,23 @@ Public Class ReservarMaterial
     End Sub
 
     Private Sub AgregarBtn_Click(sender As Object, e As EventArgs) Handles AgregarBtn.Click
-        Dim Material As New Material
-        If vMaterial Is Nothing Then vMaterial = New Material
-        vMaterial.Id = IdTxt.Text
-        vMaterial.Nombre = MaterialTxt.Text
-        vMaterial.Cantidad = CantidadNumeric.Value
-        vMaterial.FechaDesde = FechaLimiteDTP.Value
-        vMaterial.FechaHasta = vEvento.Fecha
-        If Not vFlag Then
-            vEventoDinamico.ReservarMaterial(vEvento, vMaterial)
+        If IdTxt.Text <> "" And MaterialTxt.Text <> "" And CantidadNumeric.Value <> 0 And FechaLimiteDTP.Value.Date <> Date.Today.Date Then
+            Dim Material As New Material
+            If vMaterial Is Nothing Then vMaterial = New Material
+            vMaterial.Id = IdTxt.Text
+            vMaterial.Nombre = MaterialTxt.Text
+            vMaterial.Cantidad = CantidadNumeric.Value
+            vMaterial.FechaDesde = FechaLimiteDTP.Value
+            vMaterial.FechaHasta = vEvento.Fecha
+            If Not vFlag Then
+                vEventoDinamico.ReservarMaterial(vEvento, vMaterial)
+            Else
+                vEvento.ListaMateriales.Add(vMaterial)
+            End If
+            Actualizar()
         Else
-            vEvento.ListaMateriales.Add(vMaterial)
+            MessageBox.Show(vTraductor.Traducir("Ingrese los datos del material a reservar"), "EvOrg")
         End If
-        Actualizar()
     End Sub
 
     Private Sub EventoCombo_SelectedValueChanged(sender As Object, e As EventArgs) Handles EventoCombo.SelectedValueChanged

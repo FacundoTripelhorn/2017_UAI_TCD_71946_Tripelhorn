@@ -38,7 +38,14 @@ Public Class MaterialDatos
             If TypeOf pObjeto Is Material Then
                 vMaterial = DirectCast(pObjeto, Material)
                 Dim DTable As DataTable = Comando.GetData("SELECT * FROM Material WHERE Id = '" & vMaterial.Id & "'")
+                Dim DTReservas As DataTable = Comando.GetData("SELECT * FROM ReservaMaterial WHERE Material = " & vMaterial.Id)
+                If DTReservas.Rows.Count > 0 Then
+                    For Each DRow As DataRow In DTReservas.Rows
+                        DRow.Delete()
+                    Next
+                End If
                 If DTable.Rows.Count > 0 Then DTable.Rows(0).Delete()
+                Comando.ActualizarBD("ReservaMaterial", DTReservas)
                 Comando.ActualizarBD("Material", DTable)
             End If
         Catch ex As Exception
@@ -105,14 +112,38 @@ Public Class MaterialDatos
     Public Function CheckMaterial(pId As Integer, pNombre As String) As Boolean
         Dim DTable As DataTable = Comando.GetData("SELECT * FROM Material WHERE Nombre = '" & pNombre & "'")
         Dim DTableId As DataTable = Comando.GetData("SELECT * FROM Material WHERE Id = " & pId)
+        If DTable.Rows.Count > 0 Or DTableId.Rows.Count > 0 Then
+            Return True
+        Else
+        Return False
+        End If
+    End Function
+
+    Public Function CheckReservas(pId As Integer) As Boolean
+        Dim DTable As DataTable = Comando.GetData("SELECT * FROM ReservaMaterial WHERE Material = " & pId)
         If DTable.Rows.Count > 0 Then
-            If DTableId.Rows.Count > 0 Then
-                Return True
-            Else
-                Return False
-            End If
+            Return True
         Else
             Return False
         End If
+    End Function
+
+    Public Function ConsultaMaterial() As List(Of Material)
+        Dim MaterialLista As New List(Of Material)
+        Try
+            Dim DTable As DataTable = Comando.GetDataTable("Material")
+            Dim DTMT As DataTable = Comando.GetDataTable("MaterialTemporal")
+            If DTable.Rows.Count > 0 Or DTMT.Rows.Count > 0 Then
+                For Each DRow As DataRow In DTable.Rows
+                    MaterialLista.Add(New Material(DRow(0), DRow(1), DRow(2), Decimal.Parse(DRow(3))))
+                Next
+                For Each DRow As DataRow In DTMT.Rows
+                    MaterialLista.Add(New Material(DRow(0), DRow(1), 0, 0))
+                Next
+            End If
+            Return MaterialLista
+        Catch ex As Exception
+            Return Nothing
+        End Try
     End Function
 End Class

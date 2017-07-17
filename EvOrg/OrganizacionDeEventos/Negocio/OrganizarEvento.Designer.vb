@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class OrganizarEvento
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class OrganizarEvento
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(OrganizarEvento))
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
@@ -69,7 +69,7 @@ Partial Class OrganizarEvento
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 153.0!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 117.0!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 83.0!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 217.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 220.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.SeleccionarTipoFechaLbl, 0, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.TipoEventoCombo, 0, 2)
         Me.TableLayoutPanel1.Controls.Add(Me.Label2, 0, 3)
@@ -94,7 +94,7 @@ Partial Class OrganizarEvento
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 124.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 42.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 12.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(570, 342)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(573, 342)
         Me.TableLayoutPanel1.TabIndex = 0
         '
         'SeleccionarTipoFechaLbl
@@ -166,7 +166,7 @@ Partial Class OrganizarEvento
         Me.LocalidadTxt.Location = New System.Drawing.Point(357, 93)
         Me.LocalidadTxt.Margin = New System.Windows.Forms.Padding(4)
         Me.LocalidadTxt.Name = "LocalidadTxt"
-        Me.LocalidadTxt.Size = New System.Drawing.Size(209, 23)
+        Me.LocalidadTxt.Size = New System.Drawing.Size(212, 23)
         Me.LocalidadTxt.TabIndex = 3
         '
         'ClienteGPB
@@ -179,7 +179,7 @@ Partial Class OrganizarEvento
         Me.ClienteGPB.Margin = New System.Windows.Forms.Padding(4)
         Me.ClienteGPB.Name = "ClienteGPB"
         Me.ClienteGPB.Padding = New System.Windows.Forms.Padding(4)
-        Me.ClienteGPB.Size = New System.Drawing.Size(562, 116)
+        Me.ClienteGPB.Size = New System.Drawing.Size(565, 116)
         Me.ClienteGPB.TabIndex = 10
         Me.ClienteGPB.TabStop = False
         Me.ClienteGPB.Tag = "Datos del cliente"
@@ -193,7 +193,7 @@ Partial Class OrganizarEvento
         Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 88.0!))
         Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 94.0!))
         Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 72.0!))
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 106.0!))
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 109.0!))
         Me.TableLayoutPanel2.Controls.Add(Me.DNILbl, 0, 0)
         Me.TableLayoutPanel2.Controls.Add(Me.DNITxt, 1, 0)
         Me.TableLayoutPanel2.Controls.Add(Me.BuscarClienteBtn, 2, 0)
@@ -213,7 +213,7 @@ Partial Class OrganizarEvento
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35.0!))
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29.0!))
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26.0!))
-        Me.TableLayoutPanel2.Size = New System.Drawing.Size(554, 92)
+        Me.TableLayoutPanel2.Size = New System.Drawing.Size(557, 92)
         Me.TableLayoutPanel2.TabIndex = 0
         '
         'DNILbl
@@ -248,7 +248,7 @@ Partial Class OrganizarEvento
         Me.BuscarClienteBtn.Location = New System.Drawing.Point(198, 4)
         Me.BuscarClienteBtn.Margin = New System.Windows.Forms.Padding(4)
         Me.BuscarClienteBtn.Name = "BuscarClienteBtn"
-        Me.BuscarClienteBtn.Size = New System.Drawing.Size(352, 27)
+        Me.BuscarClienteBtn.Size = New System.Drawing.Size(355, 27)
         Me.BuscarClienteBtn.TabIndex = 5
         Me.BuscarClienteBtn.Tag = "Buscar cliente"
         Me.BuscarClienteBtn.Text = "Buscar cliente"
@@ -323,7 +323,7 @@ Partial Class OrganizarEvento
         Me.TelefonoTxt.Location = New System.Drawing.Point(452, 39)
         Me.TelefonoTxt.Margin = New System.Windows.Forms.Padding(4)
         Me.TelefonoTxt.Name = "TelefonoTxt"
-        Me.TelefonoTxt.Size = New System.Drawing.Size(98, 23)
+        Me.TelefonoTxt.Size = New System.Drawing.Size(101, 23)
         Me.TelefonoTxt.TabIndex = 21
         '
         'EmailLbl
@@ -348,7 +348,7 @@ Partial Class OrganizarEvento
         Me.EmailTxt.Location = New System.Drawing.Point(70, 68)
         Me.EmailTxt.Margin = New System.Windows.Forms.Padding(4)
         Me.EmailTxt.Name = "EmailTxt"
-        Me.EmailTxt.Size = New System.Drawing.Size(480, 23)
+        Me.EmailTxt.Size = New System.Drawing.Size(483, 23)
         Me.EmailTxt.TabIndex = 23
         '
         'FechaDTP
@@ -358,7 +358,7 @@ Partial Class OrganizarEvento
         Me.FechaDTP.Location = New System.Drawing.Point(274, 61)
         Me.FechaDTP.Margin = New System.Windows.Forms.Padding(4)
         Me.FechaDTP.Name = "FechaDTP"
-        Me.FechaDTP.Size = New System.Drawing.Size(292, 23)
+        Me.FechaDTP.Size = New System.Drawing.Size(295, 23)
         Me.FechaDTP.TabIndex = 1
         '
         'TableLayoutPanel3
@@ -378,7 +378,7 @@ Partial Class OrganizarEvento
         Me.TableLayoutPanel3.Name = "TableLayoutPanel3"
         Me.TableLayoutPanel3.RowCount = 1
         Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel3.Size = New System.Drawing.Size(564, 36)
+        Me.TableLayoutPanel3.Size = New System.Drawing.Size(567, 36)
         Me.TableLayoutPanel3.TabIndex = 14
         '
         'ReservarMaterialBtn
@@ -431,7 +431,7 @@ Partial Class OrganizarEvento
         Me.VerPasosBtn.Location = New System.Drawing.Point(427, 4)
         Me.VerPasosBtn.Margin = New System.Windows.Forms.Padding(4)
         Me.VerPasosBtn.Name = "VerPasosBtn"
-        Me.VerPasosBtn.Size = New System.Drawing.Size(133, 28)
+        Me.VerPasosBtn.Size = New System.Drawing.Size(136, 28)
         Me.VerPasosBtn.TabIndex = 7
         Me.VerPasosBtn.Tag = "Ver pasos"
         Me.VerPasosBtn.Text = "Ver pasos"
@@ -450,7 +450,7 @@ Partial Class OrganizarEvento
         Me.TableLayoutPanel4.Name = "TableLayoutPanel4"
         Me.TableLayoutPanel4.RowCount = 1
         Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel4.Size = New System.Drawing.Size(564, 51)
+        Me.TableLayoutPanel4.Size = New System.Drawing.Size(567, 51)
         Me.TableLayoutPanel4.TabIndex = 15
         '
         'GuardarBtn
@@ -461,7 +461,7 @@ Partial Class OrganizarEvento
         Me.GuardarBtn.Location = New System.Drawing.Point(4, 4)
         Me.GuardarBtn.Margin = New System.Windows.Forms.Padding(4)
         Me.GuardarBtn.Name = "GuardarBtn"
-        Me.GuardarBtn.Size = New System.Drawing.Size(274, 43)
+        Me.GuardarBtn.Size = New System.Drawing.Size(275, 43)
         Me.GuardarBtn.TabIndex = 10
         Me.GuardarBtn.Tag = "Guardar"
         Me.GuardarBtn.Text = "Guardar"
@@ -472,10 +472,10 @@ Partial Class OrganizarEvento
         Me.CancelarBtn.Dock = System.Windows.Forms.DockStyle.Fill
         Me.CancelarBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.CancelarBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.CancelarBtn.Location = New System.Drawing.Point(286, 4)
+        Me.CancelarBtn.Location = New System.Drawing.Point(287, 4)
         Me.CancelarBtn.Margin = New System.Windows.Forms.Padding(4)
         Me.CancelarBtn.Name = "CancelarBtn"
-        Me.CancelarBtn.Size = New System.Drawing.Size(274, 43)
+        Me.CancelarBtn.Size = New System.Drawing.Size(276, 43)
         Me.CancelarBtn.TabIndex = 11
         Me.CancelarBtn.Tag = "Cancelar"
         Me.CancelarBtn.Text = "Cancelar"
@@ -500,7 +500,7 @@ Partial Class OrganizarEvento
         Me.NombreEventoTxt.Dock = System.Windows.Forms.DockStyle.Fill
         Me.NombreEventoTxt.Location = New System.Drawing.Point(156, 3)
         Me.NombreEventoTxt.Name = "NombreEventoTxt"
-        Me.NombreEventoTxt.Size = New System.Drawing.Size(411, 23)
+        Me.NombreEventoTxt.Size = New System.Drawing.Size(414, 23)
         Me.NombreEventoTxt.TabIndex = 17
         '
         'OrganizarEvento
@@ -508,7 +508,7 @@ Partial Class OrganizarEvento
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
-        Me.ClientSize = New System.Drawing.Size(570, 342)
+        Me.ClientSize = New System.Drawing.Size(573, 342)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)

@@ -70,9 +70,18 @@ Public Class ABMServicio
                 For Each Servicio As Servicio In vServicioDinamico.ConsultaTodo
                     If Servicio.Nombre = DirectCast(GrillaServicios.SelectedRows(0).DataBoundItem, VistaServicio).Nombre Then
                         vServicio = Servicio
-                        vServicioDinamico.Baja(vServicio)
-                        Limpiar()
-                        Actualizar()
+                        If vServicioDinamico.CheckReserva(vServicio.Id) Then
+                            Dim vOpcion As Integer = MessageBox.Show(vTraductor.Traducir("El servicio seleccionado posee reservas pendientes ¿Desea eliminarlo de todas formas y cancelar las reservas?"), "EvOrg", MessageBoxButtons.YesNo)
+                            If vOpcion = DialogResult.Yes Then
+                                vServicioDinamico.Baja(vServicio)
+                                Limpiar()
+                                Actualizar()
+                            End If
+                        Else
+                            vServicioDinamico.Baja(vServicio)
+                            Limpiar()
+                            Actualizar()
+                        End If
                     End If
                 Next
             Else

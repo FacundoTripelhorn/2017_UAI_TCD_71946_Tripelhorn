@@ -1,7 +1,7 @@
 ﻿Imports BLL_Dinamica
 Imports BLL_Estatica
 Imports OrganizacionDeEventos
-
+Imports System.Text.RegularExpressions
 Public Class OrganizarEvento
     Implements IObservador
     Dim vTraductor As Traductor = Traductor.GetInstance
@@ -70,13 +70,17 @@ Public Class OrganizarEvento
     End Sub
 
     Private Sub BuscarClienteBtn_Click(sender As Object, e As EventArgs) Handles BuscarClienteBtn.Click
-        If vClienteDinamico.CheckCliente(DNITxt.Text) Then
-            vCliente = vClienteDinamico.GetCliente(DNITxt.Text)
-            NombreTxt.Text = vCliente.Nombre
-            ApellidoTxt.Text = vCliente.Apellido
-            TelefonoTxt.Text = vCliente.Telefono
-            EmailTxt.Text = vCliente.Email
-            vEvento.Cliente = vCliente
+        If DNITxt.Text <> "" Then
+            If vClienteDinamico.CheckCliente(DNITxt.Text) Then
+                vCliente = vClienteDinamico.GetCliente(DNITxt.Text)
+                NombreTxt.Text = vCliente.Nombre
+                ApellidoTxt.Text = vCliente.Apellido
+                TelefonoTxt.Text = vCliente.Telefono
+                EmailTxt.Text = vCliente.Email
+                vEvento.Cliente = vCliente
+            End If
+        Else
+            MessageBox.Show(vTraductor.Traducir("Ingrese el DNI del cliente"), "EvOrg")
         End If
     End Sub
 
@@ -89,14 +93,27 @@ Public Class OrganizarEvento
     End Sub
 
     Private Sub GuardarBtn_Click(sender As Object, e As EventArgs) Handles GuardarBtn.Click
-        vEvento.Nombre = NombreEventoTxt.Text
-        vEvento.Fecha = FechaDTP.Value
-        vEvento.CantidadInvitados = CantidadNumeric.Value
-        vEvento.Tipo = TipoEventoCombo.SelectedItem
-        vEventoDinamico.Alta(vEvento)
+        If NombreEventoTxt.Text <> "" And FechaDTP.Value.Date <> Today.Date And CantidadNumeric.Value <> 0 And TipoEventoCombo.Text <> "" Then
+            vEvento.Nombre = NombreEventoTxt.Text
+            vEvento.Fecha = FechaDTP.Value
+            vEvento.CantidadInvitados = CantidadNumeric.Value
+            vEvento.Tipo = TipoEventoCombo.SelectedItem
+            If vEvento.Salon Is Nothing Then MessageBox.Show(vTraductor.Traducir("Seleccione un salón"), "EvOrg")
+            vEventoDinamico.Alta(vEvento)
+        Else
+            MessageBox.Show(vTraductor.Traducir("Ingrese los datos del evento"), "EvOrg")
+        End If
     End Sub
 
     Private Sub CancelarBtn_Click(sender As Object, e As EventArgs) Handles CancelarBtn.Click
         Me.Close()
+    End Sub
+
+    Private Sub DNITxt_KeyPress(sender As Object, e As KeyPressEventArgs) Handles DNITxt.KeyPress
+        If Not (Regex.IsMatch(e.KeyChar, "[0-9\b]")) Then e.KeyChar = Nothing
+    End Sub
+
+    Private Sub LocalidadTxt_KeyPress(sender As Object, e As KeyPressEventArgs) Handles LocalidadTxt.KeyPress
+        If (Regex.IsMatch(e.KeyChar, "[0-9]")) Then e.KeyChar = Nothing
     End Sub
 End Class

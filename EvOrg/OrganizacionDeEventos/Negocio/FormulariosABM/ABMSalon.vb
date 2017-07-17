@@ -39,6 +39,7 @@ Public Class ABMSalon
         NumeroTxt.Text = ""
         LocalidadTxt.Text = ""
         DescripcionTxt.Text = ""
+        PrecioTxt.Text = ""
     End Sub
     Private Sub AltaBtn_Click(sender As Object, e As EventArgs) Handles AltaBtn.Click
         Try
@@ -74,9 +75,20 @@ Public Class ABMSalon
                 For Each salon As Salon In vSalonDinamico.ConsultaTodo
                     If salon.Nombre = DirectCast(GrillaSalones.SelectedRows(0).DataBoundItem, VistaSalon).Nombre Then
                         vSalon = salon
-                        vSalonDinamico.Baja(vSalon)
-                        Limpiar()
-                        Actualizar()
+                        If vSalonDinamico.CheckReserva(vSalon.Id) Then
+                            Dim vOpcion As Integer = MessageBox.Show(vTraductor.Traducir("El salón seleccionado posee eventos relacionados ¿Desea eliminarlo de todas formas?"), "EvOrg", MessageBoxButtons.YesNo)
+                            If vOpcion = DialogResult.Yes Then
+                                vSalonDinamico.Baja(vSalon)
+                                Limpiar()
+                                Actualizar()
+                                Exit For
+                            End If
+                        Else
+                            vSalonDinamico.Baja(vSalon)
+                            Limpiar()
+                            Actualizar()
+                            Exit For
+                        End If
                     End If
                 Next
             Else

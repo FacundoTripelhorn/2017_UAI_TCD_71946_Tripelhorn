@@ -137,6 +137,7 @@ Partial Class LogIn
         Me.UsuarioTxt.Dock = System.Windows.Forms.DockStyle.Fill
         Me.UsuarioTxt.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.UsuarioTxt.Location = New System.Drawing.Point(121, 26)
+        Me.UsuarioTxt.MaxLength = 18
         Me.UsuarioTxt.Name = "UsuarioTxt"
         Me.UsuarioTxt.Size = New System.Drawing.Size(170, 23)
         Me.UsuarioTxt.TabIndex = 0
@@ -146,6 +147,7 @@ Partial Class LogIn
         Me.ContraseñaTxt.Dock = System.Windows.Forms.DockStyle.Fill
         Me.ContraseñaTxt.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ContraseñaTxt.Location = New System.Drawing.Point(121, 57)
+        Me.ContraseñaTxt.MaxLength = 16
         Me.ContraseñaTxt.Name = "ContraseñaTxt"
         Me.ContraseñaTxt.Size = New System.Drawing.Size(170, 23)
         Me.ContraseñaTxt.TabIndex = 1

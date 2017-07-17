@@ -72,11 +72,17 @@ Public Class ABMTipoEvento
         Try
             If GrillaTipoEvento.SelectedRows.Count > 0 Then
                 vTipoEvento = VistaATipoEvento()
-                vTipoEventoDinamico.Baja(vTipoEvento)
+                If vTipoEventoDinamico.CheckEventos(vTipoEvento.Id) Then
+                    MessageBox.Show(vTraductor.Traducir("Como el tipo de evento seleccionado tiene eventos relacionados se deshabilitará hasta que se realicen o cancelen estos eventos"))
+                    vTipoEventoDinamico.DeshabilitarTipo(vTipoEvento.Id)
+                Else
+                    vTipoEventoDinamico.Baja(vTipoEvento)
+                End If
                 Limpiar()
                 Actualizar()
+                ActualizarPasos()
             Else
-                Throw New Exception("Seleccione el tipo de evento que desea borrar")
+                    Throw New Exception("Seleccione el tipo de evento que desea borrar")
             End If
         Catch ex As Exception
             MessageBox.Show(vTraductor.Traducir(ex.Message), "EvOrg")
@@ -103,18 +109,22 @@ Public Class ABMTipoEvento
 
     Private Sub AltaPasoBtn_Click(sender As Object, e As EventArgs) Handles AltaPasoBtn.Click
         Try
-            If DescripcionTxt2.Text <> "" And DiasNumeric.Value <> 0 And PrioridadCombo.Text <> "" Then
-                vPaso = New Paso(SetPasoId(), DescripcionTxt2.Text,, PrioridadCombo.Text, vTraductor.Traducir("Generico"))
-                If Not vPasoDinamico.CheckPasoTipoEvento(vPaso.Descripcion) Then
-                    vPasoDinamico.Alta(vPaso)
-                    vTipoEventoDinamico.AgregarPaso(VistaATipoEvento, vPaso, DiasNumeric.Value)
-                Else
-                    Throw New Exception("El paso ingresado ya existe en el tipo de evento seleccionado")
-                End If
-                Limpiar()
+            If GrillaTipoEvento.SelectedRows.Count > 0 Then
+                If DescripcionTxt2.Text <> "" And DiasNumeric.Value <> 0 And PrioridadCombo.Text <> "" Then
+                    vPaso = New Paso(SetPasoId(), DescripcionTxt2.Text,, PrioridadCombo.Text, "Generico")
+                    If Not vPasoDinamico.CheckPasoTipoEvento(vPaso.Descripcion) Then
+                        vPasoDinamico.Alta(vPaso)
+                        vTipoEventoDinamico.AgregarPaso(VistaATipoEvento, vPaso, DiasNumeric.Value)
+                    Else
+                        Throw New Exception("El paso ingresado ya existe en el tipo de evento seleccionado")
+                    End If
+                    Limpiar()
                     ActualizarPasos()
                 Else
                     Throw New Exception("Ingrese los datos del paso")
+                End If
+            Else
+                Throw New Exception("Seleccione un tipo de evento")
             End If
         Catch ex As Exception
             MessageBox.Show(vTraductor.Traducir(ex.Message), "EvOrg")

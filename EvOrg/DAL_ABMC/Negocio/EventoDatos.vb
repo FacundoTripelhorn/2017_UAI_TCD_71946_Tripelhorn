@@ -14,11 +14,15 @@ Public Class EventoDatos
                 vEvento = DirectCast(pObjeto, Evento)
                 Dim DTable As DataTable = Comando.GetDataTable("Evento")
                 Dim DRow As DataRow = DTable.NewRow
-                vEvento.Id = DirectCast(ConsultaTodo.Last, Evento).Id + 1
+                If ConsultaTodo.Count > 0 Then
+                    vEvento.Id = DirectCast(ConsultaTodo.Last, Evento).Id + 1
+                Else
+                    vEvento.Id = 1
+                End If
                 DRow.ItemArray = {vEvento.Id, vEvento.Nombre, vEvento.Fecha, vEvento.CantidadInvitados, vEvento.Tipo.Id, vEvento.Salon.Id, vEvento.Cliente.DNI}
-                DTable.Rows.Add(DRow)
-                Comando.ActualizarBD("Evento", DTable)
-            End If
+                    DTable.Rows.Add(DRow)
+                    Comando.ActualizarBD("Evento", DTable)
+                End If
         Catch ex As Exception
         End Try
     End Sub
@@ -31,6 +35,7 @@ Public Class EventoDatos
                 If vEvento.ListaMateriales.Count > 0 Then BorrarMateriales(vEvento)
                 If vEvento.ListaServicios.Count > 0 Then BorrarServicios(vEvento)
                 If vEvento.ListaPasos.Count > 0 Then BorrarPasos(vEvento)
+                If DTable.Rows.Count > 0 Then DTable.Rows(0).Delete()
                 Comando.ActualizarBD("Evento", DTable)
             End If
         Catch ex As Exception
@@ -100,11 +105,17 @@ Public Class EventoDatos
             Dim DTable As DataTable = Comando.GetDataTable("Evento")
             vEventoLista = New List(Of Object)
             For Each Drow As DataRow In DTable.Rows
-                Dim Evento As New Evento(Drow(0), Drow(1), Drow(2), Drow(3), GetTipoEvento(Drow(4)), GetSalon(Drow(5)), GetCliente(Drow(6)))
+                Dim Salon As New Salon
+                If IsDBNull(Drow(5)) Then
+                    Salon = Nothing
+                Else
+                    Salon = GetSalon(Drow(5))
+                End If
+                Dim Evento As New Evento(Drow(0), Drow(1), Drow(2), Drow(3), GetTipoEvento(Drow(4)), Salon, GetCliente(Drow(6)))
                 Evento.ListaMateriales = GetMateriales(Evento.Id)
-                Evento.ListaServicios = GetServicios(Evento.Id)
-                Evento.ListaPasos = GetPasos(Evento.Id)
-                vEventoLista.Add(Evento)
+                    Evento.ListaServicios = GetServicios(Evento.Id)
+                    Evento.ListaPasos = GetPasos(Evento.Id)
+                    vEventoLista.Add(Evento)
             Next
             Return vEventoLista
         Catch ex As Exception
@@ -117,7 +128,7 @@ Public Class EventoDatos
         Dim vMaterialDatos As New MaterialDatos
         Dim vEventoDatos As New EventoDatos
         Dim DTable As DataTable = Comando.GetData("SELECT * FROM ReservaMaterial WHERE Evento = " & pEventoId)
-        Dim vMateriales As List(Of Object) = vMaterialDatos.ConsultaTodo
+        Dim vMateriales As List(Of Material) = vMaterialDatos.ConsultaMaterial
         For Each Drow As DataRow In DTable.Rows
             For Each Material As Material In vMateriales
                 If Drow(1) = Material.Id Then

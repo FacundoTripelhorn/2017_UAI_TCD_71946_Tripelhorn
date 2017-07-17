@@ -12,7 +12,7 @@ Public Class TipoEventoDatos
                 vTipoEvento = DirectCast(pObjeto, TipoEvento)
                 Dim DTTE As DataTable = Comando.GetDataTable("TipoEvento")
                 Dim DRow As DataRow = DTTE.NewRow
-                DRow.ItemArray = {vTipoEvento.Id, vTipoEvento.Nombre, vTipoEvento.Descripcion}
+                DRow.ItemArray = {vTipoEvento.Id, vTipoEvento.Nombre, vTipoEvento.Descripcion, 1}
                 DTTE.Rows.Add(DRow)
                 Comando.ActualizarBD("TipoEvento", DTTE)
             End If
@@ -38,9 +38,9 @@ Public Class TipoEventoDatos
                         DRow.Delete()
                     Next
                 End If
+                Comando.ActualizarBD("TipoEventoPaso", DTTEP)
                 Comando.ActualizarBD("TipoEvento", DTTE)
                 Comando.ActualizarBD("Paso", DTP)
-                Comando.ActualizarBD("TipoEventoPaso", DTTEP)
             End If
         Catch ex As Exception
         End Try
@@ -66,9 +66,11 @@ Public Class TipoEventoDatos
             Dim DTTipoEvento As DataTable = Comando.GetDataTable("TipoEvento")
             TipoEventoLista = New List(Of Object)
             For Each DRow As DataRow In DTTipoEvento.Rows
-                Dim vTEvento As New TipoEvento(DRow(0), DRow(1), DRow(2))
-                vTEvento.ListaPasos = CargarPasos(vTEvento.Id)
-                TipoEventoLista.Add(vTEvento)
+                If DRow(3) = True Then
+                    Dim vTEvento As New TipoEvento(DRow(0), DRow(1), DRow(2))
+                    vTEvento.ListaPasos = CargarPasos(vTEvento.Id)
+                    TipoEventoLista.Add(vTEvento)
+                End If
             Next
             Return TipoEventoLista
         Catch ex As Exception
@@ -129,4 +131,19 @@ Public Class TipoEventoDatos
             Return False
         End If
     End Function
+
+    Public Function CheckEventos(pId As Integer) As Boolean
+        Dim DTable As DataTable = Comando.GetData("SELECT * FROM Evento WHERE Tipo = " & pId)
+        If DTable.Rows.Count > 0 Then
+            Return True
+        Else
+            Return False
+        End If
+    End Function
+
+    Public Sub DeshabilitarTipo(pId As Integer)
+        Dim DTable As DataTable = Comando.GetData("SELECT * FROM TipoEvento WHERE Id = " & pId)
+        If DTable.Rows.Count > 0 Then DTable.Rows(0).Item(3) = 0
+        Comando.ActualizarBD("TipoEvento", DTable)
+    End Sub
 End Class

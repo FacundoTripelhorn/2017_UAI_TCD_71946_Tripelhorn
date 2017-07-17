@@ -33,13 +33,27 @@ Public Class VerMateriales
     End Sub
 
     Private Sub AceptarBtn_Click(sender As Object, e As EventArgs) Handles AceptarBtn.Click
-        vMaterial = DirectCast(GrillaMateriales.SelectedRows(0).DataBoundItem, Material)
+        vMaterial = VistaAMaterial()
         CType(CallerForm, ReservarMaterial).vMaterial = vMaterial
         CType(CallerForm, ReservarMaterial).IdTxt.Text = vMaterial.Id
         CType(CallerForm, ReservarMaterial).MaterialTxt.Text = vMaterial.Nombre
         CType(CallerForm, ReservarMaterial).CantidadNumeric.Maximum = vMaterial.Cantidad
         Me.Close()
     End Sub
+
+    Private Function VistaAMaterial() As Material
+        Try
+            Dim vM As New Material
+            For Each Material As Material In vMaterialDinamico.ConsultaTodo
+                If Material.Nombre = DirectCast(GrillaMateriales.SelectedRows(0).DataBoundItem, VistaMaterial).Nombre Then
+                    vM = Material
+                End If
+            Next
+            Return vM
+        Catch ex As Exception
+            Return Nothing
+        End Try
+    End Function
 
     Public Sub ActualizarObservador(Optional pControl As Control = Nothing) Implements IObservador.ActualizarObservador
         For Each vControl As Control In pControl.Controls

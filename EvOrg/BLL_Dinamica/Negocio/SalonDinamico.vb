@@ -22,4 +22,8 @@ Public Class SalonDinamico
     Public Function CheckSalon(pNombre As String) As Boolean
         Return vSalonDatos.CheckSalon(pNombre)
     End Function
+
+    Public Function CheckReserva(pId As Integer) As Boolean
+        Return vSalonDatos.CheckReserva(pId)
+    End Function
 End Class

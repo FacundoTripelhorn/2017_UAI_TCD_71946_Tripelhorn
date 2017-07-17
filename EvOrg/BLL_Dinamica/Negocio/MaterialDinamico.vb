@@ -32,4 +32,8 @@ Public Class MaterialDinamico
     Public Function CheckMaterial(pId As Integer, pNombre As String) As Boolean
         Return Me.MaterialDatos.CheckMaterial(pId, pNombre)
     End Function
+
+    Public Function CheckReservas(pId As Integer) As Boolean
+        Return Me.MaterialDatos.CheckReservas(pId)
+    End Function
 End Class

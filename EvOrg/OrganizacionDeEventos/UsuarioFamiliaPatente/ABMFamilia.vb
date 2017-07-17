@@ -31,10 +31,9 @@ Public Class ABMFamilia
 
     Private Sub AltaBtn_Click(sender As Object, e As EventArgs) Handles AltaBtn.Click
 
-        If Not FamiliaTxt.Text = "" Then
+        If FamiliaTxt.Text <> "" Then
             Familia.Nombre = FamiliaTxt.Text
-            If FamiliaDinamica.CheckFamilia(Familia.Nombre) Then
-
+            If FamiliaDinamica.CheckFamilia(Familia.Nombre) = False Then
                 If TreePatente.Nodes.Item(0).Checked Then
                     Familia.ListaPatentes.Add(TreePatente.Nodes.Item(0).Tag)
                 End If
@@ -44,7 +43,7 @@ Public Class ABMFamilia
                 MessageBox.Show(vTraductor.Traducir("El nombre de familia ingresado ya existe"), "EvOrg")
             End If
         Else
-                MessageBox.Show(vTraductor.Traducir("La Familia tiene que tener un nombre"), "EvOrg")
+            MessageBox.Show(vTraductor.Traducir("La Familia tiene que tener un nombre"), "EvOrg")
             End If
 
             TreePatente.Nodes.Clear()
@@ -63,21 +62,33 @@ Public Class ABMFamilia
     End Sub
 
     Private Sub BajaBtn_Click(sender As Object, e As EventArgs) Handles BajaBtn.Click
-        Familia.Nombre = FamiliaListbox.SelectedItem.ToString
-        FamiliaDinamica.Baja(Familia)
-        ActualizarLista()
+        If Not FamiliaListbox.SelectedItem Is Nothing Then
+            Familia.Nombre = FamiliaListbox.SelectedItem.ToString
+            If Not FamiliaDinamica.CheckUsuarios(Familia.Id) Then
+                FamiliaDinamica.Baja(Familia)
+                ActualizarLista()
+            Else
+                MessageBox.Show(vTraductor.Traducir("La familia seleccionada no se puede eliminar, tiene usuarios asociados"), "EvOrg")
+            End If
+        Else
+                MessageBox.Show(vTraductor.Traducir("Seleccione la familia que desea eliminar"), "EvOrg")
+        End If
     End Sub
 
     Private Sub ModificacionBtn_Click(sender As Object, e As EventArgs) Handles ModificacionBtn.Click
         Try
-            Dim vFamilia As New Familia
-            vFamilia.Nombre = FamiliaListbox.SelectedItem.ToString
-            If TreePatente.Nodes.Item(0).Checked Then
-                vFamilia.ListaPatentes.Add(TreePatente.Nodes.Item(0).Tag)
+            If Not FamiliaListbox.SelectedItem Is Nothing Then
+                Dim vFamilia As New Familia
+                vFamilia.Nombre = FamiliaListbox.SelectedItem.ToString
+                If TreePatente.Nodes.Item(0).Checked Then
+                    vFamilia.ListaPatentes.Add(TreePatente.Nodes.Item(0).Tag)
+                End If
+                AgregarPatentes(vFamilia, TreePatente.Nodes.Item(0))
+                FamiliaDinamica.Modificacion(vFamilia)
+                ActualizarLista()
+            Else
+                MessageBox.Show(vTraductor.Traducir("Seleccione la familia que desea modificar"), "EvOrg")
             End If
-            AgregarPatentes(vFamilia, TreePatente.Nodes.Item(0))
-            FamiliaDinamica.Modificacion(vFamilia)
-            ActualizarLista()
         Catch ex As Exception
 
         End Try

@@ -35,4 +35,12 @@ Public Class TipoEventoDinamico
     Public Function CheckTipoEvento(pNombre As String) As Boolean
         Return vTipoEventoDatos.CheckTipoEvento(pNombre)
     End Function
+
+    Public Function CheckEventos(pId As Integer) As Boolean
+        Return vTipoEventoDatos.CheckEventos(pId)
+    End Function
+
+    Public Sub DeshabilitarTipo(pId As Integer)
+        vTipoEventoDatos.DeshabilitarTipo(pId)
+    End Sub
 End Class

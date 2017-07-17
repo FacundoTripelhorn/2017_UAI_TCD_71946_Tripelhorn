@@ -28,4 +28,8 @@ Public Class FamiliaDinamica
     Public Function ListarPatentes(pObjeto As Object) As List(Of Object)
         Return FamiliaDatos.ListarPatentes(pObjeto)
     End Function
+
+    Public Function CheckUsuarios(pId As Integer) As Boolean
+        Return FamiliaDatos.CheckUsuarios(pId)
+    End Function
 End Class
